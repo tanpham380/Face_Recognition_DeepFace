@@ -21,29 +21,33 @@ This project provides a RESTful API for face recognition tasks, including:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/your-username/face-recognition-api.git
-Navigate to the project directory:
+2. **Navigate to the project directory:**
+
 cd face-recognition-api
-Install dependencies:
+3. **Install dependencies:**
 pip install -r requirements.txt
-Configuration
+
+4. **Create a .env file:**
 Create a .env file in the project root directory with the following environment variables:
 
 API_KEY=your_api_key  # Your secret API key for authentication
 DATABASE_URI=sqlite:///your_database.db  # Path to your SQLite database file
 Replace your_api_key and your_database.db with your desired values.
 
-Running the API
+5. **Run the API:**
 Start the Flask application:
 
-flask run
+python api.py
 The API will be accessible at http://127.0.0.1:5000/.
 
-API Endpoints
-Authentication
+## API Endpoints
+
+**Authentication:**
 All API endpoints require an API key for authentication. The API key is specified in the Authorization header of requests:
 
+
 Authorization: Bearer your_api_key
-Registration
+**Registration**
 Endpoint: /register Method: POST Parameters:
 
 uid: Unique identifier for the person.
@@ -54,7 +58,7 @@ Example Request:
   "uid": "user123",
   "image": "path/to/image.jpg"
 }
-Recognition
+**Recognition**
 Endpoint: /recognize Method: POST Parameters:
 
 image: Image file to recognize.
@@ -63,7 +67,7 @@ Example Request:
 {
   "image": "path/to/image.jpg"
 }
-Verification
+**Verification**
 Endpoint: /verify Method: POST Parameters:
 
 img1_path: Path to the first image.
@@ -74,7 +78,7 @@ Example Request:
   "img1_path": "path/to/image1.jpg",
   "img2_path": "path/to/image2.jpg"
 }
-Representation
+**Representation**
 Endpoint: /represent Method: POST Parameters:
 
 img_path: Path to the image.
@@ -83,7 +87,7 @@ Example Request:
 {
   "img_path": "path/to/image.jpg"
 }
-Analysis
+**Analysis**
 Endpoint: /analyze Method: POST Parameters:
 
 img_path: Path to the image.
@@ -133,4 +137,3 @@ The API is still under development and may have limitations.
 - **Provide a Contribution Guide:**  If you want others to contribute to the project, include a "Contributing" section with guidelines.
 - **Link to Documentation:**  If you have more detailed documentation, link to it from the README.
 
-By following these suggestions, you can create a README.md file that is both informative and visually appealing.
