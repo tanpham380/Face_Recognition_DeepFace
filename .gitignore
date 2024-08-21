@@ -3,6 +3,7 @@ file*
 core/database
 core/static/*
 core/static
+core/static/images/*
 
 core/logs/*
 core/log/*
