@@ -1,0 +1,1493 @@
+2024-08-21 12:29:49,846 - root - INFO - No GPU found. Running on CPU
+2024-08-21 12:29:49,846 - root - INFO - No GPU found. Running on CPU
+2024-08-21 12:29:49,863 - root - INFO - Starting Flask app: app
+2024-08-21 12:29:49,863 - root - INFO - Starting Flask app: app
+2024-08-21 12:29:49,863 - root - INFO - Starting Flask app: app
+2024-08-21 12:29:49,863 - root - INFO - Starting Flask app: app
+2024-08-21 12:29:49,863 - root - INFO - Starting Flask app: app
+2024-08-21 12:29:49,870 - root - INFO - Worker thread started
+2024-08-21 12:29:49,870 - root - INFO - Worker thread 0 started
+2024-08-21 12:29:49,870 - root - INFO - Worker thread started
+2024-08-21 12:29:49,870 - root - INFO - Worker thread 0 started
+2024-08-21 12:29:49,870 - root - INFO - Worker thread started
+2024-08-21 12:29:49,870 - root - INFO - Worker thread 0 started
+2024-08-21 12:29:49,870 - root - INFO - Worker thread started
+2024-08-21 12:29:49,870 - root - INFO - Worker thread 0 started
+2024-08-21 12:29:49,870 - root - INFO - Worker thread started
+2024-08-21 12:29:49,870 - root - INFO - Worker thread 0 started
+2024-08-21 12:29:49,880 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,880 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,882 - root - INFO - Worker thread started
+2024-08-21 12:29:49,880 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,882 - root - INFO - Worker thread 1 started
+2024-08-21 12:29:49,880 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,882 - root - INFO - Worker thread started
+2024-08-21 12:29:49,882 - root - INFO - Worker thread 1 started
+2024-08-21 12:29:49,880 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,882 - root - INFO - Worker thread started
+2024-08-21 12:29:49,882 - root - INFO - Worker thread 1 started
+2024-08-21 12:29:49,882 - root - INFO - Worker thread started
+2024-08-21 12:29:49,882 - root - INFO - Worker thread 1 started
+2024-08-21 12:29:49,882 - root - INFO - Worker thread started
+2024-08-21 12:29:49,882 - root - INFO - Worker thread 1 started
+2024-08-21 12:29:49,893 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,895 - root - INFO - Worker thread started
+2024-08-21 12:29:49,893 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,896 - root - INFO - Worker thread 2 started
+2024-08-21 12:29:49,895 - root - INFO - Worker thread started
+2024-08-21 12:29:49,893 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,896 - root - INFO - Worker thread 2 started
+2024-08-21 12:29:49,895 - root - INFO - Worker thread started
+2024-08-21 12:29:49,893 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,896 - root - INFO - Worker thread 2 started
+2024-08-21 12:29:49,895 - root - INFO - Worker thread started
+2024-08-21 12:29:49,893 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,896 - root - INFO - Worker thread 2 started
+2024-08-21 12:29:49,895 - root - INFO - Worker thread started
+2024-08-21 12:29:49,896 - root - INFO - Worker thread 2 started
+2024-08-21 12:29:49,909 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,909 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,911 - root - INFO - Worker thread started
+2024-08-21 12:29:49,909 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,912 - root - INFO - Worker thread 3 started
+2024-08-21 12:29:49,911 - root - INFO - Worker thread started
+2024-08-21 12:29:49,912 - root - INFO - Worker thread 3 started
+2024-08-21 12:29:49,909 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,911 - root - INFO - Worker thread started
+2024-08-21 12:29:49,912 - root - INFO - Worker thread 3 started
+2024-08-21 12:29:49,909 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,911 - root - INFO - Worker thread started
+2024-08-21 12:29:49,912 - root - INFO - Worker thread 3 started
+2024-08-21 12:29:49,911 - root - INFO - Worker thread started
+2024-08-21 12:29:49,912 - root - INFO - Worker thread 3 started
+2024-08-21 12:29:49,925 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,925 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,925 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,925 - root - INFO - Worker waiting for a task
+2024-08-21 12:29:49,925 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,767 - root - INFO - No GPU found. Running on CPU
+2024-08-21 12:31:07,767 - root - INFO - No GPU found. Running on CPU
+2024-08-21 12:31:07,784 - root - INFO - Starting Flask app: app
+2024-08-21 12:31:07,784 - root - INFO - Starting Flask app: app
+2024-08-21 12:31:07,784 - root - INFO - Starting Flask app: app
+2024-08-21 12:31:07,784 - root - INFO - Starting Flask app: app
+2024-08-21 12:31:07,784 - root - INFO - Starting Flask app: app
+2024-08-21 12:31:07,793 - root - INFO - Worker thread started
+2024-08-21 12:31:07,794 - root - INFO - Worker thread 0 started
+2024-08-21 12:31:07,793 - root - INFO - Worker thread started
+2024-08-21 12:31:07,794 - root - INFO - Worker thread 0 started
+2024-08-21 12:31:07,793 - root - INFO - Worker thread started
+2024-08-21 12:31:07,794 - root - INFO - Worker thread 0 started
+2024-08-21 12:31:07,793 - root - INFO - Worker thread started
+2024-08-21 12:31:07,794 - root - INFO - Worker thread 0 started
+2024-08-21 12:31:07,793 - root - INFO - Worker thread started
+2024-08-21 12:31:07,794 - root - INFO - Worker thread 0 started
+2024-08-21 12:31:07,803 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,803 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,806 - root - INFO - Worker thread started
+2024-08-21 12:31:07,806 - root - INFO - Worker thread 1 started
+2024-08-21 12:31:07,803 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,806 - root - INFO - Worker thread started
+2024-08-21 12:31:07,806 - root - INFO - Worker thread 1 started
+2024-08-21 12:31:07,803 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,803 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,806 - root - INFO - Worker thread started
+2024-08-21 12:31:07,806 - root - INFO - Worker thread 1 started
+2024-08-21 12:31:07,806 - root - INFO - Worker thread started
+2024-08-21 12:31:07,806 - root - INFO - Worker thread 1 started
+2024-08-21 12:31:07,806 - root - INFO - Worker thread started
+2024-08-21 12:31:07,806 - root - INFO - Worker thread 1 started
+2024-08-21 12:31:07,820 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,820 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,822 - root - INFO - Worker thread started
+2024-08-21 12:31:07,822 - root - INFO - Worker thread 2 started
+2024-08-21 12:31:07,820 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,822 - root - INFO - Worker thread started
+2024-08-21 12:31:07,822 - root - INFO - Worker thread 2 started
+2024-08-21 12:31:07,822 - root - INFO - Worker thread started
+2024-08-21 12:31:07,820 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,822 - root - INFO - Worker thread 2 started
+2024-08-21 12:31:07,822 - root - INFO - Worker thread started
+2024-08-21 12:31:07,820 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,822 - root - INFO - Worker thread 2 started
+2024-08-21 12:31:07,822 - root - INFO - Worker thread started
+2024-08-21 12:31:07,822 - root - INFO - Worker thread 2 started
+2024-08-21 12:31:07,835 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,835 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,837 - root - INFO - Worker thread started
+2024-08-21 12:31:07,837 - root - INFO - Worker thread 3 started
+2024-08-21 12:31:07,835 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,837 - root - INFO - Worker thread started
+2024-08-21 12:31:07,837 - root - INFO - Worker thread 3 started
+2024-08-21 12:31:07,835 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,837 - root - INFO - Worker thread started
+2024-08-21 12:31:07,837 - root - INFO - Worker thread 3 started
+2024-08-21 12:31:07,835 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,837 - root - INFO - Worker thread started
+2024-08-21 12:31:07,837 - root - INFO - Worker thread 3 started
+2024-08-21 12:31:07,837 - root - INFO - Worker thread started
+2024-08-21 12:31:07,837 - root - INFO - Worker thread 3 started
+2024-08-21 12:31:07,851 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,851 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,851 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,851 - root - INFO - Worker waiting for a task
+2024-08-21 12:31:07,851 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,903 - root - INFO - No GPU found. Running on CPU
+2024-08-21 13:10:19,903 - root - INFO - No GPU found. Running on CPU
+2024-08-21 13:10:19,925 - root - INFO - Starting Flask app: app
+2024-08-21 13:10:19,925 - root - INFO - Starting Flask app: app
+2024-08-21 13:10:19,925 - root - INFO - Starting Flask app: app
+2024-08-21 13:10:19,925 - root - INFO - Starting Flask app: app
+2024-08-21 13:10:19,925 - root - INFO - Starting Flask app: app
+2024-08-21 13:10:19,933 - root - INFO - Worker thread started
+2024-08-21 13:10:19,933 - root - INFO - Worker thread 0 started
+2024-08-21 13:10:19,933 - root - INFO - Worker thread started
+2024-08-21 13:10:19,933 - root - INFO - Worker thread 0 started
+2024-08-21 13:10:19,933 - root - INFO - Worker thread started
+2024-08-21 13:10:19,933 - root - INFO - Worker thread 0 started
+2024-08-21 13:10:19,933 - root - INFO - Worker thread started
+2024-08-21 13:10:19,933 - root - INFO - Worker thread 0 started
+2024-08-21 13:10:19,933 - root - INFO - Worker thread started
+2024-08-21 13:10:19,933 - root - INFO - Worker thread 0 started
+2024-08-21 13:10:19,942 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,942 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,944 - root - INFO - Worker thread started
+2024-08-21 13:10:19,942 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,945 - root - INFO - Worker thread 1 started
+2024-08-21 13:10:19,944 - root - INFO - Worker thread started
+2024-08-21 13:10:19,945 - root - INFO - Worker thread 1 started
+2024-08-21 13:10:19,942 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,944 - root - INFO - Worker thread started
+2024-08-21 13:10:19,944 - root - INFO - Worker thread started
+2024-08-21 13:10:19,945 - root - INFO - Worker thread 1 started
+2024-08-21 13:10:19,942 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,945 - root - INFO - Worker thread 1 started
+2024-08-21 13:10:19,944 - root - INFO - Worker thread started
+2024-08-21 13:10:19,945 - root - INFO - Worker thread 1 started
+2024-08-21 13:10:19,955 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,955 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,959 - root - INFO - Worker thread started
+2024-08-21 13:10:19,955 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,959 - root - INFO - Worker thread 2 started
+2024-08-21 13:10:19,959 - root - INFO - Worker thread started
+2024-08-21 13:10:19,955 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,959 - root - INFO - Worker thread 2 started
+2024-08-21 13:10:19,959 - root - INFO - Worker thread started
+2024-08-21 13:10:19,955 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,959 - root - INFO - Worker thread 2 started
+2024-08-21 13:10:19,959 - root - INFO - Worker thread started
+2024-08-21 13:10:19,959 - root - INFO - Worker thread 2 started
+2024-08-21 13:10:19,959 - root - INFO - Worker thread started
+2024-08-21 13:10:19,959 - root - INFO - Worker thread 2 started
+2024-08-21 13:10:19,969 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,969 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,971 - root - INFO - Worker thread started
+2024-08-21 13:10:19,971 - root - INFO - Worker thread started
+2024-08-21 13:10:19,969 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,971 - root - INFO - Worker thread 3 started
+2024-08-21 13:10:19,971 - root - INFO - Worker thread started
+2024-08-21 13:10:19,971 - root - INFO - Worker thread 3 started
+2024-08-21 13:10:19,969 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,971 - root - INFO - Worker thread started
+2024-08-21 13:10:19,969 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,971 - root - INFO - Worker thread 3 started
+2024-08-21 13:10:19,971 - root - INFO - Worker thread started
+2024-08-21 13:10:19,971 - root - INFO - Worker thread 3 started
+2024-08-21 13:10:19,982 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,971 - root - INFO - Worker thread 3 started
+2024-08-21 13:10:19,982 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,982 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,982 - root - INFO - Worker waiting for a task
+2024-08-21 13:10:19,982 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,659 - root - INFO - No GPU found. Running on CPU
+2024-08-21 13:14:35,659 - root - INFO - No GPU found. Running on CPU
+2024-08-21 13:14:35,680 - root - INFO - Starting Flask app: app
+2024-08-21 13:14:35,680 - root - INFO - Starting Flask app: app
+2024-08-21 13:14:35,680 - root - INFO - Starting Flask app: app
+2024-08-21 13:14:35,680 - root - INFO - Starting Flask app: app
+2024-08-21 13:14:35,680 - root - INFO - Starting Flask app: app
+2024-08-21 13:14:35,689 - root - INFO - Worker thread started
+2024-08-21 13:14:35,689 - root - INFO - Worker thread 0 started
+2024-08-21 13:14:35,689 - root - INFO - Worker thread started
+2024-08-21 13:14:35,689 - root - INFO - Worker thread 0 started
+2024-08-21 13:14:35,689 - root - INFO - Worker thread started
+2024-08-21 13:14:35,689 - root - INFO - Worker thread 0 started
+2024-08-21 13:14:35,689 - root - INFO - Worker thread started
+2024-08-21 13:14:35,689 - root - INFO - Worker thread 0 started
+2024-08-21 13:14:35,689 - root - INFO - Worker thread started
+2024-08-21 13:14:35,689 - root - INFO - Worker thread 0 started
+2024-08-21 13:14:35,698 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,698 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,701 - root - INFO - Worker thread started
+2024-08-21 13:14:35,698 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,701 - root - INFO - Worker thread 1 started
+2024-08-21 13:14:35,698 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,701 - root - INFO - Worker thread started
+2024-08-21 13:14:35,701 - root - INFO - Worker thread 1 started
+2024-08-21 13:14:35,698 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,701 - root - INFO - Worker thread started
+2024-08-21 13:14:35,701 - root - INFO - Worker thread 1 started
+2024-08-21 13:14:35,701 - root - INFO - Worker thread started
+2024-08-21 13:14:35,701 - root - INFO - Worker thread 1 started
+2024-08-21 13:14:35,701 - root - INFO - Worker thread started
+2024-08-21 13:14:35,701 - root - INFO - Worker thread 1 started
+2024-08-21 13:14:35,713 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,713 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,715 - root - INFO - Worker thread started
+2024-08-21 13:14:35,713 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,716 - root - INFO - Worker thread 2 started
+2024-08-21 13:14:35,715 - root - INFO - Worker thread started
+2024-08-21 13:14:35,713 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,716 - root - INFO - Worker thread 2 started
+2024-08-21 13:14:35,713 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,715 - root - INFO - Worker thread started
+2024-08-21 13:14:35,716 - root - INFO - Worker thread 2 started
+2024-08-21 13:14:35,715 - root - INFO - Worker thread started
+2024-08-21 13:14:35,716 - root - INFO - Worker thread 2 started
+2024-08-21 13:14:35,715 - root - INFO - Worker thread started
+2024-08-21 13:14:35,716 - root - INFO - Worker thread 2 started
+2024-08-21 13:14:35,727 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,728 - root - INFO - Worker thread started
+2024-08-21 13:14:35,727 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,728 - root - INFO - Worker thread 3 started
+2024-08-21 13:14:35,728 - root - INFO - Worker thread started
+2024-08-21 13:14:35,727 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,728 - root - INFO - Worker thread 3 started
+2024-08-21 13:14:35,727 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,728 - root - INFO - Worker thread started
+2024-08-21 13:14:35,728 - root - INFO - Worker thread 3 started
+2024-08-21 13:14:35,727 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,728 - root - INFO - Worker thread started
+2024-08-21 13:14:35,728 - root - INFO - Worker thread 3 started
+2024-08-21 13:14:35,728 - root - INFO - Worker thread started
+2024-08-21 13:14:35,728 - root - INFO - Worker thread 3 started
+2024-08-21 13:14:35,740 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,740 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,740 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,740 - root - INFO - Worker waiting for a task
+2024-08-21 13:14:35,740 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,660 - root - INFO - Using GPU for TensorFlow operations
+2024-08-21 13:15:04,660 - root - INFO - Using GPU for TensorFlow operations
+2024-08-21 13:15:04,682 - root - INFO - Starting Flask app: app
+2024-08-21 13:15:04,682 - root - INFO - Starting Flask app: app
+2024-08-21 13:15:04,682 - root - INFO - Starting Flask app: app
+2024-08-21 13:15:04,682 - root - INFO - Starting Flask app: app
+2024-08-21 13:15:04,682 - root - INFO - Starting Flask app: app
+2024-08-21 13:15:04,690 - root - INFO - Worker thread started
+2024-08-21 13:15:04,691 - root - INFO - Worker thread 0 started
+2024-08-21 13:15:04,690 - root - INFO - Worker thread started
+2024-08-21 13:15:04,690 - root - INFO - Worker thread started
+2024-08-21 13:15:04,691 - root - INFO - Worker thread 0 started
+2024-08-21 13:15:04,690 - root - INFO - Worker thread started
+2024-08-21 13:15:04,691 - root - INFO - Worker thread 0 started
+2024-08-21 13:15:04,690 - root - INFO - Worker thread started
+2024-08-21 13:15:04,691 - root - INFO - Worker thread 0 started
+2024-08-21 13:15:04,691 - root - INFO - Worker thread 0 started
+2024-08-21 13:15:04,699 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,699 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,699 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,702 - root - INFO - Worker thread started
+2024-08-21 13:15:04,702 - root - INFO - Worker thread 1 started
+2024-08-21 13:15:04,699 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,702 - root - INFO - Worker thread started
+2024-08-21 13:15:04,699 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,702 - root - INFO - Worker thread 1 started
+2024-08-21 13:15:04,702 - root - INFO - Worker thread started
+2024-08-21 13:15:04,702 - root - INFO - Worker thread started
+2024-08-21 13:15:04,702 - root - INFO - Worker thread 1 started
+2024-08-21 13:15:04,702 - root - INFO - Worker thread started
+2024-08-21 13:15:04,702 - root - INFO - Worker thread 1 started
+2024-08-21 13:15:04,702 - root - INFO - Worker thread 1 started
+2024-08-21 13:15:04,713 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,713 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,716 - root - INFO - Worker thread started
+2024-08-21 13:15:04,713 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,717 - root - INFO - Worker thread 2 started
+2024-08-21 13:15:04,713 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,716 - root - INFO - Worker thread started
+2024-08-21 13:15:04,717 - root - INFO - Worker thread 2 started
+2024-08-21 13:15:04,716 - root - INFO - Worker thread started
+2024-08-21 13:15:04,713 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,717 - root - INFO - Worker thread 2 started
+2024-08-21 13:15:04,716 - root - INFO - Worker thread started
+2024-08-21 13:15:04,717 - root - INFO - Worker thread 2 started
+2024-08-21 13:15:04,716 - root - INFO - Worker thread started
+2024-08-21 13:15:04,717 - root - INFO - Worker thread 2 started
+2024-08-21 13:15:04,727 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,727 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,729 - root - INFO - Worker thread started
+2024-08-21 13:15:04,729 - root - INFO - Worker thread 3 started
+2024-08-21 13:15:04,727 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,729 - root - INFO - Worker thread started
+2024-08-21 13:15:04,729 - root - INFO - Worker thread 3 started
+2024-08-21 13:15:04,727 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,729 - root - INFO - Worker thread started
+2024-08-21 13:15:04,729 - root - INFO - Worker thread 3 started
+2024-08-21 13:15:04,727 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,729 - root - INFO - Worker thread started
+2024-08-21 13:15:04,729 - root - INFO - Worker thread 3 started
+2024-08-21 13:15:04,729 - root - INFO - Worker thread started
+2024-08-21 13:15:04,729 - root - INFO - Worker thread 3 started
+2024-08-21 13:15:04,741 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,741 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,741 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,741 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,741 - root - INFO - Worker waiting for a task
+2024-08-21 13:15:04,804 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.136:5000
+2024-08-21 13:15:04,804 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.136:5000
+2024-08-21 13:15:04,804 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.136:5000
+2024-08-21 13:15:04,804 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.136:5000
+2024-08-21 13:15:04,804 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.136:5000
+2024-08-21 13:15:04,813 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-08-21 13:15:04,813 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-08-21 13:15:04,813 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-08-21 13:15:04,813 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-08-21 13:15:04,813 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-08-21 13:15:16,392 - werkzeug - INFO - 192.168.1.136 - - [21/Aug/2024 13:15:16] "GET / HTTP/1.1" 200 -
+2024-08-21 13:15:16,392 - werkzeug - INFO - 192.168.1.136 - - [21/Aug/2024 13:15:16] "GET / HTTP/1.1" 200 -
+2024-08-21 13:15:16,392 - werkzeug - INFO - 192.168.1.136 - - [21/Aug/2024 13:15:16] "GET / HTTP/1.1" 200 -
+2024-08-21 13:15:16,392 - werkzeug - INFO - 192.168.1.136 - - [21/Aug/2024 13:15:16] "GET / HTTP/1.1" 200 -
+2024-08-21 13:15:16,392 - werkzeug - INFO - 192.168.1.136 - - [21/Aug/2024 13:15:16] "GET / HTTP/1.1" 200 -
+2024-08-21 13:15:16,447 - werkzeug - INFO - 192.168.1.136 - - [21/Aug/2024 13:15:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-08-21 13:15:16,447 - werkzeug - INFO - 192.168.1.136 - - [21/Aug/2024 13:15:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-08-21 13:15:16,447 - werkzeug - INFO - 192.168.1.136 - - [21/Aug/2024 13:15:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-08-21 13:15:16,447 - werkzeug - INFO - 192.168.1.136 - - [21/Aug/2024 13:15:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-08-21 13:15:16,447 - werkzeug - INFO - 192.168.1.136 - - [21/Aug/2024 13:15:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-08-21 13:16:57,141 - root - INFO - Using GPU for TensorFlow operations
+2024-08-21 13:16:57,141 - root - INFO - Using GPU for TensorFlow operations
+2024-08-21 13:16:57,158 - root - INFO - Starting Flask app: app
+2024-08-21 13:16:57,158 - root - INFO - Starting Flask app: app
+2024-08-21 13:16:57,158 - root - INFO - Starting Flask app: app
+2024-08-21 13:16:57,158 - root - INFO - Starting Flask app: app
+2024-08-21 13:16:57,158 - root - INFO - Starting Flask app: app
+2024-08-21 13:16:57,165 - root - INFO - Worker thread started
+2024-08-21 13:16:57,166 - root - INFO - Worker thread 0 started
+2024-08-21 13:16:57,165 - root - INFO - Worker thread started
+2024-08-21 13:16:57,166 - root - INFO - Worker thread 0 started
+2024-08-21 13:16:57,165 - root - INFO - Worker thread started
+2024-08-21 13:16:57,166 - root - INFO - Worker thread 0 started
+2024-08-21 13:16:57,165 - root - INFO - Worker thread started
+2024-08-21 13:16:57,166 - root - INFO - Worker thread 0 started
+2024-08-21 13:16:57,165 - root - INFO - Worker thread started
+2024-08-21 13:16:57,166 - root - INFO - Worker thread 0 started
+2024-08-21 13:16:57,174 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,175 - root - INFO - Worker thread started
+2024-08-21 13:16:57,174 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,176 - root - INFO - Worker thread 1 started
+2024-08-21 13:16:57,175 - root - INFO - Worker thread started
+2024-08-21 13:16:57,174 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,176 - root - INFO - Worker thread 1 started
+2024-08-21 13:16:57,175 - root - INFO - Worker thread started
+2024-08-21 13:16:57,176 - root - INFO - Worker thread 1 started
+2024-08-21 13:16:57,174 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,175 - root - INFO - Worker thread started
+2024-08-21 13:16:57,174 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,176 - root - INFO - Worker thread 1 started
+2024-08-21 13:16:57,175 - root - INFO - Worker thread started
+2024-08-21 13:16:57,176 - root - INFO - Worker thread 1 started
+2024-08-21 13:16:57,187 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,187 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,187 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,190 - root - INFO - Worker thread started
+2024-08-21 13:16:57,190 - root - INFO - Worker thread 2 started
+2024-08-21 13:16:57,190 - root - INFO - Worker thread started
+2024-08-21 13:16:57,187 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,190 - root - INFO - Worker thread 2 started
+2024-08-21 13:16:57,187 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,190 - root - INFO - Worker thread started
+2024-08-21 13:16:57,190 - root - INFO - Worker thread 2 started
+2024-08-21 13:16:57,190 - root - INFO - Worker thread started
+2024-08-21 13:16:57,190 - root - INFO - Worker thread 2 started
+2024-08-21 13:16:57,190 - root - INFO - Worker thread started
+2024-08-21 13:16:57,190 - root - INFO - Worker thread 2 started
+2024-08-21 13:16:57,202 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,204 - root - INFO - Worker thread started
+2024-08-21 13:16:57,202 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,204 - root - INFO - Worker thread 3 started
+2024-08-21 13:16:57,204 - root - INFO - Worker thread started
+2024-08-21 13:16:57,202 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,204 - root - INFO - Worker thread 3 started
+2024-08-21 13:16:57,204 - root - INFO - Worker thread started
+2024-08-21 13:16:57,202 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,204 - root - INFO - Worker thread 3 started
+2024-08-21 13:16:57,204 - root - INFO - Worker thread started
+2024-08-21 13:16:57,202 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,204 - root - INFO - Worker thread 3 started
+2024-08-21 13:16:57,204 - root - INFO - Worker thread started
+2024-08-21 13:16:57,204 - root - INFO - Worker thread 3 started
+2024-08-21 13:16:57,216 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,216 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,216 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,216 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,216 - root - INFO - Worker waiting for a task
+2024-08-21 13:16:57,266 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.136:5000
+2024-08-21 13:16:57,266 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.136:5000
+2024-08-21 13:16:57,266 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.136:5000
+2024-08-21 13:16:57,266 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.136:5000
+2024-08-21 13:16:57,266 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.136:5000
+2024-08-21 13:16:57,273 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-08-21 13:16:57,273 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-08-21 13:16:57,273 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-08-21 13:16:57,273 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-08-21 13:16:57,273 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-08-21 13:17:00,518 - werkzeug - INFO - 192.168.1.136 - - [21/Aug/2024 13:17:00] "GET / HTTP/1.1" 200 -
+2024-08-21 13:17:00,518 - werkzeug - INFO - 192.168.1.136 - - [21/Aug/2024 13:17:00] "GET / HTTP/1.1" 200 -
+2024-08-21 13:17:00,518 - werkzeug - INFO - 192.168.1.136 - - [21/Aug/2024 13:17:00] "GET / HTTP/1.1" 200 -
+2024-08-21 13:17:00,518 - werkzeug - INFO - 192.168.1.136 - - [21/Aug/2024 13:17:00] "GET / HTTP/1.1" 200 -
+2024-08-21 13:17:00,518 - werkzeug - INFO - 192.168.1.136 - - [21/Aug/2024 13:17:00] "GET / HTTP/1.1" 200 -
+2024-08-21 13:17:47,318 - root - INFO - No GPU found. Running on CPU
+2024-08-21 13:17:47,318 - root - INFO - No GPU found. Running on CPU
+2024-08-21 13:17:47,333 - root - INFO - Starting Flask app: app
+2024-08-21 13:17:47,333 - root - INFO - Starting Flask app: app
+2024-08-21 13:17:47,333 - root - INFO - Starting Flask app: app
+2024-08-21 13:17:47,333 - root - INFO - Starting Flask app: app
+2024-08-21 13:17:47,333 - root - INFO - Starting Flask app: app
+2024-08-21 13:17:47,340 - root - INFO - Worker thread started
+2024-08-21 13:17:47,340 - root - INFO - Worker thread 0 started
+2024-08-21 13:17:47,340 - root - INFO - Worker thread started
+2024-08-21 13:17:47,340 - root - INFO - Worker thread 0 started
+2024-08-21 13:17:47,340 - root - INFO - Worker thread started
+2024-08-21 13:17:47,340 - root - INFO - Worker thread 0 started
+2024-08-21 13:17:47,340 - root - INFO - Worker thread started
+2024-08-21 13:17:47,340 - root - INFO - Worker thread 0 started
+2024-08-21 13:17:47,340 - root - INFO - Worker thread started
+2024-08-21 13:17:47,340 - root - INFO - Worker thread 0 started
+2024-08-21 13:17:47,348 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,348 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,350 - root - INFO - Worker thread started
+2024-08-21 13:17:47,350 - root - INFO - Worker thread 1 started
+2024-08-21 13:17:47,348 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,350 - root - INFO - Worker thread started
+2024-08-21 13:17:47,348 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,350 - root - INFO - Worker thread 1 started
+2024-08-21 13:17:47,350 - root - INFO - Worker thread started
+2024-08-21 13:17:47,348 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,350 - root - INFO - Worker thread 1 started
+2024-08-21 13:17:47,350 - root - INFO - Worker thread started
+2024-08-21 13:17:47,350 - root - INFO - Worker thread 1 started
+2024-08-21 13:17:47,350 - root - INFO - Worker thread started
+2024-08-21 13:17:47,350 - root - INFO - Worker thread 1 started
+2024-08-21 13:17:47,360 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,360 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,362 - root - INFO - Worker thread started
+2024-08-21 13:17:47,360 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,362 - root - INFO - Worker thread 2 started
+2024-08-21 13:17:47,362 - root - INFO - Worker thread started
+2024-08-21 13:17:47,362 - root - INFO - Worker thread 2 started
+2024-08-21 13:17:47,360 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,362 - root - INFO - Worker thread started
+2024-08-21 13:17:47,360 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,362 - root - INFO - Worker thread 2 started
+2024-08-21 13:17:47,362 - root - INFO - Worker thread started
+2024-08-21 13:17:47,362 - root - INFO - Worker thread 2 started
+2024-08-21 13:17:47,362 - root - INFO - Worker thread started
+2024-08-21 13:17:47,362 - root - INFO - Worker thread 2 started
+2024-08-21 13:17:47,372 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,372 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,374 - root - INFO - Worker thread started
+2024-08-21 13:17:47,374 - root - INFO - Worker thread 3 started
+2024-08-21 13:17:47,372 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,374 - root - INFO - Worker thread started
+2024-08-21 13:17:47,372 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,374 - root - INFO - Worker thread 3 started
+2024-08-21 13:17:47,374 - root - INFO - Worker thread started
+2024-08-21 13:17:47,374 - root - INFO - Worker thread 3 started
+2024-08-21 13:17:47,372 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,374 - root - INFO - Worker thread started
+2024-08-21 13:17:47,374 - root - INFO - Worker thread 3 started
+2024-08-21 13:17:47,374 - root - INFO - Worker thread started
+2024-08-21 13:17:47,374 - root - INFO - Worker thread 3 started
+2024-08-21 13:17:47,384 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,384 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,384 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,384 - root - INFO - Worker waiting for a task
+2024-08-21 13:17:47,384 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,765 - root - INFO - No GPU found. Running on CPU
+2024-08-21 13:22:41,765 - root - INFO - No GPU found. Running on CPU
+2024-08-21 13:22:41,783 - root - INFO - Starting Flask app: app
+2024-08-21 13:22:41,783 - root - INFO - Starting Flask app: app
+2024-08-21 13:22:41,783 - root - INFO - Starting Flask app: app
+2024-08-21 13:22:41,783 - root - INFO - Starting Flask app: app
+2024-08-21 13:22:41,783 - root - INFO - Starting Flask app: app
+2024-08-21 13:22:41,792 - root - INFO - Worker thread started
+2024-08-21 13:22:41,792 - root - INFO - Worker thread 0 started
+2024-08-21 13:22:41,792 - root - INFO - Worker thread started
+2024-08-21 13:22:41,792 - root - INFO - Worker thread 0 started
+2024-08-21 13:22:41,792 - root - INFO - Worker thread started
+2024-08-21 13:22:41,792 - root - INFO - Worker thread started
+2024-08-21 13:22:41,792 - root - INFO - Worker thread 0 started
+2024-08-21 13:22:41,792 - root - INFO - Worker thread started
+2024-08-21 13:22:41,792 - root - INFO - Worker thread 0 started
+2024-08-21 13:22:41,802 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,792 - root - INFO - Worker thread 0 started
+2024-08-21 13:22:41,802 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,805 - root - INFO - Worker thread started
+2024-08-21 13:22:41,802 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,805 - root - INFO - Worker thread 1 started
+2024-08-21 13:22:41,805 - root - INFO - Worker thread started
+2024-08-21 13:22:41,802 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,805 - root - INFO - Worker thread 1 started
+2024-08-21 13:22:41,805 - root - INFO - Worker thread started
+2024-08-21 13:22:41,802 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,805 - root - INFO - Worker thread 1 started
+2024-08-21 13:22:41,805 - root - INFO - Worker thread started
+2024-08-21 13:22:41,805 - root - INFO - Worker thread 1 started
+2024-08-21 13:22:41,805 - root - INFO - Worker thread started
+2024-08-21 13:22:41,805 - root - INFO - Worker thread 1 started
+2024-08-21 13:22:41,816 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,816 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,818 - root - INFO - Worker thread started
+2024-08-21 13:22:41,819 - root - INFO - Worker thread 2 started
+2024-08-21 13:22:41,816 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,818 - root - INFO - Worker thread started
+2024-08-21 13:22:41,816 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,819 - root - INFO - Worker thread 2 started
+2024-08-21 13:22:41,818 - root - INFO - Worker thread started
+2024-08-21 13:22:41,816 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,819 - root - INFO - Worker thread 2 started
+2024-08-21 13:22:41,818 - root - INFO - Worker thread started
+2024-08-21 13:22:41,819 - root - INFO - Worker thread 2 started
+2024-08-21 13:22:41,818 - root - INFO - Worker thread started
+2024-08-21 13:22:41,819 - root - INFO - Worker thread 2 started
+2024-08-21 13:22:41,830 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,831 - root - INFO - Worker thread started
+2024-08-21 13:22:41,830 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,831 - root - INFO - Worker thread 3 started
+2024-08-21 13:22:41,831 - root - INFO - Worker thread started
+2024-08-21 13:22:41,830 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,831 - root - INFO - Worker thread 3 started
+2024-08-21 13:22:41,831 - root - INFO - Worker thread started
+2024-08-21 13:22:41,830 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,831 - root - INFO - Worker thread 3 started
+2024-08-21 13:22:41,831 - root - INFO - Worker thread started
+2024-08-21 13:22:41,830 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,831 - root - INFO - Worker thread started
+2024-08-21 13:22:41,831 - root - INFO - Worker thread 3 started
+2024-08-21 13:22:41,831 - root - INFO - Worker thread 3 started
+2024-08-21 13:22:41,843 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,843 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,843 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,843 - root - INFO - Worker waiting for a task
+2024-08-21 13:22:41,843 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,234 - root - INFO - No GPU found. Running on CPU
+2024-08-21 13:36:59,234 - root - INFO - No GPU found. Running on CPU
+2024-08-21 13:36:59,256 - root - INFO - Starting Flask app: app
+2024-08-21 13:36:59,256 - root - INFO - Starting Flask app: app
+2024-08-21 13:36:59,256 - root - INFO - Starting Flask app: app
+2024-08-21 13:36:59,256 - root - INFO - Starting Flask app: app
+2024-08-21 13:36:59,256 - root - INFO - Starting Flask app: app
+2024-08-21 13:36:59,265 - root - INFO - Worker thread started
+2024-08-21 13:36:59,265 - root - INFO - Worker thread 0 started
+2024-08-21 13:36:59,265 - root - INFO - Worker thread started
+2024-08-21 13:36:59,265 - root - INFO - Worker thread started
+2024-08-21 13:36:59,265 - root - INFO - Worker thread 0 started
+2024-08-21 13:36:59,265 - root - INFO - Worker thread started
+2024-08-21 13:36:59,265 - root - INFO - Worker thread 0 started
+2024-08-21 13:36:59,265 - root - INFO - Worker thread 0 started
+2024-08-21 13:36:59,265 - root - INFO - Worker thread started
+2024-08-21 13:36:59,265 - root - INFO - Worker thread 0 started
+2024-08-21 13:36:59,275 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,275 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,277 - root - INFO - Worker thread started
+2024-08-21 13:36:59,275 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,278 - root - INFO - Worker thread 1 started
+2024-08-21 13:36:59,277 - root - INFO - Worker thread started
+2024-08-21 13:36:59,278 - root - INFO - Worker thread 1 started
+2024-08-21 13:36:59,275 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,277 - root - INFO - Worker thread started
+2024-08-21 13:36:59,278 - root - INFO - Worker thread 1 started
+2024-08-21 13:36:59,275 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,277 - root - INFO - Worker thread started
+2024-08-21 13:36:59,278 - root - INFO - Worker thread 1 started
+2024-08-21 13:36:59,277 - root - INFO - Worker thread started
+2024-08-21 13:36:59,278 - root - INFO - Worker thread 1 started
+2024-08-21 13:36:59,289 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,291 - root - INFO - Worker thread started
+2024-08-21 13:36:59,289 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,291 - root - INFO - Worker thread 2 started
+2024-08-21 13:36:59,291 - root - INFO - Worker thread started
+2024-08-21 13:36:59,289 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,291 - root - INFO - Worker thread 2 started
+2024-08-21 13:36:59,291 - root - INFO - Worker thread started
+2024-08-21 13:36:59,289 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,291 - root - INFO - Worker thread 2 started
+2024-08-21 13:36:59,291 - root - INFO - Worker thread started
+2024-08-21 13:36:59,289 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,291 - root - INFO - Worker thread 2 started
+2024-08-21 13:36:59,291 - root - INFO - Worker thread started
+2024-08-21 13:36:59,291 - root - INFO - Worker thread 2 started
+2024-08-21 13:36:59,301 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,302 - root - INFO - Worker thread started
+2024-08-21 13:36:59,301 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,302 - root - INFO - Worker thread 3 started
+2024-08-21 13:36:59,302 - root - INFO - Worker thread started
+2024-08-21 13:36:59,301 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,302 - root - INFO - Worker thread 3 started
+2024-08-21 13:36:59,301 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,302 - root - INFO - Worker thread started
+2024-08-21 13:36:59,302 - root - INFO - Worker thread 3 started
+2024-08-21 13:36:59,301 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,302 - root - INFO - Worker thread started
+2024-08-21 13:36:59,302 - root - INFO - Worker thread 3 started
+2024-08-21 13:36:59,302 - root - INFO - Worker thread started
+2024-08-21 13:36:59,302 - root - INFO - Worker thread 3 started
+2024-08-21 13:36:59,314 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,314 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,314 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,314 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,314 - root - INFO - Worker waiting for a task
+2024-08-21 13:36:59,406 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.136:5000
+2024-08-21 13:36:59,406 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.136:5000
+2024-08-21 13:36:59,406 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.136:5000
+2024-08-21 13:36:59,406 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.136:5000
+2024-08-21 13:36:59,406 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.136:5000
+2024-08-21 13:36:59,414 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-08-21 13:36:59,414 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-08-21 13:36:59,414 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-08-21 13:36:59,414 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-08-21 13:36:59,414 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-08-21 13:40:01,085 - root - INFO - No GPU found. Running on CPU
+2024-08-21 13:40:01,085 - root - INFO - No GPU found. Running on CPU
+2024-08-21 13:40:01,103 - root - INFO - Starting Flask app: app
+2024-08-21 13:40:01,103 - root - INFO - Starting Flask app: app
+2024-08-21 13:40:01,103 - root - INFO - Starting Flask app: app
+2024-08-21 13:40:01,103 - root - INFO - Starting Flask app: app
+2024-08-21 13:40:01,103 - root - INFO - Starting Flask app: app
+2024-08-21 13:40:01,108 - root - INFO - Worker thread started
+2024-08-21 13:40:01,109 - root - INFO - Worker thread 0 started
+2024-08-21 13:40:01,108 - root - INFO - Worker thread started
+2024-08-21 13:40:01,109 - root - INFO - Worker thread 0 started
+2024-08-21 13:40:01,108 - root - INFO - Worker thread started
+2024-08-21 13:40:01,109 - root - INFO - Worker thread 0 started
+2024-08-21 13:40:01,108 - root - INFO - Worker thread started
+2024-08-21 13:40:01,109 - root - INFO - Worker thread 0 started
+2024-08-21 13:40:01,108 - root - INFO - Worker thread started
+2024-08-21 13:40:01,109 - root - INFO - Worker thread 0 started
+2024-08-21 13:40:01,116 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,116 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,118 - root - INFO - Worker thread started
+2024-08-21 13:40:01,118 - root - INFO - Worker thread 1 started
+2024-08-21 13:40:01,116 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,118 - root - INFO - Worker thread started
+2024-08-21 13:40:01,116 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,118 - root - INFO - Worker thread 1 started
+2024-08-21 13:40:01,118 - root - INFO - Worker thread started
+2024-08-21 13:40:01,118 - root - INFO - Worker thread 1 started
+2024-08-21 13:40:01,116 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,118 - root - INFO - Worker thread started
+2024-08-21 13:40:01,118 - root - INFO - Worker thread 1 started
+2024-08-21 13:40:01,118 - root - INFO - Worker thread started
+2024-08-21 13:40:01,118 - root - INFO - Worker thread 1 started
+2024-08-21 13:40:01,128 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,130 - root - INFO - Worker thread started
+2024-08-21 13:40:01,128 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,130 - root - INFO - Worker thread 2 started
+2024-08-21 13:40:01,128 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,130 - root - INFO - Worker thread started
+2024-08-21 13:40:01,130 - root - INFO - Worker thread 2 started
+2024-08-21 13:40:01,128 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,130 - root - INFO - Worker thread started
+2024-08-21 13:40:01,130 - root - INFO - Worker thread 2 started
+2024-08-21 13:40:01,128 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,130 - root - INFO - Worker thread started
+2024-08-21 13:40:01,130 - root - INFO - Worker thread 2 started
+2024-08-21 13:40:01,130 - root - INFO - Worker thread started
+2024-08-21 13:40:01,130 - root - INFO - Worker thread 2 started
+2024-08-21 13:40:01,141 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,141 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,143 - root - INFO - Worker thread started
+2024-08-21 13:40:01,143 - root - INFO - Worker thread 3 started
+2024-08-21 13:40:01,141 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,143 - root - INFO - Worker thread started
+2024-08-21 13:40:01,143 - root - INFO - Worker thread 3 started
+2024-08-21 13:40:01,141 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,143 - root - INFO - Worker thread started
+2024-08-21 13:40:01,143 - root - INFO - Worker thread 3 started
+2024-08-21 13:40:01,141 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,143 - root - INFO - Worker thread started
+2024-08-21 13:40:01,143 - root - INFO - Worker thread 3 started
+2024-08-21 13:40:01,143 - root - INFO - Worker thread started
+2024-08-21 13:40:01,143 - root - INFO - Worker thread 3 started
+2024-08-21 13:40:01,154 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,154 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,154 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,154 - root - INFO - Worker waiting for a task
+2024-08-21 13:40:01,154 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,297 - root - INFO - No GPU found. Running on CPU
+2024-08-21 14:36:27,297 - root - INFO - No GPU found. Running on CPU
+2024-08-21 14:36:27,319 - root - INFO - Starting Flask app: app
+2024-08-21 14:36:27,319 - root - INFO - Starting Flask app: app
+2024-08-21 14:36:27,319 - root - INFO - Starting Flask app: app
+2024-08-21 14:36:27,319 - root - INFO - Starting Flask app: app
+2024-08-21 14:36:27,319 - root - INFO - Starting Flask app: app
+2024-08-21 14:36:27,327 - root - INFO - Worker thread started
+2024-08-21 14:36:27,327 - root - INFO - Worker thread 0 started
+2024-08-21 14:36:27,327 - root - INFO - Worker thread started
+2024-08-21 14:36:27,327 - root - INFO - Worker thread 0 started
+2024-08-21 14:36:27,327 - root - INFO - Worker thread started
+2024-08-21 14:36:27,327 - root - INFO - Worker thread 0 started
+2024-08-21 14:36:27,327 - root - INFO - Worker thread started
+2024-08-21 14:36:27,327 - root - INFO - Worker thread 0 started
+2024-08-21 14:36:27,327 - root - INFO - Worker thread started
+2024-08-21 14:36:27,336 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,327 - root - INFO - Worker thread 0 started
+2024-08-21 14:36:27,336 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,338 - root - INFO - Worker thread started
+2024-08-21 14:36:27,336 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,339 - root - INFO - Worker thread 1 started
+2024-08-21 14:36:27,338 - root - INFO - Worker thread started
+2024-08-21 14:36:27,336 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,339 - root - INFO - Worker thread 1 started
+2024-08-21 14:36:27,338 - root - INFO - Worker thread started
+2024-08-21 14:36:27,336 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,339 - root - INFO - Worker thread 1 started
+2024-08-21 14:36:27,338 - root - INFO - Worker thread started
+2024-08-21 14:36:27,339 - root - INFO - Worker thread 1 started
+2024-08-21 14:36:27,338 - root - INFO - Worker thread started
+2024-08-21 14:36:27,339 - root - INFO - Worker thread 1 started
+2024-08-21 14:36:27,350 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,351 - root - INFO - Worker thread started
+2024-08-21 14:36:27,350 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,353 - root - INFO - Worker thread 2 started
+2024-08-21 14:36:27,351 - root - INFO - Worker thread started
+2024-08-21 14:36:27,350 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,353 - root - INFO - Worker thread 2 started
+2024-08-21 14:36:27,350 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,351 - root - INFO - Worker thread started
+2024-08-21 14:36:27,350 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,351 - root - INFO - Worker thread started
+2024-08-21 14:36:27,353 - root - INFO - Worker thread 2 started
+2024-08-21 14:36:27,351 - root - INFO - Worker thread started
+2024-08-21 14:36:27,353 - root - INFO - Worker thread 2 started
+2024-08-21 14:36:27,363 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,353 - root - INFO - Worker thread 2 started
+2024-08-21 14:36:27,363 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,363 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,366 - root - INFO - Worker thread started
+2024-08-21 14:36:27,367 - root - INFO - Worker thread 3 started
+2024-08-21 14:36:27,363 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,366 - root - INFO - Worker thread started
+2024-08-21 14:36:27,363 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,367 - root - INFO - Worker thread 3 started
+2024-08-21 14:36:27,366 - root - INFO - Worker thread started
+2024-08-21 14:36:27,367 - root - INFO - Worker thread 3 started
+2024-08-21 14:36:27,366 - root - INFO - Worker thread started
+2024-08-21 14:36:27,367 - root - INFO - Worker thread 3 started
+2024-08-21 14:36:27,366 - root - INFO - Worker thread started
+2024-08-21 14:36:27,367 - root - INFO - Worker thread 3 started
+2024-08-21 14:36:27,378 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,378 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,378 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,378 - root - INFO - Worker waiting for a task
+2024-08-21 14:36:27,378 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,298 - root - INFO - No GPU found. Running on CPU
+2024-08-21 14:37:40,298 - root - INFO - No GPU found. Running on CPU
+2024-08-21 14:37:40,312 - root - INFO - Starting Flask app: app
+2024-08-21 14:37:40,312 - root - INFO - Starting Flask app: app
+2024-08-21 14:37:40,312 - root - INFO - Starting Flask app: app
+2024-08-21 14:37:40,312 - root - INFO - Starting Flask app: app
+2024-08-21 14:37:40,312 - root - INFO - Starting Flask app: app
+2024-08-21 14:37:40,319 - root - INFO - Worker thread started
+2024-08-21 14:37:40,319 - root - INFO - Worker thread 0 started
+2024-08-21 14:37:40,319 - root - INFO - Worker thread started
+2024-08-21 14:37:40,319 - root - INFO - Worker thread 0 started
+2024-08-21 14:37:40,319 - root - INFO - Worker thread started
+2024-08-21 14:37:40,319 - root - INFO - Worker thread 0 started
+2024-08-21 14:37:40,319 - root - INFO - Worker thread started
+2024-08-21 14:37:40,319 - root - INFO - Worker thread 0 started
+2024-08-21 14:37:40,319 - root - INFO - Worker thread started
+2024-08-21 14:37:40,319 - root - INFO - Worker thread 0 started
+2024-08-21 14:37:40,326 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,328 - root - INFO - Worker thread started
+2024-08-21 14:37:40,326 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,328 - root - INFO - Worker thread 1 started
+2024-08-21 14:37:40,328 - root - INFO - Worker thread started
+2024-08-21 14:37:40,328 - root - INFO - Worker thread 1 started
+2024-08-21 14:37:40,326 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,328 - root - INFO - Worker thread started
+2024-08-21 14:37:40,328 - root - INFO - Worker thread 1 started
+2024-08-21 14:37:40,326 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,328 - root - INFO - Worker thread started
+2024-08-21 14:37:40,328 - root - INFO - Worker thread 1 started
+2024-08-21 14:37:40,326 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,328 - root - INFO - Worker thread started
+2024-08-21 14:37:40,328 - root - INFO - Worker thread 1 started
+2024-08-21 14:37:40,338 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,340 - root - INFO - Worker thread started
+2024-08-21 14:37:40,338 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,340 - root - INFO - Worker thread 2 started
+2024-08-21 14:37:40,340 - root - INFO - Worker thread started
+2024-08-21 14:37:40,338 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,340 - root - INFO - Worker thread 2 started
+2024-08-21 14:37:40,340 - root - INFO - Worker thread started
+2024-08-21 14:37:40,338 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,340 - root - INFO - Worker thread 2 started
+2024-08-21 14:37:40,340 - root - INFO - Worker thread started
+2024-08-21 14:37:40,338 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,340 - root - INFO - Worker thread 2 started
+2024-08-21 14:37:40,340 - root - INFO - Worker thread started
+2024-08-21 14:37:40,340 - root - INFO - Worker thread 2 started
+2024-08-21 14:37:40,351 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,353 - root - INFO - Worker thread started
+2024-08-21 14:37:40,351 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,353 - root - INFO - Worker thread 3 started
+2024-08-21 14:37:40,353 - root - INFO - Worker thread started
+2024-08-21 14:37:40,351 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,353 - root - INFO - Worker thread 3 started
+2024-08-21 14:37:40,353 - root - INFO - Worker thread started
+2024-08-21 14:37:40,351 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,353 - root - INFO - Worker thread 3 started
+2024-08-21 14:37:40,353 - root - INFO - Worker thread started
+2024-08-21 14:37:40,351 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,353 - root - INFO - Worker thread 3 started
+2024-08-21 14:37:40,353 - root - INFO - Worker thread started
+2024-08-21 14:37:40,353 - root - INFO - Worker thread 3 started
+2024-08-21 14:37:40,364 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,364 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,364 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,364 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:40,364 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,242 - root - INFO - No GPU found. Running on CPU
+2024-08-21 14:37:41,242 - root - INFO - No GPU found. Running on CPU
+2024-08-21 14:37:41,257 - root - INFO - Starting Flask app: app
+2024-08-21 14:37:41,257 - root - INFO - Starting Flask app: app
+2024-08-21 14:37:41,257 - root - INFO - Starting Flask app: app
+2024-08-21 14:37:41,257 - root - INFO - Starting Flask app: app
+2024-08-21 14:37:41,257 - root - INFO - Starting Flask app: app
+2024-08-21 14:37:41,264 - root - INFO - Worker thread started
+2024-08-21 14:37:41,264 - root - INFO - Worker thread 0 started
+2024-08-21 14:37:41,264 - root - INFO - Worker thread started
+2024-08-21 14:37:41,264 - root - INFO - Worker thread 0 started
+2024-08-21 14:37:41,264 - root - INFO - Worker thread started
+2024-08-21 14:37:41,264 - root - INFO - Worker thread 0 started
+2024-08-21 14:37:41,264 - root - INFO - Worker thread started
+2024-08-21 14:37:41,264 - root - INFO - Worker thread 0 started
+2024-08-21 14:37:41,264 - root - INFO - Worker thread started
+2024-08-21 14:37:41,264 - root - INFO - Worker thread 0 started
+2024-08-21 14:37:41,273 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,273 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,275 - root - INFO - Worker thread started
+2024-08-21 14:37:41,275 - root - INFO - Worker thread 1 started
+2024-08-21 14:37:41,273 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,275 - root - INFO - Worker thread started
+2024-08-21 14:37:41,275 - root - INFO - Worker thread 1 started
+2024-08-21 14:37:41,273 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,275 - root - INFO - Worker thread started
+2024-08-21 14:37:41,275 - root - INFO - Worker thread 1 started
+2024-08-21 14:37:41,273 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,275 - root - INFO - Worker thread started
+2024-08-21 14:37:41,275 - root - INFO - Worker thread 1 started
+2024-08-21 14:37:41,275 - root - INFO - Worker thread started
+2024-08-21 14:37:41,275 - root - INFO - Worker thread 1 started
+2024-08-21 14:37:41,285 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,287 - root - INFO - Worker thread started
+2024-08-21 14:37:41,285 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,287 - root - INFO - Worker thread 2 started
+2024-08-21 14:37:41,287 - root - INFO - Worker thread started
+2024-08-21 14:37:41,285 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,287 - root - INFO - Worker thread 2 started
+2024-08-21 14:37:41,287 - root - INFO - Worker thread started
+2024-08-21 14:37:41,285 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,287 - root - INFO - Worker thread 2 started
+2024-08-21 14:37:41,287 - root - INFO - Worker thread started
+2024-08-21 14:37:41,285 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,287 - root - INFO - Worker thread 2 started
+2024-08-21 14:37:41,287 - root - INFO - Worker thread started
+2024-08-21 14:37:41,287 - root - INFO - Worker thread 2 started
+2024-08-21 14:37:41,297 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,298 - root - INFO - Worker thread started
+2024-08-21 14:37:41,297 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,298 - root - INFO - Worker thread 3 started
+2024-08-21 14:37:41,298 - root - INFO - Worker thread started
+2024-08-21 14:37:41,297 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,298 - root - INFO - Worker thread 3 started
+2024-08-21 14:37:41,298 - root - INFO - Worker thread started
+2024-08-21 14:37:41,297 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,298 - root - INFO - Worker thread 3 started
+2024-08-21 14:37:41,298 - root - INFO - Worker thread started
+2024-08-21 14:37:41,298 - root - INFO - Worker thread 3 started
+2024-08-21 14:37:41,297 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,298 - root - INFO - Worker thread started
+2024-08-21 14:37:41,298 - root - INFO - Worker thread 3 started
+2024-08-21 14:37:41,310 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,310 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,310 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,310 - root - INFO - Worker waiting for a task
+2024-08-21 14:37:41,310 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,711 - root - INFO - Using GPU for TensorFlow operations
+2024-08-21 14:57:56,711 - root - INFO - Using GPU for TensorFlow operations
+2024-08-21 14:57:56,735 - root - INFO - Starting Flask app: app
+2024-08-21 14:57:56,735 - root - INFO - Starting Flask app: app
+2024-08-21 14:57:56,735 - root - INFO - Starting Flask app: app
+2024-08-21 14:57:56,735 - root - INFO - Starting Flask app: app
+2024-08-21 14:57:56,735 - root - INFO - Starting Flask app: app
+2024-08-21 14:57:56,743 - root - INFO - Worker thread started
+2024-08-21 14:57:56,744 - root - INFO - Worker thread 0 started
+2024-08-21 14:57:56,743 - root - INFO - Worker thread started
+2024-08-21 14:57:56,744 - root - INFO - Worker thread 0 started
+2024-08-21 14:57:56,743 - root - INFO - Worker thread started
+2024-08-21 14:57:56,744 - root - INFO - Worker thread 0 started
+2024-08-21 14:57:56,743 - root - INFO - Worker thread started
+2024-08-21 14:57:56,744 - root - INFO - Worker thread 0 started
+2024-08-21 14:57:56,743 - root - INFO - Worker thread started
+2024-08-21 14:57:56,744 - root - INFO - Worker thread 0 started
+2024-08-21 14:57:56,752 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,752 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,754 - root - INFO - Worker thread started
+2024-08-21 14:57:56,752 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,754 - root - INFO - Worker thread 1 started
+2024-08-21 14:57:56,754 - root - INFO - Worker thread started
+2024-08-21 14:57:56,752 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,754 - root - INFO - Worker thread 1 started
+2024-08-21 14:57:56,754 - root - INFO - Worker thread started
+2024-08-21 14:57:56,752 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,754 - root - INFO - Worker thread 1 started
+2024-08-21 14:57:56,754 - root - INFO - Worker thread started
+2024-08-21 14:57:56,754 - root - INFO - Worker thread started
+2024-08-21 14:57:56,754 - root - INFO - Worker thread 1 started
+2024-08-21 14:57:56,754 - root - INFO - Worker thread 1 started
+2024-08-21 14:57:56,764 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,764 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,764 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,767 - root - INFO - Worker thread started
+2024-08-21 14:57:56,768 - root - INFO - Worker thread 2 started
+2024-08-21 14:57:56,764 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,767 - root - INFO - Worker thread started
+2024-08-21 14:57:56,764 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,768 - root - INFO - Worker thread 2 started
+2024-08-21 14:57:56,767 - root - INFO - Worker thread started
+2024-08-21 14:57:56,768 - root - INFO - Worker thread 2 started
+2024-08-21 14:57:56,767 - root - INFO - Worker thread started
+2024-08-21 14:57:56,768 - root - INFO - Worker thread 2 started
+2024-08-21 14:57:56,767 - root - INFO - Worker thread started
+2024-08-21 14:57:56,768 - root - INFO - Worker thread 2 started
+2024-08-21 14:57:56,777 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,777 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,780 - root - INFO - Worker thread started
+2024-08-21 14:57:56,777 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,780 - root - INFO - Worker thread 3 started
+2024-08-21 14:57:56,780 - root - INFO - Worker thread started
+2024-08-21 14:57:56,777 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,777 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,780 - root - INFO - Worker thread 3 started
+2024-08-21 14:57:56,780 - root - INFO - Worker thread started
+2024-08-21 14:57:56,780 - root - INFO - Worker thread 3 started
+2024-08-21 14:57:56,780 - root - INFO - Worker thread started
+2024-08-21 14:57:56,780 - root - INFO - Worker thread 3 started
+2024-08-21 14:57:56,780 - root - INFO - Worker thread started
+2024-08-21 14:57:56,780 - root - INFO - Worker thread 3 started
+2024-08-21 14:57:56,789 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,789 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,789 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,789 - root - INFO - Worker waiting for a task
+2024-08-21 14:57:56,789 - root - INFO - Worker waiting for a task
+2024-08-21 15:00:11,183 - root - INFO - Generated unique task ID: task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:11,183 - root - INFO - Generated unique task ID: task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:11,183 - root - INFO - Generated unique task ID: task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:11,183 - root - INFO - Generated unique task ID: task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:11,183 - root - INFO - Generated unique task ID: task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:11,186 - core.utils.database - INFO - Inserting task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81 for UID None with status pending, final_task: False
+2024-08-21 15:00:11,186 - core.utils.database - INFO - Inserting task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81 for UID None with status pending, final_task: False
+2024-08-21 15:00:11,186 - core.utils.database - INFO - Inserting task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81 for UID None with status pending, final_task: False
+2024-08-21 15:00:11,186 - core.utils.database - INFO - Inserting task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81 for UID None with status pending, final_task: False
+2024-08-21 15:00:11,186 - core.utils.database - INFO - Inserting task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81 for UID None with status pending, final_task: False
+2024-08-21 15:00:11,196 - root - INFO - Added task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81 to the queue
+2024-08-21 15:00:11,196 - root - INFO - Added task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81 to the queue
+2024-08-21 15:00:11,196 - root - INFO - Worker received task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:11,196 - root - INFO - Added task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81 to the queue
+2024-08-21 15:00:11,196 - root - INFO - Worker received task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:11,196 - root - INFO - Added task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81 to the queue
+2024-08-21 15:00:11,196 - root - INFO - Added task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81 to the queue
+2024-08-21 15:00:11,196 - root - INFO - Worker received task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:11,201 - root - INFO - Generated unique task ID: task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:11,196 - root - INFO - Worker received task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:11,201 - root - INFO - Generated unique task ID: task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:11,196 - root - INFO - Worker received task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:11,201 - root - INFO - Generated unique task ID: task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:11,201 - root - INFO - Generated unique task ID: task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:11,201 - root - INFO - Generated unique task ID: task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:11,206 - core.utils.database - INFO - Inserting task task-1724227211-f4d8ca400a594dde98df1d270d9653cb for UID thanhtan2136-1 with status pending, final_task: True
+2024-08-21 15:00:11,206 - core.utils.database - INFO - Inserting task task-1724227211-f4d8ca400a594dde98df1d270d9653cb for UID thanhtan2136-1 with status pending, final_task: True
+2024-08-21 15:00:11,206 - core.utils.database - INFO - Inserting task task-1724227211-f4d8ca400a594dde98df1d270d9653cb for UID thanhtan2136-1 with status pending, final_task: True
+2024-08-21 15:00:11,206 - core.utils.database - INFO - Inserting task task-1724227211-f4d8ca400a594dde98df1d270d9653cb for UID thanhtan2136-1 with status pending, final_task: True
+2024-08-21 15:00:11,206 - core.utils.database - INFO - Inserting task task-1724227211-f4d8ca400a594dde98df1d270d9653cb for UID thanhtan2136-1 with status pending, final_task: True
+2024-08-21 15:00:11,212 - root - INFO - Worker picked up task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:11,212 - root - INFO - Worker picked up task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:11,212 - root - INFO - Worker picked up task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:11,212 - root - INFO - Worker picked up task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:11,212 - root - INFO - Worker picked up task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:11,217 - root - INFO - Running background processing for UID thanhtan2136-1
+2024-08-21 15:00:11,218 - root - INFO - Added task task-1724227211-f4d8ca400a594dde98df1d270d9653cb to the queue
+2024-08-21 15:00:11,217 - root - INFO - Running background processing for UID thanhtan2136-1
+2024-08-21 15:00:11,218 - root - INFO - Worker received task task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:11,218 - root - INFO - Added task task-1724227211-f4d8ca400a594dde98df1d270d9653cb to the queue
+2024-08-21 15:00:11,218 - root - INFO - Worker received task task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:11,217 - root - INFO - Running background processing for UID thanhtan2136-1
+2024-08-21 15:00:11,218 - root - INFO - Added task task-1724227211-f4d8ca400a594dde98df1d270d9653cb to the queue
+2024-08-21 15:00:11,217 - root - INFO - Running background processing for UID thanhtan2136-1
+2024-08-21 15:00:11,218 - root - INFO - Worker received task task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:11,218 - root - INFO - Added task task-1724227211-f4d8ca400a594dde98df1d270d9653cb to the queue
+2024-08-21 15:00:11,218 - root - INFO - Worker received task task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:11,217 - root - INFO - Running background processing for UID thanhtan2136-1
+2024-08-21 15:00:11,218 - root - INFO - Added task task-1724227211-f4d8ca400a594dde98df1d270d9653cb to the queue
+2024-08-21 15:00:11,227 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1.png
+2024-08-21 15:00:11,218 - root - INFO - Worker received task task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:11,227 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1.png
+2024-08-21 15:00:11,227 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1.png
+2024-08-21 15:00:11,227 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1.png
+2024-08-21 15:00:11,227 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1.png
+2024-08-21 15:00:11,239 - root - INFO - Worker picked up task task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:11,239 - root - INFO - Worker picked up task task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:11,239 - root - INFO - Worker picked up task task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:11,239 - root - INFO - Worker picked up task task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:11,239 - root - INFO - Worker picked up task task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:11,244 - root - INFO - Running final task for UID thanhtan2136-1
+2024-08-21 15:00:11,244 - root - INFO - Running final task for UID thanhtan2136-1
+2024-08-21 15:00:11,244 - root - INFO - Running final task for UID thanhtan2136-1
+2024-08-21 15:00:11,244 - root - INFO - Running final task for UID thanhtan2136-1
+2024-08-21 15:00:11,244 - root - INFO - Running final task for UID thanhtan2136-1
+2024-08-21 15:00:17,392 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:17,392 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:17,392 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:17,392 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:17,392 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:17,407 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug1.png
+2024-08-21 15:00:17,407 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug1.png
+2024-08-21 15:00:17,407 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug1.png
+2024-08-21 15:00:17,407 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug1.png
+2024-08-21 15:00:17,407 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug1.png
+2024-08-21 15:00:19,285 - root - INFO - Worker completed task task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:19,285 - root - INFO - Worker completed task task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:19,285 - root - INFO - Worker completed task task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:19,285 - root - INFO - Worker completed task task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:19,285 - root - INFO - Worker completed task task-1724227211-f4d8ca400a594dde98df1d270d9653cb
+2024-08-21 15:00:19,289 - root - INFO - Worker waiting for a task
+2024-08-21 15:00:19,289 - root - INFO - Worker waiting for a task
+2024-08-21 15:00:19,289 - root - INFO - Worker waiting for a task
+2024-08-21 15:00:19,289 - root - INFO - Worker waiting for a task
+2024-08-21 15:00:19,289 - root - INFO - Worker waiting for a task
+2024-08-21 15:00:23,246 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:23,246 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:23,246 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:23,246 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:23,246 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:23,252 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug2.png
+2024-08-21 15:00:23,252 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug2.png
+2024-08-21 15:00:23,252 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug2.png
+2024-08-21 15:00:23,252 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug2.png
+2024-08-21 15:00:23,252 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug2.png
+2024-08-21 15:00:24,258 - root - INFO - Generated unique task ID: task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:00:24,258 - root - INFO - Generated unique task ID: task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:00:24,258 - root - INFO - Generated unique task ID: task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:00:24,258 - root - INFO - Generated unique task ID: task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:00:24,258 - root - INFO - Generated unique task ID: task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:00:24,262 - core.utils.database - INFO - Inserting task task-1724227224-23b2e686de5449f3a32b7406b36a6845 for UID None with status pending, final_task: False
+2024-08-21 15:00:24,262 - core.utils.database - INFO - Inserting task task-1724227224-23b2e686de5449f3a32b7406b36a6845 for UID None with status pending, final_task: False
+2024-08-21 15:00:24,262 - core.utils.database - INFO - Inserting task task-1724227224-23b2e686de5449f3a32b7406b36a6845 for UID None with status pending, final_task: False
+2024-08-21 15:00:24,262 - core.utils.database - INFO - Inserting task task-1724227224-23b2e686de5449f3a32b7406b36a6845 for UID None with status pending, final_task: False
+2024-08-21 15:00:24,262 - core.utils.database - INFO - Inserting task task-1724227224-23b2e686de5449f3a32b7406b36a6845 for UID None with status pending, final_task: False
+2024-08-21 15:00:24,270 - root - INFO - Added task task-1724227224-23b2e686de5449f3a32b7406b36a6845 to the queue
+2024-08-21 15:00:24,270 - root - INFO - Added task task-1724227224-23b2e686de5449f3a32b7406b36a6845 to the queue
+2024-08-21 15:00:24,270 - root - INFO - Worker received task task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:00:24,270 - root - INFO - Added task task-1724227224-23b2e686de5449f3a32b7406b36a6845 to the queue
+2024-08-21 15:00:24,270 - root - INFO - Worker received task task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:00:24,270 - root - INFO - Added task task-1724227224-23b2e686de5449f3a32b7406b36a6845 to the queue
+2024-08-21 15:00:24,270 - root - INFO - Added task task-1724227224-23b2e686de5449f3a32b7406b36a6845 to the queue
+2024-08-21 15:00:24,270 - root - INFO - Worker received task task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:00:24,275 - root - INFO - Generated unique task ID: task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:24,270 - root - INFO - Worker received task task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:00:24,275 - root - INFO - Generated unique task ID: task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:24,275 - root - INFO - Generated unique task ID: task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:24,270 - root - INFO - Worker received task task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:00:24,275 - root - INFO - Generated unique task ID: task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:24,275 - root - INFO - Generated unique task ID: task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:24,279 - core.utils.database - INFO - Inserting task task-1724227224-0a14add84ce54172aa57ca38460b4b6d for UID thanhtan2136-2 with status pending, final_task: True
+2024-08-21 15:00:24,279 - core.utils.database - INFO - Inserting task task-1724227224-0a14add84ce54172aa57ca38460b4b6d for UID thanhtan2136-2 with status pending, final_task: True
+2024-08-21 15:00:24,279 - core.utils.database - INFO - Inserting task task-1724227224-0a14add84ce54172aa57ca38460b4b6d for UID thanhtan2136-2 with status pending, final_task: True
+2024-08-21 15:00:24,279 - core.utils.database - INFO - Inserting task task-1724227224-0a14add84ce54172aa57ca38460b4b6d for UID thanhtan2136-2 with status pending, final_task: True
+2024-08-21 15:00:24,279 - core.utils.database - INFO - Inserting task task-1724227224-0a14add84ce54172aa57ca38460b4b6d for UID thanhtan2136-2 with status pending, final_task: True
+2024-08-21 15:00:24,286 - root - INFO - Worker picked up task task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:00:24,286 - root - INFO - Worker picked up task task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:00:24,286 - root - INFO - Worker picked up task task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:00:24,286 - root - INFO - Worker picked up task task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:00:24,286 - root - INFO - Worker picked up task task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:00:24,291 - root - INFO - Running background processing for UID thanhtan2136-2
+2024-08-21 15:00:24,291 - root - INFO - Running background processing for UID thanhtan2136-2
+2024-08-21 15:00:24,293 - root - INFO - Added task task-1724227224-0a14add84ce54172aa57ca38460b4b6d to the queue
+2024-08-21 15:00:24,291 - root - INFO - Running background processing for UID thanhtan2136-2
+2024-08-21 15:00:24,294 - root - INFO - Worker received task task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:24,293 - root - INFO - Added task task-1724227224-0a14add84ce54172aa57ca38460b4b6d to the queue
+2024-08-21 15:00:24,291 - root - INFO - Running background processing for UID thanhtan2136-2
+2024-08-21 15:00:24,293 - root - INFO - Added task task-1724227224-0a14add84ce54172aa57ca38460b4b6d to the queue
+2024-08-21 15:00:24,294 - root - INFO - Worker received task task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:24,291 - root - INFO - Running background processing for UID thanhtan2136-2
+2024-08-21 15:00:24,293 - root - INFO - Added task task-1724227224-0a14add84ce54172aa57ca38460b4b6d to the queue
+2024-08-21 15:00:24,294 - root - INFO - Worker received task task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:24,293 - root - INFO - Added task task-1724227224-0a14add84ce54172aa57ca38460b4b6d to the queue
+2024-08-21 15:00:24,299 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2.png
+2024-08-21 15:00:24,294 - root - INFO - Worker received task task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:24,299 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2.png
+2024-08-21 15:00:24,294 - root - INFO - Worker received task task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:24,299 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2.png
+2024-08-21 15:00:24,299 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2.png
+2024-08-21 15:00:24,299 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2.png
+2024-08-21 15:00:24,312 - root - INFO - Worker picked up task task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:24,312 - root - INFO - Worker picked up task task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:24,312 - root - INFO - Worker picked up task task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:24,312 - root - INFO - Worker picked up task task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:24,312 - root - INFO - Worker picked up task task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:24,316 - root - INFO - Running final task for UID thanhtan2136-2
+2024-08-21 15:00:24,316 - root - INFO - Running final task for UID thanhtan2136-2
+2024-08-21 15:00:24,316 - root - INFO - Running final task for UID thanhtan2136-2
+2024-08-21 15:00:24,316 - root - INFO - Running final task for UID thanhtan2136-2
+2024-08-21 15:00:24,316 - root - INFO - Running final task for UID thanhtan2136-2
+2024-08-21 15:00:29,520 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:29,520 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:29,520 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:29,520 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:29,520 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:29,526 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug3.png
+2024-08-21 15:00:29,526 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug3.png
+2024-08-21 15:00:29,526 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug3.png
+2024-08-21 15:00:29,526 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug3.png
+2024-08-21 15:00:29,526 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug3.png
+2024-08-21 15:00:30,555 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:30,555 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:30,555 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:30,555 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:30,555 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:30,571 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug1.png
+2024-08-21 15:00:30,571 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug1.png
+2024-08-21 15:00:30,571 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug1.png
+2024-08-21 15:00:30,571 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug1.png
+2024-08-21 15:00:30,571 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug1.png
+2024-08-21 15:00:33,237 - root - INFO - Worker completed task task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:33,237 - root - INFO - Worker completed task task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:33,237 - root - INFO - Worker completed task task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:33,237 - root - INFO - Worker completed task task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:33,237 - root - INFO - Worker completed task task-1724227224-0a14add84ce54172aa57ca38460b4b6d
+2024-08-21 15:00:33,240 - root - INFO - Worker waiting for a task
+2024-08-21 15:00:33,240 - root - INFO - Worker waiting for a task
+2024-08-21 15:00:33,240 - root - INFO - Worker waiting for a task
+2024-08-21 15:00:33,240 - root - INFO - Worker waiting for a task
+2024-08-21 15:00:33,240 - root - INFO - Worker waiting for a task
+2024-08-21 15:00:35,271 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:35,271 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:35,271 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:35,271 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:35,271 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:35,276 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug4.png
+2024-08-21 15:00:35,276 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug4.png
+2024-08-21 15:00:35,276 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug4.png
+2024-08-21 15:00:35,276 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug4.png
+2024-08-21 15:00:35,276 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150010_thanhtan2136-1_aug4.png
+2024-08-21 15:00:36,551 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:36,551 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:36,551 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:36,551 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:36,551 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:36,554 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug2.png
+2024-08-21 15:00:36,554 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug2.png
+2024-08-21 15:00:36,554 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug2.png
+2024-08-21 15:00:36,554 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug2.png
+2024-08-21 15:00:36,554 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug2.png
+2024-08-21 15:00:41,207 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:41,207 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:41,207 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:41,207 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:41,207 - root - INFO - Face registered successfully for UID thanhtan2136-1
+2024-08-21 15:00:41,211 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150011_thanhtan2136-1_aug5.png
+2024-08-21 15:00:41,211 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150011_thanhtan2136-1_aug5.png
+2024-08-21 15:00:41,211 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150011_thanhtan2136-1_aug5.png
+2024-08-21 15:00:41,211 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150011_thanhtan2136-1_aug5.png
+2024-08-21 15:00:41,211 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150011_thanhtan2136-1_aug5.png
+2024-08-21 15:00:42,373 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:42,373 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:42,373 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:42,373 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:42,373 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:42,377 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug3.png
+2024-08-21 15:00:42,377 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug3.png
+2024-08-21 15:00:42,377 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug3.png
+2024-08-21 15:00:42,377 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug3.png
+2024-08-21 15:00:42,377 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug3.png
+2024-08-21 15:00:46,953 - core.utils.database - INFO - Starting a new transaction...
+2024-08-21 15:00:46,953 - core.utils.database - INFO - Starting a new transaction...
+2024-08-21 15:00:46,953 - core.utils.database - INFO - Starting a new transaction...
+2024-08-21 15:00:46,953 - core.utils.database - INFO - Starting a new transaction...
+2024-08-21 15:00:46,953 - core.utils.database - INFO - Starting a new transaction...
+2024-08-21 15:00:46,970 - core.utils.database - INFO - Committing the transaction...
+2024-08-21 15:00:46,970 - core.utils.database - INFO - Committing the transaction...
+2024-08-21 15:00:46,970 - core.utils.database - INFO - Committing the transaction...
+2024-08-21 15:00:46,970 - core.utils.database - INFO - Committing the transaction...
+2024-08-21 15:00:46,970 - core.utils.database - INFO - Committing the transaction...
+2024-08-21 15:00:47,001 - root - INFO - Worker completed task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:47,001 - root - INFO - Worker completed task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:47,001 - root - INFO - Worker completed task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:47,001 - root - INFO - Worker completed task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:47,001 - root - INFO - Worker completed task task-1724227211-15f8d651c80748dea0a3d5c29e3bbc81
+2024-08-21 15:00:47,006 - root - INFO - Worker waiting for a task
+2024-08-21 15:00:47,006 - root - INFO - Worker waiting for a task
+2024-08-21 15:00:47,006 - root - INFO - Worker waiting for a task
+2024-08-21 15:00:47,006 - root - INFO - Worker waiting for a task
+2024-08-21 15:00:47,006 - root - INFO - Worker waiting for a task
+2024-08-21 15:00:48,213 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:48,213 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:48,213 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:48,213 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:48,213 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:48,216 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug4.png
+2024-08-21 15:00:48,216 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug4.png
+2024-08-21 15:00:48,216 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug4.png
+2024-08-21 15:00:48,216 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug4.png
+2024-08-21 15:00:48,216 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug4.png
+2024-08-21 15:00:54,202 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:54,202 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:54,202 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:54,202 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:54,202 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:00:54,207 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug5.png
+2024-08-21 15:00:54,207 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug5.png
+2024-08-21 15:00:54,207 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug5.png
+2024-08-21 15:00:54,207 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug5.png
+2024-08-21 15:00:54,207 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug5.png
+2024-08-21 15:01:00,175 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:00,175 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:00,175 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:00,175 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:00,175 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:00,181 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug6.png
+2024-08-21 15:01:00,181 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug6.png
+2024-08-21 15:01:00,181 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug6.png
+2024-08-21 15:01:00,181 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug6.png
+2024-08-21 15:01:00,181 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150023_thanhtan2136-2_aug6.png
+2024-08-21 15:01:05,980 - core.utils.database - INFO - Starting a new transaction...
+2024-08-21 15:01:05,980 - core.utils.database - INFO - Starting a new transaction...
+2024-08-21 15:01:05,980 - core.utils.database - INFO - Starting a new transaction...
+2024-08-21 15:01:05,980 - core.utils.database - INFO - Starting a new transaction...
+2024-08-21 15:01:05,980 - core.utils.database - INFO - Starting a new transaction...
+2024-08-21 15:01:05,995 - core.utils.database - INFO - Committing the transaction...
+2024-08-21 15:01:05,995 - core.utils.database - INFO - Committing the transaction...
+2024-08-21 15:01:05,995 - core.utils.database - INFO - Committing the transaction...
+2024-08-21 15:01:05,995 - core.utils.database - INFO - Committing the transaction...
+2024-08-21 15:01:05,995 - core.utils.database - INFO - Committing the transaction...
+2024-08-21 15:01:06,021 - root - INFO - Worker completed task task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:01:06,021 - root - INFO - Worker completed task task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:01:06,021 - root - INFO - Worker completed task task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:01:06,021 - root - INFO - Worker completed task task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:01:06,021 - root - INFO - Worker completed task task-1724227224-23b2e686de5449f3a32b7406b36a6845
+2024-08-21 15:01:06,026 - root - INFO - Worker waiting for a task
+2024-08-21 15:01:06,026 - root - INFO - Worker waiting for a task
+2024-08-21 15:01:06,026 - root - INFO - Worker waiting for a task
+2024-08-21 15:01:06,026 - root - INFO - Worker waiting for a task
+2024-08-21 15:01:06,026 - root - INFO - Worker waiting for a task
+2024-08-21 15:01:09,893 - root - INFO - Generated unique task ID: task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:09,893 - root - INFO - Generated unique task ID: task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:09,893 - root - INFO - Generated unique task ID: task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:09,893 - root - INFO - Generated unique task ID: task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:09,893 - root - INFO - Generated unique task ID: task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:09,896 - core.utils.database - INFO - Inserting task task-1724227269-b82f0de832544eb5a3acf34b94a03462 for UID None with status pending, final_task: False
+2024-08-21 15:01:09,896 - core.utils.database - INFO - Inserting task task-1724227269-b82f0de832544eb5a3acf34b94a03462 for UID None with status pending, final_task: False
+2024-08-21 15:01:09,896 - core.utils.database - INFO - Inserting task task-1724227269-b82f0de832544eb5a3acf34b94a03462 for UID None with status pending, final_task: False
+2024-08-21 15:01:09,896 - core.utils.database - INFO - Inserting task task-1724227269-b82f0de832544eb5a3acf34b94a03462 for UID None with status pending, final_task: False
+2024-08-21 15:01:09,896 - core.utils.database - INFO - Inserting task task-1724227269-b82f0de832544eb5a3acf34b94a03462 for UID None with status pending, final_task: False
+2024-08-21 15:01:09,905 - root - INFO - Added task task-1724227269-b82f0de832544eb5a3acf34b94a03462 to the queue
+2024-08-21 15:01:09,905 - root - INFO - Added task task-1724227269-b82f0de832544eb5a3acf34b94a03462 to the queue
+2024-08-21 15:01:09,905 - root - INFO - Worker received task task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:09,905 - root - INFO - Added task task-1724227269-b82f0de832544eb5a3acf34b94a03462 to the queue
+2024-08-21 15:01:09,905 - root - INFO - Added task task-1724227269-b82f0de832544eb5a3acf34b94a03462 to the queue
+2024-08-21 15:01:09,905 - root - INFO - Worker received task task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:09,905 - root - INFO - Added task task-1724227269-b82f0de832544eb5a3acf34b94a03462 to the queue
+2024-08-21 15:01:09,908 - root - INFO - Generated unique task ID: task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:09,905 - root - INFO - Worker received task task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:09,908 - root - INFO - Generated unique task ID: task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:09,908 - root - INFO - Generated unique task ID: task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:09,905 - root - INFO - Worker received task task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:09,908 - root - INFO - Generated unique task ID: task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:09,905 - root - INFO - Worker received task task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:09,908 - root - INFO - Generated unique task ID: task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:09,913 - core.utils.database - INFO - Inserting task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b for UID thanhtan2136-2 with status pending, final_task: True
+2024-08-21 15:01:09,913 - core.utils.database - INFO - Inserting task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b for UID thanhtan2136-2 with status pending, final_task: True
+2024-08-21 15:01:09,913 - core.utils.database - INFO - Inserting task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b for UID thanhtan2136-2 with status pending, final_task: True
+2024-08-21 15:01:09,913 - core.utils.database - INFO - Inserting task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b for UID thanhtan2136-2 with status pending, final_task: True
+2024-08-21 15:01:09,913 - core.utils.database - INFO - Inserting task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b for UID thanhtan2136-2 with status pending, final_task: True
+2024-08-21 15:01:09,919 - root - INFO - Worker picked up task task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:09,919 - root - INFO - Worker picked up task task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:09,919 - root - INFO - Worker picked up task task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:09,919 - root - INFO - Worker picked up task task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:09,919 - root - INFO - Worker picked up task task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:09,924 - root - INFO - Running background processing for UID thanhtan2136-2
+2024-08-21 15:01:09,924 - root - INFO - Added task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b to the queue
+2024-08-21 15:01:09,924 - root - INFO - Worker received task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:09,924 - root - INFO - Running background processing for UID thanhtan2136-2
+2024-08-21 15:01:09,924 - root - INFO - Added task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b to the queue
+2024-08-21 15:01:09,924 - root - INFO - Running background processing for UID thanhtan2136-2
+2024-08-21 15:01:09,924 - root - INFO - Worker received task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:09,924 - root - INFO - Added task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b to the queue
+2024-08-21 15:01:09,924 - root - INFO - Worker received task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:09,924 - root - INFO - Running background processing for UID thanhtan2136-2
+2024-08-21 15:01:09,924 - root - INFO - Added task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b to the queue
+2024-08-21 15:01:09,924 - root - INFO - Running background processing for UID thanhtan2136-2
+2024-08-21 15:01:09,924 - root - INFO - Worker received task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:09,924 - root - INFO - Added task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b to the queue
+2024-08-21 15:01:09,924 - root - INFO - Worker received task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:09,932 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150108_thanhtan2136-2.png
+2024-08-21 15:01:09,932 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150108_thanhtan2136-2.png
+2024-08-21 15:01:09,932 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150108_thanhtan2136-2.png
+2024-08-21 15:01:09,932 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150108_thanhtan2136-2.png
+2024-08-21 15:01:09,932 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150108_thanhtan2136-2.png
+2024-08-21 15:01:09,941 - root - INFO - Worker picked up task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:09,941 - root - INFO - Worker picked up task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:09,941 - root - INFO - Worker picked up task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:09,941 - root - INFO - Worker picked up task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:09,941 - root - INFO - Worker picked up task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:09,946 - root - INFO - Running final task for UID thanhtan2136-2
+2024-08-21 15:01:09,946 - root - INFO - Running final task for UID thanhtan2136-2
+2024-08-21 15:01:09,946 - root - INFO - Running final task for UID thanhtan2136-2
+2024-08-21 15:01:09,946 - root - INFO - Running final task for UID thanhtan2136-2
+2024-08-21 15:01:09,946 - root - INFO - Running final task for UID thanhtan2136-2
+2024-08-21 15:01:16,375 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:16,375 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:16,375 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:16,375 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:16,375 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:16,381 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug1.png
+2024-08-21 15:01:16,381 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug1.png
+2024-08-21 15:01:16,381 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug1.png
+2024-08-21 15:01:16,381 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug1.png
+2024-08-21 15:01:16,381 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug1.png
+2024-08-21 15:01:18,124 - root - INFO - Worker completed task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:18,124 - root - INFO - Worker completed task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:18,124 - root - INFO - Worker completed task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:18,124 - root - INFO - Worker completed task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:18,124 - root - INFO - Worker completed task task-1724227269-94188de25e2f4e3a9f056a4d42c6cd2b
+2024-08-21 15:01:18,127 - root - INFO - Worker waiting for a task
+2024-08-21 15:01:18,127 - root - INFO - Worker waiting for a task
+2024-08-21 15:01:18,127 - root - INFO - Worker waiting for a task
+2024-08-21 15:01:18,127 - root - INFO - Worker waiting for a task
+2024-08-21 15:01:18,127 - root - INFO - Worker waiting for a task
+2024-08-21 15:01:22,284 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:22,284 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:22,284 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:22,284 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:22,284 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:22,287 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug2.png
+2024-08-21 15:01:22,287 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug2.png
+2024-08-21 15:01:22,287 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug2.png
+2024-08-21 15:01:22,287 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug2.png
+2024-08-21 15:01:22,287 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug2.png
+2024-08-21 15:01:28,264 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:28,264 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:28,264 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:28,264 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:28,264 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:28,269 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug3.png
+2024-08-21 15:01:28,269 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug3.png
+2024-08-21 15:01:28,269 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug3.png
+2024-08-21 15:01:28,269 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug3.png
+2024-08-21 15:01:28,269 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug3.png
+2024-08-21 15:01:34,061 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:34,061 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:34,061 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:34,061 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:34,061 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:34,064 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug4.png
+2024-08-21 15:01:34,064 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug4.png
+2024-08-21 15:01:34,064 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug4.png
+2024-08-21 15:01:34,064 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug4.png
+2024-08-21 15:01:34,064 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug4.png
+2024-08-21 15:01:39,871 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:39,871 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:39,871 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:39,871 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:39,871 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:39,876 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug5.png
+2024-08-21 15:01:39,876 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug5.png
+2024-08-21 15:01:39,876 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug5.png
+2024-08-21 15:01:39,876 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug5.png
+2024-08-21 15:01:39,876 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug5.png
+2024-08-21 15:01:45,745 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:45,745 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:45,745 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:45,745 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:45,745 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:45,750 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug6.png
+2024-08-21 15:01:45,750 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug6.png
+2024-08-21 15:01:45,750 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug6.png
+2024-08-21 15:01:45,750 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug6.png
+2024-08-21 15:01:45,750 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug6.png
+2024-08-21 15:01:51,629 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:51,629 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:51,629 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:51,629 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:51,629 - root - INFO - Face registered successfully for UID thanhtan2136-2
+2024-08-21 15:01:51,634 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug7.png
+2024-08-21 15:01:51,634 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug7.png
+2024-08-21 15:01:51,634 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug7.png
+2024-08-21 15:01:51,634 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug7.png
+2024-08-21 15:01:51,634 - root - INFO - Processing image: core\static\images\thanhtan2136\20240821_150109_thanhtan2136-2_aug7.png
+2024-08-21 15:01:57,621 - core.utils.database - INFO - Starting a new transaction...
+2024-08-21 15:01:57,621 - core.utils.database - INFO - Starting a new transaction...
+2024-08-21 15:01:57,621 - core.utils.database - INFO - Starting a new transaction...
+2024-08-21 15:01:57,621 - core.utils.database - INFO - Starting a new transaction...
+2024-08-21 15:01:57,621 - core.utils.database - INFO - Starting a new transaction...
+2024-08-21 15:01:57,635 - core.utils.database - INFO - Committing the transaction...
+2024-08-21 15:01:57,635 - core.utils.database - INFO - Committing the transaction...
+2024-08-21 15:01:57,635 - core.utils.database - INFO - Committing the transaction...
+2024-08-21 15:01:57,635 - core.utils.database - INFO - Committing the transaction...
+2024-08-21 15:01:57,635 - core.utils.database - INFO - Committing the transaction...
+2024-08-21 15:01:57,662 - root - INFO - Worker completed task task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:57,662 - root - INFO - Worker completed task task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:57,662 - root - INFO - Worker completed task task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:57,662 - root - INFO - Worker completed task task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:57,662 - root - INFO - Worker completed task task-1724227269-b82f0de832544eb5a3acf34b94a03462
+2024-08-21 15:01:57,667 - root - INFO - Worker waiting for a task
+2024-08-21 15:01:57,667 - root - INFO - Worker waiting for a task
+2024-08-21 15:01:57,667 - root - INFO - Worker waiting for a task
+2024-08-21 15:01:57,667 - root - INFO - Worker waiting for a task
+2024-08-21 15:01:57,667 - root - INFO - Worker waiting for a task
