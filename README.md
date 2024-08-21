@@ -98,8 +98,7 @@ Example Request:
   "img_path": "path/to/image.jpg",
   "actions": ["age", "gender", "emotion", "race"]
 }
-Example Usage
-import requests
+
 
 # Set API key and endpoint
 api_key = "your_api_key"
