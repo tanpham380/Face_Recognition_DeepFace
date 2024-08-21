@@ -1,5 +1,7 @@
 import datetime
+import flask
 import json
+import os.path
 import time
 import traceback
 from typing import Optional, List, Dict, Any
@@ -8,7 +10,7 @@ import numpy as np
 from core.utils.augment_images import augment_image
 from core.utils.theading import task_queue
 from core.utils.database import SQLiteManager
-from core.utils.save_file import delete_images, extract_base_identity, save_image
+from core.utils.progress_file import delete_images, delete_images_for_uid, extract_base_identity, save_image
 # from core.utils.search_embleeding import find_in_db
 from core.utils.static_variable import BASE_PATH, IMAGES_DIR, TEMP_DIR
 from core.utils.logging import get_logger
@@ -31,27 +33,49 @@ def check_version() -> Dict[str, Any]:
         return {"message": "Failed to fetch version", "data": None, "success": False}
 
 
-def delete_face(uid: str, db_manager: SQLiteManager) -> Dict[str, Any]:
+
+
+def delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:
+    from core.utils.theading import add_task_to_queue
     try:
-        if not db_manager.uid_exists(uid):
-            return {"message": "UID not found", "data": None, "success": False}
-
+        # Cancel any pending or processing tasks related to this UID
+        task_id = db_manager.get_active_final_task(uid)
+        if task_id:
+            db_manager.cancel_task(task_id)
+            logger.info(f"Canceled pending or processing task {task_id} for UID {uid}")
+        
+        # Extract base_uid from the given uid
+        base_uid = uid.split('-')[0]
+        
+        # Delete all embeddings associated with this UID
         db_manager.delete_embedding_by_uid(uid)
+        
+        # Delete images associated with the base_uid
+        delete_images_for_uid(uid, base_uid)
+        logger.info(f"Deleted all face embeddings and images for UID {uid}")
 
-        return {"message": "Face deleted successfully!", "data": {"uid": uid}, "success": True}
+        # Schedule the final task to re-render the database vector using DeepFace
+        add_task_to_queue(recreate_DB, db_manager, IMAGES_DIR, current_app._get_current_object(), uid=uid)
+        logger.info(f"Final task scheduled for re-rendering vector database for UID {uid}")
+
+        return {"message": "Face deleted successfully and final task scheduled!", "data": {"uid": uid}, "success": True}
+
     except Exception as e:
         logger.error(f"Exception while deleting face with UID {uid}: {str(e)} - {traceback.format_exc()}")
         return {"message": "Failed to delete face", "data": None, "success": False}
-    finally:
-        delete_images(os.path.join(IMAGES_DIR, uid))
+
+def recreate_DB(db_manager: SQLiteManager, img_path, app, uid) -> Dict[str, Any]:
+    with app.app_context():
+        logger.info(f"Recreating DB for UID {uid} using image path {img_path}")
         deepface_controller.find(
-                img_path= os.path.join(BASE_PATH, "static", "temp.png"),
-                db_path=IMAGES_DIR,
-                model_name="Facenet512",
-                detector_backend="retinaface",
-                anti_spoofing=False
-            )
-    
+            img_path=os.path.join(BASE_PATH, "static", "temp.png"),
+            db_path=img_path,
+            model_name="Facenet512",
+            detector_backend="retinaface",
+            anti_spoofing=False
+        )
+        logger.info(f"Completed recreating DB for UID {uid}")
+
 def check_and_run_final_task(db_manager: SQLiteManager, img_path, app, uid):
     """Check if all tasks are done and run the final task if they are."""
     logger.info(f"Running final task for UID {uid}")

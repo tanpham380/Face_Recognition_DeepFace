@@ -104,6 +104,10 @@ class SQLiteManager:
                 INSERT OR REPLACE INTO face_embeddings (uid, embedding)
                 VALUES (?, ?)
             """, (uid, sqlite3.Binary(embedding)))
+    def delete_embedding_by_uid(self, uid: str):
+        """Delete all embeddings associated with the given UID."""
+        with self.get_connection() as conn:
+            conn.execute("DELETE FROM face_embeddings WHERE uid = ?", (uid,))
 
     def get_embedding_by_uid(self, uid: str) -> Optional[Dict[str, Any]]:
         with self.get_connection() as conn:

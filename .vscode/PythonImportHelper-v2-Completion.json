@@ -443,6 +443,14 @@
         "documentation": {}
     },
     {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Any",
         "importPath": "typing",
         "description": "typing",
@@ -3003,6 +3011,14 @@
         "documentation": {}
     },
     {
+        "label": "deepcopy",
+        "importPath": "copy",
+        "description": "copy",
+        "isExtraImport": true,
+        "detail": "copy",
+        "documentation": {}
+    },
+    {
         "label": "BaseTask",
         "importPath": "torchkit.task.base_task",
         "description": "torchkit.task.base_task",
@@ -3233,6 +3249,30 @@
         "documentation": {}
     },
     {
+        "label": "absolute_import",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "print_function",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "with_statement",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
         "label": "json",
         "kind": 6,
         "isExtraImport": true,
@@ -3280,6 +3320,15 @@
         "description": "torch.distributed",
         "isExtraImport": true,
         "detail": "torch.distributed",
+        "documentation": {}
+    },
+    {
+        "label": "google.protobuf",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "google.protobuf",
+        "description": "google.protobuf",
+        "detail": "google.protobuf",
         "documentation": {}
     },
     {
@@ -4269,14 +4318,6 @@
         "documentation": {}
     },
     {
-        "label": "DeepFace",
-        "importPath": "deepface",
-        "description": "deepface",
-        "isExtraImport": true,
-        "detail": "deepface",
-        "documentation": {}
-    },
-    {
         "label": "modeling",
         "importPath": "deepface.modules",
         "description": "deepface.modules",
@@ -4453,6 +4494,14 @@
         "documentation": {}
     },
     {
+        "label": "get_logger",
+        "importPath": "core.utils.logging",
+        "description": "core.utils.logging",
+        "isExtraImport": true,
+        "detail": "core.utils.logging",
+        "documentation": {}
+    },
+    {
         "label": "package_utils",
         "importPath": "deepface.commons",
         "description": "deepface.commons",
@@ -4469,11 +4518,29 @@
         "documentation": {}
     },
     {
-        "label": "BytesIO",
-        "importPath": "io",
-        "description": "io",
+        "label": "ThreadPoolExecutor",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
         "isExtraImport": true,
-        "detail": "io",
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "flask",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "flask",
+        "description": "flask",
+        "detail": "flask",
         "documentation": {}
     },
     {
@@ -4541,12 +4608,11 @@
         "documentation": {}
     },
     {
-        "label": "sqlite3",
-        "kind": 6,
+        "label": "cosine",
+        "importPath": "scipy.spatial.distance",
+        "description": "scipy.spatial.distance",
         "isExtraImport": true,
-        "importPath": "sqlite3",
-        "description": "sqlite3",
-        "detail": "sqlite3",
+        "detail": "scipy.spatial.distance",
         "documentation": {}
     },
     {
@@ -4574,6 +4640,14 @@
         "documentation": {}
     },
     {
+        "label": "IMAGES_DIR",
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "isExtraImport": true,
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
         "label": "NUMBER_WORKER",
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
@@ -4582,7 +4656,23 @@
         "documentation": {}
     },
     {
+        "label": "BASE_PATH",
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "isExtraImport": true,
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
         "label": "IMAGES_DIR",
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "isExtraImport": true,
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
+        "label": "TEMP_DIR",
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
         "isExtraImport": true,
@@ -4606,6 +4696,14 @@
         "documentation": {}
     },
     {
+        "label": "IMAGES_DIR",
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "isExtraImport": true,
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
         "label": "load_dotenv",
         "importPath": "dotenv",
         "description": "dotenv",
@@ -4619,6 +4717,24 @@
         "description": "dotenv",
         "isExtraImport": true,
         "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
         "documentation": {}
     },
     {
@@ -4646,19 +4762,59 @@
         "documentation": {}
     },
     {
-        "label": "delete_images",
-        "importPath": "core.utils.save_file",
-        "description": "core.utils.save_file",
+        "label": "task_queue",
+        "importPath": "core.utils.theading",
+        "description": "core.utils.theading",
         "isExtraImport": true,
-        "detail": "core.utils.save_file",
+        "detail": "core.utils.theading",
+        "documentation": {}
+    },
+    {
+        "label": "stop_workers",
+        "importPath": "core.utils.theading",
+        "description": "core.utils.theading",
+        "isExtraImport": true,
+        "detail": "core.utils.theading",
+        "documentation": {}
+    },
+    {
+        "label": "start_workers",
+        "importPath": "core.utils.theading",
+        "description": "core.utils.theading",
+        "isExtraImport": true,
+        "detail": "core.utils.theading",
+        "documentation": {}
+    },
+    {
+        "label": "delete_images",
+        "importPath": "core.utils.progress_file",
+        "description": "core.utils.progress_file",
+        "isExtraImport": true,
+        "detail": "core.utils.progress_file",
+        "documentation": {}
+    },
+    {
+        "label": "delete_images_for_uid",
+        "importPath": "core.utils.progress_file",
+        "description": "core.utils.progress_file",
+        "isExtraImport": true,
+        "detail": "core.utils.progress_file",
+        "documentation": {}
+    },
+    {
+        "label": "extract_base_identity",
+        "importPath": "core.utils.progress_file",
+        "description": "core.utils.progress_file",
+        "isExtraImport": true,
+        "detail": "core.utils.progress_file",
         "documentation": {}
     },
     {
         "label": "save_image",
-        "importPath": "core.utils.save_file",
-        "description": "core.utils.save_file",
+        "importPath": "core.utils.progress_file",
+        "description": "core.utils.progress_file",
         "isExtraImport": true,
-        "detail": "core.utils.save_file",
+        "detail": "core.utils.progress_file",
         "documentation": {}
     },
     {
@@ -4667,46 +4823,6 @@
         "description": "core.deepface_controller.controller",
         "isExtraImport": true,
         "detail": "core.deepface_controller.controller",
-        "documentation": {}
-    },
-    {
-        "label": "add_task_to_queue",
-        "importPath": "core.utils.threading",
-        "description": "core.utils.threading",
-        "isExtraImport": true,
-        "detail": "core.utils.threading",
-        "documentation": {}
-    },
-    {
-        "label": "stop_workers",
-        "importPath": "core.utils.threading",
-        "description": "core.utils.threading",
-        "isExtraImport": true,
-        "detail": "core.utils.threading",
-        "documentation": {}
-    },
-    {
-        "label": "start_workers",
-        "importPath": "core.utils.threading",
-        "description": "core.utils.threading",
-        "isExtraImport": true,
-        "detail": "core.utils.threading",
-        "documentation": {}
-    },
-    {
-        "label": "ThreadPoolExecutor",
-        "importPath": "concurrent.futures",
-        "description": "concurrent.futures",
-        "isExtraImport": true,
-        "detail": "concurrent.futures",
-        "documentation": {}
-    },
-    {
-        "label": "as_completed",
-        "importPath": "concurrent.futures",
-        "description": "concurrent.futures",
-        "isExtraImport": true,
-        "detail": "concurrent.futures",
         "documentation": {}
     },
     {
@@ -4733,6 +4849,32 @@
         "description": "core.routes",
         "isExtraImport": true,
         "detail": "core.routes",
+        "documentation": {}
+    },
+    {
+        "label": "ctypes",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ctypes",
+        "description": "ctypes",
+        "detail": "ctypes",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "minidom",
+        "importPath": "xml.dom",
+        "description": "xml.dom",
+        "isExtraImport": true,
+        "detail": "xml.dom",
         "documentation": {}
     },
     {
@@ -9650,29 +9792,11 @@
         "documentation": {}
     },
     {
-        "label": "os.environ[\"TF_USE_LEGACY_KERAS\"]",
-        "kind": 5,
-        "importPath": "core.deepface_controller.controller",
-        "description": "core.deepface_controller.controller",
-        "peekOfCode": "os.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"\n# pylint: disable=wrong-import-position\n# 3rd party dependencies\n# package dependencies\nlogger = get_logger()\n# -----------------------------------\n# configurations for dependencies\nfrom deepface.commons import package_utils, folder_utils\n# users should install tf_keras package if they are using tf 2.16 or later versions\npackage_utils.validate_for_keras3()",
-        "detail": "core.deepface_controller.controller",
-        "documentation": {}
-    },
-    {
         "label": "logger",
         "kind": 5,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "logger = get_logger()\n# -----------------------------------\n# configurations for dependencies\nfrom deepface.commons import package_utils, folder_utils\n# users should install tf_keras package if they are using tf 2.16 or later versions\npackage_utils.validate_for_keras3()\nwarnings.filterwarnings(\"ignore\")\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\ntf_version = package_utils.get_tf_major_version()\nif tf_version == 2:",
-        "detail": "core.deepface_controller.controller",
-        "documentation": {}
-    },
-    {
-        "label": "os.environ[\"TF_CPP_MIN_LOG_LEVEL\"]",
-        "kind": 5,
-        "importPath": "core.deepface_controller.controller",
-        "description": "core.deepface_controller.controller",
-        "peekOfCode": "os.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\ntf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\n# -----------------------------------\n# create required folders if necessary to store model weights\nfolder_utils.initialize_folder()\nclass DeepFaceController():\n    def __init__(self):\n        # super().__init__()",
+        "peekOfCode": "logger = get_logger()\n# -----------------------------------\n# configurations for dependencies\nfrom deepface.commons import package_utils, folder_utils\n# Users should install tf_keras package if they are using tf 2.16 or later versions\npackage_utils.validate_for_keras3()\nwarnings.filterwarnings(\"ignore\")\ntf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
@@ -9681,7 +9805,16 @@
         "kind": 5,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "tf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\n# -----------------------------------\n# create required folders if necessary to store model weights\nfolder_utils.initialize_folder()\nclass DeepFaceController():\n    def __init__(self):\n        # super().__init__()\n        self._face_detector_backend = [",
+        "peekOfCode": "tf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\nmessange = None\n# Configure TensorFlow to use GPU\nif len(tf.config.experimental.list_physical_devices('GPU')) > 0:\n    # Ensure that TensorFlow uses the GPU\n    physical_devices = tf.config.experimental.list_physical_devices('GPU')\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')",
+        "detail": "core.deepface_controller.controller",
+        "documentation": {}
+    },
+    {
+        "label": "messange",
+        "kind": 5,
+        "importPath": "core.deepface_controller.controller",
+        "description": "core.deepface_controller.controller",
+        "peekOfCode": "messange = None\n# Configure TensorFlow to use GPU\nif len(tf.config.experimental.list_physical_devices('GPU')) > 0:\n    # Ensure that TensorFlow uses the GPU\n    physical_devices = tf.config.experimental.list_physical_devices('GPU')\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')\n    messange = (\"Using GPU for TensorFlow operations\")\n    logger.info(\"Using GPU for TensorFlow operations\")\nelse:",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
@@ -9690,7 +9823,16 @@
         "kind": 2,
         "importPath": "core.utils.augment_images",
         "description": "core.utils.augment_images",
-        "peekOfCode": "def shift_image(image, shift):\n    \"\"\"Dịch chuyển hình ảnh với một khoảng cách nhất định.\"\"\"\n    width, height = image.size\n    shifted_image = Image.new(\"RGB\", (width, height))\n    shifted_image.paste(image, (shift[0], shift[1]))\n    return shifted_image\ndef augment_image(image_data):\n    # Nếu image_data là một FileStorage object từ Flask hoặc BytesIO, thì chuyển đổi thành đối tượng Image\n    if hasattr(image_data, 'read'):  # Kiểm tra xem có phương thức 'read' không\n        image = Image.open(image_data)",
+        "peekOfCode": "def shift_image(image, shift):\n    \"\"\"Dịch chuyển hình ảnh với một khoảng cách nhất định.\"\"\"\n    width, height = image.size\n    shifted_image = Image.new(\"RGB\", (width, height))\n    shifted_image.paste(image, (shift[0], shift[1]))\n    return shifted_image\ndef process_image(image, operation, *args):\n    \"\"\"Helper function to apply various operations on the image.\"\"\"\n    if operation == 'rotate':\n        return image.rotate(*args, resample=Image.BICUBIC)",
+        "detail": "core.utils.augment_images",
+        "documentation": {}
+    },
+    {
+        "label": "process_image",
+        "kind": 2,
+        "importPath": "core.utils.augment_images",
+        "description": "core.utils.augment_images",
+        "peekOfCode": "def process_image(image, operation, *args):\n    \"\"\"Helper function to apply various operations on the image.\"\"\"\n    if operation == 'rotate':\n        return image.rotate(*args, resample=Image.BICUBIC)\n    elif operation == 'flip':\n        return ImageOps.mirror(image)\n    elif operation == 'brightness':\n        enhancer = ImageEnhance.Brightness(image)\n        return enhancer.enhance(*args)\n    elif operation == 'shift':",
         "detail": "core.utils.augment_images",
         "documentation": {}
     },
@@ -9699,7 +9841,7 @@
         "kind": 2,
         "importPath": "core.utils.augment_images",
         "description": "core.utils.augment_images",
-        "peekOfCode": "def augment_image(image_data):\n    # Nếu image_data là một FileStorage object từ Flask hoặc BytesIO, thì chuyển đổi thành đối tượng Image\n    if hasattr(image_data, 'read'):  # Kiểm tra xem có phương thức 'read' không\n        image = Image.open(image_data)\n    elif isinstance(image_data, str):  # Nếu là một đường dẫn, mở đường dẫn đó\n        image = Image.open(image_data)\n    else:\n        image = image_data  # Giả định rằng nếu không phải FileStorage, BytesIO, hoặc str, thì image_data đã là một đối tượng Image\n    augmented_images = []\n    # Xoay ảnh ±5 độ (giảm góc xoay để tránh biến dạng khuôn mặt)",
+        "peekOfCode": "def augment_image(image_data):\n    if hasattr(image_data, 'read'):\n        image = Image.open(image_data)\n        image.load()\n    elif isinstance(image_data, str):\n        image = Image.open(image_data)\n        image.load()\n    else:\n        image = image_data\n    augmented_images = []",
         "detail": "core.utils.augment_images",
         "documentation": {}
     },
@@ -9708,7 +9850,7 @@
         "kind": 6,
         "importPath": "core.utils.database",
         "description": "core.utils.database",
-        "peekOfCode": "class SQLiteManager:\n    def __init__(self, db_path: str):\n        self.db_path = db_path\n    def get_connection(self):\n        if 'db_connection' not in g:\n            g.db_connection = sqlite3.connect(self.db_path)\n        return g.db_connection\n    def close_connection(self, error):\n        if 'db_connection' in g:\n            g.db_connection.close()",
+        "peekOfCode": "class SQLiteManager:\n    def __init__(self, db_path: str):\n        self.db_path = db_path\n        self.logger = logging.getLogger(__name__)\n    def get_connection(self):\n        if 'db_connection' not in g:\n            g.db_connection = sqlite3.connect(self.db_path)\n            g.db_connection.row_factory = sqlite3.Row  # Enables dict-like cursor\n        return g.db_connection\n    def close_connection(self, error=None):",
         "detail": "core.utils.database",
         "documentation": {}
     },
@@ -9740,21 +9882,48 @@
         "documentation": {}
     },
     {
+        "label": "extract_base_identity",
+        "kind": 2,
+        "importPath": "core.utils.progress_file",
+        "description": "core.utils.progress_file",
+        "peekOfCode": "def extract_base_identity(identity):\n    # Split the identity by '_' and take the last part without the augmentation part\n    identity = os.path.splitext(os.path.basename(identity))[0]\n    identity = \"_\".join(identity.split('_')[2:]).split('_')[0]\n    return identity\ndef delete_images_for_uid(uid: str, base_uid: str ):\n    # Adjust the pattern to correctly match files associated with the base_uid and uid\n    image_pattern = os.path.join(IMAGES_DIR, base_uid, f\"*_{uid}*.png\")\n    # Ensure the pattern is correct and matches files\n    matching_files = glob.glob(image_pattern)",
+        "detail": "core.utils.progress_file",
+        "documentation": {}
+    },
+    {
+        "label": "delete_images_for_uid",
+        "kind": 2,
+        "importPath": "core.utils.progress_file",
+        "description": "core.utils.progress_file",
+        "peekOfCode": "def delete_images_for_uid(uid: str, base_uid: str ):\n    # Adjust the pattern to correctly match files associated with the base_uid and uid\n    image_pattern = os.path.join(IMAGES_DIR, base_uid, f\"*_{uid}*.png\")\n    # Ensure the pattern is correct and matches files\n    matching_files = glob.glob(image_pattern)\n    if not matching_files:\n        logger.info(f\"No files found for pattern\")\n    for file_path in matching_files:\n        try:\n            os.remove(file_path)",
+        "detail": "core.utils.progress_file",
+        "documentation": {}
+    },
+    {
         "label": "save_image",
         "kind": 2,
-        "importPath": "core.utils.save_file",
-        "description": "core.utils.save_file",
+        "importPath": "core.utils.progress_file",
+        "description": "core.utils.progress_file",
         "peekOfCode": "def save_image(image: Any, uid: str, base_dir: str, prefix: str, anti_spoofing: bool = False):\n    \"\"\"\n    Save the given image to a directory with a specific format. If the directory contains more than\n    20 images (4 original and 16 augmented), the oldest augmented images will be deleted.\n    Parameters:\n    - image: The image object to be saved.\n    - uid: The UID or identifier for the directory.\n    - base_dir: The base directory where the UID directory will be created.\n    - prefix: The prefix to use for the filename (e.g., \"query\" or UID).\n    - anti_spoofing: Boolean flag indicating if the image is flagged for anti-spoofing.",
-        "detail": "core.utils.save_file",
+        "detail": "core.utils.progress_file",
         "documentation": {}
     },
     {
         "label": "delete_images",
         "kind": 2,
-        "importPath": "core.utils.save_file",
-        "description": "core.utils.save_file",
+        "importPath": "core.utils.progress_file",
+        "description": "core.utils.progress_file",
         "peekOfCode": "def delete_images(directory: str):\n    \"\"\"\n    Delete all images in the specified directory.\n    Parameters:\n    - directory: The directory where images will be deleted.\n    \"\"\"\n    if os.path.exists(directory):\n        for filename in os.listdir(directory):\n            file_path = os.path.join(directory, filename)\n            if os.path.isfile(file_path):",
-        "detail": "core.utils.save_file",
+        "detail": "core.utils.progress_file",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "core.utils.progress_file",
+        "description": "core.utils.progress_file",
+        "peekOfCode": "logger = get_logger()\ndef extract_base_identity(identity):\n    # Split the identity by '_' and take the last part without the augmentation part\n    identity = os.path.splitext(os.path.basename(identity))[0]\n    identity = \"_\".join(identity.split('_')[2:]).split('_')[0]\n    return identity\ndef delete_images_for_uid(uid: str, base_uid: str ):\n    # Adjust the pattern to correctly match files associated with the base_uid and uid\n    image_pattern = os.path.join(IMAGES_DIR, base_uid, f\"*_{uid}*.png\")\n    # Ensure the pattern is correct and matches files",
+        "detail": "core.utils.progress_file",
         "documentation": {}
     },
     {
@@ -9767,11 +9936,20 @@
         "documentation": {}
     },
     {
+        "label": "TEMP_DIR",
+        "kind": 5,
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
         "label": "BASE_PATH",
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4",
+        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -9780,7 +9958,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4",
+        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -9789,7 +9967,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "IMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4",
+        "peekOfCode": "IMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -9798,7 +9976,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "VECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4",
+        "peekOfCode": "VECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -9807,7 +9985,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "MAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4",
+        "peekOfCode": "MAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -9816,7 +9994,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "API_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4",
+        "peekOfCode": "API_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -9825,7 +10003,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "LOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4",
+        "peekOfCode": "LOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -9834,71 +10012,107 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "NUMBER_WORKER = 4",
+        "peekOfCode": "NUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ['TF_ENABLE_ONEDNN_OPTS']",
+        "kind": 5,
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "peekOfCode": "os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"TF_CPP_MIN_LOG_LEVEL\"]",
+        "kind": 5,
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "peekOfCode": "os.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"TF_USE_LEGACY_KERAS\"]",
+        "kind": 5,
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "peekOfCode": "os.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
+        "label": "generate_unique_task_id",
+        "kind": 2,
+        "importPath": "core.utils.theading",
+        "description": "core.utils.theading",
+        "peekOfCode": "def generate_unique_task_id(db_manager: SQLiteManager) -> str:\n    \"\"\"Generate a unique task ID that doesn't exist in the database.\"\"\"\n    while True:\n        task_id = f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\n        with db_manager.get_connection() as conn:\n            result = conn.execute(\"\"\"\n                SELECT task_id FROM task_status WHERE task_id = ?\n            \"\"\", (task_id,)).fetchone()\n        if result is None:\n            return task_id",
+        "detail": "core.utils.theading",
         "documentation": {}
     },
     {
         "label": "add_task_to_queue",
         "kind": 2,
-        "importPath": "core.utils.threading",
-        "description": "core.utils.threading",
-        "peekOfCode": "def add_task_to_queue(func, db_manager: SQLiteManager, *args, **kwargs):\n    \"\"\"Add a task to the queue with an ID.\"\"\"\n    task_id = f\"task-{int(time.time())}\"\n    # Insert the task into the database with a \"pending\" status\n    with db_manager.get_connection() as conn:\n        conn.execute(\"\"\"\n            INSERT INTO task_status (task_id, status)\n            VALUES (?, ?)\n        \"\"\", (task_id, \"pending\"))\n    # Add the task to the queue",
-        "detail": "core.utils.threading",
+        "importPath": "core.utils.theading",
+        "description": "core.utils.theading",
+        "peekOfCode": "def add_task_to_queue(func, db_manager: SQLiteManager, *args, **kwargs):\n    \"\"\"Add a task to the queue with an ID.\"\"\"\n    task_id = generate_unique_task_id(db_manager)\n    uid = kwargs.get('uid', None) \n    logger.info(f\"Generated unique task ID: {task_id}\")\n    from core.service import check_and_run_final_task\n    db_manager.insert_task(task_id, uid, \"pending\", is_final_task=(func == check_and_run_final_task))\n    task_queue.put((task_id, lambda: func(db_manager, *args, **kwargs)))\n    logger.info(f\"Added task {task_id} to the queue\")\ndef worker(app, db_manager: SQLiteManager):",
+        "detail": "core.utils.theading",
         "documentation": {}
     },
     {
         "label": "worker",
         "kind": 2,
-        "importPath": "core.utils.threading",
-        "description": "core.utils.threading",
-        "peekOfCode": "def worker(app, db_manager: SQLiteManager):\n    \"\"\"Worker function to process tasks from the queue.\"\"\"\n    logger.info(\"Worker thread started\")\n    with app.app_context():  # Push the application context\n        while True:\n            logger.info(\"Worker waiting for a task\")\n            task_id, task = task_queue.get()  # Get a task from the queue\n            if task is None:  # Check for a stop signal\n                break\n            logger.info(f\"Worker received task {task_id}\")",
-        "detail": "core.utils.threading",
+        "importPath": "core.utils.theading",
+        "description": "core.utils.theading",
+        "peekOfCode": "def worker(app, db_manager: SQLiteManager):\n    \"\"\"Worker function to process tasks from the queue.\"\"\"\n    logger.info(\"Worker thread started\")\n    with app.app_context():\n        while True:\n            logger.info(\"Worker waiting for a task\")\n            task_id, task = task_queue.get()\n            if task is None:\n                break\n            logger.info(f\"Worker received task {task_id}\")",
+        "detail": "core.utils.theading",
         "documentation": {}
     },
     {
         "label": "start_workers",
         "kind": 2,
-        "importPath": "core.utils.threading",
-        "description": "core.utils.threading",
-        "peekOfCode": "def start_workers(app, db_manager: SQLiteManager):\n    \"\"\"Start worker threads.\"\"\"\n    global threads\n    for i in range(NUMBER_WORKER):\n        t = threading.Thread(target=worker, args=(app, db_manager))\n        t.start()\n        threads.append(t)\n        logger.info(f\"Worker thread {i} started\")\ndef stop_workers():\n    \"\"\"Send stop signal to all workers.\"\"\"",
-        "detail": "core.utils.threading",
+        "importPath": "core.utils.theading",
+        "description": "core.utils.theading",
+        "peekOfCode": "def start_workers(app, db_manager: SQLiteManager):\n    global threads\n    for i in range(NUMBER_WORKER):\n        t = threading.Thread(target=worker, args=(app, db_manager), name=f\"Worker-{i}\")\n        t.start()\n        threads.append(t)\n        logger.info(f\"Worker thread {i} started\")\ndef stop_workers():\n    for _ in range(NUMBER_WORKER):\n        task_queue.put((None, None))",
+        "detail": "core.utils.theading",
         "documentation": {}
     },
     {
         "label": "stop_workers",
         "kind": 2,
-        "importPath": "core.utils.threading",
-        "description": "core.utils.threading",
-        "peekOfCode": "def stop_workers():\n    \"\"\"Send stop signal to all workers.\"\"\"\n    for _ in range(NUMBER_WORKER):\n        task_queue.put((None, None))\n    for t in threads:\n        t.join()",
-        "detail": "core.utils.threading",
+        "importPath": "core.utils.theading",
+        "description": "core.utils.theading",
+        "peekOfCode": "def stop_workers():\n    for _ in range(NUMBER_WORKER):\n        task_queue.put((None, None))\n    for t in threads:\n        t.join()",
+        "detail": "core.utils.theading",
         "documentation": {}
     },
     {
         "label": "task_queue",
         "kind": 5,
-        "importPath": "core.utils.threading",
-        "description": "core.utils.threading",
-        "peekOfCode": "task_queue = queue.Queue()\nlogger = get_logger()\nthreads = []\ndef add_task_to_queue(func, db_manager: SQLiteManager, *args, **kwargs):\n    \"\"\"Add a task to the queue with an ID.\"\"\"\n    task_id = f\"task-{int(time.time())}\"\n    # Insert the task into the database with a \"pending\" status\n    with db_manager.get_connection() as conn:\n        conn.execute(\"\"\"\n            INSERT INTO task_status (task_id, status)",
-        "detail": "core.utils.threading",
+        "importPath": "core.utils.theading",
+        "description": "core.utils.theading",
+        "peekOfCode": "task_queue = queue.Queue()\nlogger = get_logger()\nthreads = []\ndef generate_unique_task_id(db_manager: SQLiteManager) -> str:\n    \"\"\"Generate a unique task ID that doesn't exist in the database.\"\"\"\n    while True:\n        task_id = f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\n        with db_manager.get_connection() as conn:\n            result = conn.execute(\"\"\"\n                SELECT task_id FROM task_status WHERE task_id = ?",
+        "detail": "core.utils.theading",
         "documentation": {}
     },
     {
         "label": "logger",
         "kind": 5,
-        "importPath": "core.utils.threading",
-        "description": "core.utils.threading",
-        "peekOfCode": "logger = get_logger()\nthreads = []\ndef add_task_to_queue(func, db_manager: SQLiteManager, *args, **kwargs):\n    \"\"\"Add a task to the queue with an ID.\"\"\"\n    task_id = f\"task-{int(time.time())}\"\n    # Insert the task into the database with a \"pending\" status\n    with db_manager.get_connection() as conn:\n        conn.execute(\"\"\"\n            INSERT INTO task_status (task_id, status)\n            VALUES (?, ?)",
-        "detail": "core.utils.threading",
+        "importPath": "core.utils.theading",
+        "description": "core.utils.theading",
+        "peekOfCode": "logger = get_logger()\nthreads = []\ndef generate_unique_task_id(db_manager: SQLiteManager) -> str:\n    \"\"\"Generate a unique task ID that doesn't exist in the database.\"\"\"\n    while True:\n        task_id = f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\n        with db_manager.get_connection() as conn:\n            result = conn.execute(\"\"\"\n                SELECT task_id FROM task_status WHERE task_id = ?\n            \"\"\", (task_id,)).fetchone()",
+        "detail": "core.utils.theading",
         "documentation": {}
     },
     {
         "label": "threads",
         "kind": 5,
-        "importPath": "core.utils.threading",
-        "description": "core.utils.threading",
-        "peekOfCode": "threads = []\ndef add_task_to_queue(func, db_manager: SQLiteManager, *args, **kwargs):\n    \"\"\"Add a task to the queue with an ID.\"\"\"\n    task_id = f\"task-{int(time.time())}\"\n    # Insert the task into the database with a \"pending\" status\n    with db_manager.get_connection() as conn:\n        conn.execute(\"\"\"\n            INSERT INTO task_status (task_id, status)\n            VALUES (?, ?)\n        \"\"\", (task_id, \"pending\"))",
-        "detail": "core.utils.threading",
+        "importPath": "core.utils.theading",
+        "description": "core.utils.theading",
+        "peekOfCode": "threads = []\ndef generate_unique_task_id(db_manager: SQLiteManager) -> str:\n    \"\"\"Generate a unique task ID that doesn't exist in the database.\"\"\"\n    while True:\n        task_id = f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\n        with db_manager.get_connection() as conn:\n            result = conn.execute(\"\"\"\n                SELECT task_id FROM task_status WHERE task_id = ?\n            \"\"\", (task_id,)).fetchone()\n        if result is None:",
+        "detail": "core.utils.theading",
         "documentation": {}
     },
     {
@@ -9915,7 +10129,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def version():\n    db_manager = current_app.config['DB_MANAGER']\n    embeddings = db_manager.get_all_embeddings()\n    return {\"information\": embeddings}\n@blueprint.route(\"/tasks/status\", methods=[\"GET\"])\n@require_api_key\ndef get_task_status():\n    \"\"\"API để xem trạng thái các tác vụ.\"\"\"\n    db_manager = current_app.config['DB_MANAGER']\n    with db_manager.get_connection() as conn:",
+        "peekOfCode": "def version():\n    db_manager = current_app.config['DB_MANAGER']\n    embeddings = db_manager.get_all_embeddings()\n    return {\"information\": embeddings}\n@blueprint.route(\"/tasks/status\", methods=[\"GET\"])\n@require_api_key\ndef get_task_status():\n    \"\"\"API để xem trạng thái các tác vụ.\"\"\"\n    try :\n        db_manager = current_app.config['DB_MANAGER']",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -9924,7 +10138,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def get_task_status():\n    \"\"\"API để xem trạng thái các tác vụ.\"\"\"\n    db_manager = current_app.config['DB_MANAGER']\n    with db_manager.get_connection() as conn:\n        cursor = conn.execute(\"\"\"\n            SELECT task_id, status, created_at\n            FROM task_status\n            ORDER BY created_at DESC\n        \"\"\")\n        tasks = cursor.fetchall()",
+        "peekOfCode": "def get_task_status():\n    \"\"\"API để xem trạng thái các tác vụ.\"\"\"\n    try :\n        db_manager = current_app.config['DB_MANAGER']\n        with db_manager.get_connection() as conn:\n            cursor = conn.execute(\"\"\"\n                SELECT task_id, status, created_at\n                FROM task_status\n                ORDER BY created_at DESC\n            \"\"\")",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -9933,7 +10147,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def list_faces():\n    db_manager = current_app.config['DB_MANAGER']\n    uids = db_manager.get_all_uids()\n    return {\"registered_faces\": uids}\n@blueprint.route(\"/embedding\", methods=[\"GET\"])\n@require_api_key\ndef get_embedding_by_uid():\n    uid = request.args.get(\"uid\")\n    if not uid:\n        return {\"message\": \"UID is required\"}, 400",
+        "peekOfCode": "def list_faces():\n    try: \n        db_manager = current_app.config['DB_MANAGER']\n        uids = db_manager.get_all_uids()\n        # Use a set to remove duplicates and then convert it back to a list\n        unique_uids = list(set(uids))\n        return {\"message\": \"Thành công\", \"data\": unique_uids , \"success\": True }\n    except Exception as e:\n        return {\"message\": \"Failed to list faces\", \"data\": None, \"success\": False}, 500\n@blueprint.route(\"/embedding\", methods=[\"GET\"])",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -9978,7 +10192,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def delete_face():\n    uid = request.form.get(\"uid\")\n    if not uid:\n        return {\"message\": \"UID is required\"}, 400\n    db_manager = current_app.config['DB_MANAGER']\n    try:\n        response = service.delete_face(uid, db_manager)\n        return response\n    except Exception as e:\n        return {\"message\": \"Failed to delete face\", \"error\": str(e)}, 500",
+        "peekOfCode": "def delete_face():\n    uid = request.form.get(\"uid\")\n    if not uid:\n        return {\"message\": \"UID is required\"}, 400\n    db_manager = current_app.config['DB_MANAGER']\n    try:\n        response = service.delete_face(uid, db_manager , current_app)\n        return response\n    except Exception as e:\n        return {\"message\": \"Failed to delete face\", \"error\": str(e)}, 500",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10050,7 +10264,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def check_version() -> Dict[str, Any]:\n    try:\n        version = deepface_controller.check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {\n                     str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, db_manager: SQLiteManager) -> Dict[str, Any]:\n    try:",
+        "peekOfCode": "def check_version() -> Dict[str, Any]:\n    try:\n        version = deepface_controller.check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    from core.utils.theading import add_task_to_queue\n    try:",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10059,7 +10273,16 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def delete_face(uid: str, db_manager: SQLiteManager) -> Dict[str, Any]:\n    try:\n        if not db_manager.uid_exists(uid):\n            return {\"message\": \"UID not found\", \"data\": None, \"success\": False}\n        db_manager.delete_embedding_by_uid(uid)\n        return {\"message\": \"Face deleted successfully!\", \"data\": {\"uid\": uid}, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while deleting face with UID {\n                     uid}: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to delete face\", \"data\": None, \"success\": False}",
+        "peekOfCode": "def delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    from core.utils.theading import add_task_to_queue\n    try:\n        # Cancel any pending or processing tasks related to this UID\n        task_id = db_manager.get_active_final_task(uid)\n        if task_id:\n            db_manager.cancel_task(task_id)\n            logger.info(f\"Canceled pending or processing task {task_id} for UID {uid}\")\n        # Extract base_uid from the given uid\n        base_uid = uid.split('-')[0]",
+        "detail": "core.service",
+        "documentation": {}
+    },
+    {
+        "label": "recreate_DB",
+        "kind": 2,
+        "importPath": "core.service",
+        "description": "core.service",
+        "peekOfCode": "def recreate_DB(db_manager: SQLiteManager, img_path, app, uid) -> Dict[str, Any]:\n    with app.app_context():\n        logger.info(f\"Recreating DB for UID {uid} using image path {img_path}\")\n        deepface_controller.find(\n            img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),\n            db_path=img_path,\n            model_name=\"Facenet512\",\n            detector_backend=\"retinaface\",\n            anti_spoofing=False\n        )",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10068,7 +10291,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def check_and_run_final_task(db_manager: SQLiteManager, app):\n    \"\"\"Check if all tasks are done and run the final task if they are.\"\"\"\n    with db_manager.get_connection() as conn:\n        cursor = conn.execute(\"\"\"\n            SELECT COUNT(*) FROM task_status WHERE status != 'completed'\n        \"\"\")\n        remaining_tasks = cursor.fetchone()[0]\n    logger.info(f\"Remaining tasks: {remaining_tasks}\")\n    if remaining_tasks == 0:\n        # Run the final deepface_controller.find task",
+        "peekOfCode": "def check_and_run_final_task(db_manager: SQLiteManager, img_path, app, uid):\n    \"\"\"Check if all tasks are done and run the final task if they are.\"\"\"\n    logger.info(f\"Running final task for UID {uid}\")\n    # Check if there are any other pending or processing tasks for the same UID\n    pending_task_id = db_manager.get_active_final_task(uid)\n    if pending_task_id:\n        logger.info(f\"Cannot run final task for UID {uid}, other task {pending_task_id} is still pending.\")\n        return\n    # Run the final task only if it is the last task in the queue\n    if task_queue.empty():",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10077,16 +10300,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def handle_background_tasks(db_manager: SQLiteManager, image_paths, uid, app, max_embeddings=20):\n    logger.info(f\"Running background processing for UID {uid}\")\n    with app.app_context():\n        try:\n            for img_path in image_paths:\n                try:\n                    logger.info(f\"Processing image: {img_path}\")\n                    represent_objs = deepface_controller.represent(\n                        img_path=img_path,\n                        model_name=\"Facenet512\",",
-        "detail": "core.service",
-        "documentation": {}
-    },
-    {
-        "label": "handle_background_tasks2",
-        "kind": 2,
-        "importPath": "core.service",
-        "description": "core.service",
-        "peekOfCode": "def handle_background_tasks2(db_manager: SQLiteManager, image_paths, uid, app, max_embeddings=20):\n    logger.info(f\"Running background processing for UID {uid}\")\n    with app.app_context():\n        try:\n            new_embeddings = []\n            # Process images in parallel using ThreadPoolExecutor\n            with ThreadPoolExecutor() as executor:\n                futures = {executor.submit(deepface_controller.represent, img_path=img_path,\n                                           model_name=\"Facenet512\",\n                                           detector_backend=\"retinaface\",",
+        "peekOfCode": "def handle_background_tasks(db_manager: SQLiteManager, image_paths, uid, app, max_embeddings=20):\n    logger.info(f\"Running background processing for UID {uid}\")\n    with app.app_context():\n        try:\n            for img_path in image_paths:\n                logger.info(f\"Processing image: {img_path}\")\n                # Check for new requests every 5 seconds\n                time.sleep(5)\n                if not task_queue.empty():\n                    logger.info(\"New request detected, stopping current task and waiting for final task.\")",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10095,7 +10309,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def register_face(image: Any, uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    try:\n        # Save the original image and get only the image path\n        image_path, _ = save_image(image, uid, IMAGES_DIR, uid)\n        # Create augmented images\n        augmented_images = augment_image(image)\n        # Save augmented images and store only their paths\n        augmented_image_paths = []\n        for i, img in enumerate(augmented_images, start=1):\n            augmented_image_path, _ = save_image(img, uid, IMAGES_DIR, f\"{uid}_aug{i}\")",
+        "peekOfCode": "def register_face(image: Any, uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    from core.utils.theading import add_task_to_queue\n    try:\n        image_path, _ = save_image(image, uid, IMAGES_DIR, uid)\n        augmented_images = augment_image(image)\n        augmented_image_paths = []\n        for i, img in enumerate(augmented_images, start=1):\n            augmented_image_path, _ = save_image(img, uid, IMAGES_DIR, f\"{uid}_aug{i}\")\n            augmented_image_paths.append(augmented_image_path)\n        # Process embeddings in the background",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10104,7 +10318,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def recognize_face(image: Any) -> Dict[str, Any]:\n    try:\n        # Save the image temporarily\n        image_path, _  = save_image(image, \"query_results\", \"/tmp\", \"\")\n        value_objs_anti_spoofing = deepface_controller.extract_faces(\n            img_path=image_path,\n            detector_backend=\"retinaface\",\n            anti_spoofing=True\n        )[0]\n        # Perform face recognition using DeepFace",
+        "peekOfCode": "def recognize_face(image: Any) -> Dict[str, Any]:\n    try:\n        # Save the image temporarily\n        image_path, _  = save_image(image, \"query_results\", TEMP_DIR, \"\")\n        # Extract faces with anti-spoofing\n        value_objs_anti_spoofing = deepface_controller.extract_faces(\n            img_path=image_path,\n            detector_backend=\"retinaface\",\n            anti_spoofing=True\n        )[0]",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10113,7 +10327,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def recognize_face_with_database(image: Any, db_manager: SQLiteManager) -> Dict[str, Any]:\n    try:\n        image_path, _ = save_image(image, \"query_results\", \"/tmp\", \"\")\n        value_objs = deepface_controller.verify_faces_db(\n            img_path=image_path,\n            db_manager=db_manager,\n            model_name=\"Facenet512\",\n            detector_backend=\"retinaface\",\n            anti_spoofing=True\n        )",
+        "peekOfCode": "def recognize_face_with_database(image: Any, db_manager: SQLiteManager) -> Dict[str, Any]:\n    try:\n        image_path, _  = save_image(image, \"query_results\", TEMP_DIR, \"\")\n        value_objs = deepface_controller.verify_faces_db(\n            img_path=image_path,\n            db_manager=db_manager,\n            model_name=\"Facenet512\",\n            detector_backend=\"retinaface\",\n            anti_spoofing=True\n        )",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10149,7 +10363,7 @@
         "kind": 5,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "logger = get_logger()\ndeepface_controller = DeepFaceController()\ndef check_version() -> Dict[str, Any]:\n    try:\n        version = deepface_controller.check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {\n                     str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}",
+        "peekOfCode": "logger = get_logger()\ndeepface_controller = DeepFaceController()\ndef check_version() -> Dict[str, Any]:\n    try:\n        version = deepface_controller.check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10158,8 +10372,17 @@
         "kind": 5,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "deepface_controller = DeepFaceController()\ndef check_version() -> Dict[str, Any]:\n    try:\n        version = deepface_controller.check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {\n                     str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, db_manager: SQLiteManager) -> Dict[str, Any]:",
+        "peekOfCode": "deepface_controller = DeepFaceController()\ndef check_version() -> Dict[str, Any]:\n    try:\n        version = deepface_controller.check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    from core.utils.theading import add_task_to_queue",
         "detail": "core.service",
+        "documentation": {}
+    },
+    {
+        "label": "deepface_app",
+        "kind": 5,
+        "importPath": "api",
+        "description": "api",
+        "peekOfCode": "deepface_app = app.create_app()\nif __name__ == \"__main__\":\n    parser = argparse.ArgumentParser()\n    parser.add_argument(\"-p\", \"--port\", type=int,\n                        default=5000, help=\"Port of serving api\")\n    args = parser.parse_args()\n    deepface_app.run(host=\"0.0.0.0\", port=args.port, debug=True,\n                     load_dotenv=True, use_reloader=False)",
+        "detail": "api",
         "documentation": {}
     },
     {
@@ -10167,7 +10390,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def create_app():\n    app = Flask(__name__)\n    # Initialize SQLite manager\n    db_manager = SQLiteManager(DB_PATH)\n    app.config['DB_MANAGER'] = db_manager\n    # Create required directories\n    directories = ['static', 'static/images', 'database']\n    base_paths = [os.path.join(BASE_PATH, d) for d in directories]\n    for path in base_paths:\n        os.makedirs(path, exist_ok=True)",
+        "peekOfCode": "def create_app():\n    app = Flask(__name__)\n    # Initialize SQLite manager\n    db_manager = SQLiteManager(DB_PATH)\n    app.config['DB_MANAGER'] = db_manager\n    logger.info(f\"Starting Flask app: {app.name}\")\n    # Create required directories\n    directories = ['static', 'static/images', 'database']\n    base_paths = [os.path.join(BASE_PATH, d) for d in directories]\n    for path in base_paths:",
         "detail": "app",
         "documentation": {}
     },
@@ -10176,26 +10399,476 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "logger = get_logger()\ndef create_app():\n    app = Flask(__name__)\n    # Initialize SQLite manager\n    db_manager = SQLiteManager(DB_PATH)\n    app.config['DB_MANAGER'] = db_manager\n    # Create required directories\n    directories = ['static', 'static/images', 'database']\n    base_paths = [os.path.join(BASE_PATH, d) for d in directories]\n    for path in base_paths:",
+        "peekOfCode": "logger = get_logger()\ndef create_app():\n    app = Flask(__name__)\n    # Initialize SQLite manager\n    db_manager = SQLiteManager(DB_PATH)\n    app.config['DB_MANAGER'] = db_manager\n    logger.info(f\"Starting Flask app: {app.name}\")\n    # Create required directories\n    directories = ['static', 'static/images', 'database']\n    base_paths = [os.path.join(BASE_PATH, d) for d in directories]",
         "detail": "app",
         "documentation": {}
     },
     {
-        "label": "a",
-        "kind": 5,
+        "label": "delete_images_for_uid",
+        "kind": 2,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "a = DeepFace.analyze(img_path = \"file2.jpg\" , anti_spoofing = True, actions=  (\"age\"),) \nface_objs = DeepFace.extract_faces(\n  img_path = \"file2.jpg\", detector_backend = \"opencv\", grayscale = False, enforce_detection = True, align = True, anti_spoofing = True\n)\nprint(face_objs)",
+        "peekOfCode": "def delete_images_for_uid( uid: str, base_uid: str):\n    # Adjust the pattern to correctly match files associated with the base_uid\n    image_pattern = os.path.join(IMAGES_DIR,base_uid ,f\"*_{uid}*.png\")\n    print(f\"Deleting images for UID {base_uid} with pattern {image_pattern}\")\n    # Ensure the pattern is correct and matches files\n    matching_files = glob.glob(image_pattern)\n    print(f\"Matching files: {matching_files}\")\n    if not matching_files:\n        print(f\"No files found for pattern: {image_pattern}\")\n    for file_path in matching_files:",
         "detail": "test",
         "documentation": {}
     },
     {
-        "label": "face_objs",
+        "label": "FastCgiRecord",
+        "kind": 6,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "class FastCgiRecord(object):\n    \"\"\"Represents a FastCgiRecord.  Encapulates the type, role, flags.  Holds\n    onto the params which we will receive and update later.\"\"\"\n    def __init__(self, type, req_id, role, flags):\n        self.type = type\n        self.req_id = req_id\n        self.role = role\n        self.flags = flags\n        self.params = {}\n    def __repr__(self):",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "_ExitException",
+        "kind": 6,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "class _ExitException(Exception):\n    pass\nif sys.version_info[0] >= 3:\n    # indexing into byte strings gives us an int, so\n    # ord is unnecessary on Python 3\n    def ord(x):\n        return x\n    def chr(x):\n        return bytes((x, ))\n    def wsgi_decode(x):",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "FILE_NOTIFY_INFORMATION",
+        "kind": 6,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "class FILE_NOTIFY_INFORMATION(ctypes.Structure):\n    _fields_ = [('NextEntryOffset', ctypes.c_uint32),\n                ('Action', ctypes.c_uint32),\n                ('FileNameLength', ctypes.c_uint32),\n                ('Filename', ctypes.c_wchar)]\n_ON_EXIT_TASKS = None\ndef run_exit_tasks():\n    global _ON_EXIT_TASKS\n    maybe_log(\"Running on_exit tasks\")\n    while _ON_EXIT_TASKS:",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "handle_response",
+        "kind": 6,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "class handle_response(object):\n    \"\"\"A context manager for handling the response. This will ensure that\n    exceptions in the handler are correctly reported, and the FastCGI request is\n    properly terminated.\n    \"\"\"\n    def __init__(self, stream, record, get_output, get_errors):\n        self.stream = stream\n        self.record = record\n        self._get_output = get_output\n        self._get_errors = get_errors",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "read_fastcgi_record",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def read_fastcgi_record(stream):\n    \"\"\"reads the main fast cgi record\"\"\"\n    data = stream.read(8)     # read record\n    if not data:\n        # no more data, our other process must have died...\n        raise _ExitException()\n    fcgi_ver, reqtype, req_id, content_size, padding_len, _ = struct.unpack('>BBHHBB', data)\n    content = stream.read(content_size)  # read content\n    stream.read(padding_len)\n    if fcgi_ver != FCGI_VERSION_1:",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "read_fastcgi_begin_request",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def read_fastcgi_begin_request(stream, req_id, content):\n    \"\"\"reads the begin request body and updates our _REQUESTS table to include\n    the new request\"\"\"\n    #    typedef struct {\n    #        unsigned char roleB1;\n    #        unsigned char roleB0;\n    #        unsigned char flags;\n    #        unsigned char reserved[5];\n    #    } FCGI_BeginRequestBody;\n    # TODO: Ignore request if it exists",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "read_encoded_int",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def read_encoded_int(content, offset):\n    i = struct.unpack_from('>B', content, offset)[0]\n    if i < 0x80:\n        return offset + 1, i\n    return offset + 4, struct.unpack_from('>I', content, offset)[0] & ~0x80000000\ndef read_fastcgi_keyvalue_pairs(content, offset):\n    \"\"\"Reads a FastCGI key/value pair stream\"\"\"\n    offset, name_len = read_encoded_int(content, offset)\n    offset, value_len = read_encoded_int(content, offset)\n    name = content[offset:(offset + name_len)]",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "read_fastcgi_keyvalue_pairs",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def read_fastcgi_keyvalue_pairs(content, offset):\n    \"\"\"Reads a FastCGI key/value pair stream\"\"\"\n    offset, name_len = read_encoded_int(content, offset)\n    offset, value_len = read_encoded_int(content, offset)\n    name = content[offset:(offset + name_len)]\n    offset += name_len\n    value = content[offset:(offset + value_len)]\n    offset += value_len\n    return offset, name, value\ndef get_encoded_int(i):",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "get_encoded_int",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def get_encoded_int(i):\n    \"\"\"Writes the length of a single name for a key or value in a key/value\n    stream\"\"\"\n    if i <= 0x7f:\n        return struct.pack('>B', i)\n    elif i < 0x80000000:\n        return struct.pack('>I', i | 0x80000000)\n    else:\n        raise ValueError('cannot encode value %s (%x) because it is too large' % (i, i))\ndef write_fastcgi_keyvalue_pairs(pairs):",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "write_fastcgi_keyvalue_pairs",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def write_fastcgi_keyvalue_pairs(pairs):\n    \"\"\"Creates a FastCGI key/value stream and returns it as a byte string\"\"\"\n    parts = []\n    for raw_key, raw_value in pairs.items():\n        key = wsgi_encode(raw_key)\n        value = wsgi_encode(raw_value)\n        parts.append(get_encoded_int(len(key)))\n        parts.append(get_encoded_int(len(value)))\n        parts.append(key)\n        parts.append(value)",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "read_fastcgi_params",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def read_fastcgi_params(stream, req_id, content):\n    if not content:\n        return None\n    offset = 0\n    res = _REQUESTS[req_id].params\n    while offset < len(content):\n        offset, name, value = read_fastcgi_keyvalue_pairs(content, offset)\n        name = wsgi_decode(name)\n        raw_name = RAW_VALUE_NAMES.get(name)\n        if raw_name:",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "read_fastcgi_input",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def read_fastcgi_input(stream, req_id, content):\n    \"\"\"reads FastCGI std-in and stores it in wsgi.input passed in the\n    wsgi environment array\"\"\"\n    res = _REQUESTS[req_id].params\n    if 'wsgi.input' not in res:\n        res['wsgi.input'] = content\n    else:\n        res['wsgi.input'] += content\n    if not content:\n        # we've hit the end of the input stream, time to process input...",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "read_fastcgi_data",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def read_fastcgi_data(stream, req_id, content):\n    \"\"\"reads FastCGI data stream and publishes it as wsgi.data\"\"\"\n    res = _REQUESTS[req_id].params\n    if 'wsgi.data' not in res:\n        res['wsgi.data'] = content\n    else:\n        res['wsgi.data'] += content\ndef read_fastcgi_abort_request(stream, req_id, content):\n    \"\"\"reads the wsgi abort request, which we ignore, we'll send the\n    finish execution request anyway...\"\"\"",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "read_fastcgi_abort_request",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def read_fastcgi_abort_request(stream, req_id, content):\n    \"\"\"reads the wsgi abort request, which we ignore, we'll send the\n    finish execution request anyway...\"\"\"\n    pass\ndef read_fastcgi_get_values(stream, req_id, content):\n    \"\"\"reads the fastcgi request to get parameter values, and immediately \n    responds\"\"\"\n    offset = 0\n    request = {}\n    while offset < len(content):",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "read_fastcgi_get_values",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def read_fastcgi_get_values(stream, req_id, content):\n    \"\"\"reads the fastcgi request to get parameter values, and immediately \n    responds\"\"\"\n    offset = 0\n    request = {}\n    while offset < len(content):\n        offset, name, value = read_fastcgi_keyvalue_pairs(content, offset)\n        request[name] = value\n    response = {}\n    if FCGI_MAX_CONNS in request:",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def log(txt):\n    \"\"\"Logs messages to a log file if WSGI_LOG env var is defined.\"\"\"\n    if APPINSIGHT_CLIENT:\n        try:\n            APPINSIGHT_CLIENT.track_event(txt)\n        except:\n            pass\n    log_file = os.environ.get('WSGI_LOG')\n    if log_file:\n        with open(log_file, 'a+', encoding='utf-8') as f:",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "maybe_log",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def maybe_log(txt):\n    \"\"\"Logs messages to a log file if WSGI_LOG env var is defined, and does not\n    raise exceptions if logging fails.\"\"\"\n    try:\n        log(txt)\n    except:\n        pass\ndef send_response(stream, req_id, resp_type, content, streaming=True):\n    \"\"\"sends a response w/ the given id, type, and content to the server.\n    If the content is streaming then an empty record is sent at the end to ",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "send_response",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def send_response(stream, req_id, resp_type, content, streaming=True):\n    \"\"\"sends a response w/ the given id, type, and content to the server.\n    If the content is streaming then an empty record is sent at the end to \n    terminate the stream\"\"\"\n    if not isinstance(content, bytes):\n        raise TypeError(\"content must be encoded before sending: %r\" % content)\n    offset = 0\n    while True:\n        len_remaining = max(min(len(content) - offset, 0xFFFF), 0)\n        data = struct.pack(",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "get_environment",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def get_environment(dir):\n    web_config = os.path.join(dir, 'Web.config')\n    if not os.path.exists(web_config):\n        return {}\n    d = {}\n    doc = minidom.parse(web_config)\n    config = doc.getElementsByTagName('configuration')\n    for configSection in config:\n        appSettings = configSection.getElementsByTagName('appSettings')\n        for appSettingsSection in appSettings:",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "run_exit_tasks",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def run_exit_tasks():\n    global _ON_EXIT_TASKS\n    maybe_log(\"Running on_exit tasks\")\n    while _ON_EXIT_TASKS:\n        tasks, _ON_EXIT_TASKS = _ON_EXIT_TASKS, []\n        for t in tasks:\n            try:\n                t()\n            except Exception:\n                maybe_log(\"Error in exit task: \" + traceback.format_exc())",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "on_exit",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def on_exit(task):\n    global _ON_EXIT_TASKS\n    if _ON_EXIT_TASKS is None:\n        _ON_EXIT_TASKS = tasks = []\n        try:\n            evt = int(os.getenv('_FCGI_SHUTDOWN_EVENT_'))\n        except (TypeError, ValueError):\n            maybe_log(\"Could not wait on event %s\" % os.getenv('_FCGI_SHUTDOWN_EVENT_'))\n        else:\n            def _wait_for_exit():",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "start_file_watcher",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def start_file_watcher(path, restart_regex):\n    if restart_regex is None:\n        restart_regex = \".*((\\\\.py)|(\\\\.config))$\"\n    elif not restart_regex:\n        # restart regex set to empty string, no restart behavior\n        return\n    def enum_changes(path):\n        \"\"\"Returns a generator that blocks until a change occurs, then yields\n        the filename of the changed file.\n        Yields an empty string and stops if the buffer overruns, indicating that",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_handler",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def get_wsgi_handler(handler_name):\n    if not handler_name:\n        raise Exception('WSGI_HANDLER env var must be set')\n    if not isinstance(handler_name, str):\n        handler_name = to_str(handler_name)\n    module_name, _, callable_name = handler_name.rpartition('.')\n    should_call = callable_name.endswith('()')\n    callable_name = callable_name[:-2] if should_call else callable_name\n    name_list = [(callable_name, should_call)]\n    handler = None",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "read_wsgi_handler",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def read_wsgi_handler(physical_path):\n    global APPINSIGHT_CLIENT\n    env = get_environment(physical_path)\n    os.environ.update(env)\n    for path in (v for k, v in env.items() if k.lower() == 'pythonpath'):\n        # Expand environment variables manually.\n        expanded_path = re.sub(\n            '%(\\\\w+?)%',\n            lambda m: os.getenv(m.group(1), ''),\n            path",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def main():\n    initialized = False\n    log('wfastcgi.py %s started' % __version__)\n    log('Python version: %s' % sys.version)\n    print('wfastcgi.py %s started' % __version__)\n    try:\n        fcgi_stream = sys.stdin.detach() if sys.version_info[0] >= 3 else sys.stdin\n        try:\n            import msvcrt\n            msvcrt.setmode(fcgi_stream.fileno(), os.O_BINARY)",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "enable",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def enable():\n    executable = '\"' + sys.executable + '\"' if ' ' in sys.executable else sys.executable\n    quoted_file = '\"' + __file__ + '\"' if ' ' in __file__ else __file__\n    res = _run_appcmd([\n        \"set\", \"config\", \"/section:system.webServer/fastCGI\",\n        \"/+[fullPath='\" + executable + \"', arguments='\" + quoted_file + \"', signalBeforeTerminateSeconds='30']\"\n    ])\n    if res == 0:\n        print('\"%s|%s\" can now be used as a FastCGI script processor' % (executable, quoted_file))\n    return res",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "disable",
+        "kind": 2,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "def disable():\n    executable = '\"' + sys.executable + '\"' if ' ' in sys.executable else sys.executable\n    quoted_file = '\"' + __file__ + '\"' if ' ' in __file__ else __file__    \n    res = _run_appcmd([\n        \"set\", \"config\", \"/section:system.webServer/fastCGI\",\n        \"/-[fullPath='\" + executable + \"', arguments='\" + quoted_file + \"', signalBeforeTerminateSeconds='30']\"\n    ])\n    if res == 0:\n        print('\"%s|%s\" is no longer registered for use with FastCGI' % (executable, quoted_file))\n    return res",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "__author__",
         "kind": 5,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "face_objs = DeepFace.extract_faces(\n  img_path = \"file2.jpg\", detector_backend = \"opencv\", grayscale = False, enforce_detection = True, align = True, anti_spoofing = True\n)\nprint(face_objs)",
-        "detail": "test",
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "__author__ = \"Microsoft Corporation <ptvshelp@microsoft.com>\"\n__version__ = \"3.0.0\"\nimport ctypes\nimport datetime\nimport os\nimport re\nimport struct\nimport sys\nimport traceback\nfrom xml.dom import minidom",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "__version__",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "__version__ = \"3.0.0\"\nimport ctypes\nimport datetime\nimport os\nimport re\nimport struct\nimport sys\nimport traceback\nfrom xml.dom import minidom\n# os.system(\"conda activate Face_Recognition_v3\")",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "FCGI_VERSION_1",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "FCGI_VERSION_1 = 1\nFCGI_HEADER_LEN = 8\nFCGI_BEGIN_REQUEST       = 1\nFCGI_ABORT_REQUEST       = 2\nFCGI_END_REQUEST         = 3\nFCGI_PARAMS              = 4\nFCGI_STDIN               = 5\nFCGI_STDOUT              = 6\nFCGI_STDERR              = 7\nFCGI_DATA                = 8",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "FCGI_HEADER_LEN",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "FCGI_HEADER_LEN = 8\nFCGI_BEGIN_REQUEST       = 1\nFCGI_ABORT_REQUEST       = 2\nFCGI_END_REQUEST         = 3\nFCGI_PARAMS              = 4\nFCGI_STDIN               = 5\nFCGI_STDOUT              = 6\nFCGI_STDERR              = 7\nFCGI_DATA                = 8\nFCGI_GET_VALUES          = 9",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "FCGI_MAXTYPE",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "FCGI_MAXTYPE = FCGI_UNKNOWN_TYPE\nFCGI_NULL_REQUEST_ID    = 0\nFCGI_KEEP_CONN = 1\nFCGI_RESPONDER  = 1\nFCGI_AUTHORIZER = 2\nFCGI_FILTER     = 3\nFCGI_REQUEST_COMPLETE = 0\nFCGI_CANT_MPX_CONN    = 1\nFCGI_OVERLOADED       = 2\nFCGI_UNKNOWN_ROLE     = 3",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "FCGI_KEEP_CONN",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "FCGI_KEEP_CONN = 1\nFCGI_RESPONDER  = 1\nFCGI_AUTHORIZER = 2\nFCGI_FILTER     = 3\nFCGI_REQUEST_COMPLETE = 0\nFCGI_CANT_MPX_CONN    = 1\nFCGI_OVERLOADED       = 2\nFCGI_UNKNOWN_ROLE     = 3\nFCGI_MAX_CONNS  = \"FCGI_MAX_CONNS\"\nFCGI_MAX_REQS   = \"FCGI_MAX_REQS\"",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "FCGI_AUTHORIZER",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "FCGI_AUTHORIZER = 2\nFCGI_FILTER     = 3\nFCGI_REQUEST_COMPLETE = 0\nFCGI_CANT_MPX_CONN    = 1\nFCGI_OVERLOADED       = 2\nFCGI_UNKNOWN_ROLE     = 3\nFCGI_MAX_CONNS  = \"FCGI_MAX_CONNS\"\nFCGI_MAX_REQS   = \"FCGI_MAX_REQS\"\nFCGI_MPXS_CONNS = \"FCGI_MPXS_CONNS\"\nclass FastCgiRecord(object):",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "FCGI_REQUEST_COMPLETE",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "FCGI_REQUEST_COMPLETE = 0\nFCGI_CANT_MPX_CONN    = 1\nFCGI_OVERLOADED       = 2\nFCGI_UNKNOWN_ROLE     = 3\nFCGI_MAX_CONNS  = \"FCGI_MAX_CONNS\"\nFCGI_MAX_REQS   = \"FCGI_MAX_REQS\"\nFCGI_MPXS_CONNS = \"FCGI_MPXS_CONNS\"\nclass FastCgiRecord(object):\n    \"\"\"Represents a FastCgiRecord.  Encapulates the type, role, flags.  Holds\n    onto the params which we will receive and update later.\"\"\"",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "FCGI_MPXS_CONNS",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "FCGI_MPXS_CONNS = \"FCGI_MPXS_CONNS\"\nclass FastCgiRecord(object):\n    \"\"\"Represents a FastCgiRecord.  Encapulates the type, role, flags.  Holds\n    onto the params which we will receive and update later.\"\"\"\n    def __init__(self, type, req_id, role, flags):\n        self.type = type\n        self.req_id = req_id\n        self.role = role\n        self.flags = flags\n        self.params = {}",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "RAW_VALUE_NAMES",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "RAW_VALUE_NAMES = {\n    'SCRIPT_NAME' : 'wsgi.script_name',\n    'PATH_INFO' : 'wsgi.path_info',\n    'QUERY_STRING' : 'wsgi.query_string',\n    'HTTP_X_ORIGINAL_URL' : 'wfastcgi.http_x_original_url',\n}\ndef read_fastcgi_params(stream, req_id, content):\n    if not content:\n        return None\n    offset = 0",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "REQUEST_PROCESSORS",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "REQUEST_PROCESSORS = {\n    FCGI_BEGIN_REQUEST : read_fastcgi_begin_request,\n    FCGI_ABORT_REQUEST : read_fastcgi_abort_request,\n    FCGI_PARAMS : read_fastcgi_params,\n    FCGI_STDIN : read_fastcgi_input,\n    FCGI_DATA : read_fastcgi_data,\n    FCGI_GET_VALUES : read_fastcgi_get_values\n}\nAPPINSIGHT_CLIENT = None\ndef log(txt):",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "APPINSIGHT_CLIENT",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "APPINSIGHT_CLIENT = None\ndef log(txt):\n    \"\"\"Logs messages to a log file if WSGI_LOG env var is defined.\"\"\"\n    if APPINSIGHT_CLIENT:\n        try:\n            APPINSIGHT_CLIENT.track_event(txt)\n        except:\n            pass\n    log_file = os.environ.get('WSGI_LOG')\n    if log_file:",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "ReadDirectoryChangesW",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "ReadDirectoryChangesW = ctypes.windll.kernel32.ReadDirectoryChangesW\nReadDirectoryChangesW.restype = ctypes.c_uint32\nReadDirectoryChangesW.argtypes  = [\n    ctypes.c_void_p,     # HANDLE hDirectory\n    ctypes.c_void_p,     # LPVOID lpBuffer\n    ctypes.c_uint32,     # DWORD nBufferLength\n    ctypes.c_uint32,     # BOOL bWatchSubtree\n    ctypes.c_uint32,     # DWORD dwNotifyFilter\n    ctypes.POINTER(ctypes.c_uint32),  # LPDWORD lpBytesReturned\n    ctypes.c_void_p,     # LPOVERLAPPED lpOverlapped",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "ReadDirectoryChangesW.restype",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "ReadDirectoryChangesW.restype = ctypes.c_uint32\nReadDirectoryChangesW.argtypes  = [\n    ctypes.c_void_p,     # HANDLE hDirectory\n    ctypes.c_void_p,     # LPVOID lpBuffer\n    ctypes.c_uint32,     # DWORD nBufferLength\n    ctypes.c_uint32,     # BOOL bWatchSubtree\n    ctypes.c_uint32,     # DWORD dwNotifyFilter\n    ctypes.POINTER(ctypes.c_uint32),  # LPDWORD lpBytesReturned\n    ctypes.c_void_p,     # LPOVERLAPPED lpOverlapped\n    ctypes.c_void_p      # LPOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "FILE_LIST_DIRECTORY",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "FILE_LIST_DIRECTORY = 1\nFILE_SHARE_READ = 0x00000001\nFILE_SHARE_WRITE = 0x00000002\nFILE_SHARE_DELETE = 0x00000004\nFILE_FLAG_BACKUP_SEMANTICS = 0x02000000\nMAX_PATH = 260\nFILE_NOTIFY_CHANGE_LAST_WRITE  = 0x10\nERROR_NOTIFY_ENUM_DIR = 1022\nINVALID_HANDLE_VALUE = 0xFFFFFFFF\nclass FILE_NOTIFY_INFORMATION(ctypes.Structure):",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "FILE_SHARE_READ",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "FILE_SHARE_READ = 0x00000001\nFILE_SHARE_WRITE = 0x00000002\nFILE_SHARE_DELETE = 0x00000004\nFILE_FLAG_BACKUP_SEMANTICS = 0x02000000\nMAX_PATH = 260\nFILE_NOTIFY_CHANGE_LAST_WRITE  = 0x10\nERROR_NOTIFY_ENUM_DIR = 1022\nINVALID_HANDLE_VALUE = 0xFFFFFFFF\nclass FILE_NOTIFY_INFORMATION(ctypes.Structure):\n    _fields_ = [('NextEntryOffset', ctypes.c_uint32),",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "FILE_SHARE_WRITE",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "FILE_SHARE_WRITE = 0x00000002\nFILE_SHARE_DELETE = 0x00000004\nFILE_FLAG_BACKUP_SEMANTICS = 0x02000000\nMAX_PATH = 260\nFILE_NOTIFY_CHANGE_LAST_WRITE  = 0x10\nERROR_NOTIFY_ENUM_DIR = 1022\nINVALID_HANDLE_VALUE = 0xFFFFFFFF\nclass FILE_NOTIFY_INFORMATION(ctypes.Structure):\n    _fields_ = [('NextEntryOffset', ctypes.c_uint32),\n                ('Action', ctypes.c_uint32),",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "FILE_SHARE_DELETE",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "FILE_SHARE_DELETE = 0x00000004\nFILE_FLAG_BACKUP_SEMANTICS = 0x02000000\nMAX_PATH = 260\nFILE_NOTIFY_CHANGE_LAST_WRITE  = 0x10\nERROR_NOTIFY_ENUM_DIR = 1022\nINVALID_HANDLE_VALUE = 0xFFFFFFFF\nclass FILE_NOTIFY_INFORMATION(ctypes.Structure):\n    _fields_ = [('NextEntryOffset', ctypes.c_uint32),\n                ('Action', ctypes.c_uint32),\n                ('FileNameLength', ctypes.c_uint32),",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "FILE_FLAG_BACKUP_SEMANTICS",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "FILE_FLAG_BACKUP_SEMANTICS = 0x02000000\nMAX_PATH = 260\nFILE_NOTIFY_CHANGE_LAST_WRITE  = 0x10\nERROR_NOTIFY_ENUM_DIR = 1022\nINVALID_HANDLE_VALUE = 0xFFFFFFFF\nclass FILE_NOTIFY_INFORMATION(ctypes.Structure):\n    _fields_ = [('NextEntryOffset', ctypes.c_uint32),\n                ('Action', ctypes.c_uint32),\n                ('FileNameLength', ctypes.c_uint32),\n                ('Filename', ctypes.c_wchar)]",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_PATH",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "MAX_PATH = 260\nFILE_NOTIFY_CHANGE_LAST_WRITE  = 0x10\nERROR_NOTIFY_ENUM_DIR = 1022\nINVALID_HANDLE_VALUE = 0xFFFFFFFF\nclass FILE_NOTIFY_INFORMATION(ctypes.Structure):\n    _fields_ = [('NextEntryOffset', ctypes.c_uint32),\n                ('Action', ctypes.c_uint32),\n                ('FileNameLength', ctypes.c_uint32),\n                ('Filename', ctypes.c_wchar)]\n_ON_EXIT_TASKS = None",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "ERROR_NOTIFY_ENUM_DIR",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "ERROR_NOTIFY_ENUM_DIR = 1022\nINVALID_HANDLE_VALUE = 0xFFFFFFFF\nclass FILE_NOTIFY_INFORMATION(ctypes.Structure):\n    _fields_ = [('NextEntryOffset', ctypes.c_uint32),\n                ('Action', ctypes.c_uint32),\n                ('FileNameLength', ctypes.c_uint32),\n                ('Filename', ctypes.c_wchar)]\n_ON_EXIT_TASKS = None\ndef run_exit_tasks():\n    global _ON_EXIT_TASKS",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "INVALID_HANDLE_VALUE",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "INVALID_HANDLE_VALUE = 0xFFFFFFFF\nclass FILE_NOTIFY_INFORMATION(ctypes.Structure):\n    _fields_ = [('NextEntryOffset', ctypes.c_uint32),\n                ('Action', ctypes.c_uint32),\n                ('FileNameLength', ctypes.c_uint32),\n                ('Filename', ctypes.c_wchar)]\n_ON_EXIT_TASKS = None\ndef run_exit_tasks():\n    global _ON_EXIT_TASKS\n    maybe_log(\"Running on_exit tasks\")",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "_ON_EXIT_TASKS",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "_ON_EXIT_TASKS = None\ndef run_exit_tasks():\n    global _ON_EXIT_TASKS\n    maybe_log(\"Running on_exit tasks\")\n    while _ON_EXIT_TASKS:\n        tasks, _ON_EXIT_TASKS = _ON_EXIT_TASKS, []\n        for t in tasks:\n            try:\n                t()\n            except Exception:",
+        "detail": "wfastcgi",
+        "documentation": {}
+    },
+    {
+        "label": "_REQUESTS",
+        "kind": 5,
+        "importPath": "wfastcgi",
+        "description": "wfastcgi",
+        "peekOfCode": "_REQUESTS = {}\ndef main():\n    initialized = False\n    log('wfastcgi.py %s started' % __version__)\n    log('Python version: %s' % sys.version)\n    print('wfastcgi.py %s started' % __version__)\n    try:\n        fcgi_stream = sys.stdin.detach() if sys.version_info[0] >= 3 else sys.stdin\n        try:\n            import msvcrt",
+        "detail": "wfastcgi",
         "documentation": {}
     }
 ]

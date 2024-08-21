@@ -47,7 +47,7 @@ if len(tf.config.experimental.list_physical_devices('GPU')) > 0:
     logger.info("Using GPU for TensorFlow operations")
 else:
     logger.info("No GPU found. Running on CPU")
-    messange = ("No GPU found. Running on CPU")
+    messange = ("Using CPU for TensorFlow operations")
 # -----------------------------------
 
 # Create required folders if necessary to store model weights
@@ -149,7 +149,7 @@ class DeepFaceController():
         elif isinstance(actions, list):
             self._actions = actions
     def check_version(self) -> str :
-        return __version__ + " " +  " " + messange
+        return {"message": messange , "version": __version__} 
 
         
     def verify_faces_db(

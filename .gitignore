@@ -1,0 +1,14 @@
+.env
+file*
+core/database
+core/static/*
+core/static
+
+core/logs/*
+core/log/*
+.venv
+__pycache__
+*.pyc
+*.log
+logs/
+.vscode/

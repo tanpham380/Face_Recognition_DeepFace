@@ -1,4 +1,5 @@
 from flask import Blueprint, current_app, request
+import google.protobuf
 import numpy as np
 from core import service
 from core.utils.middleware import require_api_key
@@ -23,17 +24,21 @@ def version():
 @blueprint.route("/tasks/status", methods=["GET"])
 @require_api_key
 def get_task_status():
+    
     """API để xem trạng thái các tác vụ."""
-    db_manager = current_app.config['DB_MANAGER']
-    with db_manager.get_connection() as conn:
-        cursor = conn.execute("""
-            SELECT task_id, status, created_at
-            FROM task_status
-            ORDER BY created_at DESC
-        """)
-        tasks = cursor.fetchall()
-        tasks_list = [{"task_id": row[0], "status": row[1], "created_at": row[2]} for row in tasks]
-        return {"message": tasks_list}
+    try :
+        db_manager = current_app.config['DB_MANAGER']
+        with db_manager.get_connection() as conn:
+            cursor = conn.execute("""
+                SELECT task_id, status, created_at
+                FROM task_status
+                ORDER BY created_at DESC
+            """)
+            tasks = cursor.fetchall()
+            tasks_list = [{"task_id": row[0], "status": row[1], "created_at": row[2]} for row in tasks]
+            return {"message": "Thành công", "data": tasks_list , "success": True }
+    except Exception as e:
+        return {"message": "Failed to get task status", "data": None, "success": False}, 500
 
 
 
@@ -41,9 +46,18 @@ def get_task_status():
 @blueprint.route("/list", methods=["GET"])
 @require_api_key
 def list_faces():
-    db_manager = current_app.config['DB_MANAGER']
-    uids = db_manager.get_all_uids()
-    return {"registered_faces": uids}
+    try: 
+        db_manager = current_app.config['DB_MANAGER']
+        uids = db_manager.get_all_uids()
+
+        # Use a set to remove duplicates and then convert it back to a list
+        unique_uids = list(set(uids))
+        return {"message": "Thành công", "data": unique_uids , "success": True }
+    except Exception as e:
+        return {"message": "Failed to list faces", "data": None, "success": False}, 500
+
+    
+
 
 
 @blueprint.route("/embedding", methods=["GET"])
@@ -116,7 +130,7 @@ def delete_face():
     db_manager = current_app.config['DB_MANAGER']
 
     try:
-        response = service.delete_face(uid, db_manager)
+        response = service.delete_face(uid, db_manager , current_app)
         return response
     except Exception as e:
         return {"message": "Failed to delete face", "error": str(e)}, 500

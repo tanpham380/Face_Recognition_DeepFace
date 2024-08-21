@@ -1,6 +1,6 @@
 from PIL import Image, ImageEnhance, ImageOps
+from concurrent.futures import ThreadPoolExecutor
 import numpy as np
-from io import BytesIO
 
 def shift_image(image, shift):
     """Dịch chuyển hình ảnh với một khoảng cách nhất định."""
@@ -8,76 +8,50 @@ def shift_image(image, shift):
     shifted_image = Image.new("RGB", (width, height))
     shifted_image.paste(image, (shift[0], shift[1]))
     return shifted_image
+
+def process_image(image, operation, *args):
+    """Helper function to apply various operations on the image."""
+    if operation == 'rotate':
+        return image.rotate(*args, resample=Image.BICUBIC)
+    elif operation == 'flip':
+        return ImageOps.mirror(image)
+    elif operation == 'brightness':
+        enhancer = ImageEnhance.Brightness(image)
+        return enhancer.enhance(*args)
+    elif operation == 'shift':
+        return shift_image(image, args)
+
+from copy import deepcopy
+
 def augment_image(image_data):
-    # Nếu image_data là một FileStorage object từ Flask hoặc BytesIO, thì chuyển đổi thành đối tượng Image
-    if hasattr(image_data, 'read'):  # Kiểm tra xem có phương thức 'read' không
+    if hasattr(image_data, 'read'):
         image = Image.open(image_data)
-    elif isinstance(image_data, str):  # Nếu là một đường dẫn, mở đường dẫn đó
+        image.load()
+    elif isinstance(image_data, str):
         image = Image.open(image_data)
+        image.load()
     else:
-        image = image_data  # Giả định rằng nếu không phải FileStorage, BytesIO, hoặc str, thì image_data đã là một đối tượng Image
+        image = image_data
 
     augmented_images = []
+    operations = [
+        ('rotate', 5),
+        ('rotate', -5),
+        ('flip',),
+        ('brightness', 0.8),
+        ('shift', 3, 0),
+        ('shift', -3, 0)
+    ]
 
-    # Xoay ảnh ±5 độ (giảm góc xoay để tránh biến dạng khuôn mặt)
-    rotated = image.rotate(5, resample=Image.BICUBIC)
-    augmented_images.append(rotated)
-    rotated = image.rotate(-5, resample=Image.BICUBIC)
-    augmented_images.append(rotated)
+    def process_with_copy(op):
+        return process_image(deepcopy(image), *op)
 
-    # Lật ảnh ngang (giữ lại vì có thể hữu ích)
-    flipped = ImageOps.mirror(image)
-    augmented_images.append(flipped)
+    with ThreadPoolExecutor() as executor:
+        results = executor.map(process_with_copy, operations)
+        augmented_images.extend(results)
 
-    # Giảm độ sáng đi 20%
-    enhancer = ImageEnhance.Brightness(image)
-    darkened = enhancer.enhance(0.8)  # Giảm sáng 20%
-    augmented_images.append(darkened)
-
-    # Dịch chuyển hình ảnh (giảm số lượng dịch chuyển)
-    shifts = [(3, 0), (-3, 0)]  # Dịch chuyển nhẹ hơn
-    for shift in shifts:
-        shifted = shift_image(image, shift)
-        augmented_images.append(shifted)
-
-    # Thêm ảnh gốc vào danh sách
     augmented_images.append(image)
 
     return augmented_images
 
-# def augment_image(image_data):
-#     # Nếu image_data là một FileStorage object từ Flask hoặc BytesIO, thì chuyển đổi thành đối tượng Image
-#     if hasattr(image_data, 'read'):  # Kiểm tra xem có phương thức 'read' không
-#         image = Image.open(image_data)
-#     elif isinstance(image_data, str):  # Nếu là một đường dẫn, mở đường dẫn đó
-#         image = Image.open(image_data)
-#     else:
-#         image = image_data  # Giả định rằng nếu không phải FileStorage, BytesIO, hoặc str, thì image_data đã là một đối tượng Image
 
-#     augmented_images = []
-
-#     # Xoay ảnh ±10 độ
-#     for angle in [-10, 10]:
-#         rotated = image.rotate(angle, resample=Image.BICUBIC)
-#         augmented_images.append(rotated)
-
-#     # Lật ảnh ngang
-#     flipped = ImageOps.mirror(image)
-#     augmented_images.append(flipped)
-
-#     # Điều chỉnh độ sáng
-#     enhancer = ImageEnhance.Brightness(image)
-#     for factor in [0.8, 1.2]:  # Giảm độ sáng 20% và tăng 20%
-#         brightened = enhancer.enhance(factor)
-#         augmented_images.append(brightened)
-
-#     # Dịch chuyển hình ảnh theo các hướng khác nhau
-#     shifts = [(5, 0), (-5, 0), (0, 5), (0, -5)]
-#     for shift in shifts:
-#         shifted = shift_image(image, shift)
-#         augmented_images.append(shifted)
-
-#     # Thêm ảnh gốc vào danh sách
-#     augmented_images.append(image)
-
-#     return augmented_images

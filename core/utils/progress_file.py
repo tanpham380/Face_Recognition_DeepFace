@@ -5,12 +5,38 @@ from typing import Any, Tuple
 import os
 import datetime
 from typing import Any
+
+from core.utils.logging import get_logger
+from core.utils.static_variable import IMAGES_DIR
+import glob
+logger = get_logger()
 def extract_base_identity(identity):
     # Split the identity by '_' and take the last part without the augmentation part
     identity = os.path.splitext(os.path.basename(identity))[0]
     identity = "_".join(identity.split('_')[2:]).split('_')[0]
 
     return identity
+
+def delete_images_for_uid(uid: str, base_uid: str ):
+    # Adjust the pattern to correctly match files associated with the base_uid and uid
+    image_pattern = os.path.join(IMAGES_DIR, base_uid, f"*_{uid}*.png")
+
+    # Ensure the pattern is correct and matches files
+    matching_files = glob.glob(image_pattern)
+
+    if not matching_files:
+        logger.info(f"No files found for pattern")
+
+    for file_path in matching_files:
+        try:
+            os.remove(file_path)
+            logger.info(f"Deleted file {file_path}")
+        except Exception as e:
+            logger.error(f"Failed to delete file {file_path}: {e}")
+            
+            
+            
+            
 def save_image(image: Any, uid: str, base_dir: str, prefix: str, anti_spoofing: bool = False):
     """
     Save the given image to a directory with a specific format. If the directory contains more than
