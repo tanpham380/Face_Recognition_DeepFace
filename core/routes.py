@@ -1,13 +1,11 @@
 from flask import Blueprint, current_app, request
-import google.protobuf
-import numpy as np
 from core import service
 from core.utils.middleware import require_api_key
 from core.utils.logging import get_logger
 logger = get_logger()
 blueprint = Blueprint("routes", __name__)
 
-
+# Assuming you have an instance of DeepFaceController
 @blueprint.route("/")
 def home():
     version = service.check_version()

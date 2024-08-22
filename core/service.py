@@ -8,7 +8,7 @@ from typing import Optional, List, Dict, Any
 import os
 import numpy as np
 from core.utils.augment_images import augment_image
-from core.utils.theading import task_queue
+from core.utils.theading import add_task_to_queue, task_queue
 from core.utils.database import SQLiteManager
 from core.utils.progress_file import delete_images, delete_images_for_uid, extract_base_identity, save_image
 # from core.utils.search_embleeding import find_in_db
@@ -21,8 +21,8 @@ from core.deepface_controller.controller import DeepFaceController
 # Initialize the logger
 logger = get_logger()
 
+# Assuming you have an instance of DeepFaceController
 deepface_controller = DeepFaceController()
-
 
 def check_version() -> Dict[str, Any]:
     try:
@@ -32,24 +32,20 @@ def check_version() -> Dict[str, Any]:
         logger.error(f"Exception while checking version: {str(e)} - {traceback.format_exc()}")
         return {"message": "Failed to fetch version", "data": None, "success": False}
 
-
-
-
 def delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:
-    from core.utils.theading import add_task_to_queue
     try:
         # Cancel any pending or processing tasks related to this UID
         task_id = db_manager.get_active_final_task(uid)
         if task_id:
             db_manager.cancel_task(task_id)
             logger.info(f"Canceled pending or processing task {task_id} for UID {uid}")
-        
+
         # Extract base_uid from the given uid
         base_uid = uid.split('-')[0]
-        
+
         # Delete all embeddings associated with this UID
         db_manager.delete_embedding_by_uid(uid)
-        
+
         # Delete images associated with the base_uid
         delete_images_for_uid(uid, base_uid)
         logger.info(f"Deleted all face embeddings and images for UID {uid}")
@@ -77,17 +73,14 @@ def recreate_DB(db_manager: SQLiteManager, img_path, app, uid) -> Dict[str, Any]
         logger.info(f"Completed recreating DB for UID {uid}")
 
 def check_and_run_final_task(db_manager: SQLiteManager, img_path, app, uid):
-    """Check if all tasks are done and run the final task if they are."""
     logger.info(f"Running final task for UID {uid}")
     
-    # Check if there are any other pending or processing tasks for the same UID
     pending_task_id = db_manager.get_active_final_task(uid)
     
     if pending_task_id:
         logger.info(f"Cannot run final task for UID {uid}, other task {pending_task_id} is still pending.")
         return
     
-    # Run the final task only if it is the last task in the queue
     if task_queue.empty():
         with app.app_context():
             deepface_controller.find(
@@ -107,7 +100,6 @@ def handle_background_tasks(db_manager: SQLiteManager, image_paths, uid, app, ma
             for img_path in image_paths:
                 logger.info(f"Processing image: {img_path}")
                 
-                # Check for new requests every 5 seconds
                 time.sleep(5)
                 if not task_queue.empty():
                     logger.info("New request detected, stopping current task and waiting for final task.")
@@ -127,8 +119,7 @@ def handle_background_tasks(db_manager: SQLiteManager, image_paths, uid, app, ma
                     existing_embeddings = db_manager.get_embeddings(uid)
 
                     if len(existing_embeddings) >= max_embeddings:
-                        db_manager.delete_oldest_embeddings(
-                            uid, len(existing_embeddings) - max_embeddings + 1)
+                        db_manager.delete_oldest_embeddings(uid, len(existing_embeddings) - max_embeddings + 1)
 
                     db_manager.insert_or_update_embedding(uid, embedding)
                     logger.info(f"Face registered successfully for UID {uid}")
@@ -138,11 +129,7 @@ def handle_background_tasks(db_manager: SQLiteManager, image_paths, uid, app, ma
         except Exception as e:
             logger.error(f"Exception during background processing for UID {uid}: {str(e)} - {traceback.format_exc()}")
 
-
-
-
 def register_face(image: Any, uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:
-    from core.utils.theading import add_task_to_queue
     try:
         image_path, _ = save_image(image, uid, IMAGES_DIR, uid)
         augmented_images = augment_image(image)
@@ -152,10 +139,7 @@ def register_face(image: Any, uid: str, db_manager: SQLiteManager, current_app) 
             augmented_image_path, _ = save_image(img, uid, IMAGES_DIR, f"{uid}_aug{i}")
             augmented_image_paths.append(augmented_image_path)
 
-        # Process embeddings in the background
         add_task_to_queue(handle_background_tasks, db_manager, [image_path] + augmented_image_paths, uid, current_app._get_current_object())
-
-        # Schedule a new final task
         add_task_to_queue(check_and_run_final_task, db_manager, img_path=image_path, app=current_app._get_current_object(), uid=uid)
 
         return {"message": "Face registered successfully!.", "data": {"uid": uid}, "success": True}
@@ -164,22 +148,16 @@ def register_face(image: Any, uid: str, db_manager: SQLiteManager, current_app) 
         logger.error(f"Exception while registering face with UID {uid}: {str(e)} - {traceback.format_exc()}")
         return {"message": "Failed to register face", "data": None, "success": False}
 
-
-
-
 def recognize_face(image: Any) -> Dict[str, Any]:
     try:
-        # Save the image temporarily
-        image_path, _  = save_image(image, "query_results", TEMP_DIR, "")
+        image_path, _ = save_image(image, "query_results", TEMP_DIR, "")
         
-        # Extract faces with anti-spoofing
         value_objs_anti_spoofing = deepface_controller.extract_faces(
             img_path=image_path,
             detector_backend="retinaface",
             anti_spoofing=True
         )[0]
         
-        # Perform face recognition
         value_objs = deepface_controller.find(
             img_path=image_path,
             db_path=IMAGES_DIR,
@@ -188,27 +166,12 @@ def recognize_face(image: Any) -> Dict[str, Any]:
             anti_spoofing=False
         )
 
-        # If results are returned, construct the response
         if value_objs and not value_objs[0].empty:
-            # Extract the best match
             best_match = value_objs[0].iloc[0]
 
-            # Extract identity and simplify it
             best_match_identity = extract_base_identity(os.path.splitext(os.path.basename(best_match['identity']))[0])
             best_match_confidence = round(float((1 - best_match['distance'] / best_match['threshold']) * 100), 2)
 
-            # Include all matches in the data
-            all_matches = value_objs[0].apply(
-                lambda row: {
-                    "identity": extract_base_identity(os.path.splitext(os.path.basename(row['identity']))[0]),
-                    "distance": round(float(row['distance']), 2),
-                    "threshold": round(float(row['threshold']), 2),
-                    "confidence": round((1 - float(row['distance']) / float(row['threshold'])) * 100, 2)
-                },
-                axis=1
-            ).tolist()
-
-            # Construct the response
             response = {
                 "message": "Face recognized successfully!",
                 "data": {
@@ -216,13 +179,6 @@ def recognize_face(image: Any) -> Dict[str, Any]:
                         "identity": best_match_identity,
                         "confidence": best_match_confidence
                     },
-                    # "all_matches": all_matches,
-                    # "source_region": {
-                    #     "source_x": int(best_match['source_x']),
-                    #     "source_y": int(best_match['source_y']),
-                    #     "source_w": int(best_match['source_w']),
-                    #     "source_h": int(best_match['source_h']),
-                    # },
                     "is_real": bool(value_objs_anti_spoofing.get('is_real', False)),
                     "antispoof_score": round(float(value_objs_anti_spoofing.get('antispoof_score', 0)), 2) * 100
                 },
@@ -237,9 +193,7 @@ def recognize_face(image: Any) -> Dict[str, Any]:
         logger.error(f"Exception while recognizing face: {str(e)} - {traceback.format_exc()}")
         return {"message": "Failed to recognize face", "data": None, "success": False}
     finally:
-        # Clean up temporary images if necessary
         pass
-
 
 def recognize_face_with_database(image: Any, db_manager: SQLiteManager) -> Dict[str, Any]:
     try:
@@ -254,30 +208,15 @@ def recognize_face_with_database(image: Any, db_manager: SQLiteManager) -> Dict[
         )
 
         if value_objs and 'matches' in value_objs[0] and value_objs[0]['matches']:
-            # Extract the threshold value from the top-level dictionary
             threshold = value_objs[0].get('threshold', None)
             if threshold is None:
                 raise KeyError("Threshold is missing in the response")
 
-            # Extract the most similar match (first match, as the list is sorted by distance)
             best_match = value_objs[0]['matches'][0]
 
-            # Calculate confidence using the threshold from the top level
             confidence = (1 - best_match['distance'] / threshold) * 100
             confidence = round(confidence, 2)
 
-            # Include all matches in the data
-            all_matches = [
-                {
-                    "identity": match['identity'],
-                    "distance": match['distance'],
-                    "threshold": threshold,  # Use the threshold from the top level
-                    "confidence": round((1 - match['distance'] / threshold) * 100, 2)
-                }
-                for match in value_objs[0]['matches']
-            ]
-
-            # Construct the response
             response = {
                 "message": "Face recognized successfully!",
                 "data": {
@@ -285,8 +224,6 @@ def recognize_face_with_database(image: Any, db_manager: SQLiteManager) -> Dict[
                         "identity": best_match['identity'],
                         "confidence": round(confidence, 2)
                     },
-                    # "all_matches": all_matches,
-                    # "source_region": value_objs[0]['source_region'],
                     "is_real": value_objs[0]['is_real'],
                     "antispoof_score": round(value_objs[0]['antispoof_score'], 2) * 100
                 },
@@ -305,7 +242,6 @@ def recognize_face_with_database(image: Any, db_manager: SQLiteManager) -> Dict[
         return {"message": "Failed to recognize face", "data": None, "success": False}
     finally:
         pass
-
 
 
 

@@ -419,6 +419,78 @@
         "documentation": {}
     },
     {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -468,46 +540,6 @@
     },
     {
         "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Dict",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -3323,15 +3355,6 @@
         "documentation": {}
     },
     {
-        "label": "google.protobuf",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "google.protobuf",
-        "description": "google.protobuf",
-        "detail": "google.protobuf",
-        "documentation": {}
-    },
-    {
         "label": "descriptor",
         "importPath": "google.protobuf",
         "description": "google.protobuf",
@@ -3821,6 +3844,22 @@
         "documentation": {}
     },
     {
+        "label": "Pool",
+        "importPath": "multiprocessing",
+        "description": "multiprocessing",
+        "isExtraImport": true,
+        "detail": "multiprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "cpu_count",
+        "importPath": "multiprocessing",
+        "description": "multiprocessing",
+        "isExtraImport": true,
+        "detail": "multiprocessing",
+        "documentation": {}
+    },
+    {
         "label": "threading",
         "kind": 6,
         "isExtraImport": true,
@@ -4302,6 +4341,46 @@
         "documentation": {}
     },
     {
+        "label": "package_utils",
+        "importPath": "deepface.commons",
+        "description": "deepface.commons",
+        "isExtraImport": true,
+        "detail": "deepface.commons",
+        "documentation": {}
+    },
+    {
+        "label": "folder_utils",
+        "importPath": "deepface.commons",
+        "description": "deepface.commons",
+        "isExtraImport": true,
+        "detail": "deepface.commons",
+        "documentation": {}
+    },
+    {
+        "label": "package_utils",
+        "importPath": "deepface.commons",
+        "description": "deepface.commons",
+        "isExtraImport": true,
+        "detail": "deepface.commons",
+        "documentation": {}
+    },
+    {
+        "label": "folder_utils",
+        "importPath": "deepface.commons",
+        "description": "deepface.commons",
+        "isExtraImport": true,
+        "detail": "deepface.commons",
+        "documentation": {}
+    },
+    {
+        "label": "__version__",
+        "importPath": "deepface",
+        "description": "deepface",
+        "isExtraImport": true,
+        "detail": "deepface",
+        "documentation": {}
+    },
+    {
         "label": "DeepFace",
         "importPath": "deepface",
         "description": "deepface",
@@ -4382,7 +4461,7 @@
         "documentation": {}
     },
     {
-        "label": "detection",
+        "label": "modeling",
         "importPath": "deepface.modules",
         "description": "deepface.modules",
         "isExtraImport": true,
@@ -4406,11 +4485,43 @@
         "documentation": {}
     },
     {
-        "label": "SQLiteManager",
-        "importPath": "core.utils.database",
-        "description": "core.utils.database",
+        "label": "recognition",
+        "importPath": "deepface.modules",
+        "description": "deepface.modules",
         "isExtraImport": true,
-        "detail": "core.utils.database",
+        "detail": "deepface.modules",
+        "documentation": {}
+    },
+    {
+        "label": "demography",
+        "importPath": "deepface.modules",
+        "description": "deepface.modules",
+        "isExtraImport": true,
+        "detail": "deepface.modules",
+        "documentation": {}
+    },
+    {
+        "label": "detection",
+        "importPath": "deepface.modules",
+        "description": "deepface.modules",
+        "isExtraImport": true,
+        "detail": "deepface.modules",
+        "documentation": {}
+    },
+    {
+        "label": "streaming",
+        "importPath": "deepface.modules",
+        "description": "deepface.modules",
+        "isExtraImport": true,
+        "detail": "deepface.modules",
+        "documentation": {}
+    },
+    {
+        "label": "preprocessing",
+        "importPath": "deepface.modules",
+        "description": "deepface.modules",
+        "isExtraImport": true,
+        "detail": "deepface.modules",
         "documentation": {}
     },
     {
@@ -4446,11 +4557,11 @@
         "documentation": {}
     },
     {
-        "label": "get_logger",
-        "importPath": "core.utils.logging",
-        "description": "core.utils.logging",
+        "label": "SQLiteManager",
+        "importPath": "core.utils.database",
+        "description": "core.utils.database",
         "isExtraImport": true,
-        "detail": "core.utils.logging",
+        "detail": "core.utils.database",
         "documentation": {}
     },
     {
@@ -4502,19 +4613,11 @@
         "documentation": {}
     },
     {
-        "label": "package_utils",
-        "importPath": "deepface.commons",
-        "description": "deepface.commons",
+        "label": "get_logger",
+        "importPath": "core.utils.logging",
+        "description": "core.utils.logging",
         "isExtraImport": true,
-        "detail": "deepface.commons",
-        "documentation": {}
-    },
-    {
-        "label": "folder_utils",
-        "importPath": "deepface.commons",
-        "description": "deepface.commons",
-        "isExtraImport": true,
-        "detail": "deepface.commons",
+        "detail": "core.utils.logging",
         "documentation": {}
     },
     {
@@ -4540,6 +4643,22 @@
         "isExtraImport": true,
         "importPath": "flask",
         "description": "flask",
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "g",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "current_app",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
         "detail": "flask",
         "documentation": {}
     },
@@ -4605,6 +4724,14 @@
         "description": "flask",
         "isExtraImport": true,
         "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "cosine",
+        "importPath": "scipy.spatial.distance",
+        "description": "scipy.spatial.distance",
+        "isExtraImport": true,
+        "detail": "scipy.spatial.distance",
         "documentation": {}
     },
     {
@@ -4696,14 +4823,6 @@
         "documentation": {}
     },
     {
-        "label": "IMAGES_DIR",
-        "importPath": "core.utils.static_variable",
-        "description": "core.utils.static_variable",
-        "isExtraImport": true,
-        "detail": "core.utils.static_variable",
-        "documentation": {}
-    },
-    {
         "label": "load_dotenv",
         "importPath": "dotenv",
         "description": "dotenv",
@@ -4759,6 +4878,14 @@
         "description": "core.utils.augment_images",
         "isExtraImport": true,
         "detail": "core.utils.augment_images",
+        "documentation": {}
+    },
+    {
+        "label": "add_task_to_queue",
+        "importPath": "core.utils.theading",
+        "description": "core.utils.theading",
+        "isExtraImport": true,
+        "detail": "core.utils.theading",
         "documentation": {}
     },
     {
@@ -9787,7 +9914,16 @@
         "kind": 6,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "class DeepFaceController():\n    def __init__(self):\n        # super().__init__()\n        self._face_detector_backend = [\n            'opencv', 'ssd', 'dlib', 'mtcnn', 'fastmtcnn',\n            'retinaface', 'mediapipe', 'yolov8', 'yunet', 'centerface'\n        ]\n        self._face_detector_threshold = 0.6\n        self._face_detector_enforce_detection = False\n        self._model_name = [",
+        "peekOfCode": "class DeepFaceController:\n    def __init__(self):\n        self._face_detector_backend = [\n            'opencv', 'ssd', 'dlib', 'mtcnn', 'fastmtcnn',\n            'retinaface', 'mediapipe', 'yolov8', 'yunet', 'centerface'\n        ]\n        self._model_name = [\n            \"VGG-Face\", \"Facenet\", \"Facenet512\", \"OpenFace\", \"DeepFace\",\n            \"DeepID\", \"ArcFace\", \"Dlib\", \"SFace\", \"GhostFaceNet\"\n        ]",
+        "detail": "core.deepface_controller.controller",
+        "documentation": {}
+    },
+    {
+        "label": "parallel_distance_computation",
+        "kind": 2,
+        "importPath": "core.deepface_controller.controller",
+        "description": "core.deepface_controller.controller",
+        "peekOfCode": "def parallel_distance_computation(embedding_chunk, target_representation, distance_metric, threshold):\n    try:\n        # Convert the embeddings to a NumPy array\n        embedding_array = np.array([np.frombuffer(e['embedding'], dtype='float32') for e in embedding_chunk])\n        # Calculate distances based on the specified metric\n        if distance_metric == \"cosine\":\n            distances = 1 - np.dot(embedding_array, target_representation) / (\n                np.linalg.norm(embedding_array, axis=1) * np.linalg.norm(target_representation)\n            )\n        elif distance_metric == \"euclidean\":",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
@@ -9796,7 +9932,7 @@
         "kind": 5,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "logger = get_logger()\n# -----------------------------------\n# configurations for dependencies\nfrom deepface.commons import package_utils, folder_utils\n# Users should install tf_keras package if they are using tf 2.16 or later versions\npackage_utils.validate_for_keras3()\nwarnings.filterwarnings(\"ignore\")\ntf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)",
+        "peekOfCode": "logger = get_logger()\n# -----------------------------------\n# configurations for dependencies\n# Users should install tf_keras package if they are using tf 2.16 or later versions\npackage_utils.validate_for_keras3()\nwarnings.filterwarnings(\"ignore\")\ntf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\nmessange = None",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
@@ -9816,6 +9952,42 @@
         "description": "core.deepface_controller.controller",
         "peekOfCode": "messange = None\n# Configure TensorFlow to use GPU\nif len(tf.config.experimental.list_physical_devices('GPU')) > 0:\n    # Ensure that TensorFlow uses the GPU\n    physical_devices = tf.config.experimental.list_physical_devices('GPU')\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')\n    messange = (\"Using GPU for TensorFlow operations\")\n    logger.info(\"Using GPU for TensorFlow operations\")\nelse:",
         "detail": "core.deepface_controller.controller",
+        "documentation": {}
+    },
+    {
+        "label": "DeepFaceController",
+        "kind": 6,
+        "importPath": "core.deepface_controller.controller_old",
+        "description": "core.deepface_controller.controller_old",
+        "peekOfCode": "class DeepFaceController():\n    def __init__(self):\n        # super().__init__()\n        self._face_detector_backend = [\n            'opencv', 'ssd', 'dlib', 'mtcnn', 'fastmtcnn',\n            'retinaface', 'mediapipe', 'yolov8', 'yunet', 'centerface'\n        ]\n        self._face_detector_threshold = 0.6\n        self._face_detector_enforce_detection = False\n        self._model_name = [",
+        "detail": "core.deepface_controller.controller_old",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "core.deepface_controller.controller_old",
+        "description": "core.deepface_controller.controller_old",
+        "peekOfCode": "logger = get_logger()\n# -----------------------------------\n# configurations for dependencies\nfrom deepface.commons import package_utils, folder_utils\n# Users should install tf_keras package if they are using tf 2.16 or later versions\npackage_utils.validate_for_keras3()\nwarnings.filterwarnings(\"ignore\")\ntf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)",
+        "detail": "core.deepface_controller.controller_old",
+        "documentation": {}
+    },
+    {
+        "label": "tf_version",
+        "kind": 5,
+        "importPath": "core.deepface_controller.controller_old",
+        "description": "core.deepface_controller.controller_old",
+        "peekOfCode": "tf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\nmessange = None\n# Configure TensorFlow to use GPU\nif len(tf.config.experimental.list_physical_devices('GPU')) > 0:\n    # Ensure that TensorFlow uses the GPU\n    physical_devices = tf.config.experimental.list_physical_devices('GPU')\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')",
+        "detail": "core.deepface_controller.controller_old",
+        "documentation": {}
+    },
+    {
+        "label": "messange",
+        "kind": 5,
+        "importPath": "core.deepface_controller.controller_old",
+        "description": "core.deepface_controller.controller_old",
+        "peekOfCode": "messange = None\n# Configure TensorFlow to use GPU\nif len(tf.config.experimental.list_physical_devices('GPU')) > 0:\n    # Ensure that TensorFlow uses the GPU\n    physical_devices = tf.config.experimental.list_physical_devices('GPU')\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')\n    messange = (\"Using GPU for TensorFlow operations\")\n    logger.info(\"Using GPU for TensorFlow operations\")\nelse:",
+        "detail": "core.deepface_controller.controller_old",
         "documentation": {}
     },
     {
@@ -9850,8 +10022,17 @@
         "kind": 6,
         "importPath": "core.utils.database",
         "description": "core.utils.database",
-        "peekOfCode": "class SQLiteManager:\n    def __init__(self, db_path: str):\n        self.db_path = db_path\n        self.logger = logging.getLogger(__name__)\n    def get_connection(self):\n        if 'db_connection' not in g:\n            g.db_connection = sqlite3.connect(self.db_path)\n            g.db_connection.row_factory = sqlite3.Row  # Enables dict-like cursor\n        return g.db_connection\n    def close_connection(self, error=None):",
+        "peekOfCode": "class SQLiteManager:\n    def __init__(self, db_path: str):\n        self.db_path = db_path\n        self.logger = logging.getLogger(__name__)\n        self.local = threading.local()  # Thread-local storage for thread-specific connections\n    def optimize_sqlite(self):\n        \"\"\"Optimize SQLite settings for better performance.\"\"\"\n        with self.get_connection() as conn:\n            conn.execute(\"PRAGMA synchronous = OFF\")\n            conn.execute(\"PRAGMA journal_mode = WAL\")",
         "detail": "core.utils.database",
+        "documentation": {}
+    },
+    {
+        "label": "SQLiteManager",
+        "kind": 6,
+        "importPath": "core.utils.databasev2",
+        "description": "core.utils.databasev2",
+        "peekOfCode": "class SQLiteManager:\n    def __init__(self, db_path: str):\n        self.db_path = db_path\n        self.logger = logging.getLogger(__name__)\n        # Initialize SQLite settings for optimization\n    def optimize_sqlite(self):\n        \"\"\"Optimize SQLite settings for better performance.\"\"\"\n        with self.get_connection() as conn:\n            conn.execute(\"PRAGMA synchronous = OFF\")\n            conn.execute(\"PRAGMA journal_mode = WAL\")",
+        "detail": "core.utils.databasev2",
         "documentation": {}
     },
     {
@@ -9924,15 +10105,6 @@
         "description": "core.utils.progress_file",
         "peekOfCode": "logger = get_logger()\ndef extract_base_identity(identity):\n    # Split the identity by '_' and take the last part without the augmentation part\n    identity = os.path.splitext(os.path.basename(identity))[0]\n    identity = \"_\".join(identity.split('_')[2:]).split('_')[0]\n    return identity\ndef delete_images_for_uid(uid: str, base_uid: str ):\n    # Adjust the pattern to correctly match files associated with the base_uid and uid\n    image_pattern = os.path.join(IMAGES_DIR, base_uid, f\"*_{uid}*.png\")\n    # Ensure the pattern is correct and matches files",
         "detail": "core.utils.progress_file",
-        "documentation": {}
-    },
-    {
-        "label": "logger",
-        "kind": 5,
-        "importPath": "core.utils.search_embleeding",
-        "description": "core.utils.search_embleeding",
-        "peekOfCode": "logger = get_logger()\n# def find_in_db(\n#     img_path: Union[str, np.ndarray],\n#     db_manager: SQLiteManager,\n#     model_name: str = \"VGG-Face\",\n#     distance_metric: str = \"cosine\",\n#     enforce_detection: bool = True,\n#     detector_backend: str = \"opencv\",\n#     align: bool = True,\n#     expand_percentage: int = 0,",
-        "detail": "core.utils.search_embleeding",
         "documentation": {}
     },
     {
@@ -10048,7 +10220,7 @@
         "kind": 2,
         "importPath": "core.utils.theading",
         "description": "core.utils.theading",
-        "peekOfCode": "def generate_unique_task_id(db_manager: SQLiteManager) -> str:\n    \"\"\"Generate a unique task ID that doesn't exist in the database.\"\"\"\n    while True:\n        task_id = f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\n        with db_manager.get_connection() as conn:\n            result = conn.execute(\"\"\"\n                SELECT task_id FROM task_status WHERE task_id = ?\n            \"\"\", (task_id,)).fetchone()\n        if result is None:\n            return task_id",
+        "peekOfCode": "def generate_unique_task_id(db_manager: SQLiteManager) -> str:\n    while True:\n        task_id = f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\n        with db_manager.get_connection() as conn:\n            result = conn.execute(\"\"\"\n                SELECT task_id FROM task_status WHERE task_id = ?\n            \"\"\", (task_id,)).fetchone()\n        if result is None:\n            return task_id\ndef add_task_to_queue(func, db_manager: SQLiteManager, *args, **kwargs):",
         "detail": "core.utils.theading",
         "documentation": {}
     },
@@ -10057,7 +10229,7 @@
         "kind": 2,
         "importPath": "core.utils.theading",
         "description": "core.utils.theading",
-        "peekOfCode": "def add_task_to_queue(func, db_manager: SQLiteManager, *args, **kwargs):\n    \"\"\"Add a task to the queue with an ID.\"\"\"\n    task_id = generate_unique_task_id(db_manager)\n    uid = kwargs.get('uid', None) \n    logger.info(f\"Generated unique task ID: {task_id}\")\n    from core.service import check_and_run_final_task\n    db_manager.insert_task(task_id, uid, \"pending\", is_final_task=(func == check_and_run_final_task))\n    task_queue.put((task_id, lambda: func(db_manager, *args, **kwargs)))\n    logger.info(f\"Added task {task_id} to the queue\")\ndef worker(app, db_manager: SQLiteManager):",
+        "peekOfCode": "def add_task_to_queue(func, db_manager: SQLiteManager, *args, **kwargs):\n    task_id = generate_unique_task_id(db_manager)\n    uid = kwargs.get('uid', None) \n    logger.info(f\"Generated unique task ID: {task_id}\")\n    from core.service import check_and_run_final_task\n    db_manager.insert_task(task_id, uid, \"pending\", is_final_task=(func == check_and_run_final_task))\n    task_queue.put((task_id, lambda: func(db_manager, *args, **kwargs)))\n    logger.info(f\"Added task {task_id} to the queue\")\ndef worker(app, db_manager: SQLiteManager):\n    logger.info(\"Worker thread started\")",
         "detail": "core.utils.theading",
         "documentation": {}
     },
@@ -10066,7 +10238,7 @@
         "kind": 2,
         "importPath": "core.utils.theading",
         "description": "core.utils.theading",
-        "peekOfCode": "def worker(app, db_manager: SQLiteManager):\n    \"\"\"Worker function to process tasks from the queue.\"\"\"\n    logger.info(\"Worker thread started\")\n    with app.app_context():\n        while True:\n            logger.info(\"Worker waiting for a task\")\n            task_id, task = task_queue.get()\n            if task is None:\n                break\n            logger.info(f\"Worker received task {task_id}\")",
+        "peekOfCode": "def worker(app, db_manager: SQLiteManager):\n    logger.info(\"Worker thread started\")\n    with app.app_context():\n        while True:\n            logger.info(\"Worker waiting for a task\")\n            task_id, task = task_queue.get()\n            if task is None:\n                break\n            logger.info(f\"Worker received task {task_id}\")\n            try:",
         "detail": "core.utils.theading",
         "documentation": {}
     },
@@ -10093,7 +10265,7 @@
         "kind": 5,
         "importPath": "core.utils.theading",
         "description": "core.utils.theading",
-        "peekOfCode": "task_queue = queue.Queue()\nlogger = get_logger()\nthreads = []\ndef generate_unique_task_id(db_manager: SQLiteManager) -> str:\n    \"\"\"Generate a unique task ID that doesn't exist in the database.\"\"\"\n    while True:\n        task_id = f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\n        with db_manager.get_connection() as conn:\n            result = conn.execute(\"\"\"\n                SELECT task_id FROM task_status WHERE task_id = ?",
+        "peekOfCode": "task_queue = queue.Queue()\nlogger = get_logger()\nthreads = []\ndef generate_unique_task_id(db_manager: SQLiteManager) -> str:\n    while True:\n        task_id = f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\n        with db_manager.get_connection() as conn:\n            result = conn.execute(\"\"\"\n                SELECT task_id FROM task_status WHERE task_id = ?\n            \"\"\", (task_id,)).fetchone()",
         "detail": "core.utils.theading",
         "documentation": {}
     },
@@ -10102,7 +10274,7 @@
         "kind": 5,
         "importPath": "core.utils.theading",
         "description": "core.utils.theading",
-        "peekOfCode": "logger = get_logger()\nthreads = []\ndef generate_unique_task_id(db_manager: SQLiteManager) -> str:\n    \"\"\"Generate a unique task ID that doesn't exist in the database.\"\"\"\n    while True:\n        task_id = f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\n        with db_manager.get_connection() as conn:\n            result = conn.execute(\"\"\"\n                SELECT task_id FROM task_status WHERE task_id = ?\n            \"\"\", (task_id,)).fetchone()",
+        "peekOfCode": "logger = get_logger()\nthreads = []\ndef generate_unique_task_id(db_manager: SQLiteManager) -> str:\n    while True:\n        task_id = f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\n        with db_manager.get_connection() as conn:\n            result = conn.execute(\"\"\"\n                SELECT task_id FROM task_status WHERE task_id = ?\n            \"\"\", (task_id,)).fetchone()\n        if result is None:",
         "detail": "core.utils.theading",
         "documentation": {}
     },
@@ -10111,7 +10283,7 @@
         "kind": 5,
         "importPath": "core.utils.theading",
         "description": "core.utils.theading",
-        "peekOfCode": "threads = []\ndef generate_unique_task_id(db_manager: SQLiteManager) -> str:\n    \"\"\"Generate a unique task ID that doesn't exist in the database.\"\"\"\n    while True:\n        task_id = f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\n        with db_manager.get_connection() as conn:\n            result = conn.execute(\"\"\"\n                SELECT task_id FROM task_status WHERE task_id = ?\n            \"\"\", (task_id,)).fetchone()\n        if result is None:",
+        "peekOfCode": "threads = []\ndef generate_unique_task_id(db_manager: SQLiteManager) -> str:\n    while True:\n        task_id = f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\n        with db_manager.get_connection() as conn:\n            result = conn.execute(\"\"\"\n                SELECT task_id FROM task_status WHERE task_id = ?\n            \"\"\", (task_id,)).fetchone()\n        if result is None:\n            return task_id",
         "detail": "core.utils.theading",
         "documentation": {}
     },
@@ -10246,7 +10418,7 @@
         "kind": 5,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "logger = get_logger()\nblueprint = Blueprint(\"routes\", __name__)\n@blueprint.route(\"/\")\ndef home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/information\", methods=[\"GET\"])\n@require_api_key\ndef version():\n    db_manager = current_app.config['DB_MANAGER']",
+        "peekOfCode": "logger = get_logger()\nblueprint = Blueprint(\"routes\", __name__)\n# Assuming you have an instance of DeepFaceController\n@blueprint.route(\"/\")\ndef home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/information\", methods=[\"GET\"])\n@require_api_key\ndef version():",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10255,7 +10427,7 @@
         "kind": 5,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "blueprint = Blueprint(\"routes\", __name__)\n@blueprint.route(\"/\")\ndef home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/information\", methods=[\"GET\"])\n@require_api_key\ndef version():\n    db_manager = current_app.config['DB_MANAGER']\n    embeddings = db_manager.get_all_embeddings()",
+        "peekOfCode": "blueprint = Blueprint(\"routes\", __name__)\n# Assuming you have an instance of DeepFaceController\n@blueprint.route(\"/\")\ndef home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/information\", methods=[\"GET\"])\n@require_api_key\ndef version():\n    db_manager = current_app.config['DB_MANAGER']",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10264,7 +10436,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def check_version() -> Dict[str, Any]:\n    try:\n        version = deepface_controller.check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    from core.utils.theading import add_task_to_queue\n    try:",
+        "peekOfCode": "def check_version() -> Dict[str, Any]:\n    try:\n        version = deepface_controller.check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    try:\n        # Cancel any pending or processing tasks related to this UID",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10273,7 +10445,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    from core.utils.theading import add_task_to_queue\n    try:\n        # Cancel any pending or processing tasks related to this UID\n        task_id = db_manager.get_active_final_task(uid)\n        if task_id:\n            db_manager.cancel_task(task_id)\n            logger.info(f\"Canceled pending or processing task {task_id} for UID {uid}\")\n        # Extract base_uid from the given uid\n        base_uid = uid.split('-')[0]",
+        "peekOfCode": "def delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    try:\n        # Cancel any pending or processing tasks related to this UID\n        task_id = db_manager.get_active_final_task(uid)\n        if task_id:\n            db_manager.cancel_task(task_id)\n            logger.info(f\"Canceled pending or processing task {task_id} for UID {uid}\")\n        # Extract base_uid from the given uid\n        base_uid = uid.split('-')[0]\n        # Delete all embeddings associated with this UID",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10291,7 +10463,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def check_and_run_final_task(db_manager: SQLiteManager, img_path, app, uid):\n    \"\"\"Check if all tasks are done and run the final task if they are.\"\"\"\n    logger.info(f\"Running final task for UID {uid}\")\n    # Check if there are any other pending or processing tasks for the same UID\n    pending_task_id = db_manager.get_active_final_task(uid)\n    if pending_task_id:\n        logger.info(f\"Cannot run final task for UID {uid}, other task {pending_task_id} is still pending.\")\n        return\n    # Run the final task only if it is the last task in the queue\n    if task_queue.empty():",
+        "peekOfCode": "def check_and_run_final_task(db_manager: SQLiteManager, img_path, app, uid):\n    logger.info(f\"Running final task for UID {uid}\")\n    pending_task_id = db_manager.get_active_final_task(uid)\n    if pending_task_id:\n        logger.info(f\"Cannot run final task for UID {uid}, other task {pending_task_id} is still pending.\")\n        return\n    if task_queue.empty():\n        with app.app_context():\n            deepface_controller.find(\n                img_path=img_path,",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10300,7 +10472,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def handle_background_tasks(db_manager: SQLiteManager, image_paths, uid, app, max_embeddings=20):\n    logger.info(f\"Running background processing for UID {uid}\")\n    with app.app_context():\n        try:\n            for img_path in image_paths:\n                logger.info(f\"Processing image: {img_path}\")\n                # Check for new requests every 5 seconds\n                time.sleep(5)\n                if not task_queue.empty():\n                    logger.info(\"New request detected, stopping current task and waiting for final task.\")",
+        "peekOfCode": "def handle_background_tasks(db_manager: SQLiteManager, image_paths, uid, app, max_embeddings=20):\n    logger.info(f\"Running background processing for UID {uid}\")\n    with app.app_context():\n        try:\n            for img_path in image_paths:\n                logger.info(f\"Processing image: {img_path}\")\n                time.sleep(5)\n                if not task_queue.empty():\n                    logger.info(\"New request detected, stopping current task and waiting for final task.\")\n                    return",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10309,7 +10481,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def register_face(image: Any, uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    from core.utils.theading import add_task_to_queue\n    try:\n        image_path, _ = save_image(image, uid, IMAGES_DIR, uid)\n        augmented_images = augment_image(image)\n        augmented_image_paths = []\n        for i, img in enumerate(augmented_images, start=1):\n            augmented_image_path, _ = save_image(img, uid, IMAGES_DIR, f\"{uid}_aug{i}\")\n            augmented_image_paths.append(augmented_image_path)\n        # Process embeddings in the background",
+        "peekOfCode": "def register_face(image: Any, uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    try:\n        image_path, _ = save_image(image, uid, IMAGES_DIR, uid)\n        augmented_images = augment_image(image)\n        augmented_image_paths = []\n        for i, img in enumerate(augmented_images, start=1):\n            augmented_image_path, _ = save_image(img, uid, IMAGES_DIR, f\"{uid}_aug{i}\")\n            augmented_image_paths.append(augmented_image_path)\n        add_task_to_queue(handle_background_tasks, db_manager, [image_path] + augmented_image_paths, uid, current_app._get_current_object())\n        add_task_to_queue(check_and_run_final_task, db_manager, img_path=image_path, app=current_app._get_current_object(), uid=uid)",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10318,7 +10490,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def recognize_face(image: Any) -> Dict[str, Any]:\n    try:\n        # Save the image temporarily\n        image_path, _  = save_image(image, \"query_results\", TEMP_DIR, \"\")\n        # Extract faces with anti-spoofing\n        value_objs_anti_spoofing = deepface_controller.extract_faces(\n            img_path=image_path,\n            detector_backend=\"retinaface\",\n            anti_spoofing=True\n        )[0]",
+        "peekOfCode": "def recognize_face(image: Any) -> Dict[str, Any]:\n    try:\n        image_path, _ = save_image(image, \"query_results\", TEMP_DIR, \"\")\n        value_objs_anti_spoofing = deepface_controller.extract_faces(\n            img_path=image_path,\n            detector_backend=\"retinaface\",\n            anti_spoofing=True\n        )[0]\n        value_objs = deepface_controller.find(\n            img_path=image_path,",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10363,7 +10535,7 @@
         "kind": 5,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "logger = get_logger()\ndeepface_controller = DeepFaceController()\ndef check_version() -> Dict[str, Any]:\n    try:\n        version = deepface_controller.check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:",
+        "peekOfCode": "logger = get_logger()\n# Assuming you have an instance of DeepFaceController\ndeepface_controller = DeepFaceController()\ndef check_version() -> Dict[str, Any]:\n    try:\n        version = deepface_controller.check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10372,7 +10544,7 @@
         "kind": 5,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "deepface_controller = DeepFaceController()\ndef check_version() -> Dict[str, Any]:\n    try:\n        version = deepface_controller.check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    from core.utils.theading import add_task_to_queue",
+        "peekOfCode": "deepface_controller = DeepFaceController()\ndef check_version() -> Dict[str, Any]:\n    try:\n        version = deepface_controller.check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    try:",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10390,7 +10562,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def create_app():\n    app = Flask(__name__)\n    # Initialize SQLite manager\n    db_manager = SQLiteManager(DB_PATH)\n    app.config['DB_MANAGER'] = db_manager\n    logger.info(f\"Starting Flask app: {app.name}\")\n    # Create required directories\n    directories = ['static', 'static/images', 'database']\n    base_paths = [os.path.join(BASE_PATH, d) for d in directories]\n    for path in base_paths:",
+        "peekOfCode": "def create_app():\n    app = Flask(__name__)\n    # Initialize SQLite manager\n    with app.app_context():\n        db_manager = SQLiteManager(DB_PATH)\n        db_manager.optimize_sqlite()\n        db_manager.create_table()\n        db_manager.create_task_status_table()\n    app.config['DB_MANAGER'] = db_manager\n    logger.info(f\"Starting Flask app: {app.name}\")",
         "detail": "app",
         "documentation": {}
     },
@@ -10399,17 +10571,8 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "logger = get_logger()\ndef create_app():\n    app = Flask(__name__)\n    # Initialize SQLite manager\n    db_manager = SQLiteManager(DB_PATH)\n    app.config['DB_MANAGER'] = db_manager\n    logger.info(f\"Starting Flask app: {app.name}\")\n    # Create required directories\n    directories = ['static', 'static/images', 'database']\n    base_paths = [os.path.join(BASE_PATH, d) for d in directories]",
+        "peekOfCode": "logger = get_logger()\ndef create_app():\n    app = Flask(__name__)\n    # Initialize SQLite manager\n    with app.app_context():\n        db_manager = SQLiteManager(DB_PATH)\n        db_manager.optimize_sqlite()\n        db_manager.create_table()\n        db_manager.create_task_status_table()\n    app.config['DB_MANAGER'] = db_manager",
         "detail": "app",
-        "documentation": {}
-    },
-    {
-        "label": "delete_images_for_uid",
-        "kind": 2,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "def delete_images_for_uid( uid: str, base_uid: str):\n    # Adjust the pattern to correctly match files associated with the base_uid\n    image_pattern = os.path.join(IMAGES_DIR,base_uid ,f\"*_{uid}*.png\")\n    print(f\"Deleting images for UID {base_uid} with pattern {image_pattern}\")\n    # Ensure the pattern is correct and matches files\n    matching_files = glob.glob(image_pattern)\n    print(f\"Matching files: {matching_files}\")\n    if not matching_files:\n        print(f\"No files found for pattern: {image_pattern}\")\n    for file_path in matching_files:",
-        "detail": "test",
         "documentation": {}
     },
     {

@@ -13,7 +13,15 @@ def create_app():
     app = Flask(__name__)
 
     # Initialize SQLite manager
-    db_manager = SQLiteManager(DB_PATH)
+    
+    
+    
+    with app.app_context():
+        db_manager = SQLiteManager(DB_PATH)
+        db_manager.optimize_sqlite()
+        db_manager.create_table()
+        db_manager.create_task_status_table()
+
     app.config['DB_MANAGER'] = db_manager
     logger.info(f"Starting Flask app: {app.name}")
     # Create required directories
@@ -34,11 +42,6 @@ def create_app():
             logger.info("Cleared task_status table.")
     
     atexit.register(cleanup)
-
-    # Create tables within the app context
-    with app.app_context():
-        db_manager.create_table()
-        db_manager.create_task_status_table()
 
     # Register blueprint
     app.register_blueprint(blueprint) #Register your blueprints here
