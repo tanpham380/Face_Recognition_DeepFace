@@ -4533,7 +4533,7 @@
         "documentation": {}
     },
     {
-        "label": "ZODBManager",
+        "label": "SQLiteManager",
         "importPath": "core.utils.database",
         "description": "core.utils.database",
         "isExtraImport": true,
@@ -10168,7 +10168,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\" \"db.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)",
+        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10177,7 +10177,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\" \"db.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
+        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10186,7 +10186,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\" \"db.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
+        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },

@@ -6,7 +6,7 @@ import tempfile
 TEMP_DIR = tempfile.gettempdir()
 
 BASE_PATH = "core"
-DB_PATH = os.path.join(BASE_PATH, "database" "db.fs")
+DB_PATH = os.path.join(BASE_PATH, "database", "face_recognition.db")
 IMAGES_DIR = os.path.join(BASE_PATH, "static", "images")
 VECTOR_SIZE = 512
 MAX_SCORE = -1
