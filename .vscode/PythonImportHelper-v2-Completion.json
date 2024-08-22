@@ -10283,7 +10283,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/information\", methods=[\"GET\"])\n@require_api_key\ndef version():\n    db_manager = current_app.config['DB_MANAGER']\n    embeddings = db_manager.get_all_embeddings()\n    return {\"information\": embeddings}\n@blueprint.route(\"/tasks/status\", methods=[\"GET\"])",
+        "peekOfCode": "def home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/information\", methods=[\"GET\"])\n@require_api_key\ndef version():\n    db_manager = current_app.config['DB_MANAGER']\n    embeddings = db_manager.is_database_locked()\n    return {\"information\": embeddings}\n@blueprint.route(\"/tasks/status\", methods=[\"GET\"])",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10292,7 +10292,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def version():\n    db_manager = current_app.config['DB_MANAGER']\n    embeddings = db_manager.get_all_embeddings()\n    return {\"information\": embeddings}\n@blueprint.route(\"/tasks/status\", methods=[\"GET\"])\n@require_api_key\ndef get_task_status():\n    \"\"\"API để xem trạng thái các tác vụ.\"\"\"\n    try :\n        db_manager = current_app.config['DB_MANAGER']",
+        "peekOfCode": "def version():\n    db_manager = current_app.config['DB_MANAGER']\n    embeddings = db_manager.is_database_locked()\n    return {\"information\": embeddings}\n@blueprint.route(\"/tasks/status\", methods=[\"GET\"])\n@require_api_key\ndef get_task_status():\n    \"\"\"API để xem trạng thái các tác vụ.\"\"\"\n    try :\n        db_manager = current_app.config['DB_MANAGER']",
         "detail": "core.routes",
         "documentation": {}
     },

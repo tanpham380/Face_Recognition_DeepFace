@@ -16,7 +16,7 @@ def home():
 @require_api_key
 def version():
     db_manager = current_app.config['DB_MANAGER']
-    embeddings = db_manager.get_all_embeddings()
+    embeddings = db_manager.is_database_locked()
     return {"information": embeddings}
 
 @blueprint.route("/tasks/status", methods=["GET"])
