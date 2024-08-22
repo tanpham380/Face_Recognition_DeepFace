@@ -141,6 +141,8 @@ def recognize_db():
         return {"message": "Image is required"}, 400
 
     image = request.files["image"]
+    if image is None:
+        return {"message": "Image is required"}, 400
     db_manager = current_app.config['DB_MANAGER']
     try:
         response = service.recognize_face_with_database(image, db_manager)

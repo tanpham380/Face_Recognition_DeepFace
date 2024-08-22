@@ -35,7 +35,7 @@ def create_app():
         db_manager.create_table()
         db_manager.create_task_status_table()
         app.config['deepface_controller'] = deepface_controller
-        # preload_models(deepface_controller)
+        preload_models(deepface_controller)
 
     app.config['DB_MANAGER'] = db_manager
     logger.info(f"Starting Flask app: {app.name}")
