@@ -1,4 +1,4 @@
-from deepface.commons import package_utils, folder_utils
+from deepface import DeepFace
 from deepface import __version__
 from deepface.modules import (
     modeling,
@@ -13,11 +13,11 @@ from deepface.modules import (
 import tensorflow as tf
 import pandas as pd
 import numpy as np
+import os
 import time
 import warnings
 import logging
 from typing import Any, Dict, List, Union, Optional
-from multiprocessing import Pool, cpu_count
 
 from core.utils.database import SQLiteManager
 from core.utils.logging import get_logger
@@ -26,6 +26,7 @@ logger = get_logger()
 
 # -----------------------------------
 # configurations for dependencies
+from deepface.commons import package_utils, folder_utils
 
 # Users should install tf_keras package if they are using tf 2.16 or later versions
 package_utils.validate_for_keras3()
@@ -52,49 +53,47 @@ else:
 # Create required folders if necessary to store model weights
 folder_utils.initialize_folder()
 
-def parallel_distance_computation(embedding_chunk, target_representation, distance_metric, threshold):
-    try:
-        # Convert the embeddings directly from list to NumPy array
-        embedding_array = np.array([np.array(e['embedding'], dtype='float32') for e in embedding_chunk])
+def find_distance_vectorized(db_embeddings: np.ndarray, target_embedding: np.ndarray, metric: str) -> np.ndarray:
+    """
+    Calculate the distance between a target embedding and a set of database embeddings using a specified metric.
+    
+    :param db_embeddings: A NumPy array of shape (N, D) where N is the number of embeddings and D is the dimensionality.
+    :param target_embedding: A NumPy array of shape (D,) representing the target embedding.
+    :param metric: The distance metric to use. Supported values: "cosine", "euclidean", "euclidean_l2".
+    :return: A NumPy array of distances.
+    """
+    if metric == 'cosine':
+        dot_product = np.dot(db_embeddings, target_embedding)
+        norm_db = np.linalg.norm(db_embeddings, axis=1)
+        norm_target = np.linalg.norm(target_embedding)
+        return 1 - (dot_product / (norm_db * norm_target))
 
-        # Calculate distances based on the specified metric
-        if distance_metric == "cosine":
-            distances = 1 - np.dot(embedding_array, target_representation) / (
-                np.linalg.norm(embedding_array, axis=1) * np.linalg.norm(target_representation)
-            )
-        elif distance_metric == "euclidean":
-            distances = np.linalg.norm(embedding_array - target_representation, axis=1)
-        elif distance_metric == "euclidean_l2":
-            distances = np.linalg.norm(embedding_array - target_representation, axis=1) ** 2
+    elif metric == 'euclidean':
+        return np.linalg.norm(db_embeddings - target_embedding, axis=1)
 
-        # Filter results by the threshold and collect matches
-        matches = [
-            {"identity": embedding_chunk[i]['uid'], "distance": distances[i]}
-            for i in range(int(len(distances)))
-            if distances[i] <= threshold
-        ]
-    except Exception as e:
-        logger.error(f"Error in parallel_distance_computation: {e}")
-        matches = []
+    elif metric == 'euclidean_l2':
+        return np.linalg.norm(db_embeddings - target_embedding, axis=1) ** 2
 
-    return matches
-
-class DeepFaceController:
+    else:
+        raise ValueError(f"Unsupported distance metric: {metric}")
+class DeepFaceController():
     def __init__(self):
+        # super().__init__()
         self._face_detector_backend = [
             'opencv', 'ssd', 'dlib', 'mtcnn', 'fastmtcnn',
             'retinaface', 'mediapipe', 'yolov8', 'yunet', 'centerface'
         ]
+        self._face_detector_threshold = 0.6
+        self._face_detector_enforce_detection = False
         self._model_name = [
             "VGG-Face", "Facenet", "Facenet512", "OpenFace", "DeepFace",
             "DeepID", "ArcFace", "Dlib", "SFace", "GhostFaceNet"
         ]
-        self._distance_metric = ["cosine", "euclidean", "euclidean_l2"]
-        self._face_detector_threshold = 0.6
-        self._face_detector_enforce_detection = False
         self._anti_spoofing = False
         self._align = True
+        self._distance_metric = ["cosine", "euclidean", "euclidean_l2"]
         self._actions = ['age', 'gender', 'race', 'emotion']
+    # Getter and Setter for attributes
 
     @property
     def face_detector_backend(self) -> List[str]:
@@ -171,10 +170,10 @@ class DeepFaceController:
             self._actions = [actions]
         elif isinstance(actions, list):
             self._actions = actions
+    def check_version(self) -> str :
+        return {"message": messange , "version": __version__} 
 
-    def check_version(self) -> str:
-        return {"message": messange, "version": __version__}
-
+        
     def verify_faces_db(
         self,
         img_path: Union[str, np.ndarray],
@@ -190,6 +189,7 @@ class DeepFaceController:
         silent: bool = False,
         anti_spoofing: Optional[bool] = None,
     ) -> List[Dict[str, Any]]:
+
         tic = time.time()
 
         # Use class attributes if parameters are not provided
@@ -216,8 +216,9 @@ class DeepFaceController:
 
         source_obj = source_objs[0]  # Use only the first detected face
 
-        # Get all embeddings from the database
+        # Get embeddings from the database
         db_embeddings = db_manager.get_all_embeddings()
+
         if not db_embeddings:
             return []
 
@@ -231,53 +232,44 @@ class DeepFaceController:
             normalization=normalization,
         )[0]["embedding"]
 
-        # Convert target representation to NumPy array
-        target_representation_array = np.array(target_representation, dtype='float32')
+        # Vectorized distance calculation using NumPy
+        db_embeddings_array = np.array([entry['embedding'] for entry in db_embeddings])
+        distances = find_distance_vectorized(
+            db_embeddings_array, target_representation, distance_metric
+        )
+        identities = [entry['uid'] for entry in db_embeddings]
 
-        # Use the number of CPU cores for parallel processing
-        num_cores = cpu_count()
-        chunk_size = int(len(db_embeddings) // num_cores + 1)  # Ensure chunk_size is an integer
-        embedding_chunks = [db_embeddings[i:i + chunk_size] for i in range(0, len(db_embeddings), chunk_size)]
+        target_threshold = threshold or verification.find_threshold(
+            model_name, distance_metric
+        )
 
-        # Use multiprocessing to calculate distances in parallel with batch processing
-        target_threshold = threshold or verification.find_threshold(model_name, distance_metric)
-        with Pool(processes=num_cores) as pool:
-            results = pool.starmap(
-                parallel_distance_computation, 
-                [(chunk, target_representation_array, distance_metric, target_threshold) for chunk in embedding_chunks]
-            )
+        # Filter results based on threshold
+        valid_indices = np.where(distances <= target_threshold)[0]
+        result_df = pd.DataFrame({
+            "identity": np.array(identities)[valid_indices],
+            "distance": distances[valid_indices]
+        }).sort_values(by="distance").reset_index(drop=True)
 
-        # Flatten the results and sort by distance
-        matches = [item for sublist in results for item in sublist]
-        matches.sort(key=lambda x: x["distance"])
-
-        if not matches:
-            return []
-
-        resp_obj = [{
-            "source_region": source_obj["facial_area"],
-            "matches": matches,
-            "threshold": target_threshold,
-            "is_real": source_obj.get("is_real", True),
-            "antispoof_score": source_obj.get("antispoof_score", 0.0)
-        }]
+        resp_obj = []
+        if not result_df.empty:
+            resp_obj.append({
+                "source_region": source_obj["facial_area"],
+                "matches": result_df.to_dict(orient='records'),
+                "threshold": target_threshold,
+                "is_real": source_obj.get("is_real", True),
+                "antispoof_score": source_obj.get("antispoof_score", 0.0)
+            })
 
         toc = time.time()
-        resp_obj.append({"time_excuse": toc - tic})
+        resp_obj.append({
+            "time_excuse": toc - tic,
+        })
 
         return resp_obj
-        
-    
+
+
     def build_model(self, model_name: str) -> Any:
-        """
-        This function builds a deepface model
-        Args:
-            model_name (string): face recognition or facial attribute model
-                VGG-Face, Facenet, OpenFace, DeepFace, DeepID for face recognition
-                Age, Gender, Emotion, Race for facial attributes
-        Returns:
-            built_model
-        """
+
         return modeling.build_model(model_name=model_name)
 
     def verify(
@@ -321,6 +313,7 @@ class DeepFaceController:
         silent: bool = False,
         anti_spoofing: bool = False,
     ) -> List[Dict[str, Any]]:
+
         return demography.analyze(
             img_path=img_path,
             actions=actions,
@@ -348,68 +341,6 @@ class DeepFaceController:
         refresh_database: bool = True,
         anti_spoofing: bool = False,
     ) -> List[pd.DataFrame]:
-        """
-        Identify individuals in a database
-        Args:
-            img_path (str or np.ndarray): The exact path to the image, a numpy array in BGR format,
-                or a base64 encoded image. If the source image contains multiple faces, the result will
-                include information for each detected face.
-
-            db_path (string): Path to the folder containing image files. All detected faces
-                in the database will be considered in the decision-making process.
-
-            model_name (str): Model for face recognition. Options: VGG-Face, Facenet, Facenet512,
-                OpenFace, DeepFace, DeepID, Dlib, ArcFace, SFace and GhostFaceNet (default is VGG-Face).
-
-            distance_metric (string): Metric for measuring similarity. Options: 'cosine',
-                'euclidean', 'euclidean_l2' (default is cosine).
-
-            enforce_detection (boolean): If no face is detected in an image, raise an exception.
-                Set to False to avoid the exception for low-resolution images (default is True).
-
-            detector_backend (string): face detector backend. Options: 'opencv', 'retinaface',
-                'mtcnn', 'ssd', 'dlib', 'mediapipe', 'yolov8', 'centerface' or 'skip'
-                (default is opencv).
-
-            align (boolean): Perform alignment based on the eye positions (default is True).
-
-            expand_percentage (int): expand detected facial area with a percentage (default is 0).
-
-            threshold (float): Specify a threshold to determine whether a pair represents the same
-                person or different individuals. This threshold is used for comparing distances.
-                If left unset, default pre-tuned threshold values will be applied based on the specified
-                model name and distance metric (default is None).
-
-            normalization (string): Normalize the input image before feeding it to the model.
-                Options: base, raw, Facenet, Facenet2018, VGGFace, VGGFace2, ArcFace (default is base).
-
-            silent (boolean): Suppress or allow some log messages for a quieter analysis process
-                (default is False).
-
-            refresh_database (boolean): Synchronizes the images representation (pkl) file with the
-                directory/db files, if set to false, it will ignore any file changes inside the db_path
-                (default is True).
-
-            anti_spoofing (boolean): Flag to enable anti spoofing (default is False).
-
-        Returns:
-            results (List[pd.DataFrame]): A list of pandas dataframes. Each dataframe corresponds
-                to the identity information for an individual detected in the source image.
-                The DataFrame columns include:
-
-            - 'identity': Identity label of the detected individual.
-
-            - 'target_x', 'target_y', 'target_w', 'target_h': Bounding box coordinates of the
-                    target face in the database.
-
-            - 'source_x', 'source_y', 'source_w', 'source_h': Bounding box coordinates of the
-                    detected face in the source image.
-
-            - 'threshold': threshold to determine a pair whether same person or different persons
-
-            - 'distance': Similarity score between the faces based on the
-                    specified model and distance metric
-        """
         return recognition.find(
             img_path=img_path,
             db_path=db_path,
@@ -437,6 +368,7 @@ class DeepFaceController:
         normalization: str = "base",
         anti_spoofing: bool = False,
     ) -> List[Dict[str, Any]]:
+
         return representation.represent(
             img_path=img_path,
             model_name=model_name,
@@ -460,6 +392,7 @@ class DeepFaceController:
         frame_threshold: int = 5,
         anti_spoofing: bool = False,
     ) -> None:
+
         time_threshold = max(time_threshold, 1)
         frame_threshold = max(frame_threshold, 1)
 
@@ -485,6 +418,7 @@ class DeepFaceController:
         grayscale: bool = False,
         anti_spoofing: bool = False,
     ) -> List[Dict[str, Any]]:
+  
         return detection.extract_faces(
             img_path=img_path,
             detector_backend=detector_backend,
@@ -546,5 +480,3 @@ class DeepFaceController:
             return preprocessing.resize_image(
                 img=extracted_face, target_size=target_size)
         return None
-
-

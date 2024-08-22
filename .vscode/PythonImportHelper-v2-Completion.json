@@ -3844,22 +3844,6 @@
         "documentation": {}
     },
     {
-        "label": "Pool",
-        "importPath": "multiprocessing",
-        "description": "multiprocessing",
-        "isExtraImport": true,
-        "detail": "multiprocessing",
-        "documentation": {}
-    },
-    {
-        "label": "cpu_count",
-        "importPath": "multiprocessing",
-        "description": "multiprocessing",
-        "isExtraImport": true,
-        "detail": "multiprocessing",
-        "documentation": {}
-    },
-    {
         "label": "threading",
         "kind": 6,
         "isExtraImport": true,
@@ -4341,35 +4325,11 @@
         "documentation": {}
     },
     {
-        "label": "package_utils",
-        "importPath": "deepface.commons",
-        "description": "deepface.commons",
+        "label": "DeepFace",
+        "importPath": "deepface",
+        "description": "deepface",
         "isExtraImport": true,
-        "detail": "deepface.commons",
-        "documentation": {}
-    },
-    {
-        "label": "folder_utils",
-        "importPath": "deepface.commons",
-        "description": "deepface.commons",
-        "isExtraImport": true,
-        "detail": "deepface.commons",
-        "documentation": {}
-    },
-    {
-        "label": "package_utils",
-        "importPath": "deepface.commons",
-        "description": "deepface.commons",
-        "isExtraImport": true,
-        "detail": "deepface.commons",
-        "documentation": {}
-    },
-    {
-        "label": "folder_utils",
-        "importPath": "deepface.commons",
-        "description": "deepface.commons",
-        "isExtraImport": true,
-        "detail": "deepface.commons",
+        "detail": "deepface",
         "documentation": {}
     },
     {
@@ -4621,6 +4581,38 @@
         "documentation": {}
     },
     {
+        "label": "package_utils",
+        "importPath": "deepface.commons",
+        "description": "deepface.commons",
+        "isExtraImport": true,
+        "detail": "deepface.commons",
+        "documentation": {}
+    },
+    {
+        "label": "folder_utils",
+        "importPath": "deepface.commons",
+        "description": "deepface.commons",
+        "isExtraImport": true,
+        "detail": "deepface.commons",
+        "documentation": {}
+    },
+    {
+        "label": "package_utils",
+        "importPath": "deepface.commons",
+        "description": "deepface.commons",
+        "isExtraImport": true,
+        "detail": "deepface.commons",
+        "documentation": {}
+    },
+    {
+        "label": "folder_utils",
+        "importPath": "deepface.commons",
+        "description": "deepface.commons",
+        "isExtraImport": true,
+        "detail": "deepface.commons",
+        "documentation": {}
+    },
+    {
         "label": "ThreadPoolExecutor",
         "importPath": "concurrent.futures",
         "description": "concurrent.futures",
@@ -4823,6 +4815,14 @@
         "documentation": {}
     },
     {
+        "label": "IMAGES_DIR",
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "isExtraImport": true,
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
         "label": "load_dotenv",
         "importPath": "dotenv",
         "description": "dotenv",
@@ -4913,14 +4913,6 @@
         "documentation": {}
     },
     {
-        "label": "delete_images",
-        "importPath": "core.utils.progress_file",
-        "description": "core.utils.progress_file",
-        "isExtraImport": true,
-        "detail": "core.utils.progress_file",
-        "documentation": {}
-    },
-    {
         "label": "delete_images_for_uid",
         "importPath": "core.utils.progress_file",
         "description": "core.utils.progress_file",
@@ -4945,14 +4937,6 @@
         "documentation": {}
     },
     {
-        "label": "DeepFaceController",
-        "importPath": "core.deepface_controller.controller",
-        "description": "core.deepface_controller.controller",
-        "isExtraImport": true,
-        "detail": "core.deepface_controller.controller",
-        "documentation": {}
-    },
-    {
         "label": "app",
         "kind": 6,
         "isExtraImport": true,
@@ -4968,6 +4952,14 @@
         "importPath": "atexit",
         "description": "atexit",
         "detail": "atexit",
+        "documentation": {}
+    },
+    {
+        "label": "DeepFaceController",
+        "importPath": "core.deepface_controller.controller",
+        "description": "core.deepface_controller.controller",
+        "isExtraImport": true,
+        "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
     {
@@ -9914,16 +9906,16 @@
         "kind": 6,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "class DeepFaceController:\n    def __init__(self):\n        self._face_detector_backend = [\n            'opencv', 'ssd', 'dlib', 'mtcnn', 'fastmtcnn',\n            'retinaface', 'mediapipe', 'yolov8', 'yunet', 'centerface'\n        ]\n        self._model_name = [\n            \"VGG-Face\", \"Facenet\", \"Facenet512\", \"OpenFace\", \"DeepFace\",\n            \"DeepID\", \"ArcFace\", \"Dlib\", \"SFace\", \"GhostFaceNet\"\n        ]",
+        "peekOfCode": "class DeepFaceController():\n    def __init__(self):\n        # super().__init__()\n        self._face_detector_backend = [\n            'opencv', 'ssd', 'dlib', 'mtcnn', 'fastmtcnn',\n            'retinaface', 'mediapipe', 'yolov8', 'yunet', 'centerface'\n        ]\n        self._face_detector_threshold = 0.6\n        self._face_detector_enforce_detection = False\n        self._model_name = [",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
     {
-        "label": "parallel_distance_computation",
+        "label": "find_distance_vectorized",
         "kind": 2,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "def parallel_distance_computation(embedding_chunk, target_representation, distance_metric, threshold):\n    try:\n        # Convert the embeddings directly from list to NumPy array\n        embedding_array = np.array([np.array(e['embedding'], dtype='float32') for e in embedding_chunk])\n        # Calculate distances based on the specified metric\n        if distance_metric == \"cosine\":\n            distances = 1 - np.dot(embedding_array, target_representation) / (\n                np.linalg.norm(embedding_array, axis=1) * np.linalg.norm(target_representation)\n            )\n        elif distance_metric == \"euclidean\":",
+        "peekOfCode": "def find_distance_vectorized(db_embeddings: np.ndarray, target_embedding: np.ndarray, metric: str) -> np.ndarray:\n    \"\"\"\n    Calculate the distance between a target embedding and a set of database embeddings using a specified metric.\n    :param db_embeddings: A NumPy array of shape (N, D) where N is the number of embeddings and D is the dimensionality.\n    :param target_embedding: A NumPy array of shape (D,) representing the target embedding.\n    :param metric: The distance metric to use. Supported values: \"cosine\", \"euclidean\", \"euclidean_l2\".\n    :return: A NumPy array of distances.\n    \"\"\"\n    if metric == 'cosine':\n        dot_product = np.dot(db_embeddings, target_embedding)",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
@@ -9932,7 +9924,7 @@
         "kind": 5,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "logger = get_logger()\n# -----------------------------------\n# configurations for dependencies\n# Users should install tf_keras package if they are using tf 2.16 or later versions\npackage_utils.validate_for_keras3()\nwarnings.filterwarnings(\"ignore\")\ntf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\nmessange = None",
+        "peekOfCode": "logger = get_logger()\n# -----------------------------------\n# configurations for dependencies\nfrom deepface.commons import package_utils, folder_utils\n# Users should install tf_keras package if they are using tf 2.16 or later versions\npackage_utils.validate_for_keras3()\nwarnings.filterwarnings(\"ignore\")\ntf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
@@ -10085,7 +10077,7 @@
         "kind": 2,
         "importPath": "core.utils.progress_file",
         "description": "core.utils.progress_file",
-        "peekOfCode": "def save_image(image: Any, uid: str, base_dir: str, prefix: str, anti_spoofing: bool = False):\n    \"\"\"\n    Save the given image to a directory with a specific format. If the directory contains more than\n    20 images (4 original and 16 augmented), the oldest augmented images will be deleted.\n    Parameters:\n    - image: The image object to be saved.\n    - uid: The UID or identifier for the directory.\n    - base_dir: The base directory where the UID directory will be created.\n    - prefix: The prefix to use for the filename (e.g., \"query\" or UID).\n    - anti_spoofing: Boolean flag indicating if the image is flagged for anti-spoofing.",
+        "peekOfCode": "def save_image(image: Any, uid: str, base_dir: str, prefix: str, anti_spoofing: bool = False):\n    \"\"\"\n    Save the given image to a directory with a specific format. If the directory contains more than\n    56 images (8 original and 48 augmented), the oldest augmented images will be deleted.\n    Parameters:\n    - image: The image object to be saved.\n    - uid: The UID or identifier for the directory.\n    - base_dir: The base directory where the UID directory will be created.\n    - prefix: The prefix to use for the filename (e.g., \"query\" or UID).\n    - anti_spoofing: Boolean flag indicating if the image is flagged for anti-spoofing.",
         "detail": "core.utils.progress_file",
         "documentation": {}
     },
@@ -10112,7 +10104,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
+        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10121,7 +10113,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
+        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10130,7 +10122,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10139,7 +10131,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "IMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "IMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10148,7 +10140,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "VECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "VECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10157,7 +10149,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "MAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "MAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10166,7 +10158,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "API_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "API_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10175,7 +10167,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "LOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "LOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10184,7 +10176,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "NUMBER_WORKER = 4 \nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "NUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10432,11 +10424,20 @@
         "documentation": {}
     },
     {
+        "label": "get_deepface_controller",
+        "kind": 2,
+        "importPath": "core.service",
+        "description": "core.service",
+        "peekOfCode": "def get_deepface_controller():\n    return flask.current_app.config['deepface_controller']\ndef check_version() -> Dict[str, Any]:\n    try:\n        version = get_deepface_controller().check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:",
+        "detail": "core.service",
+        "documentation": {}
+    },
+    {
         "label": "check_version",
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def check_version() -> Dict[str, Any]:\n    try:\n        version = deepface_controller.check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    try:\n        # Cancel any pending or processing tasks related to this UID",
+        "peekOfCode": "def check_version() -> Dict[str, Any]:\n    try:\n        version = get_deepface_controller().check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    try:\n        # Cancel any pending or processing tasks related to this UID",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10454,7 +10455,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def recreate_DB(db_manager: SQLiteManager, img_path, app, uid) -> Dict[str, Any]:\n    with app.app_context():\n        logger.info(f\"Recreating DB for UID {uid} using image path {img_path}\")\n        deepface_controller.find(\n            img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),\n            db_path=img_path,\n            model_name=\"Facenet512\",\n            detector_backend=\"retinaface\",\n            anti_spoofing=False\n        )",
+        "peekOfCode": "def recreate_DB(db_manager: SQLiteManager, img_path, app, uid) -> Dict[str, Any]:\n    with app.app_context():\n        logger.info(f\"Recreating DB for UID {uid} using image path {img_path}\")\n        get_deepface_controller().find(\n            img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),\n            db_path=img_path,\n            model_name=\"Facenet512\",\n            detector_backend=\"retinaface\",\n            anti_spoofing=False\n        )",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10463,7 +10464,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def check_and_run_final_task(db_manager: SQLiteManager, img_path, app, uid):\n    logger.info(f\"Running final task for UID {uid}\")\n    pending_task_id = db_manager.get_active_final_task(uid)\n    if pending_task_id:\n        logger.info(f\"Cannot run final task for UID {uid}, other task {pending_task_id} is still pending.\")\n        return\n    if task_queue.empty():\n        with app.app_context():\n            deepface_controller.find(\n                img_path=img_path,",
+        "peekOfCode": "def check_and_run_final_task(db_manager: SQLiteManager, img_path, app, uid):\n    logger.info(f\"Running final task for UID {uid}\")\n    pending_task_id = db_manager.get_active_final_task(uid)\n    if pending_task_id:\n        logger.info(f\"Cannot run final task for UID {uid}, other task {pending_task_id} is still pending.\")\n        return\n    if task_queue.empty():\n        with app.app_context():\n            get_deepface_controller().find(\n                img_path=img_path,",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10472,7 +10473,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def handle_background_tasks(db_manager: SQLiteManager, image_paths, uid, app, max_embeddings=20):\n    logger.info(f\"Running background processing for UID {uid}\")\n    with app.app_context():\n        try:\n            for img_path in image_paths:\n                logger.info(f\"Processing image: {img_path}\")\n                time.sleep(5)\n                if not task_queue.empty():\n                    logger.info(\"New request detected, stopping current task and waiting for final task.\")\n                    return",
+        "peekOfCode": "def handle_background_tasks(db_manager: SQLiteManager, image_paths, uid, app, max_embeddings=60):\n    logger.info(f\"Running background processing for UID {uid}\")\n    with app.app_context():\n        try:\n            for img_path in image_paths:\n                logger.info(f\"Processing image: {img_path}\")\n                time.sleep(5)\n                if not task_queue.empty():\n                    logger.info(\"New request detected, stopping current task and waiting for final task.\")\n                    return",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10490,7 +10491,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def recognize_face(image: Any) -> Dict[str, Any]:\n    try:\n        image_path, _ = save_image(image, \"query_results\", TEMP_DIR, \"\")\n        value_objs_anti_spoofing = deepface_controller.extract_faces(\n            img_path=image_path,\n            detector_backend=\"retinaface\",\n            anti_spoofing=True\n        )[0]\n        value_objs = deepface_controller.find(\n            img_path=image_path,",
+        "peekOfCode": "def recognize_face(image: Any) -> Dict[str, Any]:\n    try:\n        image_path, _ = save_image(image, \"query_results\", TEMP_DIR, \"\")\n        value_objs_anti_spoofing = get_deepface_controller().extract_faces(\n            img_path=image_path,\n            detector_backend=\"retinaface\",\n            anti_spoofing=True\n        )[0]\n        value_objs = get_deepface_controller().find(\n            img_path=image_path,",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10499,7 +10500,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def recognize_face_with_database(image: Any, db_manager: SQLiteManager) -> Dict[str, Any]:\n    try:\n        image_path, _  = save_image(image, \"query_results\", TEMP_DIR, \"\")\n        value_objs = deepface_controller.verify_faces_db(\n            img_path=image_path,\n            db_manager=db_manager,\n            model_name=\"Facenet512\",\n            detector_backend=\"retinaface\",\n            anti_spoofing=True\n        )",
+        "peekOfCode": "def recognize_face_with_database(image: Any, db_manager: SQLiteManager) -> Dict[str, Any]:\n    try:\n        image_path, _  = save_image(image, \"query_results\", TEMP_DIR, \"\")\n        value_objs = get_deepface_controller().verify_faces_db(\n            img_path=image_path,\n            db_manager=db_manager,\n            model_name=\"Facenet512\",\n            detector_backend=\"retinaface\",\n            anti_spoofing=True\n        )",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10526,7 +10527,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def analyze(\n    img_path: str,\n    actions: List[str],\n    detector_backend: str,\n    enforce_detection: bool,\n    align: bool,\n    anti_spoofing: bool,\n) -> Dict[str, Any]:\n    try:\n        demographies = deepface_controller.analyze(",
+        "peekOfCode": "def analyze(\n    img_path: str,\n    actions: List[str],\n    detector_backend: str,\n    enforce_detection: bool,\n    align: bool,\n    anti_spoofing: bool,\n) -> Dict[str, Any]:\n    try:\n        demographies = get_deepface_controller().analyze(",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10535,16 +10536,7 @@
         "kind": 5,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "logger = get_logger()\n# Assuming you have an instance of DeepFaceController\ndeepface_controller = DeepFaceController()\ndef check_version() -> Dict[str, Any]:\n    try:\n        version = deepface_controller.check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}",
-        "detail": "core.service",
-        "documentation": {}
-    },
-    {
-        "label": "deepface_controller",
-        "kind": 5,
-        "importPath": "core.service",
-        "description": "core.service",
-        "peekOfCode": "deepface_controller = DeepFaceController()\ndef check_version() -> Dict[str, Any]:\n    try:\n        version = deepface_controller.check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    try:",
+        "peekOfCode": "logger = get_logger()\ndef get_deepface_controller():\n    return flask.current_app.config['deepface_controller']\ndef check_version() -> Dict[str, Any]:\n    try:\n        version = get_deepface_controller().check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10558,11 +10550,20 @@
         "documentation": {}
     },
     {
+        "label": "preload_models",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def preload_models():\n    # Load the models by calling a dummy detection\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )\ndef create_app():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
         "label": "create_app",
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def create_app():\n    app = Flask(__name__)\n    # Initialize SQLite manager\n    with app.app_context():\n        db_manager = SQLiteManager(DB_PATH)\n        db_manager.optimize_sqlite()\n        db_manager.create_table()\n        db_manager.create_task_status_table()\n    app.config['DB_MANAGER'] = db_manager\n    logger.info(f\"Starting Flask app: {app.name}\")",
+        "peekOfCode": "def create_app():\n    app = Flask(__name__)\n    # Initialize SQLite manager\n    with app.app_context():\n        db_manager = SQLiteManager(DB_PATH)\n        db_manager.optimize_sqlite()\n        db_manager.create_table()\n        db_manager.create_task_status_table()\n        app.config['deepface_controller'] = deepface_controller\n        preload_models()",
         "detail": "app",
         "documentation": {}
     },
@@ -10571,7 +10572,16 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "logger = get_logger()\ndef create_app():\n    app = Flask(__name__)\n    # Initialize SQLite manager\n    with app.app_context():\n        db_manager = SQLiteManager(DB_PATH)\n        db_manager.optimize_sqlite()\n        db_manager.create_table()\n        db_manager.create_task_status_table()\n    app.config['DB_MANAGER'] = db_manager",
+        "peekOfCode": "logger = get_logger()\ndeepface_controller = DeepFaceController()\ndef preload_models():\n    # Load the models by calling a dummy detection\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "deepface_controller",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "deepface_controller = DeepFaceController()\ndef preload_models():\n    # Load the models by calling a dummy detection\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )",
         "detail": "app",
         "documentation": {}
     },

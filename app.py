@@ -1,14 +1,27 @@
 import atexit
 import os
 from flask import Flask, current_app
+from core.deepface_controller.controller import DeepFaceController
 from core.utils.database import SQLiteManager
 from core.utils.logging import get_logger
-from core.utils.static_variable import BASE_PATH, DB_PATH
+from core.utils.static_variable import BASE_PATH, DB_PATH, IMAGES_DIR
 from core.utils.theading import stop_workers, start_workers
 from core.routes import blueprint
 
 logger = get_logger()
+deepface_controller = DeepFaceController()
 
+
+def preload_models():
+    # Load the models by calling a dummy detection
+    deepface_controller.find(
+        img_path=os.path.join(BASE_PATH, "static", "temp.png"), # Pass a dummy or default image path
+        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager
+        model_name="Facenet512",
+        detector_backend="retinaface",
+        anti_spoofing=True
+    )
+    
 def create_app():
     app = Flask(__name__)
 
@@ -21,6 +34,8 @@ def create_app():
         db_manager.optimize_sqlite()
         db_manager.create_table()
         db_manager.create_task_status_table()
+        app.config['deepface_controller'] = deepface_controller
+        preload_models()
 
     app.config['DB_MANAGER'] = db_manager
     logger.info(f"Starting Flask app: {app.name}")

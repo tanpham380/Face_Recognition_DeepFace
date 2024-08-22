@@ -1,6 +1,5 @@
-import datetime
+
 import flask
-import json
 import os.path
 import time
 import traceback
@@ -10,23 +9,22 @@ import numpy as np
 from core.utils.augment_images import augment_image
 from core.utils.theading import add_task_to_queue, task_queue
 from core.utils.database import SQLiteManager
-from core.utils.progress_file import delete_images, delete_images_for_uid, extract_base_identity, save_image
+from core.utils.progress_file import delete_images_for_uid, extract_base_identity, save_image
 # from core.utils.search_embleeding import find_in_db
 from core.utils.static_variable import BASE_PATH, IMAGES_DIR, TEMP_DIR
 from core.utils.logging import get_logger
-from core.deepface_controller.controller import DeepFaceController
 
 
 
 # Initialize the logger
 logger = get_logger()
+def get_deepface_controller():
+    return flask.current_app.config['deepface_controller']
 
-# Assuming you have an instance of DeepFaceController
-deepface_controller = DeepFaceController()
 
 def check_version() -> Dict[str, Any]:
     try:
-        version = deepface_controller.check_version()
+        version = get_deepface_controller().check_version()
         return {"message": "Version fetched successfully", "data": version, "success": True}
     except Exception as e:
         logger.error(f"Exception while checking version: {str(e)} - {traceback.format_exc()}")
@@ -63,7 +61,7 @@ def delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, A
 def recreate_DB(db_manager: SQLiteManager, img_path, app, uid) -> Dict[str, Any]:
     with app.app_context():
         logger.info(f"Recreating DB for UID {uid} using image path {img_path}")
-        deepface_controller.find(
+        get_deepface_controller().find(
             img_path=os.path.join(BASE_PATH, "static", "temp.png"),
             db_path=img_path,
             model_name="Facenet512",
@@ -83,7 +81,7 @@ def check_and_run_final_task(db_manager: SQLiteManager, img_path, app, uid):
     
     if task_queue.empty():
         with app.app_context():
-            deepface_controller.find(
+            get_deepface_controller().find(
                 img_path=img_path,
                 db_path=IMAGES_DIR,
                 model_name="Facenet512",
@@ -93,7 +91,7 @@ def check_and_run_final_task(db_manager: SQLiteManager, img_path, app, uid):
     else:
         logger.info(f"New tasks are still in the queue, skipping final task execution for UID {uid}.")
 
-def handle_background_tasks(db_manager: SQLiteManager, image_paths, uid, app, max_embeddings=20):
+def handle_background_tasks(db_manager: SQLiteManager, image_paths, uid, app, max_embeddings=60):
     logger.info(f"Running background processing for UID {uid}")
     with app.app_context():
         try:
@@ -105,7 +103,7 @@ def handle_background_tasks(db_manager: SQLiteManager, image_paths, uid, app, ma
                     logger.info("New request detected, stopping current task and waiting for final task.")
                     return
                 
-                represent_objs = deepface_controller.represent(
+                represent_objs = get_deepface_controller().represent(
                     img_path=img_path,
                     model_name="Facenet512",
                     detector_backend="retinaface",
@@ -152,13 +150,13 @@ def recognize_face(image: Any) -> Dict[str, Any]:
     try:
         image_path, _ = save_image(image, "query_results", TEMP_DIR, "")
         
-        value_objs_anti_spoofing = deepface_controller.extract_faces(
+        value_objs_anti_spoofing = get_deepface_controller().extract_faces(
             img_path=image_path,
             detector_backend="retinaface",
             anti_spoofing=True
         )[0]
         
-        value_objs = deepface_controller.find(
+        value_objs = get_deepface_controller().find(
             img_path=image_path,
             db_path=IMAGES_DIR,
             model_name="Facenet512",
@@ -199,7 +197,7 @@ def recognize_face_with_database(image: Any, db_manager: SQLiteManager) -> Dict[
     try:
         image_path, _  = save_image(image, "query_results", TEMP_DIR, "")
 
-        value_objs = deepface_controller.verify_faces_db(
+        value_objs = get_deepface_controller().verify_faces_db(
             img_path=image_path,
             db_manager=db_manager,
             model_name="Facenet512",
@@ -255,7 +253,7 @@ def represent(
     max_faces: Optional[int] = None,
 ) -> Dict[str, Any]:
     try:
-        embedding_objs = deepface_controller.represent(
+        embedding_objs = get_deepface_controller().represent(
             img_path=img_path,
             model_name=model_name,
             detector_backend=detector_backend,
@@ -281,7 +279,7 @@ def verify(
     anti_spoofing: bool,
 ) -> Dict[str, Any]:
     try:
-        result = deepface_controller.verify(
+        result = get_deepface_controller().verify(
             img1_path=img1_path,
             img2_path=img2_path,
             model_name=model_name,
@@ -306,7 +304,7 @@ def analyze(
     anti_spoofing: bool,
 ) -> Dict[str, Any]:
     try:
-        demographies = deepface_controller.analyze(
+        demographies = get_deepface_controller().analyze(
             img_path=img_path,
             actions=actions,
             detector_backend=detector_backend,
