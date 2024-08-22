@@ -9923,7 +9923,7 @@
         "kind": 2,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "def parallel_distance_computation(embedding_chunk, target_representation, distance_metric, threshold):\n    try:\n        # Convert the embeddings to a NumPy array\n        embedding_array = np.array([np.frombuffer(e['embedding'], dtype='float32') for e in embedding_chunk])\n        # Calculate distances based on the specified metric\n        if distance_metric == \"cosine\":\n            distances = 1 - np.dot(embedding_array, target_representation) / (\n                np.linalg.norm(embedding_array, axis=1) * np.linalg.norm(target_representation)\n            )\n        elif distance_metric == \"euclidean\":",
+        "peekOfCode": "def parallel_distance_computation(embedding_chunk, target_representation, distance_metric, threshold):\n    try:\n        # Convert the embeddings directly from list to NumPy array\n        embedding_array = np.array([np.array(e['embedding'], dtype='float32') for e in embedding_chunk])\n        # Calculate distances based on the specified metric\n        if distance_metric == \"cosine\":\n            distances = 1 - np.dot(embedding_array, target_representation) / (\n                np.linalg.norm(embedding_array, axis=1) * np.linalg.norm(target_representation)\n            )\n        elif distance_metric == \"euclidean\":",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },

@@ -13,7 +13,6 @@ from deepface.modules import (
 import tensorflow as tf
 import pandas as pd
 import numpy as np
-import os
 import time
 import warnings
 import logging
@@ -55,8 +54,8 @@ folder_utils.initialize_folder()
 
 def parallel_distance_computation(embedding_chunk, target_representation, distance_metric, threshold):
     try:
-        # Convert the embeddings to a NumPy array
-        embedding_array = np.array([np.frombuffer(e['embedding'], dtype='float32') for e in embedding_chunk])
+        # Convert the embeddings directly from list to NumPy array
+        embedding_array = np.array([np.array(e['embedding'], dtype='float32') for e in embedding_chunk])
 
         # Calculate distances based on the specified metric
         if distance_metric == "cosine":
@@ -71,7 +70,7 @@ def parallel_distance_computation(embedding_chunk, target_representation, distan
         # Filter results by the threshold and collect matches
         matches = [
             {"identity": embedding_chunk[i]['uid'], "distance": distances[i]}
-            for i in range(len(distances))
+            for i in range(int(len(distances)))
             if distances[i] <= threshold
         ]
     except Exception as e:
@@ -79,6 +78,7 @@ def parallel_distance_computation(embedding_chunk, target_representation, distan
         matches = []
 
     return matches
+
 class DeepFaceController:
     def __init__(self):
         self._face_detector_backend = [
@@ -176,96 +176,96 @@ class DeepFaceController:
         return {"message": messange, "version": __version__}
 
     def verify_faces_db(
-            self,
-            img_path: Union[str, np.ndarray],
-            db_manager: SQLiteManager,
-            model_name: Optional[Union[str, List[str]]] = None,
-            distance_metric: Optional[Union[str, List[str]]] = None,
-            enforce_detection: Optional[bool] = None,
-            detector_backend: Optional[Union[str, List[str]]] = None,
-            align: Optional[bool] = None,
-            expand_percentage: int = 0,
-            threshold: Optional[float] = None,
-            normalization: str = "base",
-            silent: bool = False,
-            anti_spoofing: Optional[bool] = None,
-        ) -> List[Dict[str, Any]]:
-            tic = time.time()
+        self,
+        img_path: Union[str, np.ndarray],
+        db_manager: SQLiteManager,
+        model_name: Optional[Union[str, List[str]]] = None,
+        distance_metric: Optional[Union[str, List[str]]] = None,
+        enforce_detection: Optional[bool] = None,
+        detector_backend: Optional[Union[str, List[str]]] = None,
+        align: Optional[bool] = None,
+        expand_percentage: int = 0,
+        threshold: Optional[float] = None,
+        normalization: str = "base",
+        silent: bool = False,
+        anti_spoofing: Optional[bool] = None,
+    ) -> List[Dict[str, Any]]:
+        tic = time.time()
 
-            # Use class attributes if parameters are not provided
-            model_name = model_name or self._model_name[0]
-            distance_metric = distance_metric or self._distance_metric[0]
-            enforce_detection = enforce_detection if enforce_detection is not None else self._face_detector_enforce_detection
-            detector_backend = detector_backend or self._face_detector_backend[0]
-            align = align if align is not None else self._align
-            anti_spoofing = anti_spoofing if anti_spoofing is not None else self._anti_spoofing
+        # Use class attributes if parameters are not provided
+        model_name = model_name or self._model_name[0]
+        distance_metric = distance_metric or self._distance_metric[0]
+        enforce_detection = enforce_detection if enforce_detection is not None else self._face_detector_enforce_detection
+        detector_backend = detector_backend or self._face_detector_backend[0]
+        align = align if align is not None else self._align
+        anti_spoofing = anti_spoofing if anti_spoofing is not None else self._anti_spoofing
 
-            # Detect faces and get embeddings from the provided image
-            source_objs = detection.extract_faces(
-                img_path=img_path,
-                detector_backend=detector_backend,
-                grayscale=False,
-                enforce_detection=enforce_detection,
-                align=align,
-                expand_percentage=expand_percentage,
-                anti_spoofing=anti_spoofing,
+        # Detect faces and get embeddings from the provided image
+        source_objs = detection.extract_faces(
+            img_path=img_path,
+            detector_backend=detector_backend,
+            grayscale=False,
+            enforce_detection=enforce_detection,
+            align=align,
+            expand_percentage=expand_percentage,
+            anti_spoofing=anti_spoofing,
+        )
+
+        if not source_objs:
+            return []
+
+        source_obj = source_objs[0]  # Use only the first detected face
+
+        # Get all embeddings from the database
+        db_embeddings = db_manager.get_all_embeddings()
+        if not db_embeddings:
+            return []
+
+        source_img = source_obj["face"]
+        target_representation = representation.represent(
+            img_path=source_img,
+            model_name=model_name,
+            enforce_detection=enforce_detection,
+            detector_backend="skip",
+            align=align,
+            normalization=normalization,
+        )[0]["embedding"]
+
+        # Convert target representation to NumPy array
+        target_representation_array = np.array(target_representation, dtype='float32')
+
+        # Use the number of CPU cores for parallel processing
+        num_cores = cpu_count()
+        chunk_size = int(len(db_embeddings) // num_cores + 1)  # Ensure chunk_size is an integer
+        embedding_chunks = [db_embeddings[i:i + chunk_size] for i in range(0, len(db_embeddings), chunk_size)]
+
+        # Use multiprocessing to calculate distances in parallel with batch processing
+        target_threshold = threshold or verification.find_threshold(model_name, distance_metric)
+        with Pool(processes=num_cores) as pool:
+            results = pool.starmap(
+                parallel_distance_computation, 
+                [(chunk, target_representation_array, distance_metric, target_threshold) for chunk in embedding_chunks]
             )
 
-            if not source_objs:
-                return []
+        # Flatten the results and sort by distance
+        matches = [item for sublist in results for item in sublist]
+        matches.sort(key=lambda x: x["distance"])
 
-            source_obj = source_objs[0]  # Use only the first detected face
+        if not matches:
+            return []
 
-            # Get all embeddings from the database
-            db_embeddings = db_manager.get_all_embeddings()
-            if not db_embeddings:
-                return []
+        resp_obj = [{
+            "source_region": source_obj["facial_area"],
+            "matches": matches,
+            "threshold": target_threshold,
+            "is_real": source_obj.get("is_real", True),
+            "antispoof_score": source_obj.get("antispoof_score", 0.0)
+        }]
 
-            source_img = source_obj["face"]
-            target_representation = representation.represent(
-                img_path=source_img,
-                model_name=model_name,
-                enforce_detection=enforce_detection,
-                detector_backend="skip",
-                align=align,
-                normalization=normalization,
-            )[0]["embedding"]
+        toc = time.time()
+        resp_obj.append({"time_excuse": toc - tic})
 
-            # Convert target representation to NumPy array
-            target_representation_array = np.array(target_representation, dtype='float32')
-
-            # Use the number of CPU cores for parallel processing
-            num_cores = cpu_count()
-            chunk_size = len(db_embeddings) // num_cores + 1
-            embedding_chunks = [db_embeddings[i:i + chunk_size] for i in range(0, len(db_embeddings), chunk_size)]
-
-            # Use multiprocessing to calculate distances in parallel with batch processing
-            target_threshold = threshold or verification.find_threshold(model_name, distance_metric)
-            with Pool(processes=num_cores) as pool:
-                results = pool.starmap(
-                    parallel_distance_computation, 
-                    [(chunk, target_representation_array, distance_metric, target_threshold) for chunk in embedding_chunks]
-                )
-
-            # Flatten the results and sort by distance
-            matches = [item for sublist in results for item in sublist]
-            matches.sort(key=lambda x: x["distance"])
-
-            if not matches:
-                return []
-
-            resp_obj = [{
-                "source_region": source_obj["facial_area"],
-                "matches": matches,
-                "threshold": target_threshold,
-                "is_real": source_obj.get("is_real", True),
-                "antispoof_score": source_obj.get("antispoof_score", 0.0)
-            }]
-
-            toc = time.time()
-            resp_obj.append({"time_excuse": toc - tic})
-
-            return resp_obj
+        return resp_obj
         
     
     def build_model(self, model_name: str) -> Any:
