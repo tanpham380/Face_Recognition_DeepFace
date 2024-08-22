@@ -37,16 +37,16 @@ if tf_version == 2:
     tf.get_logger().setLevel(logging.ERROR)
 
 # Configure TensorFlow to use GPU
-message = None
+messange = None
 if len(tf.config.experimental.list_physical_devices('GPU')) > 0:
     physical_devices = tf.config.experimental.list_physical_devices('GPU')
     tf.config.experimental.set_memory_growth(physical_devices[0], True)
     tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')
-    message = "Using GPU for TensorFlow operations"
-    logger.info(message)
+    messange = "Using GPU for TensorFlow operations"
+    logger.info(messange)
 else:
-    message = "No GPU found. Running on CPU"
-    logger.info(message)
+    messange = "No GPU found. Running on CPU"
+    logger.info(messange)
 
 folder_utils.initialize_folder()
 
