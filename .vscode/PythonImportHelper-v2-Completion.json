@@ -4325,11 +4325,35 @@
         "documentation": {}
     },
     {
-        "label": "DeepFace",
-        "importPath": "deepface",
-        "description": "deepface",
+        "label": "package_utils",
+        "importPath": "deepface.commons",
+        "description": "deepface.commons",
         "isExtraImport": true,
-        "detail": "deepface",
+        "detail": "deepface.commons",
+        "documentation": {}
+    },
+    {
+        "label": "folder_utils",
+        "importPath": "deepface.commons",
+        "description": "deepface.commons",
+        "isExtraImport": true,
+        "detail": "deepface.commons",
+        "documentation": {}
+    },
+    {
+        "label": "package_utils",
+        "importPath": "deepface.commons",
+        "description": "deepface.commons",
+        "isExtraImport": true,
+        "detail": "deepface.commons",
+        "documentation": {}
+    },
+    {
+        "label": "folder_utils",
+        "importPath": "deepface.commons",
+        "description": "deepface.commons",
+        "isExtraImport": true,
+        "detail": "deepface.commons",
         "documentation": {}
     },
     {
@@ -4578,38 +4602,6 @@
         "description": "core.utils.logging",
         "isExtraImport": true,
         "detail": "core.utils.logging",
-        "documentation": {}
-    },
-    {
-        "label": "package_utils",
-        "importPath": "deepface.commons",
-        "description": "deepface.commons",
-        "isExtraImport": true,
-        "detail": "deepface.commons",
-        "documentation": {}
-    },
-    {
-        "label": "folder_utils",
-        "importPath": "deepface.commons",
-        "description": "deepface.commons",
-        "isExtraImport": true,
-        "detail": "deepface.commons",
-        "documentation": {}
-    },
-    {
-        "label": "package_utils",
-        "importPath": "deepface.commons",
-        "description": "deepface.commons",
-        "isExtraImport": true,
-        "detail": "deepface.commons",
-        "documentation": {}
-    },
-    {
-        "label": "folder_utils",
-        "importPath": "deepface.commons",
-        "description": "deepface.commons",
-        "isExtraImport": true,
-        "detail": "deepface.commons",
         "documentation": {}
     },
     {
@@ -9906,7 +9898,7 @@
         "kind": 6,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "class DeepFaceController():\n    def __init__(self):\n        # super().__init__()\n        self._face_detector_backend = [\n            'opencv', 'ssd', 'dlib', 'mtcnn', 'fastmtcnn',\n            'retinaface', 'mediapipe', 'yolov8', 'yunet', 'centerface'\n        ]\n        self._face_detector_threshold = 0.6\n        self._face_detector_enforce_detection = False\n        self._model_name = [",
+        "peekOfCode": "class DeepFaceController:\n    def __init__(self):\n        self._face_detector_backend = [\n            'opencv', 'ssd', 'dlib', 'mtcnn', 'fastmtcnn',\n            'retinaface', 'mediapipe', 'yolov8', 'yunet', 'centerface'\n        ]\n        self._face_detector_threshold = 0.6\n        self._face_detector_enforce_detection = False\n        self._model_name = [\n            \"VGG-Face\", \"Facenet\", \"Facenet512\", \"OpenFace\", \"DeepFace\",",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
@@ -9915,7 +9907,7 @@
         "kind": 2,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "def find_distance_vectorized(db_embeddings: np.ndarray, target_embedding: np.ndarray, metric: str) -> np.ndarray:\n    \"\"\"\n    Calculate the distance between a target embedding and a set of database embeddings using a specified metric.\n    :param db_embeddings: A NumPy array of shape (N, D) where N is the number of embeddings and D is the dimensionality.\n    :param target_embedding: A NumPy array of shape (D,) representing the target embedding.\n    :param metric: The distance metric to use. Supported values: \"cosine\", \"euclidean\", \"euclidean_l2\".\n    :return: A NumPy array of distances.\n    \"\"\"\n    if metric == 'cosine':\n        dot_product = np.dot(db_embeddings, target_embedding)",
+        "peekOfCode": "def find_distance_vectorized(db_embeddings: np.ndarray, target_embedding: np.ndarray, metric: str) -> np.ndarray:\n    \"\"\"\n    Calculate the distance between a target embedding and a set of database embeddings using a specified metric.\n    \"\"\"\n    if metric == 'cosine':\n        dot_product = np.dot(db_embeddings, target_embedding)\n        norm_db = np.linalg.norm(db_embeddings, axis=1)\n        norm_target = np.linalg.norm(target_embedding)\n        return 1 - (dot_product / (norm_db * norm_target))\n    elif metric == 'euclidean':",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
@@ -9924,7 +9916,7 @@
         "kind": 5,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "logger = get_logger()\n# -----------------------------------\n# configurations for dependencies\nfrom deepface.commons import package_utils, folder_utils\n# Users should install tf_keras package if they are using tf 2.16 or later versions\npackage_utils.validate_for_keras3()\nwarnings.filterwarnings(\"ignore\")\ntf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)",
+        "peekOfCode": "logger = get_logger()\n# -----------------------------------\n# Configure dependencies and TensorFlow\npackage_utils.validate_for_keras3()\nwarnings.filterwarnings(\"ignore\")\ntf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\nmessage = None\n# GPU configuration",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
@@ -9933,16 +9925,25 @@
         "kind": 5,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "tf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\nmessange = None\n# Configure TensorFlow to use GPU\nif len(tf.config.experimental.list_physical_devices('GPU')) > 0:\n    # Ensure that TensorFlow uses the GPU\n    physical_devices = tf.config.experimental.list_physical_devices('GPU')\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')",
+        "peekOfCode": "tf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\nmessage = None\n# GPU configuration\nphysical_devices = tf.config.experimental.list_physical_devices('GPU')\nif len(physical_devices) > 0:\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')\n    message = \"Using GPU for TensorFlow operations\"",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
     {
-        "label": "messange",
+        "label": "message",
         "kind": 5,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "messange = None\n# Configure TensorFlow to use GPU\nif len(tf.config.experimental.list_physical_devices('GPU')) > 0:\n    # Ensure that TensorFlow uses the GPU\n    physical_devices = tf.config.experimental.list_physical_devices('GPU')\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')\n    messange = (\"Using GPU for TensorFlow operations\")\n    logger.info(\"Using GPU for TensorFlow operations\")\nelse:",
+        "peekOfCode": "message = None\n# GPU configuration\nphysical_devices = tf.config.experimental.list_physical_devices('GPU')\nif len(physical_devices) > 0:\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')\n    message = \"Using GPU for TensorFlow operations\"\n    logger.info(message)\nelse:\n    message = \"No GPU found. Running on CPU\"",
+        "detail": "core.deepface_controller.controller",
+        "documentation": {}
+    },
+    {
+        "label": "physical_devices",
+        "kind": 5,
+        "importPath": "core.deepface_controller.controller",
+        "description": "core.deepface_controller.controller",
+        "peekOfCode": "physical_devices = tf.config.experimental.list_physical_devices('GPU')\nif len(physical_devices) > 0:\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')\n    message = \"Using GPU for TensorFlow operations\"\n    logger.info(message)\nelse:\n    message = \"No GPU found. Running on CPU\"\n    logger.info(message)\n# -----------------------------------",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
