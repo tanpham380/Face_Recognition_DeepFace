@@ -1,3 +1,5 @@
+from deepface import DeepFace
+
 from deepface.commons import package_utils, folder_utils
 from deepface import __version__
 from deepface.modules import (
