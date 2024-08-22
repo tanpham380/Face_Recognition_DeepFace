@@ -9923,7 +9923,7 @@
         "kind": 5,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "logger = get_logger()\n# Configurations for dependencies\nfrom deepface.commons import package_utils, folder_utils\npackage_utils.validate_for_keras3()\nwarnings.filterwarnings(\"ignore\")\ntf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\n# Configure TensorFlow to use GPU\nmessage = None",
+        "peekOfCode": "logger = get_logger()\n# Configurations for dependencies\nfrom deepface.commons import package_utils, folder_utils\npackage_utils.validate_for_keras3()\nwarnings.filterwarnings(\"ignore\")\ntf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\n# Configure TensorFlow to use GPU\nmessange = None",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
@@ -9932,16 +9932,16 @@
         "kind": 5,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "tf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\n# Configure TensorFlow to use GPU\nmessage = None\nif len(tf.config.experimental.list_physical_devices('GPU')) > 0:\n    physical_devices = tf.config.experimental.list_physical_devices('GPU')\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')\n    message = \"Using GPU for TensorFlow operations\"",
+        "peekOfCode": "tf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\n# Configure TensorFlow to use GPU\nmessange = None\nif len(tf.config.experimental.list_physical_devices('GPU')) > 0:\n    physical_devices = tf.config.experimental.list_physical_devices('GPU')\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')\n    messange = \"Using GPU for TensorFlow operations\"",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
     {
-        "label": "message",
+        "label": "messange",
         "kind": 5,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "message = None\nif len(tf.config.experimental.list_physical_devices('GPU')) > 0:\n    physical_devices = tf.config.experimental.list_physical_devices('GPU')\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')\n    message = \"Using GPU for TensorFlow operations\"\n    logger.info(message)\nelse:\n    message = \"No GPU found. Running on CPU\"\n    logger.info(message)",
+        "peekOfCode": "messange = None\nif len(tf.config.experimental.list_physical_devices('GPU')) > 0:\n    physical_devices = tf.config.experimental.list_physical_devices('GPU')\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')\n    messange = \"Using GPU for TensorFlow operations\"\n    logger.info(messange)\nelse:\n    messange = \"No GPU found. Running on CPU\"\n    logger.info(messange)",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
@@ -10364,7 +10364,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def recognize_db():\n    if 'image' not in request.files:\n        return {\"message\": \"Image is required\"}, 400\n    image = request.files[\"image\"]\n    db_manager = current_app.config['DB_MANAGER']\n    try:\n        response = service.recognize_face_with_database(image, db_manager)\n        return response\n    except Exception as e:\n        return {\"message\": \"Failed to recognize face\", \"error\": str(e)}, 500",
+        "peekOfCode": "def recognize_db():\n    if 'image' not in request.files:\n        return {\"message\": \"Image is required\"}, 400\n    image = request.files[\"image\"]\n    if image is None:\n        return {\"message\": \"Image is required\"}, 400\n    db_manager = current_app.config['DB_MANAGER']\n    try:\n        response = service.recognize_face_with_database(image, db_manager)\n        return response",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10553,7 +10553,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def preload_models():\n    # Load the models by calling a dummy detection\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )\ndef create_app():",
+        "peekOfCode": "def preload_models(controller):\n    # Load the models by calling a dummy detection\n    controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )\ndef create_app():",
         "detail": "app",
         "documentation": {}
     },
@@ -10562,7 +10562,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def create_app():\n    app = Flask(__name__)\n    # Initialize SQLite manager\n    with app.app_context():\n        db_manager = SQLiteManager(DB_PATH)\n        db_manager.optimize_sqlite()\n        db_manager.create_table()\n        db_manager.create_task_status_table()\n        app.config['deepface_controller'] = deepface_controller\n        preload_models()",
+        "peekOfCode": "def create_app():\n    app = Flask(__name__)\n    # Initialize SQLite manager\n    with app.app_context():\n        db_manager = SQLiteManager(DB_PATH)\n        db_manager.optimize_sqlite()\n        db_manager.create_table()\n        db_manager.create_task_status_table()\n        app.config['deepface_controller'] = deepface_controller\n        preload_models(deepface_controller)",
         "detail": "app",
         "documentation": {}
     },
@@ -10571,7 +10571,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "logger = get_logger()\ndeepface_controller = DeepFaceController()\ndef preload_models():\n    # Load the models by calling a dummy detection\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True",
+        "peekOfCode": "logger = get_logger()\ndeepface_controller = DeepFaceController()\ndef preload_models(controller):\n    # Load the models by calling a dummy detection\n    controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True",
         "detail": "app",
         "documentation": {}
     },
@@ -10580,7 +10580,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "deepface_controller = DeepFaceController()\ndef preload_models():\n    # Load the models by calling a dummy detection\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )",
+        "peekOfCode": "deepface_controller = DeepFaceController()\ndef preload_models(controller):\n    # Load the models by calling a dummy detection\n    controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )",
         "detail": "app",
         "documentation": {}
     },
