@@ -12,9 +12,9 @@ logger = get_logger()
 deepface_controller = DeepFaceController()
 
 
-def preload_models(controller):
+def preload_models():
     # Load the models by calling a dummy detection
-    controller.find(
+    deepface_controller.find(
         img_path=os.path.join(BASE_PATH, "static", "temp.png"), # Pass a dummy or default image path
         db_path=IMAGES_DIR,  # Pass a dummy or default db_manager
         model_name="Facenet512",
@@ -35,7 +35,7 @@ def create_app():
         db_manager.create_table()
         db_manager.create_task_status_table()
         app.config['deepface_controller'] = deepface_controller
-        preload_models(deepface_controller)
+        preload_models()
 
     app.config['DB_MANAGER'] = db_manager
     logger.info(f"Starting Flask app: {app.name}")

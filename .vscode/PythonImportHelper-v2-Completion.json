@@ -523,6 +523,38 @@
         "documentation": {}
     },
     {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Any",
         "importPath": "typing",
         "description": "typing",
@@ -4501,7 +4533,7 @@
         "documentation": {}
     },
     {
-        "label": "SQLiteManager",
+        "label": "ZODBManager",
         "importPath": "core.utils.database",
         "description": "core.utils.database",
         "isExtraImport": true,
@@ -4671,6 +4703,22 @@
         "documentation": {}
     },
     {
+        "label": "current_app",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "g",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "request",
         "importPath": "flask",
         "description": "flask",
@@ -4724,6 +4772,14 @@
         "description": "flask",
         "isExtraImport": true,
         "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "cosine",
+        "importPath": "scipy.spatial.distance",
+        "description": "scipy.spatial.distance",
+        "isExtraImport": true,
+        "detail": "scipy.spatial.distance",
         "documentation": {}
     },
     {
@@ -10020,6 +10076,15 @@
     {
         "label": "SQLiteManager",
         "kind": 6,
+        "importPath": "core.utils.database_old",
+        "description": "core.utils.database_old",
+        "peekOfCode": "class SQLiteManager:\n    def __init__(self, db_path: str):\n        self.db_path = db_path\n        self.logger = logging.getLogger(__name__)\n        self.local = threading.local()  # Thread-local storage for thread-specific connections\n    def optimize_sqlite(self):\n        \"\"\"Optimize SQLite settings for better performance.\"\"\"\n        with self.get_connection() as conn:\n            conn.execute(\"PRAGMA synchronous = OFF\")\n            conn.execute(\"PRAGMA journal_mode = WAL\")",
+        "detail": "core.utils.database_old",
+        "documentation": {}
+    },
+    {
+        "label": "SQLiteManager",
+        "kind": 6,
         "importPath": "core.utils.databasev2",
         "description": "core.utils.databasev2",
         "peekOfCode": "class SQLiteManager:\n    def __init__(self, db_path: str):\n        self.db_path = db_path\n        self.logger = logging.getLogger(__name__)\n        # Initialize SQLite settings for optimization\n    def optimize_sqlite(self):\n        \"\"\"Optimize SQLite settings for better performance.\"\"\"\n        with self.get_connection() as conn:\n            conn.execute(\"PRAGMA synchronous = OFF\")\n            conn.execute(\"PRAGMA journal_mode = WAL\")",
@@ -10103,7 +10168,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)",
+        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\" \"db.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10112,7 +10177,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
+        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\" \"db.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10121,7 +10186,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
+        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\" \"db.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10283,7 +10348,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/information\", methods=[\"GET\"])\n@require_api_key\ndef version():\n    db_manager = current_app.config['DB_MANAGER']\n    embeddings = db_manager.is_database_locked()\n    return {\"information\": embeddings}\n@blueprint.route(\"/tasks/status\", methods=[\"GET\"])",
+        "peekOfCode": "def home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/information\", methods=[\"GET\"])\n@require_api_key\ndef version():\n    db_manager = current_app.config['DB_MANAGER']\n    embeddings = db_manager.get_all_embeddings()\n    return {\"information\": embeddings}\n@blueprint.route(\"/tasks/status\", methods=[\"GET\"])",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10292,7 +10357,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def version():\n    db_manager = current_app.config['DB_MANAGER']\n    embeddings = db_manager.is_database_locked()\n    return {\"information\": embeddings}\n@blueprint.route(\"/tasks/status\", methods=[\"GET\"])\n@require_api_key\ndef get_task_status():\n    \"\"\"API để xem trạng thái các tác vụ.\"\"\"\n    try :\n        db_manager = current_app.config['DB_MANAGER']",
+        "peekOfCode": "def version():\n    db_manager = current_app.config['DB_MANAGER']\n    embeddings = db_manager.get_all_embeddings()\n    return {\"information\": embeddings}\n@blueprint.route(\"/tasks/status\", methods=[\"GET\"])\n@require_api_key\ndef get_task_status():\n    \"\"\"API để xem trạng thái các tác vụ.\"\"\"\n    try :\n        db_manager = current_app.config['DB_MANAGER']",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10553,7 +10618,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def preload_models(controller):\n    # Load the models by calling a dummy detection\n    controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )\ndef create_app():",
+        "peekOfCode": "def preload_models():\n    # Load the models by calling a dummy detection\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )\ndef create_app():",
         "detail": "app",
         "documentation": {}
     },
@@ -10562,7 +10627,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def create_app():\n    app = Flask(__name__)\n    # Initialize SQLite manager\n    with app.app_context():\n        db_manager = SQLiteManager(DB_PATH)\n        db_manager.optimize_sqlite()\n        db_manager.create_table()\n        db_manager.create_task_status_table()\n        app.config['deepface_controller'] = deepface_controller\n        preload_models(deepface_controller)",
+        "peekOfCode": "def create_app():\n    app = Flask(__name__)\n    # Initialize SQLite manager\n    with app.app_context():\n        db_manager = SQLiteManager(DB_PATH)\n        db_manager.optimize_sqlite()\n        db_manager.create_table()\n        db_manager.create_task_status_table()\n        app.config['deepface_controller'] = deepface_controller\n        preload_models()",
         "detail": "app",
         "documentation": {}
     },
@@ -10571,7 +10636,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "logger = get_logger()\ndeepface_controller = DeepFaceController()\ndef preload_models(controller):\n    # Load the models by calling a dummy detection\n    controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True",
+        "peekOfCode": "logger = get_logger()\ndeepface_controller = DeepFaceController()\ndef preload_models():\n    # Load the models by calling a dummy detection\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True",
         "detail": "app",
         "documentation": {}
     },
@@ -10580,7 +10645,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "deepface_controller = DeepFaceController()\ndef preload_models(controller):\n    # Load the models by calling a dummy detection\n    controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )",
+        "peekOfCode": "deepface_controller = DeepFaceController()\ndef preload_models():\n    # Load the models by calling a dummy detection\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )",
         "detail": "app",
         "documentation": {}
     },
