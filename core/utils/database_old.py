@@ -21,18 +21,17 @@ class SQLiteManager:
 
     def get_connection(self):
         if current_app:
+            # Use Flask's `g` to manage the connection in the app context
             if 'db_connection' not in g:
                 g.db_connection = sqlite3.connect(self.db_path)
-                g.db_connection.row_factory = sqlite3.Row
-                g.db_connection.execute("PRAGMA busy_timeout = 5000")  # 5 seconds
+                g.db_connection.row_factory = sqlite3.Row  # Enables dict-like cursor
             return g.db_connection
         else:
+            # Use thread-local storage for connections outside Flask context
             if not hasattr(self.local, 'connection'):
                 self.local.connection = sqlite3.connect(self.db_path)
                 self.local.connection.row_factory = sqlite3.Row
-                self.local.connection.execute("PRAGMA busy_timeout = 5000")  # 5 seconds
             return self.local.connection
-
 
     def close_connection(self, error=None):
         if current_app and 'db_connection' in g:

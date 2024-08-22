@@ -20,7 +20,7 @@ import logging
 from typing import Any, Dict, List, Union, Optional
 from concurrent.futures import ThreadPoolExecutor
 
-from core.utils.database import SQLiteManager
+from core.utils.database import ZODBManager
 from core.utils.logging import get_logger
 
 logger = get_logger()
@@ -153,7 +153,7 @@ class DeepFaceController():
     def verify_faces_db(
         self,
         img_path: Union[str, np.ndarray],
-        db_manager: SQLiteManager,
+        db_manager: ZODBManager,
         model_name: Optional[Union[str, List[str]]] = None,
         distance_metric: Optional[Union[str, List[str]]] = None,
         enforce_detection: Optional[bool] = None,

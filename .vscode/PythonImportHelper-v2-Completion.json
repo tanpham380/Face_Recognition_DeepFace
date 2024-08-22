@@ -523,6 +523,38 @@
         "documentation": {}
     },
     {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Any",
         "importPath": "typing",
         "description": "typing",
@@ -4501,7 +4533,7 @@
         "documentation": {}
     },
     {
-        "label": "SQLiteManager",
+        "label": "ZODBManager",
         "importPath": "core.utils.database",
         "description": "core.utils.database",
         "isExtraImport": true,
@@ -4671,6 +4703,22 @@
         "documentation": {}
     },
     {
+        "label": "current_app",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "g",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "request",
         "importPath": "flask",
         "description": "flask",
@@ -4724,6 +4772,14 @@
         "description": "flask",
         "isExtraImport": true,
         "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "cosine",
+        "importPath": "scipy.spatial.distance",
+        "description": "scipy.spatial.distance",
+        "isExtraImport": true,
+        "detail": "scipy.spatial.distance",
         "documentation": {}
     },
     {
@@ -9923,7 +9979,7 @@
         "kind": 5,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "logger = get_logger()\n# Configurations for dependencies\nfrom deepface.commons import package_utils, folder_utils\npackage_utils.validate_for_keras3()\nwarnings.filterwarnings(\"ignore\")\ntf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\n# Configure TensorFlow to use GPU\nmessage = None",
+        "peekOfCode": "logger = get_logger()\n# Configurations for dependencies\nfrom deepface.commons import package_utils, folder_utils\npackage_utils.validate_for_keras3()\nwarnings.filterwarnings(\"ignore\")\ntf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\n# Configure TensorFlow to use GPU\nmessange = None",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
@@ -9932,16 +9988,16 @@
         "kind": 5,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "tf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\n# Configure TensorFlow to use GPU\nmessage = None\nif len(tf.config.experimental.list_physical_devices('GPU')) > 0:\n    physical_devices = tf.config.experimental.list_physical_devices('GPU')\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')\n    message = \"Using GPU for TensorFlow operations\"",
+        "peekOfCode": "tf_version = package_utils.get_tf_major_version()\nif tf_version == 2:\n    tf.get_logger().setLevel(logging.ERROR)\n# Configure TensorFlow to use GPU\nmessange = None\nif len(tf.config.experimental.list_physical_devices('GPU')) > 0:\n    physical_devices = tf.config.experimental.list_physical_devices('GPU')\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')\n    messange = \"Using GPU for TensorFlow operations\"",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
     {
-        "label": "message",
+        "label": "messange",
         "kind": 5,
         "importPath": "core.deepface_controller.controller",
         "description": "core.deepface_controller.controller",
-        "peekOfCode": "message = None\nif len(tf.config.experimental.list_physical_devices('GPU')) > 0:\n    physical_devices = tf.config.experimental.list_physical_devices('GPU')\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')\n    message = \"Using GPU for TensorFlow operations\"\n    logger.info(message)\nelse:\n    message = \"No GPU found. Running on CPU\"\n    logger.info(message)",
+        "peekOfCode": "messange = None\nif len(tf.config.experimental.list_physical_devices('GPU')) > 0:\n    physical_devices = tf.config.experimental.list_physical_devices('GPU')\n    tf.config.experimental.set_memory_growth(physical_devices[0], True)\n    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')\n    messange = \"Using GPU for TensorFlow operations\"\n    logger.info(messange)\nelse:\n    messange = \"No GPU found. Running on CPU\"\n    logger.info(messange)",
         "detail": "core.deepface_controller.controller",
         "documentation": {}
     },
@@ -10015,6 +10071,15 @@
         "description": "core.utils.database",
         "peekOfCode": "class SQLiteManager:\n    def __init__(self, db_path: str):\n        self.db_path = db_path\n        self.logger = logging.getLogger(__name__)\n        self.local = threading.local()  # Thread-local storage for thread-specific connections\n    def optimize_sqlite(self):\n        \"\"\"Optimize SQLite settings for better performance.\"\"\"\n        with self.get_connection() as conn:\n            conn.execute(\"PRAGMA synchronous = OFF\")\n            conn.execute(\"PRAGMA journal_mode = WAL\")",
         "detail": "core.utils.database",
+        "documentation": {}
+    },
+    {
+        "label": "SQLiteManager",
+        "kind": 6,
+        "importPath": "core.utils.database_old",
+        "description": "core.utils.database_old",
+        "peekOfCode": "class SQLiteManager:\n    def __init__(self, db_path: str):\n        self.db_path = db_path\n        self.logger = logging.getLogger(__name__)\n        self.local = threading.local()  # Thread-local storage for thread-specific connections\n    def optimize_sqlite(self):\n        \"\"\"Optimize SQLite settings for better performance.\"\"\"\n        with self.get_connection() as conn:\n            conn.execute(\"PRAGMA synchronous = OFF\")\n            conn.execute(\"PRAGMA journal_mode = WAL\")",
+        "detail": "core.utils.database_old",
         "documentation": {}
     },
     {
@@ -10103,7 +10168,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)",
+        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\" \"db.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10112,7 +10177,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
+        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\" \"db.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10121,7 +10186,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
+        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\" \"db.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10364,7 +10429,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def recognize_db():\n    if 'image' not in request.files:\n        return {\"message\": \"Image is required\"}, 400\n    image = request.files[\"image\"]\n    db_manager = current_app.config['DB_MANAGER']\n    try:\n        response = service.recognize_face_with_database(image, db_manager)\n        return response\n    except Exception as e:\n        return {\"message\": \"Failed to recognize face\", \"error\": str(e)}, 500",
+        "peekOfCode": "def recognize_db():\n    if 'image' not in request.files:\n        return {\"message\": \"Image is required\"}, 400\n    image = request.files[\"image\"]\n    if image is None:\n        return {\"message\": \"Image is required\"}, 400\n    db_manager = current_app.config['DB_MANAGER']\n    try:\n        response = service.recognize_face_with_database(image, db_manager)\n        return response",
         "detail": "core.routes",
         "documentation": {}
     },
