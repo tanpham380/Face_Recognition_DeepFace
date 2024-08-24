@@ -19,7 +19,7 @@ import warnings
 import logging
 from typing import Any, Dict, List, Union, Optional
 
-from core.utils.database import SQLiteManager
+from core.utils.database_remove import SQLiteManager
 from core.utils.logging import get_logger
 
 logger = get_logger()

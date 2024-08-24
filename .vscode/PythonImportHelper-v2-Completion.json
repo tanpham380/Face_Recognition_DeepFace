@@ -4517,62 +4517,6 @@
         "documentation": {}
     },
     {
-        "label": "ThreadPoolExecutor",
-        "importPath": "concurrent.futures",
-        "description": "concurrent.futures",
-        "isExtraImport": true,
-        "detail": "concurrent.futures",
-        "documentation": {}
-    },
-    {
-        "label": "ThreadPoolExecutor",
-        "importPath": "concurrent.futures",
-        "description": "concurrent.futures",
-        "isExtraImport": true,
-        "detail": "concurrent.futures",
-        "documentation": {}
-    },
-    {
-        "label": "SQLiteManager",
-        "importPath": "core.utils.database",
-        "description": "core.utils.database",
-        "isExtraImport": true,
-        "detail": "core.utils.database",
-        "documentation": {}
-    },
-    {
-        "label": "SQLiteManager",
-        "importPath": "core.utils.database",
-        "description": "core.utils.database",
-        "isExtraImport": true,
-        "detail": "core.utils.database",
-        "documentation": {}
-    },
-    {
-        "label": "SQLiteManager",
-        "importPath": "core.utils.database",
-        "description": "core.utils.database",
-        "isExtraImport": true,
-        "detail": "core.utils.database",
-        "documentation": {}
-    },
-    {
-        "label": "SQLiteManager",
-        "importPath": "core.utils.database",
-        "description": "core.utils.database",
-        "isExtraImport": true,
-        "detail": "core.utils.database",
-        "documentation": {}
-    },
-    {
-        "label": "SQLiteManager",
-        "importPath": "core.utils.database",
-        "description": "core.utils.database",
-        "isExtraImport": true,
-        "detail": "core.utils.database",
-        "documentation": {}
-    },
-    {
         "label": "get_logger",
         "importPath": "core.utils.logging",
         "description": "core.utils.logging",
@@ -4658,6 +4602,30 @@
         "description": "deepface.commons",
         "isExtraImport": true,
         "detail": "deepface.commons",
+        "documentation": {}
+    },
+    {
+        "label": "SQLiteManager",
+        "importPath": "core.utils.database_remove",
+        "description": "core.utils.database_remove",
+        "isExtraImport": true,
+        "detail": "core.utils.database_remove",
+        "documentation": {}
+    },
+    {
+        "label": "ThreadPoolExecutor",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "ThreadPoolExecutor",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
         "documentation": {}
     },
     {
@@ -4799,11 +4767,52 @@
         "documentation": {}
     },
     {
-        "label": "RotatingFileHandler",
-        "importPath": "logging.handlers",
-        "description": "logging.handlers",
+        "label": "FileStorage",
+        "importPath": "ZODB",
+        "description": "ZODB",
         "isExtraImport": true,
-        "detail": "logging.handlers",
+        "detail": "ZODB",
+        "documentation": {}
+    },
+    {
+        "label": "DB",
+        "importPath": "ZODB",
+        "description": "ZODB",
+        "isExtraImport": true,
+        "detail": "ZODB",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "transaction",
+        "description": "transaction",
+        "detail": "transaction",
+        "documentation": {}
+    },
+    {
+        "label": "Persistent",
+        "importPath": "persistent",
+        "description": "persistent",
+        "isExtraImport": true,
+        "detail": "persistent",
+        "documentation": {}
+    },
+    {
+        "label": "OOBTree",
+        "importPath": "BTrees.OOBTree",
+        "description": "BTrees.OOBTree",
+        "isExtraImport": true,
+        "detail": "BTrees.OOBTree",
+        "documentation": {}
+    },
+    {
+        "label": "IMAGES_DIR",
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "isExtraImport": true,
+        "detail": "core.utils.static_variable",
         "documentation": {}
     },
     {
@@ -4816,14 +4825,6 @@
     },
     {
         "label": "API_KEY",
-        "importPath": "core.utils.static_variable",
-        "description": "core.utils.static_variable",
-        "isExtraImport": true,
-        "detail": "core.utils.static_variable",
-        "documentation": {}
-    },
-    {
-        "label": "IMAGES_DIR",
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
         "isExtraImport": true,
@@ -4871,7 +4872,7 @@
         "documentation": {}
     },
     {
-        "label": "DB_PATH",
+        "label": "IMAGES_DIR",
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
         "isExtraImport": true,
@@ -4879,11 +4880,11 @@
         "documentation": {}
     },
     {
-        "label": "IMAGES_DIR",
-        "importPath": "core.utils.static_variable",
-        "description": "core.utils.static_variable",
+        "label": "RotatingFileHandler",
+        "importPath": "logging.handlers",
+        "description": "logging.handlers",
         "isExtraImport": true,
-        "detail": "core.utils.static_variable",
+        "detail": "logging.handlers",
         "documentation": {}
     },
     {
@@ -4953,14 +4954,6 @@
         "documentation": {}
     },
     {
-        "label": "task_queue",
-        "importPath": "core.utils.theading",
-        "description": "core.utils.theading",
-        "isExtraImport": true,
-        "detail": "core.utils.theading",
-        "documentation": {}
-    },
-    {
         "label": "stop_workers",
         "importPath": "core.utils.theading",
         "description": "core.utils.theading",
@@ -4978,26 +4971,26 @@
     },
     {
         "label": "delete_images_for_uid",
-        "importPath": "core.utils.progress_file",
-        "description": "core.utils.progress_file",
+        "importPath": "core.utils.file_utils",
+        "description": "core.utils.file_utils",
         "isExtraImport": true,
-        "detail": "core.utils.progress_file",
+        "detail": "core.utils.file_utils",
         "documentation": {}
     },
     {
         "label": "extract_base_identity",
-        "importPath": "core.utils.progress_file",
-        "description": "core.utils.progress_file",
+        "importPath": "core.utils.file_utils",
+        "description": "core.utils.file_utils",
         "isExtraImport": true,
-        "detail": "core.utils.progress_file",
+        "detail": "core.utils.file_utils",
         "documentation": {}
     },
     {
         "label": "save_image",
-        "importPath": "core.utils.progress_file",
-        "description": "core.utils.progress_file",
+        "importPath": "core.utils.file_utils",
+        "description": "core.utils.file_utils",
         "isExtraImport": true,
-        "detail": "core.utils.progress_file",
+        "detail": "core.utils.file_utils",
         "documentation": {}
     },
     {
@@ -10042,7 +10035,7 @@
         "kind": 2,
         "importPath": "core.utils.augment_images",
         "description": "core.utils.augment_images",
-        "peekOfCode": "def shift_image(image, shift):\n    \"\"\"Dịch chuyển hình ảnh với một khoảng cách nhất định.\"\"\"\n    width, height = image.size\n    shifted_image = Image.new(\"RGB\", (width, height))\n    shifted_image.paste(image, (shift[0], shift[1]))\n    return shifted_image\ndef process_image(image, operation, *args):\n    \"\"\"Helper function to apply various operations on the image.\"\"\"\n    if operation == 'rotate':\n        return image.rotate(*args, resample=Image.BICUBIC)",
+        "peekOfCode": "def shift_image(image, shift):\n    width, height = image.size\n    shifted_image = Image.new(\"RGB\", (width, height))\n    shifted_image.paste(image, (shift[0], shift[1]))\n    return shifted_image\ndef process_image(image, operation, *args):\n    if operation == 'rotate':\n        return image.rotate(*args, resample=Image.BICUBIC)\n    elif operation == 'flip':\n        return ImageOps.mirror(image)",
         "detail": "core.utils.augment_images",
         "documentation": {}
     },
@@ -10051,7 +10044,7 @@
         "kind": 2,
         "importPath": "core.utils.augment_images",
         "description": "core.utils.augment_images",
-        "peekOfCode": "def process_image(image, operation, *args):\n    \"\"\"Helper function to apply various operations on the image.\"\"\"\n    if operation == 'rotate':\n        return image.rotate(*args, resample=Image.BICUBIC)\n    elif operation == 'flip':\n        return ImageOps.mirror(image)\n    elif operation == 'brightness':\n        enhancer = ImageEnhance.Brightness(image)\n        return enhancer.enhance(*args)\n    elif operation == 'shift':",
+        "peekOfCode": "def process_image(image, operation, *args):\n    if operation == 'rotate':\n        return image.rotate(*args, resample=Image.BICUBIC)\n    elif operation == 'flip':\n        return ImageOps.mirror(image)\n    elif operation == 'brightness':\n        enhancer = ImageEnhance.Brightness(image)\n        return enhancer.enhance(*args)\n    elif operation == 'shift':\n        return shift_image(image, args)",
         "detail": "core.utils.augment_images",
         "documentation": {}
     },
@@ -10067,19 +10060,37 @@
     {
         "label": "SQLiteManager",
         "kind": 6,
-        "importPath": "core.utils.database",
-        "description": "core.utils.database",
-        "peekOfCode": "class SQLiteManager:\n    def __init__(self, db_path: str):\n        self.db_path = db_path\n        self.logger = logging.getLogger(__name__)\n        self.local = threading.local()  # Thread-local storage for thread-specific connections\n    def optimize_sqlite(self):\n        \"\"\"Optimize SQLite settings for better performance.\"\"\"\n        with self.get_connection() as conn:\n            conn.execute(\"PRAGMA synchronous = OFF\")\n            conn.execute(\"PRAGMA journal_mode = WAL\")",
-        "detail": "core.utils.database",
-        "documentation": {}
-    },
-    {
-        "label": "SQLiteManager",
-        "kind": 6,
         "importPath": "core.utils.database_old",
         "description": "core.utils.database_old",
         "peekOfCode": "class SQLiteManager:\n    def __init__(self, db_path: str):\n        self.db_path = db_path\n        self.logger = logging.getLogger(__name__)\n        self.local = threading.local()  # Thread-local storage for thread-specific connections\n    def optimize_sqlite(self):\n        \"\"\"Optimize SQLite settings for better performance.\"\"\"\n        with self.get_connection() as conn:\n            conn.execute(\"PRAGMA synchronous = OFF\")\n            conn.execute(\"PRAGMA journal_mode = WAL\")",
         "detail": "core.utils.database_old",
+        "documentation": {}
+    },
+    {
+        "label": "TaskStatus",
+        "kind": 6,
+        "importPath": "core.utils.database_remove",
+        "description": "core.utils.database_remove",
+        "peekOfCode": "class TaskStatus(Persistent):\n    def __init__(self, task_id: str, uid: Optional[str], status: str, is_final_task: bool):\n        self.task_id = task_id\n        self.uid = uid\n        self.status = status\n        self.is_final_task = is_final_task\n        self.created_at = None  # Can add timestamp handling if needed\n        self.updated_at = None  # Can add timestamp handling if needed\nclass FaceEmbedding(Persistent):\n    def __init__(self, uid: str, embedding: bytes):",
+        "detail": "core.utils.database_remove",
+        "documentation": {}
+    },
+    {
+        "label": "FaceEmbedding",
+        "kind": 6,
+        "importPath": "core.utils.database_remove",
+        "description": "core.utils.database_remove",
+        "peekOfCode": "class FaceEmbedding(Persistent):\n    def __init__(self, uid: str, embedding: bytes):\n        self.uid = uid\n        self.embedding = embedding\nclass ZODBManager:\n    def __init__(self, db_path: str):\n        self.db_path = db_path\n        self.logger = logging.getLogger(__name__)\n        storage = FileStorage.FileStorage(db_path)\n        self.db = DB(storage)",
+        "detail": "core.utils.database_remove",
+        "documentation": {}
+    },
+    {
+        "label": "ZODBManager",
+        "kind": 6,
+        "importPath": "core.utils.database_remove",
+        "description": "core.utils.database_remove",
+        "peekOfCode": "class ZODBManager:\n    def __init__(self, db_path: str):\n        self.db_path = db_path\n        self.logger = logging.getLogger(__name__)\n        storage = FileStorage.FileStorage(db_path)\n        self.db = DB(storage)\n        connection = self.db.open()\n        self.root = connection.root()\n        # Initialize trees if they do not exist\n        self._initialize_trees()",
+        "detail": "core.utils.database_remove",
         "documentation": {}
     },
     {
@@ -10089,6 +10100,51 @@
         "description": "core.utils.databasev2",
         "peekOfCode": "class SQLiteManager:\n    def __init__(self, db_path: str):\n        self.db_path = db_path\n        self.logger = logging.getLogger(__name__)\n        # Initialize SQLite settings for optimization\n    def optimize_sqlite(self):\n        \"\"\"Optimize SQLite settings for better performance.\"\"\"\n        with self.get_connection() as conn:\n            conn.execute(\"PRAGMA synchronous = OFF\")\n            conn.execute(\"PRAGMA journal_mode = WAL\")",
         "detail": "core.utils.databasev2",
+        "documentation": {}
+    },
+    {
+        "label": "extract_base_identity",
+        "kind": 2,
+        "importPath": "core.utils.file_utils",
+        "description": "core.utils.file_utils",
+        "peekOfCode": "def extract_base_identity(identity):\n    # Split the identity by '_' and take the last part without the augmentation part\n    identity = os.path.splitext(os.path.basename(identity))[0]\n    identity = \"_\".join(identity.split('_')[2:]).split('_')[0]\n    return identity\ndef delete_images_for_uid(uid: str, base_uid: str ):\n    # Adjust the pattern to correctly match files associated with the base_uid and uid\n    image_pattern = os.path.join(IMAGES_DIR, base_uid, f\"*_{uid}*.png\")\n    # Ensure the pattern is correct and matches files\n    matching_files = glob.glob(image_pattern)",
+        "detail": "core.utils.file_utils",
+        "documentation": {}
+    },
+    {
+        "label": "delete_images_for_uid",
+        "kind": 2,
+        "importPath": "core.utils.file_utils",
+        "description": "core.utils.file_utils",
+        "peekOfCode": "def delete_images_for_uid(uid: str, base_uid: str ):\n    # Adjust the pattern to correctly match files associated with the base_uid and uid\n    image_pattern = os.path.join(IMAGES_DIR, base_uid, f\"*_{uid}*.png\")\n    # Ensure the pattern is correct and matches files\n    matching_files = glob.glob(image_pattern)\n    if not matching_files:\n        logger.info(f\"No files found for pattern\")\n    for file_path in matching_files:\n        try:\n            os.remove(file_path)",
+        "detail": "core.utils.file_utils",
+        "documentation": {}
+    },
+    {
+        "label": "save_image",
+        "kind": 2,
+        "importPath": "core.utils.file_utils",
+        "description": "core.utils.file_utils",
+        "peekOfCode": "def save_image(image: Any, uid: str, base_dir: str, prefix: str, anti_spoofing: bool = False):\n    \"\"\"\n    Save the given image to a directory with a specific format. If the directory contains more than\n    56 images (8 original and 48 augmented), the oldest augmented images will be deleted.\n    Parameters:\n    - image: The image object to be saved.\n    - uid: The UID or identifier for the directory.\n    - base_dir: The base directory where the UID directory will be created.\n    - prefix: The prefix to use for the filename (e.g., \"query\" or UID).\n    - anti_spoofing: Boolean flag indicating if the image is flagged for anti-spoofing.",
+        "detail": "core.utils.file_utils",
+        "documentation": {}
+    },
+    {
+        "label": "delete_images",
+        "kind": 2,
+        "importPath": "core.utils.file_utils",
+        "description": "core.utils.file_utils",
+        "peekOfCode": "def delete_images(directory: str):\n    \"\"\"\n    Delete all images in the specified directory.\n    Parameters:\n    - directory: The directory where images will be deleted.\n    \"\"\"\n    if os.path.exists(directory):\n        for filename in os.listdir(directory):\n            file_path = os.path.join(directory, filename)\n            if os.path.isfile(file_path):",
+        "detail": "core.utils.file_utils",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "core.utils.file_utils",
+        "description": "core.utils.file_utils",
+        "peekOfCode": "logger = get_logger()\ndef extract_base_identity(identity):\n    # Split the identity by '_' and take the last part without the augmentation part\n    identity = os.path.splitext(os.path.basename(identity))[0]\n    identity = \"_\".join(identity.split('_')[2:]).split('_')[0]\n    return identity\ndef delete_images_for_uid(uid: str, base_uid: str ):\n    # Adjust the pattern to correctly match files associated with the base_uid and uid\n    image_pattern = os.path.join(IMAGES_DIR, base_uid, f\"*_{uid}*.png\")\n    # Ensure the pattern is correct and matches files",
+        "detail": "core.utils.file_utils",
         "documentation": {}
     },
     {
@@ -10119,56 +10175,11 @@
         "documentation": {}
     },
     {
-        "label": "extract_base_identity",
-        "kind": 2,
-        "importPath": "core.utils.progress_file",
-        "description": "core.utils.progress_file",
-        "peekOfCode": "def extract_base_identity(identity):\n    # Split the identity by '_' and take the last part without the augmentation part\n    identity = os.path.splitext(os.path.basename(identity))[0]\n    identity = \"_\".join(identity.split('_')[2:]).split('_')[0]\n    return identity\ndef delete_images_for_uid(uid: str, base_uid: str ):\n    # Adjust the pattern to correctly match files associated with the base_uid and uid\n    image_pattern = os.path.join(IMAGES_DIR, base_uid, f\"*_{uid}*.png\")\n    # Ensure the pattern is correct and matches files\n    matching_files = glob.glob(image_pattern)",
-        "detail": "core.utils.progress_file",
-        "documentation": {}
-    },
-    {
-        "label": "delete_images_for_uid",
-        "kind": 2,
-        "importPath": "core.utils.progress_file",
-        "description": "core.utils.progress_file",
-        "peekOfCode": "def delete_images_for_uid(uid: str, base_uid: str ):\n    # Adjust the pattern to correctly match files associated with the base_uid and uid\n    image_pattern = os.path.join(IMAGES_DIR, base_uid, f\"*_{uid}*.png\")\n    # Ensure the pattern is correct and matches files\n    matching_files = glob.glob(image_pattern)\n    if not matching_files:\n        logger.info(f\"No files found for pattern\")\n    for file_path in matching_files:\n        try:\n            os.remove(file_path)",
-        "detail": "core.utils.progress_file",
-        "documentation": {}
-    },
-    {
-        "label": "save_image",
-        "kind": 2,
-        "importPath": "core.utils.progress_file",
-        "description": "core.utils.progress_file",
-        "peekOfCode": "def save_image(image: Any, uid: str, base_dir: str, prefix: str, anti_spoofing: bool = False):\n    \"\"\"\n    Save the given image to a directory with a specific format. If the directory contains more than\n    56 images (8 original and 48 augmented), the oldest augmented images will be deleted.\n    Parameters:\n    - image: The image object to be saved.\n    - uid: The UID or identifier for the directory.\n    - base_dir: The base directory where the UID directory will be created.\n    - prefix: The prefix to use for the filename (e.g., \"query\" or UID).\n    - anti_spoofing: Boolean flag indicating if the image is flagged for anti-spoofing.",
-        "detail": "core.utils.progress_file",
-        "documentation": {}
-    },
-    {
-        "label": "delete_images",
-        "kind": 2,
-        "importPath": "core.utils.progress_file",
-        "description": "core.utils.progress_file",
-        "peekOfCode": "def delete_images(directory: str):\n    \"\"\"\n    Delete all images in the specified directory.\n    Parameters:\n    - directory: The directory where images will be deleted.\n    \"\"\"\n    if os.path.exists(directory):\n        for filename in os.listdir(directory):\n            file_path = os.path.join(directory, filename)\n            if os.path.isfile(file_path):",
-        "detail": "core.utils.progress_file",
-        "documentation": {}
-    },
-    {
-        "label": "logger",
-        "kind": 5,
-        "importPath": "core.utils.progress_file",
-        "description": "core.utils.progress_file",
-        "peekOfCode": "logger = get_logger()\ndef extract_base_identity(identity):\n    # Split the identity by '_' and take the last part without the augmentation part\n    identity = os.path.splitext(os.path.basename(identity))[0]\n    identity = \"_\".join(identity.split('_')[2:]).split('_')[0]\n    return identity\ndef delete_images_for_uid(uid: str, base_uid: str ):\n    # Adjust the pattern to correctly match files associated with the base_uid and uid\n    image_pattern = os.path.join(IMAGES_DIR, base_uid, f\"*_{uid}*.png\")\n    # Ensure the pattern is correct and matches files",
-        "detail": "core.utils.progress_file",
-        "documentation": {}
-    },
-    {
         "label": "TEMP_DIR",
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)",
+        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10177,7 +10188,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
+        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10186,7 +10197,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\", \"face_recognition.db\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
+        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10276,7 +10287,7 @@
         "kind": 2,
         "importPath": "core.utils.theading",
         "description": "core.utils.theading",
-        "peekOfCode": "def generate_unique_task_id(db_manager: SQLiteManager) -> str:\n    while True:\n        task_id = f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\n        with db_manager.get_connection() as conn:\n            result = conn.execute(\"\"\"\n                SELECT task_id FROM task_status WHERE task_id = ?\n            \"\"\", (task_id,)).fetchone()\n        if result is None:\n            return task_id\ndef add_task_to_queue(func, db_manager: SQLiteManager, *args, **kwargs):",
+        "peekOfCode": "def generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        task_queue.put((task_id, lambda: func(*args, **kwargs)))\n        logger.info(f\"Added task {task_id} to the queue\")\ndef worker(app):",
         "detail": "core.utils.theading",
         "documentation": {}
     },
@@ -10285,7 +10296,7 @@
         "kind": 2,
         "importPath": "core.utils.theading",
         "description": "core.utils.theading",
-        "peekOfCode": "def add_task_to_queue(func, db_manager: SQLiteManager, *args, **kwargs):\n    task_id = generate_unique_task_id(db_manager)\n    uid = kwargs.get('uid', None) \n    logger.info(f\"Generated unique task ID: {task_id}\")\n    from core.service import check_and_run_final_task\n    db_manager.insert_task(task_id, uid, \"pending\", is_final_task=(func == check_and_run_final_task))\n    task_queue.put((task_id, lambda: func(db_manager, *args, **kwargs)))\n    logger.info(f\"Added task {task_id} to the queue\")\ndef worker(app, db_manager: SQLiteManager):\n    logger.info(\"Worker thread started\")",
+        "peekOfCode": "def add_task_to_queue(func, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        task_queue.put((task_id, lambda: func(*args, **kwargs)))\n        logger.info(f\"Added task {task_id} to the queue\")\ndef worker(app):\n    logger.info(\"Worker thread started\")\n    with app.app_context():",
         "detail": "core.utils.theading",
         "documentation": {}
     },
@@ -10294,7 +10305,7 @@
         "kind": 2,
         "importPath": "core.utils.theading",
         "description": "core.utils.theading",
-        "peekOfCode": "def worker(app, db_manager: SQLiteManager):\n    logger.info(\"Worker thread started\")\n    with app.app_context():\n        while True:\n            logger.info(\"Worker waiting for a task\")\n            task_id, task = task_queue.get()\n            if task is None:\n                break\n            logger.info(f\"Worker received task {task_id}\")\n            try:",
+        "peekOfCode": "def worker(app):\n    logger.info(\"Worker thread started\")\n    with app.app_context():\n        while True:\n            task_id, task = task_queue.get()\n            if task is None:\n                break\n            start_time = time.time()\n            try:\n                logger.info(f\"Worker picked up task {task_id}\")",
         "detail": "core.utils.theading",
         "documentation": {}
     },
@@ -10303,7 +10314,7 @@
         "kind": 2,
         "importPath": "core.utils.theading",
         "description": "core.utils.theading",
-        "peekOfCode": "def start_workers(app, db_manager: SQLiteManager):\n    global threads\n    for i in range(NUMBER_WORKER):\n        t = threading.Thread(target=worker, args=(app, db_manager), name=f\"Worker-{i}\")\n        t.start()\n        threads.append(t)\n        logger.info(f\"Worker thread {i} started\")\ndef stop_workers():\n    for _ in range(NUMBER_WORKER):\n        task_queue.put((None, None))",
+        "peekOfCode": "def start_workers(app):\n    global threads\n    if threads:  # Check if workers are already started\n        logger.warning(\"Workers already started.\")\n        return\n    for i in range(NUMBER_WORKER):\n        t = threading.Thread(target=worker, args=(app,), name=f\"Worker-{i}\")\n        t.start()\n        threads.append(t)\n        logger.info(f\"Worker thread {i} started\")",
         "detail": "core.utils.theading",
         "documentation": {}
     },
@@ -10312,7 +10323,7 @@
         "kind": 2,
         "importPath": "core.utils.theading",
         "description": "core.utils.theading",
-        "peekOfCode": "def stop_workers():\n    for _ in range(NUMBER_WORKER):\n        task_queue.put((None, None))\n    for t in threads:\n        t.join()",
+        "peekOfCode": "def stop_workers():\n    global threads\n    for _ in range(NUMBER_WORKER):\n        task_queue.put((None, None))\n    for t in threads:\n        t.join()\n    # Cleanup\n    threads = []\n    logger.info(\"All workers stopped\")",
         "detail": "core.utils.theading",
         "documentation": {}
     },
@@ -10321,7 +10332,7 @@
         "kind": 5,
         "importPath": "core.utils.theading",
         "description": "core.utils.theading",
-        "peekOfCode": "task_queue = queue.Queue()\nlogger = get_logger()\nthreads = []\ndef generate_unique_task_id(db_manager: SQLiteManager) -> str:\n    while True:\n        task_id = f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\n        with db_manager.get_connection() as conn:\n            result = conn.execute(\"\"\"\n                SELECT task_id FROM task_status WHERE task_id = ?\n            \"\"\", (task_id,)).fetchone()",
+        "peekOfCode": "task_queue = queue.Queue(maxsize=100)  # Bounded queue to prevent overflow\nlogger = get_logger()\nthreads = []\nqueue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, *args, **kwargs):\n    task_id = generate_unique_task_id()",
         "detail": "core.utils.theading",
         "documentation": {}
     },
@@ -10330,7 +10341,7 @@
         "kind": 5,
         "importPath": "core.utils.theading",
         "description": "core.utils.theading",
-        "peekOfCode": "logger = get_logger()\nthreads = []\ndef generate_unique_task_id(db_manager: SQLiteManager) -> str:\n    while True:\n        task_id = f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\n        with db_manager.get_connection() as conn:\n            result = conn.execute(\"\"\"\n                SELECT task_id FROM task_status WHERE task_id = ?\n            \"\"\", (task_id,)).fetchone()\n        if result is None:",
+        "peekOfCode": "logger = get_logger()\nthreads = []\nqueue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:",
         "detail": "core.utils.theading",
         "documentation": {}
     },
@@ -10339,7 +10350,25 @@
         "kind": 5,
         "importPath": "core.utils.theading",
         "description": "core.utils.theading",
-        "peekOfCode": "threads = []\ndef generate_unique_task_id(db_manager: SQLiteManager) -> str:\n    while True:\n        task_id = f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\n        with db_manager.get_connection() as conn:\n            result = conn.execute(\"\"\"\n                SELECT task_id FROM task_status WHERE task_id = ?\n            \"\"\", (task_id,)).fetchone()\n        if result is None:\n            return task_id",
+        "peekOfCode": "threads = []\nqueue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():",
+        "detail": "core.utils.theading",
+        "documentation": {}
+    },
+    {
+        "label": "queue_lock",
+        "kind": 5,
+        "importPath": "core.utils.theading",
+        "description": "core.utils.theading",
+        "peekOfCode": "queue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")",
+        "detail": "core.utils.theading",
+        "documentation": {}
+    },
+    {
+        "label": "executor",
+        "kind": 5,
+        "importPath": "core.utils.theading",
+        "description": "core.utils.theading",
+        "peekOfCode": "executor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        task_queue.put((task_id, lambda: func(*args, **kwargs)))\n        logger.info(f\"Added task {task_id} to the queue\")",
         "detail": "core.utils.theading",
         "documentation": {}
     },
@@ -10348,61 +10377,16 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/information\", methods=[\"GET\"])\n@require_api_key\ndef version():\n    db_manager = current_app.config['DB_MANAGER']\n    embeddings = db_manager.get_all_embeddings()\n    return {\"information\": embeddings}\n@blueprint.route(\"/tasks/status\", methods=[\"GET\"])",
+        "peekOfCode": "def home():\n    version = service.check_version()\n    return {\"message\": \"API version\", \"data\": version, \"success\": True}\n@blueprint.route(\"/users\", methods=[\"GET\"])\n@require_api_key\ndef get_users():\n    uid_filter = request.args.get(\"uid\")  # Get UID from query parameter, if provided\n    try:\n        users = service.list_users(uid_filter)\n        return users",
         "detail": "core.routes",
         "documentation": {}
     },
     {
-        "label": "version",
+        "label": "get_users",
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def version():\n    db_manager = current_app.config['DB_MANAGER']\n    embeddings = db_manager.get_all_embeddings()\n    return {\"information\": embeddings}\n@blueprint.route(\"/tasks/status\", methods=[\"GET\"])\n@require_api_key\ndef get_task_status():\n    \"\"\"API để xem trạng thái các tác vụ.\"\"\"\n    try :\n        db_manager = current_app.config['DB_MANAGER']",
-        "detail": "core.routes",
-        "documentation": {}
-    },
-    {
-        "label": "get_task_status",
-        "kind": 2,
-        "importPath": "core.routes",
-        "description": "core.routes",
-        "peekOfCode": "def get_task_status():\n    \"\"\"API để xem trạng thái các tác vụ.\"\"\"\n    try :\n        db_manager = current_app.config['DB_MANAGER']\n        with db_manager.get_connection() as conn:\n            cursor = conn.execute(\"\"\"\n                SELECT task_id, status, created_at\n                FROM task_status\n                ORDER BY created_at DESC\n            \"\"\")",
-        "detail": "core.routes",
-        "documentation": {}
-    },
-    {
-        "label": "list_faces",
-        "kind": 2,
-        "importPath": "core.routes",
-        "description": "core.routes",
-        "peekOfCode": "def list_faces():\n    try: \n        db_manager = current_app.config['DB_MANAGER']\n        uids = db_manager.get_all_uids()\n        # Use a set to remove duplicates and then convert it back to a list\n        unique_uids = list(set(uids))\n        return {\"message\": \"Thành công\", \"data\": unique_uids , \"success\": True }\n    except Exception as e:\n        return {\"message\": \"Failed to list faces\", \"data\": None, \"success\": False}, 500\n@blueprint.route(\"/embedding\", methods=[\"GET\"])",
-        "detail": "core.routes",
-        "documentation": {}
-    },
-    {
-        "label": "get_embedding_by_uid",
-        "kind": 2,
-        "importPath": "core.routes",
-        "description": "core.routes",
-        "peekOfCode": "def get_embedding_by_uid():\n    uid = request.args.get(\"uid\")\n    if not uid:\n        return {\"message\": \"UID is required\"}, 400\n    db_manager = current_app.config['DB_MANAGER']\n    embedding = db_manager.get_embedding_by_uid(uid)\n    if embedding:\n        return {\"embedding\": embedding}\n    else:\n        return {\"message\": \"UID not found\"}, 404",
-        "detail": "core.routes",
-        "documentation": {}
-    },
-    {
-        "label": "get_most_recent_embeddings",
-        "kind": 2,
-        "importPath": "core.routes",
-        "description": "core.routes",
-        "peekOfCode": "def get_most_recent_embeddings():\n    limit = request.args.get(\"limit\", default=10, type=int)\n    db_manager = current_app.config['DB_MANAGER']\n    embeddings = db_manager.get_most_recent_embeddings(limit=limit)\n    return {\"embeddings\": embeddings}\n@blueprint.route(\"/embeddings_by_range\", methods=[\"GET\"])\n@require_api_key\ndef get_embeddings_by_id_range():\n    start_id = request.args.get(\"start_id\", type=int)\n    end_id = request.args.get(\"end_id\", type=int)",
-        "detail": "core.routes",
-        "documentation": {}
-    },
-    {
-        "label": "get_embeddings_by_id_range",
-        "kind": 2,
-        "importPath": "core.routes",
-        "description": "core.routes",
-        "peekOfCode": "def get_embeddings_by_id_range():\n    start_id = request.args.get(\"start_id\", type=int)\n    end_id = request.args.get(\"end_id\", type=int)\n    if start_id is None or end_id is None:\n        return {\"message\": \"start_id and end_id are required\"}, 400\n    db_manager = current_app.config['DB_MANAGER']\n    embeddings = db_manager.get_embeddings_by_id_range(\n        start_id=start_id, end_id=end_id)\n    return {\"embeddings\": embeddings}\n@blueprint.route(\"/register\", methods=[\"POST\"])",
+        "peekOfCode": "def get_users():\n    uid_filter = request.args.get(\"uid\")  # Get UID from query parameter, if provided\n    try:\n        users = service.list_users(uid_filter)\n        return users\n    except Exception as e:\n        logger.error(f\"Failed to retrieve user list: {str(e)}\")\n        return {\"message\": \"Failed to retrieve user list\", \"data\": None, \"success\": False}, 500\n@blueprint.route(\"/register\", methods=[\"POST\"])\n@require_api_key",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10411,7 +10395,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def register():\n    uid = request.form.get(\"uid\")\n    if not uid:\n        return {\"message\": \"UID is required\"}, 400\n    if 'image' not in request.files:\n        return {\"message\": \"Image is required\"}, 400\n    image = request.files[\"image\"]\n    db_manager = current_app.config['DB_MANAGER']\n    try:\n        response = service.register_face(image, uid, db_manager , current_app)",
+        "peekOfCode": "def register():\n    uid = request.form.get(\"uid\")\n    if not uid:\n        return {\"message\": \"UID is required\", \"data\": None, \"success\": False}, 400\n    if 'image' not in request.files:\n        return {\"message\": \"Image is required\", \"data\": None, \"success\": False}, 400\n    image = request.files[\"image\"]\n    try:\n        response = service.register_face(image, uid, current_app)\n        return response",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10420,16 +10404,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def delete_face():\n    uid = request.form.get(\"uid\")\n    if not uid:\n        return {\"message\": \"UID is required\"}, 400\n    db_manager = current_app.config['DB_MANAGER']\n    try:\n        response = service.delete_face(uid, db_manager , current_app)\n        return response\n    except Exception as e:\n        return {\"message\": \"Failed to delete face\", \"error\": str(e)}, 500",
-        "detail": "core.routes",
-        "documentation": {}
-    },
-    {
-        "label": "recognize_db",
-        "kind": 2,
-        "importPath": "core.routes",
-        "description": "core.routes",
-        "peekOfCode": "def recognize_db():\n    if 'image' not in request.files:\n        return {\"message\": \"Image is required\"}, 400\n    image = request.files[\"image\"]\n    if image is None:\n        return {\"message\": \"Image is required\"}, 400\n    db_manager = current_app.config['DB_MANAGER']\n    try:\n        response = service.recognize_face_with_database(image, db_manager)\n        return response",
+        "peekOfCode": "def delete_face():\n    uid = request.form.get(\"uid\")\n    if not uid:\n        return {\"message\": \"UID is required\", \"data\": None, \"success\": False}, 400\n    try:\n        response = service.delete_face(uid, current_app)\n        return response\n    except Exception as e:\n        logger.error(f\"Failed to delete face: {str(e)}\")\n        return {\"message\": \"Failed to delete face\", \"data\": None, \"success\": False}, 500",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10438,7 +10413,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def recognize():\n    if 'image' not in request.files:\n        return {\"message\": \"Image is required\"}, 400\n    image = request.files[\"image\"]\n    try:\n        response = service.recognize_face(image)\n        return response\n    except Exception as e:\n        return {\"message\": \"Failed to recognize face\", \"error\": str(e)}, 500\n@blueprint.route(\"/represent\", methods=[\"POST\"])",
+        "peekOfCode": "def recognize():\n    if 'image' not in request.files:\n        return {\"message\": \"Image is required\", \"data\": None, \"success\": False}, 400\n    image = request.files[\"image\"]\n    try:\n        response = service.recognize_face(image)\n        return response\n    except Exception as e:\n        logger.error(f\"Failed to recognize face: {str(e)}\")\n        return {\"message\": \"Failed to recognize face\", \"data\": None, \"success\": False}, 500",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10447,7 +10422,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def represent():\n    input_args = request.get_json()\n    if input_args is None:\n        return {\"message\": \"empty input set passed\"}\n    img_path = input_args.get(\"img\") or input_args.get(\"img_path\")\n    if img_path is None:\n        return {\"message\": \"you must pass img_path input\"}\n    obj = service.represent(\n        img_path=img_path,\n        model_name=input_args.get(\"model_name\", \"VGG-Face\"),",
+        "peekOfCode": "def represent():\n    input_args = request.get_json()\n    if input_args is None:\n        return {\"message\": \"Empty input set passed\", \"data\": None, \"success\": False}, 400\n    img_path = input_args.get(\"img\") or input_args.get(\"img_path\")\n    if img_path is None:\n        return {\"message\": \"You must pass img_path input\", \"data\": None, \"success\": False}, 400\n    try:\n        obj = service.represent(\n            img_path=img_path,",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10456,7 +10431,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def verify():\n    input_args = request.get_json()\n    if input_args is None:\n        return {\"message\": \"empty input set passed\"}\n    img1_path = input_args.get(\"img1\") or input_args.get(\"img1_path\")\n    img2_path = input_args.get(\"img2\") or input_args.get(\"img2_path\")\n    if img1_path is None:\n        return {\"message\": \"you must pass img1_path input\"}\n    if img2_path is None:\n        return {\"message\": \"you must pass img2_path input\"}",
+        "peekOfCode": "def verify():\n    input_args = request.get_json()\n    if input_args is None:\n        return {\"message\": \"Empty input set passed\", \"data\": None, \"success\": False}, 400\n    img1_path = input_args.get(\"img1\") or input_args.get(\"img1_path\")\n    img2_path = input_args.get(\"img2\") or input_args.get(\"img2_path\")\n    if img1_path is None:\n        return {\"message\": \"You must pass img1_path input\", \"data\": None, \"success\": False}, 400\n    if img2_path is None:\n        return {\"message\": \"You must pass img2_path input\", \"data\": None, \"success\": False}, 400",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10465,7 +10440,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def analyze():\n    input_args = request.get_json()\n    if input_args is None:\n        return {\"message\": \"empty input set passed\"}\n    img_path = input_args.get(\"img\") or input_args.get(\"img_path\")\n    if img_path is None:\n        return {\"message\": \"you must pass img_path input\"}\n    demographies = service.analyze(\n        img_path=img_path,\n        actions=input_args.get(\"actions\", [\"age\", \"gender\", \"emotion\", \"race\"]),",
+        "peekOfCode": "def analyze():\n    try: \n        input_args = request.get_json()\n        if input_args is None:\n            return {\"message\": \"Empty input set passed\"}\n        img_path = input_args.get(\"img\") or input_args.get(\"img_path\")\n        if img_path is None:\n            return {\"message\": \"You must pass img_path input\"}\n        demographies = service.analyze(\n            img_path=img_path,",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10474,7 +10449,7 @@
         "kind": 5,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "logger = get_logger()\nblueprint = Blueprint(\"routes\", __name__)\n# Assuming you have an instance of DeepFaceController\n@blueprint.route(\"/\")\ndef home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/information\", methods=[\"GET\"])\n@require_api_key\ndef version():",
+        "peekOfCode": "logger = get_logger()\nblueprint = Blueprint(\"routes\", __name__)\n# Assuming you have an instance of DeepFaceController\n@blueprint.route(\"/\")\ndef home():\n    version = service.check_version()\n    return {\"message\": \"API version\", \"data\": version, \"success\": True}\n@blueprint.route(\"/users\", methods=[\"GET\"])\n@require_api_key\ndef get_users():",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10483,7 +10458,7 @@
         "kind": 5,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "blueprint = Blueprint(\"routes\", __name__)\n# Assuming you have an instance of DeepFaceController\n@blueprint.route(\"/\")\ndef home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/information\", methods=[\"GET\"])\n@require_api_key\ndef version():\n    db_manager = current_app.config['DB_MANAGER']",
+        "peekOfCode": "blueprint = Blueprint(\"routes\", __name__)\n# Assuming you have an instance of DeepFaceController\n@blueprint.route(\"/\")\ndef home():\n    version = service.check_version()\n    return {\"message\": \"API version\", \"data\": version, \"success\": True}\n@blueprint.route(\"/users\", methods=[\"GET\"])\n@require_api_key\ndef get_users():\n    uid_filter = request.args.get(\"uid\")  # Get UID from query parameter, if provided",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10492,7 +10467,16 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def get_deepface_controller():\n    return flask.current_app.config['deepface_controller']\ndef check_version() -> Dict[str, Any]:\n    try:\n        version = get_deepface_controller().check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:",
+        "peekOfCode": "def get_deepface_controller():\n    return flask.current_app.config['deepface_controller']\ndef list_users(uid_filter: str = None) -> List[Dict[str, Any]]:\n    users = []\n    base_dirs = [d for d in os.listdir(IMAGES_DIR) if os.path.isdir(os.path.join(IMAGES_DIR, d))]\n    for base_dir in base_dirs:\n        user_files = glob.glob(os.path.join(IMAGES_DIR, base_dir, '*.png'))\n        unique_uids = set()\n        for file_path in user_files:\n            uid = extract_base_identity(file_path)",
+        "detail": "core.service",
+        "documentation": {}
+    },
+    {
+        "label": "list_users",
+        "kind": 2,
+        "importPath": "core.service",
+        "description": "core.service",
+        "peekOfCode": "def list_users(uid_filter: str = None) -> List[Dict[str, Any]]:\n    users = []\n    base_dirs = [d for d in os.listdir(IMAGES_DIR) if os.path.isdir(os.path.join(IMAGES_DIR, d))]\n    for base_dir in base_dirs:\n        user_files = glob.glob(os.path.join(IMAGES_DIR, base_dir, '*.png'))\n        unique_uids = set()\n        for file_path in user_files:\n            uid = extract_base_identity(file_path)\n            if uid_filter:\n                if uid_filter in uid:",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10501,7 +10485,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def check_version() -> Dict[str, Any]:\n    try:\n        version = get_deepface_controller().check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    try:\n        # Cancel any pending or processing tasks related to this UID",
+        "peekOfCode": "def check_version() -> Dict[str, Any]:\n    try:\n        version = get_deepface_controller().check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, current_app) -> Dict[str, Any]:\n    try:\n        base_uid = uid.split('-')[0]",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10510,7 +10494,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def delete_face(uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    try:\n        # Cancel any pending or processing tasks related to this UID\n        task_id = db_manager.get_active_final_task(uid)\n        if task_id:\n            db_manager.cancel_task(task_id)\n            logger.info(f\"Canceled pending or processing task {task_id} for UID {uid}\")\n        # Extract base_uid from the given uid\n        base_uid = uid.split('-')[0]\n        # Delete all embeddings associated with this UID",
+        "peekOfCode": "def delete_face(uid: str, current_app) -> Dict[str, Any]:\n    try:\n        base_uid = uid.split('-')[0]\n        delete_images_for_uid(uid, base_uid)\n        logger.info(f\"Deleted all face embeddings and images for UID {uid}\")\n        add_task_to_queue(recreate_DB, IMAGES_DIR, current_app._get_current_object(), uid=uid)\n        logger.info(f\"Final task scheduled for re-rendering vector database for UID {uid}\")\n        return {\"message\": \"Face deleted successfully and final task scheduled!\", \"data\": {\"uid\": uid}, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while deleting face with UID {uid}: {str(e)}\")",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10519,25 +10503,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def recreate_DB(db_manager: SQLiteManager, img_path, app, uid) -> Dict[str, Any]:\n    with app.app_context():\n        logger.info(f\"Recreating DB for UID {uid} using image path {img_path}\")\n        get_deepface_controller().find(\n            img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),\n            db_path=img_path,\n            model_name=\"Facenet512\",\n            detector_backend=\"retinaface\",\n            anti_spoofing=False\n        )",
-        "detail": "core.service",
-        "documentation": {}
-    },
-    {
-        "label": "check_and_run_final_task",
-        "kind": 2,
-        "importPath": "core.service",
-        "description": "core.service",
-        "peekOfCode": "def check_and_run_final_task(db_manager: SQLiteManager, img_path, app, uid):\n    logger.info(f\"Running final task for UID {uid}\")\n    pending_task_id = db_manager.get_active_final_task(uid)\n    if pending_task_id:\n        logger.info(f\"Cannot run final task for UID {uid}, other task {pending_task_id} is still pending.\")\n        return\n    if task_queue.empty():\n        with app.app_context():\n            get_deepface_controller().find(\n                img_path=img_path,",
-        "detail": "core.service",
-        "documentation": {}
-    },
-    {
-        "label": "handle_background_tasks",
-        "kind": 2,
-        "importPath": "core.service",
-        "description": "core.service",
-        "peekOfCode": "def handle_background_tasks(db_manager: SQLiteManager, image_paths, uid, app, max_embeddings=60):\n    logger.info(f\"Running background processing for UID {uid}\")\n    with app.app_context():\n        try:\n            for img_path in image_paths:\n                logger.info(f\"Processing image: {img_path}\")\n                time.sleep(5)\n                if not task_queue.empty():\n                    logger.info(\"New request detected, stopping current task and waiting for final task.\")\n                    return",
+        "peekOfCode": "def recreate_DB(img_path, app, uid) -> Dict[str, Any]:\n    logger.info(f\"Starting recreate_DB with img_path: {img_path}, uid: {uid}\")\n    try:\n        with app.app_context():\n            get_deepface_controller().find(\n                img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),\n                db_path=img_path,\n                model_name=\"Facenet512\",\n                detector_backend=\"retinaface\",\n                anti_spoofing=False",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10546,7 +10512,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def register_face(image: Any, uid: str, db_manager: SQLiteManager, current_app) -> Dict[str, Any]:\n    try:\n        image_path, _ = save_image(image, uid, IMAGES_DIR, uid)\n        augmented_images = augment_image(image)\n        augmented_image_paths = []\n        for i, img in enumerate(augmented_images, start=1):\n            augmented_image_path, _ = save_image(img, uid, IMAGES_DIR, f\"{uid}_aug{i}\")\n            augmented_image_paths.append(augmented_image_path)\n        add_task_to_queue(handle_background_tasks, db_manager, [image_path] + augmented_image_paths, uid, current_app._get_current_object())\n        add_task_to_queue(check_and_run_final_task, db_manager, img_path=image_path, app=current_app._get_current_object(), uid=uid)",
+        "peekOfCode": "def register_face(image: Any, uid: str, current_app) -> Dict[str, Any]:\n    try:\n        image_path, _ = save_image(image, uid, IMAGES_DIR, uid)\n        augmented_images = augment_image(image)\n        for i, img in enumerate(augmented_images, start=1):\n            save_image(img, uid, IMAGES_DIR, f\"{uid}_aug{i}\")\n        add_task_to_queue(recreate_DB, img_path=IMAGES_DIR, app=current_app._get_current_object(), uid=uid)\n        return {\"message\": \"Face registered successfully!.\", \"data\": {\"uid\": uid}, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while registering face with UID {uid}: {str(e)}\")",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10556,15 +10522,6 @@
         "importPath": "core.service",
         "description": "core.service",
         "peekOfCode": "def recognize_face(image: Any) -> Dict[str, Any]:\n    try:\n        image_path, _ = save_image(image, \"query_results\", TEMP_DIR, \"\")\n        value_objs_anti_spoofing = get_deepface_controller().extract_faces(\n            img_path=image_path,\n            detector_backend=\"retinaface\",\n            anti_spoofing=True\n        )[0]\n        value_objs = get_deepface_controller().find(\n            img_path=image_path,",
-        "detail": "core.service",
-        "documentation": {}
-    },
-    {
-        "label": "recognize_face_with_database",
-        "kind": 2,
-        "importPath": "core.service",
-        "description": "core.service",
-        "peekOfCode": "def recognize_face_with_database(image: Any, db_manager: SQLiteManager) -> Dict[str, Any]:\n    try:\n        image_path, _  = save_image(image, \"query_results\", TEMP_DIR, \"\")\n        value_objs = get_deepface_controller().verify_faces_db(\n            img_path=image_path,\n            db_manager=db_manager,\n            model_name=\"Facenet512\",\n            detector_backend=\"retinaface\",\n            anti_spoofing=True\n        )",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10600,7 +10557,7 @@
         "kind": 5,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "logger = get_logger()\ndef get_deepface_controller():\n    return flask.current_app.config['deepface_controller']\ndef check_version() -> Dict[str, Any]:\n    try:\n        version = get_deepface_controller().check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}",
+        "peekOfCode": "logger = get_logger()\ndef get_deepface_controller():\n    return flask.current_app.config['deepface_controller']\ndef list_users(uid_filter: str = None) -> List[Dict[str, Any]]:\n    users = []\n    base_dirs = [d for d in os.listdir(IMAGES_DIR) if os.path.isdir(os.path.join(IMAGES_DIR, d))]\n    for base_dir in base_dirs:\n        user_files = glob.glob(os.path.join(IMAGES_DIR, base_dir, '*.png'))\n        unique_uids = set()\n        for file_path in user_files:",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10609,7 +10566,7 @@
         "kind": 5,
         "importPath": "api",
         "description": "api",
-        "peekOfCode": "deepface_app = app.create_app()\nif __name__ == \"__main__\":\n    parser = argparse.ArgumentParser()\n    parser.add_argument(\"-p\", \"--port\", type=int,\n                        default=5000, help=\"Port of serving api\")\n    args = parser.parse_args()\n    deepface_app.run(host=\"0.0.0.0\", port=args.port, debug=True,\n                     load_dotenv=True, use_reloader=False)",
+        "peekOfCode": "deepface_app = app.create_app()\nif __name__ == \"__main__\":\n    parser = argparse.ArgumentParser()\n    parser.add_argument(\"-p\", \"--port\", type=int,default=5000, help=\"Port of serving api\")\n    args = parser.parse_args()\n    deepface_app.run(host=\"0.0.0.0\", port=args.port, debug=True,load_dotenv=True, use_reloader=False)",
         "detail": "api",
         "documentation": {}
     },
@@ -10618,7 +10575,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def preload_models():\n    # Load the models by calling a dummy detection\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )\ndef create_app():",
+        "peekOfCode": "def preload_models():\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),\n        db_path=IMAGES_DIR, \n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )\ndef create_app():\n    app = Flask(__name__)",
         "detail": "app",
         "documentation": {}
     },
@@ -10627,7 +10584,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def create_app():\n    app = Flask(__name__)\n    # Initialize SQLite manager\n    with app.app_context():\n        db_manager = SQLiteManager(DB_PATH)\n        db_manager.optimize_sqlite()\n        db_manager.create_table()\n        db_manager.create_task_status_table()\n        app.config['deepface_controller'] = deepface_controller\n        preload_models()",
+        "peekOfCode": "def create_app():\n    app = Flask(__name__)\n    with app.app_context():\n        app.config['deepface_controller'] = deepface_controller\n        preload_models()\n    directories = ['static', 'static/images', 'database']\n    base_paths = [os.path.join(BASE_PATH, d) for d in directories]\n    for path in base_paths:\n        os.makedirs(path, exist_ok=True)\n    start_workers(app)",
         "detail": "app",
         "documentation": {}
     },
@@ -10636,7 +10593,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "logger = get_logger()\ndeepface_controller = DeepFaceController()\ndef preload_models():\n    # Load the models by calling a dummy detection\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True",
+        "peekOfCode": "logger = get_logger()\ndeepface_controller = DeepFaceController()\ndef preload_models():\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),\n        db_path=IMAGES_DIR, \n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )",
         "detail": "app",
         "documentation": {}
     },
@@ -10645,7 +10602,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "deepface_controller = DeepFaceController()\ndef preload_models():\n    # Load the models by calling a dummy detection\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"), # Pass a dummy or default image path\n        db_path=IMAGES_DIR,  # Pass a dummy or default db_manager\n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )",
+        "peekOfCode": "deepface_controller = DeepFaceController()\ndef preload_models():\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),\n        db_path=IMAGES_DIR, \n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )\ndef create_app():",
         "detail": "app",
         "documentation": {}
     },

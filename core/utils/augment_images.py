@@ -3,14 +3,12 @@ from concurrent.futures import ThreadPoolExecutor
 import numpy as np
 
 def shift_image(image, shift):
-    """Dịch chuyển hình ảnh với một khoảng cách nhất định."""
     width, height = image.size
     shifted_image = Image.new("RGB", (width, height))
     shifted_image.paste(image, (shift[0], shift[1]))
     return shifted_image
 
 def process_image(image, operation, *args):
-    """Helper function to apply various operations on the image."""
     if operation == 'rotate':
         return image.rotate(*args, resample=Image.BICUBIC)
     elif operation == 'flip':
