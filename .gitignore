@@ -4,7 +4,7 @@ core/database
 core/static/*
 core/static
 core/static/images/*
-
+__pycache__
 core/logs/*
 core/log/*
 .venv

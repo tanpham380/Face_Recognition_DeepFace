@@ -10179,7 +10179,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)",
+        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10188,7 +10188,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
+        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10197,7 +10197,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
+        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10206,7 +10206,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "IMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "IMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10215,7 +10215,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "VECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "VECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10224,7 +10224,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "MAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "MAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10233,7 +10233,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "API_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "API_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10242,7 +10242,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "LOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\n# NUMBER_WORKER = 4 \nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "LOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10377,7 +10377,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def home():\n    version = service.check_version()\n    return {\"message\": \"API version\", \"data\": version, \"success\": True}\n@blueprint.route(\"/users\", methods=[\"GET\"])\n@require_api_key\ndef get_users():\n    uid_filter = request.args.get(\"uid\")  # Get UID from query parameter, if provided\n    try:\n        users = service.list_users(uid_filter)\n        return users",
+        "peekOfCode": "def home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/users\", methods=[\"GET\"])\n@require_api_key\ndef get_users():\n    uid_filter = request.args.get(\"uid\")  # Get UID from query parameter, if provided\n    try:\n        users = service.list_users(uid_filter)\n        return users",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10449,7 +10449,7 @@
         "kind": 5,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "logger = get_logger()\nblueprint = Blueprint(\"routes\", __name__)\n# Assuming you have an instance of DeepFaceController\n@blueprint.route(\"/\")\ndef home():\n    version = service.check_version()\n    return {\"message\": \"API version\", \"data\": version, \"success\": True}\n@blueprint.route(\"/users\", methods=[\"GET\"])\n@require_api_key\ndef get_users():",
+        "peekOfCode": "logger = get_logger()\nblueprint = Blueprint(\"routes\", __name__)\n# Assuming you have an instance of DeepFaceController\n@blueprint.route(\"/\")\ndef home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/users\", methods=[\"GET\"])\n@require_api_key\ndef get_users():",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10458,7 +10458,7 @@
         "kind": 5,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "blueprint = Blueprint(\"routes\", __name__)\n# Assuming you have an instance of DeepFaceController\n@blueprint.route(\"/\")\ndef home():\n    version = service.check_version()\n    return {\"message\": \"API version\", \"data\": version, \"success\": True}\n@blueprint.route(\"/users\", methods=[\"GET\"])\n@require_api_key\ndef get_users():\n    uid_filter = request.args.get(\"uid\")  # Get UID from query parameter, if provided",
+        "peekOfCode": "blueprint = Blueprint(\"routes\", __name__)\n# Assuming you have an instance of DeepFaceController\n@blueprint.route(\"/\")\ndef home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/users\", methods=[\"GET\"])\n@require_api_key\ndef get_users():\n    uid_filter = request.args.get(\"uid\")  # Get UID from query parameter, if provided",
         "detail": "core.routes",
         "documentation": {}
     },

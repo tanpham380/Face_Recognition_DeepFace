@@ -10,7 +10,7 @@ blueprint = Blueprint("routes", __name__)
 @blueprint.route("/")
 def home():
     version = service.check_version()
-    return {"message": "API version", "data": version, "success": True}
+    return version
 
 
 
