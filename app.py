@@ -2,30 +2,25 @@ import atexit
 import os
 from flask import Flask, current_app
 from core.deepface_controller.controller import DeepFaceController
+from core.service import recreate_DB
 from core.utils.logging import get_logger
 from core.utils.static_variable import BASE_PATH, IMAGES_DIR
 from core.utils.theading import stop_workers, start_workers
 from core.routes import blueprint
+from core.utils.theading import add_task_to_queue
 
 logger = get_logger()
 deepface_controller = DeepFaceController()
 
 
-def preload_models():
-    deepface_controller.find(
-        img_path=os.path.join(BASE_PATH, "static", "temp.png"),
-        db_path=IMAGES_DIR, 
-        model_name="Facenet512",
-        detector_backend="retinaface",
-        anti_spoofing=True
-    )
+
 
 
 def create_app():
     app = Flask(__name__)
     with app.app_context():
-        app.config['deepface_controller'] = deepface_controller
-        preload_models()
+        app.config['deepface_controller'] = deepface_controller        
+        add_task_to_queue(recreate_DB, img_path=IMAGES_DIR, app=app, uid="tst")
 
     directories = ['static', 'static/images', 'database']
     base_paths = [os.path.join(BASE_PATH, d) for d in directories]

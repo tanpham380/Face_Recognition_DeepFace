@@ -4970,27 +4970,35 @@
         "documentation": {}
     },
     {
-        "label": "delete_images_for_uid",
-        "importPath": "core.utils.file_utils",
-        "description": "core.utils.file_utils",
+        "label": "add_task_to_queue",
+        "importPath": "core.utils.theading",
+        "description": "core.utils.theading",
         "isExtraImport": true,
-        "detail": "core.utils.file_utils",
+        "detail": "core.utils.theading",
+        "documentation": {}
+    },
+    {
+        "label": "delete_images_for_uid",
+        "importPath": "core.utils.images_handler",
+        "description": "core.utils.images_handler",
+        "isExtraImport": true,
+        "detail": "core.utils.images_handler",
         "documentation": {}
     },
     {
         "label": "extract_base_identity",
-        "importPath": "core.utils.file_utils",
-        "description": "core.utils.file_utils",
+        "importPath": "core.utils.images_handler",
+        "description": "core.utils.images_handler",
         "isExtraImport": true,
-        "detail": "core.utils.file_utils",
+        "detail": "core.utils.images_handler",
         "documentation": {}
     },
     {
         "label": "save_image",
-        "importPath": "core.utils.file_utils",
-        "description": "core.utils.file_utils",
+        "importPath": "core.utils.images_handler",
+        "description": "core.utils.images_handler",
         "isExtraImport": true,
-        "detail": "core.utils.file_utils",
+        "detail": "core.utils.images_handler",
         "documentation": {}
     },
     {
@@ -5017,6 +5025,14 @@
         "description": "core.deepface_controller.controller",
         "isExtraImport": true,
         "detail": "core.deepface_controller.controller",
+        "documentation": {}
+    },
+    {
+        "label": "recreate_DB",
+        "importPath": "core.service",
+        "description": "core.service",
+        "isExtraImport": true,
+        "detail": "core.service",
         "documentation": {}
     },
     {
@@ -10571,20 +10587,11 @@
         "documentation": {}
     },
     {
-        "label": "preload_models",
-        "kind": 2,
-        "importPath": "app",
-        "description": "app",
-        "peekOfCode": "def preload_models():\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),\n        db_path=IMAGES_DIR, \n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )\ndef create_app():\n    app = Flask(__name__)",
-        "detail": "app",
-        "documentation": {}
-    },
-    {
         "label": "create_app",
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def create_app():\n    app = Flask(__name__)\n    with app.app_context():\n        app.config['deepface_controller'] = deepface_controller\n        preload_models()\n    directories = ['static', 'static/images', 'database']\n    base_paths = [os.path.join(BASE_PATH, d) for d in directories]\n    for path in base_paths:\n        os.makedirs(path, exist_ok=True)\n    start_workers(app)",
+        "peekOfCode": "def create_app():\n    app = Flask(__name__)\n    with app.app_context():\n        app.config['deepface_controller'] = deepface_controller        \n        add_task_to_queue(recreate_DB, img_path=IMAGES_DIR, app=app, uid=\"tst\")\n    directories = ['static', 'static/images', 'database']\n    base_paths = [os.path.join(BASE_PATH, d) for d in directories]\n    for path in base_paths:\n        os.makedirs(path, exist_ok=True)\n    start_workers(app)",
         "detail": "app",
         "documentation": {}
     },
@@ -10593,7 +10600,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "logger = get_logger()\ndeepface_controller = DeepFaceController()\ndef preload_models():\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),\n        db_path=IMAGES_DIR, \n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )",
+        "peekOfCode": "logger = get_logger()\ndeepface_controller = DeepFaceController()\ndef create_app():\n    app = Flask(__name__)\n    with app.app_context():\n        app.config['deepface_controller'] = deepface_controller        \n        add_task_to_queue(recreate_DB, img_path=IMAGES_DIR, app=app, uid=\"tst\")\n    directories = ['static', 'static/images', 'database']\n    base_paths = [os.path.join(BASE_PATH, d) for d in directories]\n    for path in base_paths:",
         "detail": "app",
         "documentation": {}
     },
@@ -10602,7 +10609,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "deepface_controller = DeepFaceController()\ndef preload_models():\n    deepface_controller.find(\n        img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),\n        db_path=IMAGES_DIR, \n        model_name=\"Facenet512\",\n        detector_backend=\"retinaface\",\n        anti_spoofing=True\n    )\ndef create_app():",
+        "peekOfCode": "deepface_controller = DeepFaceController()\ndef create_app():\n    app = Flask(__name__)\n    with app.app_context():\n        app.config['deepface_controller'] = deepface_controller        \n        add_task_to_queue(recreate_DB, img_path=IMAGES_DIR, app=app, uid=\"tst\")\n    directories = ['static', 'static/images', 'database']\n    base_paths = [os.path.join(BASE_PATH, d) for d in directories]\n    for path in base_paths:\n        os.makedirs(path, exist_ok=True)",
         "detail": "app",
         "documentation": {}
     },
