@@ -2,71 +2,67 @@ import threading
 import queue
 import time
 import uuid
-
-from core.utils.database import SQLiteManager
 from core.utils.logging import get_logger
 from core.utils.static_variable import NUMBER_WORKER
+from concurrent.futures import ThreadPoolExecutor
 
-task_queue = queue.Queue()
+task_queue = queue.Queue(maxsize=100)  # Bounded queue to prevent overflow
 logger = get_logger()
 threads = []
+queue_lock = threading.Lock()
 
-def generate_unique_task_id(db_manager: SQLiteManager) -> str:
-    while True:
-        task_id = f"task-{int(time.time())}-{uuid.uuid4().hex}"
-        with db_manager.get_connection() as conn:
-            result = conn.execute("""
-                SELECT task_id FROM task_status WHERE task_id = ?
-            """, (task_id,)).fetchone()
-        if result is None:
-            return task_id
+# Initialize ThreadPoolExecutor once and reuse
+executor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)
 
-def add_task_to_queue(func, db_manager: SQLiteManager, *args, **kwargs):
-    task_id = generate_unique_task_id(db_manager)
-    uid = kwargs.get('uid', None) 
-    logger.info(f"Generated unique task ID: {task_id}")
-    from core.service import check_and_run_final_task
+def generate_unique_task_id() -> str:
+    return f"task-{int(time.time())}-{uuid.uuid4().hex}"
 
-    db_manager.insert_task(task_id, uid, "pending", is_final_task=(func == check_and_run_final_task))
+def add_task_to_queue(func, *args, **kwargs):
+    task_id = generate_unique_task_id()
     
-    task_queue.put((task_id, lambda: func(db_manager, *args, **kwargs)))
-    logger.info(f"Added task {task_id} to the queue")
+    with queue_lock:
+        if task_queue.full():
+            logger.warning(f"Task queue is full, waiting to add task {task_id}")
+        task_queue.put((task_id, lambda: func(*args, **kwargs)))
+        logger.info(f"Added task {task_id} to the queue")
 
-def worker(app, db_manager: SQLiteManager):
+def worker(app):
     logger.info("Worker thread started")
     with app.app_context():
         while True:
-            logger.info("Worker waiting for a task")
             task_id, task = task_queue.get()
             if task is None:
                 break
-            logger.info(f"Worker received task {task_id}")
+            start_time = time.time()
             try:
-                db_manager.update_task_status(task_id, "processing")
-
                 logger.info(f"Worker picked up task {task_id}")
-                task()  
-
-                db_manager.update_task_status(task_id, "completed")
-
-                logger.info(f"Worker completed task {task_id}")
-
+                future = executor.submit(task)
+                result = future.result()  # This will block until the task is done
+                logger.info(f"Worker completed task {task_id} in {time.time() - start_time:.2f} seconds")
             except Exception as e:
                 logger.error(f"Error in worker thread: {str(e)}")
-                db_manager.update_task_status(task_id, "failed")
             finally:
                 task_queue.task_done()
 
-def start_workers(app, db_manager: SQLiteManager):
+def start_workers(app):
     global threads
+    if threads:  # Check if workers are already started
+        logger.warning("Workers already started.")
+        return
+
     for i in range(NUMBER_WORKER):
-        t = threading.Thread(target=worker, args=(app, db_manager), name=f"Worker-{i}")
+        t = threading.Thread(target=worker, args=(app,), name=f"Worker-{i}")
         t.start()
         threads.append(t)
         logger.info(f"Worker thread {i} started")
 
 def stop_workers():
+    global threads
     for _ in range(NUMBER_WORKER):
         task_queue.put((None, None))
     for t in threads:
         t.join()
+
+    # Cleanup
+    threads = []
+    logger.info("All workers stopped")
