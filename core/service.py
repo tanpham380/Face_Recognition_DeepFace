@@ -7,7 +7,7 @@ import os
 import numpy as np
 from core.utils.augment_images import augment_image
 from core.utils.theading import add_task_to_queue
-from core.utils.file_utils import delete_images_for_uid, extract_base_identity, save_image
+from core.utils.images_handler import delete_images_for_uid, extract_base_identity, save_image
 from core.utils.static_variable import BASE_PATH, IMAGES_DIR, TEMP_DIR
 from core.utils.logging import get_logger
 
