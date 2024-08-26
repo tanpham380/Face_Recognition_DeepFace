@@ -4856,6 +4856,14 @@
         "documentation": {}
     },
     {
+        "label": "BASE_PATH",
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "isExtraImport": true,
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
         "label": "IMAGES_DIR",
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
