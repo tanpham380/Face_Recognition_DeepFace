@@ -1,71 +1,134 @@
-from typing import Optional, Union
+from typing import Optional
 from ZODB import DB, FileStorage
 import transaction
 from persistent.dict import PersistentDict
+
 from core.utils.models.directory_hash import DirectoryHash
 from core.utils.models.face_data import FaceData
 from core.utils.models.task_queue import TaskQueue
 from core.utils.static_variable import IMAGES_DIR, MAX_IMAGES, MAX_ORIGIN_IMAGES
 from core.utils.logging import get_logger
-import threading
 
 logger = get_logger()
 
 class ZoDB_Manager:
-    _instance = None  # Singleton instance
-    _thread_local = threading.local()
+    def __init__(self, db_path='database/zodb.fs', commit_threshold=10):
+        self.storage = FileStorage.FileStorage(db_path)
+        self.db = DB(self.storage)
+        self.connection = None
+        self.root = None
+        self.change_count = 0  # Track the number of changes
+        self.commit_threshold = commit_threshold
+        self.pending_changes = False  # Track if there are pending changes
 
-    def __new__(cls, db_path='database/zodb.fs'):
-        if cls._instance is None:
-            cls._instance = super(ZoDB_Manager, cls).__new__(cls)
-            cls._instance._initialize(db_path)
-        return cls._instance
+    def __enter__(self):
+        self.connect()
+        return self
 
-    def _initialize(self, db_path: str):
-        storage = FileStorage.FileStorage(db_path)
-        self.db = DB(storage)
-
-    def _get_thread_local_connection(self):
-        if not hasattr(self._thread_local, "connection"):
-            self._thread_local.connection = self.db.open()
-            self._thread_local.root = self._thread_local.connection.root()
-            self._initialize_root()
-        return self._thread_local.connection
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.close()
 
     def connect(self):
-        return self._get_thread_local_connection()
+        if not self.connection:
+            self.connection = self.db.open()
+            self.root = self.connection.root()
+            self._initialize_persistent_objects()
 
     def close(self):
-        connection = getattr(self._thread_local, "connection", None)
-        if connection:
-            if connection.isReadOnly() or transaction.isDoomed():
-                transaction.abort()
-            else:
-                transaction.commit()
-            connection.close()
-            del self._thread_local.connection
+        if self.pending_changes:
+            self._commit_transaction()
+        if self.connection:
+            self.connection.close()
+        self.db.close()
 
-    def _initialize_root(self):
-        root = self._thread_local.root
-        if 'directory_hashes' not in root:
-            root['directory_hashes'] = PersistentDict()
-        if 'task_queue' not in root:
-            root['task_queue'] = PersistentDict()
-        if 'face_data' not in root:
-            root['face_data'] = PersistentDict()
-        transaction.commit()
+    def _commit_transaction(self):
+        try:
+            transaction.commit()
+            self.change_count = 0
+            self.pending_changes = False
+        except Exception as e:
+            logger.error(f"Transaction commit failed: {e}")
+            transaction.abort()
+            raise
 
-    def _get_root_item(self, item_name: str) -> PersistentDict:
-        return self.root.get(item_name, PersistentDict())
+    def _initialize_persistent_objects(self):
+        if 'directory_hashes' not in self.root:
+            self.root['directory_hashes'] = PersistentDict()
+            self.pending_changes = True
+        if 'task_queue' not in self.root:
+            self.root['task_queue'] = PersistentDict()
+            self.pending_changes = True
+        if 'face_data' not in self.root:
+            self.root['face_data'] = PersistentDict()
+            self.pending_changes = True
+        self._maybe_commit()  # Commit initialization changes if any
 
-    ### FaceData Management Functions ###
-    
+    def _maybe_commit(self):
+        if self.change_count >= self.commit_threshold:
+            self._commit_transaction()
+
+    # Directory Hashes
+    def get_directory_hash(self, dir_name: str) -> Optional[DirectoryHash]:
+        return self.root['directory_hashes'].get(dir_name)
+
+    def set_directory_hash(self, dir_name: str, hash_value: str):
+        self.root['directory_hashes'][dir_name] = DirectoryHash(dir_name, hash_value)
+        self.change_count += 1
+        self.pending_changes = True
+        self._maybe_commit()
+
+    def del_directory_hash(self, dir_name: str) -> bool:
+        """Delete a directory hash by its name."""
+        if dir_name in self.root['directory_hashes']:
+            del self.root['directory_hashes'][dir_name]
+            self.change_count += 1
+            self.pending_changes = True
+            self._maybe_commit()
+            return True
+        return False
+
+    def list_all_directory_hashes(self) -> dict:
+        """List all directory hashes."""
+        return {dir_name: hash_obj.hash_value for dir_name, hash_obj in self.root['directory_hashes'].items()}
+
+    # Task Queue
+    def get_task(self, task_id: str) -> Optional[TaskQueue]:
+        return self.root['task_queue'].get(task_id)
+
+    def add_task(self, task_id: str, status: str, created_at: float):
+        self.root['task_queue'][task_id] = TaskQueue(task_id, status, created_at)
+        self.change_count += 1
+        self.pending_changes = True
+        self._maybe_commit()
+
+    def list_all_tasks(self) -> dict:
+        """List all tasks in the task queue."""
+        return {task_id: task for task_id, task in self.root['task_queue'].items()}
+
+    def update_task_status(self, task_id: str, new_status: str) -> bool:
+        """Update the status of a task in the task queue."""
+        task = self.get_task(task_id)
+        logger.info(f"Status : {new_status}")
+        if task:
+            task.update_status(new_status)  # Update status and timestamp
+            self.change_count += 1
+            self.pending_changes = True
+            self._maybe_commit()
+            logger.info(f"Updated status for task {task_id} to {new_status}.")
+            return True
+        else:
+            logger.error(f"Task with ID {task_id} not found.")
+            return False
+
+    # Face Data
     def get_face_data(self, uid: str) -> Optional[FaceData]:
-        return self._get_root_item('face_data').get(uid)
+        return self.root['face_data'].get(uid)
 
     def add_face_data(self, uid: str, image_paths: list):
         self.root['face_data'][uid] = FaceData(uid, image_paths)
-        transaction.commit()
+        self.change_count += 1
+        self.pending_changes = True
+        self._maybe_commit()
 
     def add_face_embedding(self, uid: str, image_path: str, embedding: list):
         face_data = self.get_face_data(uid)
@@ -73,51 +136,50 @@ class ZoDB_Manager:
             face_data = FaceData(uid, [image_path], [embedding])
             self.root['face_data'][uid] = face_data
         else:
-            self._handle_image_embedding_limit(face_data, uid)
+            is_augmented = 'aug' in uid
+            max_images = MAX_IMAGES if is_augmented else MAX_ORIGIN_IMAGES
+            filtered_paths = [path for path in face_data.image_paths if ('aug' in path) == is_augmented]
+
+            if len(filtered_paths) >= max_images:
+                oldest_index = next(i for i, path in enumerate(face_data.image_paths) if path == filtered_paths[0])
+                face_data.image_paths.pop(oldest_index)
+                face_data.embedding.pop(oldest_index)
+
             face_data.add_image(image_path, embedding)
-        transaction.commit()
-
-    def add_face_data_with_directory_hash(self, uid: str, image_paths: list, dir_name: str):
-        directory_hash = self.get_directory_hash(dir_name)
-        if directory_hash:
-            face_data = FaceData(uid, image_paths, dir_name)
-            self.root['face_data'][uid] = face_data
-            transaction.commit()
-            logger.info(f"Face data added for UID {uid} with directory hash {dir_name}.")
-        else:
-            logger.error(f"Directory hash {dir_name} not found for UID {uid}.")
-
-    def _handle_image_embedding_limit(self, face_data: FaceData, uid: str):
-        is_augmented = 'aug' in uid
-        max_original = MAX_ORIGIN_IMAGES
-        max_augmented = MAX_IMAGES
-
-        if is_augmented:
-            self._remove_oldest(face_data, 'aug', max_augmented)
-        else:
-            self._remove_oldest(face_data, '', max_original)
-
-    def _remove_oldest(self, face_data: FaceData, key: str, limit: int):
-        paths = [path for path in face_data.image_paths if key in path]
-        if len(paths) >= limit:
-            oldest_index = face_data.image_paths.index(paths[0])
-            face_data.image_paths.pop(oldest_index)
-            face_data.embedding.pop(oldest_index)
+        self.change_count += 1
+        self.pending_changes = True
+        self._maybe_commit()
 
     def get_face_embedding(self, uid: str) -> Optional[list]:
         face_data = self.get_face_data(uid)
-        return face_data.embedding if face_data else None
+        if face_data:
+            return face_data.embedding
+        return None
 
     def list_face_data(self, uid_filter: Optional[str] = None) -> dict:
-        return self._list_items('face_data', uid_filter, 'to_dict')
+        """List all face data or filter by UID."""
+        if uid_filter:
+            face_data = self.root['face_data'].get(uid_filter)
+            return {uid_filter: face_data.to_dict()} if face_data else {}
+        else:
+            return {uid: data.to_dict() for uid, data in self.root['face_data'].items()}
 
     def list_face_data_embedding(self, uid_filter: Optional[str] = None) -> dict:
-        return self._list_items('face_data', uid_filter, 'to_dict_embedding')
+        """List all face data or filter by UID."""
+        if uid_filter:
+            face_data = self.root['face_data'].get(uid_filter)
+            return {uid_filter: face_data.to_dict_embedding()} if face_data else {}
+        else:
+            return {uid: data.to_dict_embedding() for uid, data in self.root['face_data'].items()}
 
     def delete_face_embedding(self, uid: str, image_path: Optional[str] = None) -> bool:
+        """
+        Delete embedding data for a specific UID. If image_path is provided, 
+        delete the embedding for that specific image; otherwise, delete all embeddings for the UID and its augmentations.
+        """
         base_uid = uid.split('-')[0]
-        keys_to_delete = [key for key in self.root['face_data'].keys() if key.startswith(base_uid)]
 
+        keys_to_delete = [key for key in self.root['face_data'].keys() if key.startswith(base_uid)]
         if not keys_to_delete:
             logger.error(f"No entries found for UID {base_uid} or its augmentations.")
             return False
@@ -129,7 +191,9 @@ class ZoDB_Manager:
                 face_data.image_paths.pop(index)
                 if index < len(face_data.embedding):
                     face_data.embedding.pop(index)
-                transaction.commit()
+                self.change_count += 1
+                self.pending_changes = True
+                self._maybe_commit()
                 logger.info(f"Deleted image and embedding for UID {uid} at path {image_path}.")
                 return True
             else:
@@ -138,80 +202,8 @@ class ZoDB_Manager:
         else:
             for key in keys_to_delete:
                 del self.root['face_data'][key]
-            transaction.commit()
+            self.change_count += 1
+            self.pending_changes = True
+            self._maybe_commit()
             logger.info(f"Deleted all embeddings and data for UID {base_uid} and its augmentations.")
             return True
-
-    ### DirectoryHash Management Functions ###
-
-    def get_directory_hash(self, dir_name: str) -> Optional[DirectoryHash]:
-        return self._get_root_item('directory_hashes').get(dir_name)
-
-    def set_directory_hash(self, dir_name: str, hash_value: str):
-        self.root['directory_hashes'][dir_name] = DirectoryHash(dir_name, hash_value)
-        transaction.commit()
-
-    def del_directory_hash(self, dir_name: str) -> bool:
-        return self._delete_item('directory_hashes', dir_name)
-
-    def list_all_directory_hashes(self) -> dict:
-        return self._list_simple_items('directory_hashes')
-
-    ### TaskQueue Management Functions ###
-
-    def get_task(self, task_id: str) -> Optional[TaskQueue]:
-        return self._get_root_item('task_queue').get(task_id)
-
-    def add_task(self, task_id: str, status: str, created_at: float):
-        self._ensure_task_limit()  # Ensure only 100 tasks are stored
-        self.root['task_queue'][task_id] = TaskQueue(task_id, status, created_at)
-        transaction.commit()
-
-    def update_task_status(self, task_id: str, new_status: str):
-        task = self.get_task(task_id)
-        if task:
-            task.update_status(new_status)
-            transaction.commit()
-        else:
-            logger.error(f"Task {task_id} not found in ZoDB.")
-
-    def list_all_tasks(self) -> dict:
-        return self._list_simple_items('task_queue')
-
-    def _ensure_task_limit(self):
-        task_count = len(self.root['task_queue'])
-        if task_count >= 100:
-            # Remove oldest tasks
-            self._remove_oldest_tasks(task_count - 99)
-
-    def _remove_oldest_tasks(self, excess_count: int):
-        task_queue_items = list(self.root['task_queue'].items())
-        # Sort tasks by creation time to identify the oldest ones
-        task_queue_items.sort(key=lambda item: item[1].created_at)
-
-        for task_id, _ in task_queue_items[:excess_count]:
-            del self.root['task_queue'][task_id]
-
-        transaction.commit()
-        logger.info(f"Removed {excess_count} oldest tasks to maintain the task limit.")
-
-    ### Helper Functions ###
-
-    def _delete_item(self, root_item: str, key: str) -> bool:
-        if key in self.root[root_item]:
-            del self.root[root_item][key]
-            transaction.commit()
-            return True
-        return False
-
-    def _list_items(self, root_item: str, uid_filter: Optional[str], method: str) -> dict:
-        items = self._get_root_item(root_item)
-        if uid_filter:
-            item = items.get(uid_filter)
-            return {uid_filter: getattr(item, method)()} if item else {}
-        else:
-            return {uid: getattr(data, method)() for uid, data in items.items()}
-
-    def _list_simple_items(self, root_item: str) -> dict:
-        return {key: item.hash_value if root_item == 'directory_hashes' else item.status
-                for key, item in self._get_root_item(root_item).items()}

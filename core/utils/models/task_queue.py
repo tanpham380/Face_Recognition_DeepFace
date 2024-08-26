@@ -11,3 +11,11 @@ class TaskQueue(Persistent):
     def update_status(self, new_status: str):
         self.status = new_status
         self.updated_at = time.time()
+        
+    def to_dict(self):
+        return {
+            "task_id": self.task_id,
+            "status": self.status,
+            "created_at": self.created_at,
+            "updated_at": self.updated_at,
+        }

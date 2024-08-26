@@ -383,7 +383,6 @@ class DeepFaceController():
             expand_percentage=expand_percentage,
             anti_spoofing=anti_spoofing,
         )
-
         if not source_objs:
             return []
 
@@ -392,8 +391,12 @@ class DeepFaceController():
         # Get embeddings from the database
         db_embeddings = []
         all_face_data = db_manager.list_face_data_embedding()
+        
+
         for uid, face_data in all_face_data.items():
-            for embedding in face_data['embedding']:
+            for embedding in face_data['embedding']:                
+                logger.info(f"debug   all_face_data {uid} " )
+
                 db_embeddings.append({
                     'uid': uid,
                     'embedding': embedding

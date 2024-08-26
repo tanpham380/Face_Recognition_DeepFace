@@ -44,7 +44,11 @@ def check_and_update_directory_hash(dir_name: str, dir_path: str , app , fetch_o
         # First run or hash missing, just set the current hash without triggering DB recreation
         current_hash = hash_directory(dir_path)
         logger.info(f"Setting initial hash for directory {dir_name}.")
+        
+        
         app.config["ZoDB"].set_directory_hash(dir_name, current_hash)
+            
+        
         return
     
     previous_hash = directory_hash.hash_value

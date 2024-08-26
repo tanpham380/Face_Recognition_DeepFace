@@ -2,7 +2,6 @@ from flask import Blueprint, current_app, request
 from core import service
 from core.utils.middleware import require_api_key
 from core.utils.logging import get_logger
-from ZODB import transaction
 
 logger = get_logger()
 blueprint = Blueprint("routes", __name__)

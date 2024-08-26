@@ -37,8 +37,8 @@ def augment_image(image_data):
         ('rotate', -5),
         ('flip',),
         ('brightness', 0.8),
-        ('shift', 3, 0),
-        ('shift', -3, 0)
+        # ('shift', 3, 0),
+        # ('shift', -3, 0)
     ]
 
     def process_with_copy(op):

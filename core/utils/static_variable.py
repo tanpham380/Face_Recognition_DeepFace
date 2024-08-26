@@ -12,9 +12,9 @@ VECTOR_SIZE = 512
 MAX_SCORE = -1
 API_KEY = os.getenv("API_KEY")
 LOG_PATH_FILE = os.path.join(BASE_PATH, "logs")
-NUMBER_WORKER = min(8, os.cpu_count() or 1)
+NUMBER_WORKER = int( min(8, os.cpu_count() or 1) / 2)
 MAX_ORIGIN_IMAGES = 4
-MAX_IMAGES = 56
+MAX_IMAGES = 20
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"

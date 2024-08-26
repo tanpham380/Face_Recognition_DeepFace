@@ -7,3 +7,11 @@ class DirectoryHash(Persistent):
 
     def update_hash(self, new_hash_value: str):
         self.hash_value = new_hash_value
+        
+        
+    def to_dict(self):
+        return {
+            "directory_name": self.directory_name,
+            "hash_value": self.hash_value,
+
+        }
