@@ -10125,7 +10125,7 @@
         "kind": 6,
         "importPath": "core.utils.models.face_data",
         "description": "core.utils.models.face_data",
-        "peekOfCode": "class FaceData(Persistent):\n    def __init__(self, uid: str, image_paths: list):\n        self.uid = uid\n        self.image_paths = image_paths\n    def add_image(self, image_path: str):\n        self.image_paths.append(image_path)\n    def remove_image(self, image_path: str):\n        if image_path in self.image_paths:\n            self.image_paths.remove(image_path)",
+        "peekOfCode": "class FaceData(Persistent):\n    def __init__(self, uid: str, image_paths: list , embedder : None):\n        self.uid = uid\n        self.image_paths = image_paths\n    def add_image(self, image_path: str):\n        self.image_paths.append(image_path)\n    def remove_image(self, image_path: str):\n        if image_path in self.image_paths:\n            self.image_paths.remove(image_path)",
         "detail": "core.utils.models.face_data",
         "documentation": {}
     },
@@ -10197,7 +10197,7 @@
         "kind": 2,
         "importPath": "core.utils.images_handler",
         "description": "core.utils.images_handler",
-        "peekOfCode": "def delete_directory_if_empty(save_dir: str) -> bool:\n    remaining_images = [f for f in os.listdir(save_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]\n    if not remaining_images:\n        os.rmdir(save_dir)\n        logger.info(f\"Deleted empty directory: {save_dir}\")\n        return True\n    return False\ndef extract_base_identity(identity):\n    # Split the identity by '_' and take the last part without the augmentation part\n    identity = os.path.splitext(os.path.basename(identity))[0]",
+        "peekOfCode": "def delete_directory_if_empty(save_dir: str) -> bool:\n    remaining_images = [f for f in os.listdir(save_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]\n    if not remaining_images:\n        shutil.rmtree(save_dir)\n        logger.info(f\"Deleted empty directory: {save_dir}\")\n        return True\n    return False\ndef extract_base_identity(identity):\n    # Split the identity by '_' and take the last part without the augmentation part\n    identity = os.path.splitext(os.path.basename(identity))[0]",
         "detail": "core.utils.images_handler",
         "documentation": {}
     },
@@ -10242,7 +10242,7 @@
         "kind": 5,
         "importPath": "core.utils.images_handler",
         "description": "core.utils.images_handler",
-        "peekOfCode": "logger = get_logger()\ndef delete_directory_if_empty(save_dir: str) -> bool:\n    remaining_images = [f for f in os.listdir(save_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]\n    if not remaining_images:\n        os.rmdir(save_dir)\n        logger.info(f\"Deleted empty directory: {save_dir}\")\n        return True\n    return False\ndef extract_base_identity(identity):\n    # Split the identity by '_' and take the last part without the augmentation part",
+        "peekOfCode": "logger = get_logger()\ndef delete_directory_if_empty(save_dir: str) -> bool:\n    remaining_images = [f for f in os.listdir(save_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]\n    if not remaining_images:\n        shutil.rmtree(save_dir)\n        logger.info(f\"Deleted empty directory: {save_dir}\")\n        return True\n    return False\ndef extract_base_identity(identity):\n    # Split the identity by '_' and take the last part without the augmentation part",
         "detail": "core.utils.images_handler",
         "documentation": {}
     },

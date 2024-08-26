@@ -1,7 +1,7 @@
 from persistent import Persistent
 
 class FaceData(Persistent):
-    def __init__(self, uid: str, image_paths: list):
+    def __init__(self, uid: str, image_paths: list , embedder : None):
         self.uid = uid
         self.image_paths = image_paths
 

@@ -1,5 +1,6 @@
 import os
 import datetime
+import shutil
 from typing import Any, Tuple
 
 import os
@@ -16,7 +17,7 @@ logger = get_logger()
 def delete_directory_if_empty(save_dir: str) -> bool:
     remaining_images = [f for f in os.listdir(save_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
     if not remaining_images:
-        os.rmdir(save_dir)
+        shutil.rmtree(save_dir)
         logger.info(f"Deleted empty directory: {save_dir}")
         return True
     return False
