@@ -64,6 +64,7 @@ def check_and_update_directory_hash(dir_name: str, dir_path: str , app):
             uid=dir_name,
         )
     else:
+        print(os.path.join(BASE_PATH, "static", "temp"))
         app.config["deepface_controller"].find(
             img_path=os.path.join(BASE_PATH, "static", "temp.png"),
             db_path=os.path.join(BASE_PATH, "static", "temp"),
