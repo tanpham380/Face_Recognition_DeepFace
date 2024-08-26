@@ -6,7 +6,7 @@ from typing import Optional, List, Dict, Any
 import os
 import numpy as np
 from core.utils.augment_images import augment_image
-from core.utils.threading import add_task_to_queue , executor
+from core.utils.threading import add_task_to_queue
 from core.utils.images_handler import (
     delete_directory_if_empty,
     delete_images_for_uid,
@@ -15,7 +15,6 @@ from core.utils.images_handler import (
 )
 from core.utils.static_variable import BASE_PATH, IMAGES_DIR, TEMP_DIR
 from core.utils.logging import get_logger
-import concurrent.futures
 
 
 # Initialize the logger
@@ -147,46 +146,15 @@ def delete_face(uid: str, current_app) -> Dict[str, Any]:
         return {"message": "Failed to delete face", "data": None, "success": False}
 
 
-# def register_face(image: Any, uid: str, current_app) -> Dict[str, Any]:
-#     try:
-#         # Save original and augmented images
-#         image_path, _ = save_image(image, uid, IMAGES_DIR, uid)
-#         augmented_images = augment_image(image)
-
-#         for i, img in enumerate(augmented_images, start=1):
-#             save_image(img, uid, IMAGES_DIR, f"{uid}_aug{i}")
-
-#         add_task_to_queue(
-#             recreate_DB,
-#             img_path=IMAGES_DIR,
-#             app=current_app._get_current_object(),
-#             uid=uid,
-#         )
-
-#         return {
-#             "message": "Face registered successfully!",
-#             "data": {"uid": uid},
-#             "success": True,
-#         }
-#     except Exception as e:
-#         logger.error(
-#             f"Exception while registering face with UID {uid}: {e} - {traceback.format_exc()}"
-#         )
-#         return {"message": "Failed to register face", "data": None, "success": False}
 def register_face(image: Any, uid: str, current_app) -> Dict[str, Any]:
     try:
-        # Save original image and prepare augmented images concurrently
+        # Save original and augmented images
         image_path, _ = save_image(image, uid, IMAGES_DIR, uid)
         augmented_images = augment_image(image)
 
-        def save_augmented_image(index_image_tuple):
-            i, img = index_image_tuple
-            return save_image(img, uid, IMAGES_DIR, f"{uid}_aug{i}")
+        for i, img in enumerate(augmented_images, start=1):
+            save_image(img, uid, IMAGES_DIR, f"{uid}_aug{i}")
 
-        # Save augmented images concurrently
-        executor.map(save_augmented_image, enumerate(augmented_images, start=1))
-
-        # Queue the database recreation task
         add_task_to_queue(
             recreate_DB,
             img_path=IMAGES_DIR,
@@ -219,24 +187,16 @@ def recognize_face(image: Any, uid: Optional[str] = None) -> Dict[str, Any]:
                 "data": [],
                 "success": False,
             }
-
-        # Extract faces and recognize concurrently
-        future_anti_spoofing = executor.submit(
-            get_deepface_controller().extract_faces,
-            img_path=image_path,
-            detector_backend="retinaface",
-            anti_spoofing=True,
+        future_anti_spoofing = get_deepface_controller().extract_faces(
+            img_path=image_path, detector_backend="retinaface", anti_spoofing=True,
         )
-
-        future_recognition = executor.submit(
-            get_deepface_controller().find,
+        future_recognition = get_deepface_controller().find(
             img_path=image_path,
             db_path=save_dir,
             model_name="Facenet512",
             detector_backend="retinaface",
             anti_spoofing=False,
         )
-
         # Get the results
         anti_spoofing_results = future_anti_spoofing.result()[0]
         recognition_results = future_recognition.result()

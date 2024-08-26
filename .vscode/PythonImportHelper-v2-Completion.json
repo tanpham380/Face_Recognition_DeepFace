@@ -4645,15 +4645,6 @@
         "documentation": {}
     },
     {
-        "label": "concurrent.futures",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "concurrent.futures",
-        "description": "concurrent.futures",
-        "detail": "concurrent.futures",
-        "documentation": {}
-    },
-    {
         "label": "ThreadPoolExecutor",
         "importPath": "concurrent.futures",
         "description": "concurrent.futures",
@@ -4963,14 +4954,6 @@
     },
     {
         "label": "add_task_to_queue",
-        "importPath": "core.utils.threading",
-        "description": "core.utils.threading",
-        "isExtraImport": true,
-        "detail": "core.utils.threading",
-        "documentation": {}
-    },
-    {
-        "label": "executor",
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
         "isExtraImport": true,
@@ -10709,7 +10692,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def register_face(image: Any, uid: str, current_app) -> Dict[str, Any]:\n    try:\n        # Save original image and prepare augmented images concurrently\n        image_path, _ = save_image(image, uid, IMAGES_DIR, uid)\n        augmented_images = augment_image(image)\n        def save_augmented_image(index_image_tuple):\n            i, img = index_image_tuple\n            return save_image(img, uid, IMAGES_DIR, f\"{uid}_aug{i}\")\n        # Save augmented images concurrently\n        executor.map(save_augmented_image, enumerate(augmented_images, start=1))",
+        "peekOfCode": "def register_face(image: Any, uid: str, current_app) -> Dict[str, Any]:\n    try:\n        # Save original and augmented images\n        image_path, _ = save_image(image, uid, IMAGES_DIR, uid)\n        augmented_images = augment_image(image)\n        for i, img in enumerate(augmented_images, start=1):\n            save_image(img, uid, IMAGES_DIR, f\"{uid}_aug{i}\")\n        add_task_to_queue(\n            recreate_DB,\n            img_path=IMAGES_DIR,",
         "detail": "core.service",
         "documentation": {}
     },
