@@ -4613,6 +4613,15 @@
         "documentation": {}
     },
     {
+        "label": "concurrent.futures",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
         "label": "ThreadPoolExecutor",
         "importPath": "concurrent.futures",
         "description": "concurrent.futures",
@@ -4975,6 +4984,14 @@
         "description": "core.utils.theading",
         "isExtraImport": true,
         "detail": "core.utils.theading",
+        "documentation": {}
+    },
+    {
+        "label": "delete_directory_if_empty",
+        "importPath": "core.utils.images_handler",
+        "description": "core.utils.images_handler",
+        "isExtraImport": true,
+        "detail": "core.utils.images_handler",
         "documentation": {}
     },
     {
@@ -10119,6 +10136,15 @@
         "documentation": {}
     },
     {
+        "label": "delete_directory_if_empty",
+        "kind": 2,
+        "importPath": "core.utils.images_handler",
+        "description": "core.utils.images_handler",
+        "peekOfCode": "def delete_directory_if_empty(save_dir: str) -> bool:\n    remaining_images = [f for f in os.listdir(save_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]\n    if not remaining_images:\n        os.rmdir(save_dir)\n        logger.info(f\"Deleted empty directory: {save_dir}\")\n        return True\n    return False\ndef extract_base_identity(identity):\n    # Split the identity by '_' and take the last part without the augmentation part\n    identity = os.path.splitext(os.path.basename(identity))[0]",
+        "detail": "core.utils.images_handler",
+        "documentation": {}
+    },
+    {
         "label": "extract_base_identity",
         "kind": 2,
         "importPath": "core.utils.images_handler",
@@ -10159,7 +10185,7 @@
         "kind": 5,
         "importPath": "core.utils.images_handler",
         "description": "core.utils.images_handler",
-        "peekOfCode": "logger = get_logger()\ndef extract_base_identity(identity):\n    # Split the identity by '_' and take the last part without the augmentation part\n    identity = os.path.splitext(os.path.basename(identity))[0]\n    identity = \"_\".join(identity.split('_')[2:]).split('_')[0]\n    return identity\ndef delete_images_for_uid(uid: str, base_uid: str):\n    # Adjust the pattern to correctly match files associated with the base_uid and uid\n    image_pattern = os.path.join(IMAGES_DIR, base_uid, f\"*_{uid}*.png\")\n    # Ensure the pattern is correct and matches files",
+        "peekOfCode": "logger = get_logger()\ndef delete_directory_if_empty(save_dir: str) -> bool:\n    remaining_images = [f for f in os.listdir(save_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]\n    if not remaining_images:\n        os.rmdir(save_dir)\n        logger.info(f\"Deleted empty directory: {save_dir}\")\n        return True\n    return False\ndef extract_base_identity(identity):\n    # Split the identity by '_' and take the last part without the augmentation part",
         "detail": "core.utils.images_handler",
         "documentation": {}
     },
@@ -10429,7 +10455,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def recognize():\n    if 'image' not in request.files:\n        return {\"message\": \"Image is required\", \"data\": None, \"success\": False}, 400\n    image = request.files[\"image\"]\n    try:\n        response = service.recognize_face(image)\n        return response\n    except Exception as e:\n        logger.error(f\"Failed to recognize face: {str(e)}\")\n        return {\"message\": \"Failed to recognize face\", \"data\": None, \"success\": False}, 500",
+        "peekOfCode": "def recognize():\n    if 'image' not in request.files:\n        return {\"message\": \"Image is required\", \"data\": None, \"success\": False}, 400\n    uid = request.form.get(\"uid\")\n    image = request.files[\"image\"]\n    try:\n        response = service.recognize_face(image , uid)\n        return response\n    except Exception as e:\n        logger.error(f\"Failed to recognize face: {str(e)}\")",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10483,7 +10509,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def get_deepface_controller():\n    return flask.current_app.config['deepface_controller']\ndef list_users(uid_filter: str = None) -> List[Dict[str, Any]]:\n    users = []\n    base_dirs = [d for d in os.listdir(IMAGES_DIR) if os.path.isdir(os.path.join(IMAGES_DIR, d))]\n    for base_dir in base_dirs:\n        user_files = glob.glob(os.path.join(IMAGES_DIR, base_dir, '*.png'))\n        unique_uids = set()\n        for file_path in user_files:\n            uid = extract_base_identity(file_path)",
+        "peekOfCode": "def get_deepface_controller():\n    return flask.current_app.config['deepface_controller']\ndef list_users(uid_filter: Optional[str] = None) -> Dict[str, Any]:\n    users = []\n    for base_dir in filter(lambda d: os.path.isdir(os.path.join(IMAGES_DIR, d)), os.listdir(IMAGES_DIR)):\n        user_files = glob.glob(os.path.join(IMAGES_DIR, base_dir, '*.png'))\n        unique_uids = {extract_base_identity(f) for f in user_files if not uid_filter or uid_filter in extract_base_identity(f)}\n        for uid in unique_uids:\n            users.append({\n                \"uid\": uid,",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10492,7 +10518,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def list_users(uid_filter: str = None) -> List[Dict[str, Any]]:\n    users = []\n    base_dirs = [d for d in os.listdir(IMAGES_DIR) if os.path.isdir(os.path.join(IMAGES_DIR, d))]\n    for base_dir in base_dirs:\n        user_files = glob.glob(os.path.join(IMAGES_DIR, base_dir, '*.png'))\n        unique_uids = set()\n        for file_path in user_files:\n            uid = extract_base_identity(file_path)\n            if uid_filter:\n                if uid_filter in uid:",
+        "peekOfCode": "def list_users(uid_filter: Optional[str] = None) -> Dict[str, Any]:\n    users = []\n    for base_dir in filter(lambda d: os.path.isdir(os.path.join(IMAGES_DIR, d)), os.listdir(IMAGES_DIR)):\n        user_files = glob.glob(os.path.join(IMAGES_DIR, base_dir, '*.png'))\n        unique_uids = {extract_base_identity(f) for f in user_files if not uid_filter or uid_filter in extract_base_identity(f)}\n        for uid in unique_uids:\n            users.append({\n                \"uid\": uid,\n                \"base_dir\": base_dir,\n                \"images\": [os.path.basename(f) for f in user_files if uid in f]",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10501,16 +10527,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def check_version() -> Dict[str, Any]:\n    try:\n        version = get_deepface_controller().check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {str(e)} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef delete_face(uid: str, current_app) -> Dict[str, Any]:\n    try:\n        base_uid = uid.split('-')[0]",
-        "detail": "core.service",
-        "documentation": {}
-    },
-    {
-        "label": "delete_face",
-        "kind": 2,
-        "importPath": "core.service",
-        "description": "core.service",
-        "peekOfCode": "def delete_face(uid: str, current_app) -> Dict[str, Any]:\n    try:\n        base_uid = uid.split('-')[0]\n        delete_images_for_uid(uid, base_uid)\n        logger.info(f\"Deleted all face embeddings and images for UID {uid}\")\n        add_task_to_queue(recreate_DB, IMAGES_DIR, current_app._get_current_object(), uid=uid)\n        logger.info(f\"Final task scheduled for re-rendering vector database for UID {uid}\")\n        return {\"message\": \"Face deleted successfully and final task scheduled!\", \"data\": {\"uid\": uid}, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while deleting face with UID {uid}: {str(e)}\")",
+        "peekOfCode": "def check_version() -> Dict[str, Any]:\n    try:\n        version = get_deepface_controller().check_version()\n        return {\"message\": \"Version fetched successfully\", \"data\": version, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while checking version: {e} - {traceback.format_exc()}\")\n        return {\"message\": \"Failed to fetch version\", \"data\": None, \"success\": False}\ndef recreate_DB(img_path: str, app: Any, uid: str) -> None:\n    logger.info(f\"Starting recreate_DB with img_path: {img_path}, uid: {uid}\")\n    try:",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10519,7 +10536,16 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def recreate_DB(img_path, app, uid) -> Dict[str, Any]:\n    logger.info(f\"Starting recreate_DB with img_path: {img_path}, uid: {uid}\")\n    try:\n        with app.app_context():\n            get_deepface_controller().find(\n                img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),\n                db_path=img_path,\n                model_name=\"Facenet512\",\n                detector_backend=\"retinaface\",\n                anti_spoofing=False",
+        "peekOfCode": "def recreate_DB(img_path: str, app: Any, uid: str) -> None:\n    logger.info(f\"Starting recreate_DB with img_path: {img_path}, uid: {uid}\")\n    try:\n        with app.app_context():\n            base_uid = uid.split('-')[0]\n            save_dir = os.path.join(img_path, base_uid)\n            get_deepface_controller().find(\n                img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),\n                db_path=save_dir,\n                model_name=\"Facenet512\",",
+        "detail": "core.service",
+        "documentation": {}
+    },
+    {
+        "label": "recreate_DB",
+        "kind": 2,
+        "importPath": "core.service",
+        "description": "core.service",
+        "peekOfCode": "def recreate_DB(img_path, app, uid) -> Dict[str, Any]:\n    logger.info(f\"Starting recreate_DB with img_path: {img_path}, uid: {uid}\")\n    try:\n        with app.app_context():\n            base_uid = uid.split('-')[0]\n            save_dir = os.path.join(img_path, base_uid)\n            get_deepface_controller().find(\n                img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),\n                db_path=save_dir,\n                model_name=\"Facenet512\",",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10528,7 +10554,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def register_face(image: Any, uid: str, current_app) -> Dict[str, Any]:\n    try:\n        image_path, _ = save_image(image, uid, IMAGES_DIR, uid)\n        augmented_images = augment_image(image)\n        for i, img in enumerate(augmented_images, start=1):\n            save_image(img, uid, IMAGES_DIR, f\"{uid}_aug{i}\")\n        add_task_to_queue(recreate_DB, img_path=IMAGES_DIR, app=current_app._get_current_object(), uid=uid)\n        return {\"message\": \"Face registered successfully!.\", \"data\": {\"uid\": uid}, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while registering face with UID {uid}: {str(e)}\")",
+        "peekOfCode": "def register_face(image: Any, uid: str, current_app) -> Dict[str, Any]:\n    try:\n        image_path, _ = save_image(image, uid, IMAGES_DIR, uid)\n        augmented_images = augment_image(image)\n        for i, img in enumerate(augmented_images, start=1):\n            save_image(img, uid, IMAGES_DIR, f\"{uid}_aug{i}\")\n        add_task_to_queue(recreate_DB, img_path=IMAGES_DIR, app=current_app._get_current_object(), uid=uid)\n        return {\"message\": \"Face registered successfully!\", \"data\": {\"uid\": uid}, \"success\": True}\n    except Exception as e:\n        logger.error(f\"Exception while registering face with UID {uid}: {e} - {traceback.format_exc()}\")",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10537,7 +10563,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def recognize_face(image: Any) -> Dict[str, Any]:\n    try:\n        image_path, _ = save_image(image, \"query_results\", TEMP_DIR, \"\")\n        value_objs_anti_spoofing = get_deepface_controller().extract_faces(\n            img_path=image_path,\n            detector_backend=\"retinaface\",\n            anti_spoofing=True\n        )[0]\n        value_objs = get_deepface_controller().find(\n            img_path=image_path,",
+        "peekOfCode": "def recognize_face(image: Any, uid: Optional[str] = None) -> Dict[str, Any]:\n    try:\n        save_dir = IMAGES_DIR if uid is None else os.path.join(IMAGES_DIR, uid.split('-')[0])\n        image_path, _ = save_image(image, \"query_results\", TEMP_DIR, \"\")\n        if not os.path.exists(save_dir) or not any(f.lower().endswith(('.png', '.jpg', '.jpeg')) for f in os.listdir(save_dir)):\n            return {\"message\": \"No faces detected in the image\", \"data\": [], \"success\": False}\n        with concurrent.futures.ThreadPoolExecutor() as executor:\n            # Run extract_faces and find concurrently\n            future_anti_spoofing = executor.submit(\n                get_deepface_controller().extract_faces,",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10573,7 +10599,7 @@
         "kind": 5,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "logger = get_logger()\ndef get_deepface_controller():\n    return flask.current_app.config['deepface_controller']\ndef list_users(uid_filter: str = None) -> List[Dict[str, Any]]:\n    users = []\n    base_dirs = [d for d in os.listdir(IMAGES_DIR) if os.path.isdir(os.path.join(IMAGES_DIR, d))]\n    for base_dir in base_dirs:\n        user_files = glob.glob(os.path.join(IMAGES_DIR, base_dir, '*.png'))\n        unique_uids = set()\n        for file_path in user_files:",
+        "peekOfCode": "logger = get_logger()\ndef get_deepface_controller():\n    return flask.current_app.config['deepface_controller']\ndef list_users(uid_filter: Optional[str] = None) -> Dict[str, Any]:\n    users = []\n    for base_dir in filter(lambda d: os.path.isdir(os.path.join(IMAGES_DIR, d)), os.listdir(IMAGES_DIR)):\n        user_files = glob.glob(os.path.join(IMAGES_DIR, base_dir, '*.png'))\n        unique_uids = {extract_base_identity(f) for f in user_files if not uid_filter or uid_filter in extract_base_identity(f)}\n        for uid in unique_uids:\n            users.append({",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10587,11 +10613,20 @@
         "documentation": {}
     },
     {
+        "label": "has_directory_changed",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def has_directory_changed(directory_path, previous_stat=None):\n    current_stat = os.stat(directory_path)\n    return previous_stat is None or current_stat.st_mtime != previous_stat.st_mtime, current_stat\ndef create_app():\n    app = Flask(__name__)\n    with app.app_context():\n        app.config['deepface_controller'] = deepface_controller        \n    # Create necessary directories\n    directories = ['static', 'static/images', 'database']\n    base_paths = [os.path.join(BASE_PATH, d) for d in directories]",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
         "label": "create_app",
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def create_app():\n    app = Flask(__name__)\n    with app.app_context():\n        app.config['deepface_controller'] = deepface_controller        \n        add_task_to_queue(recreate_DB, img_path=IMAGES_DIR, app=app, uid=\"tst\")\n    directories = ['static', 'static/images', 'database']\n    base_paths = [os.path.join(BASE_PATH, d) for d in directories]\n    for path in base_paths:\n        os.makedirs(path, exist_ok=True)\n    start_workers(app)",
+        "peekOfCode": "def create_app():\n    app = Flask(__name__)\n    with app.app_context():\n        app.config['deepface_controller'] = deepface_controller        \n    # Create necessary directories\n    directories = ['static', 'static/images', 'database']\n    base_paths = [os.path.join(BASE_PATH, d) for d in directories]\n    for path in base_paths:\n        os.makedirs(path, exist_ok=True)\n    # Monitor changes in all subdirectories within IMAGES_DIR",
         "detail": "app",
         "documentation": {}
     },
@@ -10600,7 +10635,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "logger = get_logger()\ndeepface_controller = DeepFaceController()\ndef create_app():\n    app = Flask(__name__)\n    with app.app_context():\n        app.config['deepface_controller'] = deepface_controller        \n        add_task_to_queue(recreate_DB, img_path=IMAGES_DIR, app=app, uid=\"tst\")\n    directories = ['static', 'static/images', 'database']\n    base_paths = [os.path.join(BASE_PATH, d) for d in directories]\n    for path in base_paths:",
+        "peekOfCode": "logger = get_logger()\ndeepface_controller = DeepFaceController()\ndef has_directory_changed(directory_path, previous_stat=None):\n    current_stat = os.stat(directory_path)\n    return previous_stat is None or current_stat.st_mtime != previous_stat.st_mtime, current_stat\ndef create_app():\n    app = Flask(__name__)\n    with app.app_context():\n        app.config['deepface_controller'] = deepface_controller        \n    # Create necessary directories",
         "detail": "app",
         "documentation": {}
     },
@@ -10609,7 +10644,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "deepface_controller = DeepFaceController()\ndef create_app():\n    app = Flask(__name__)\n    with app.app_context():\n        app.config['deepface_controller'] = deepface_controller        \n        add_task_to_queue(recreate_DB, img_path=IMAGES_DIR, app=app, uid=\"tst\")\n    directories = ['static', 'static/images', 'database']\n    base_paths = [os.path.join(BASE_PATH, d) for d in directories]\n    for path in base_paths:\n        os.makedirs(path, exist_ok=True)",
+        "peekOfCode": "deepface_controller = DeepFaceController()\ndef has_directory_changed(directory_path, previous_stat=None):\n    current_stat = os.stat(directory_path)\n    return previous_stat is None or current_stat.st_mtime != previous_stat.st_mtime, current_stat\ndef create_app():\n    app = Flask(__name__)\n    with app.app_context():\n        app.config['deepface_controller'] = deepface_controller        \n    # Create necessary directories\n    directories = ['static', 'static/images', 'database']",
         "detail": "app",
         "documentation": {}
     },

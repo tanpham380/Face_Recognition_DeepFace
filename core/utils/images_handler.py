@@ -11,6 +11,13 @@ from core.utils.static_variable import IMAGES_DIR
 import glob
 logger = get_logger()
 
+def delete_directory_if_empty(save_dir: str) -> bool:
+    remaining_images = [f for f in os.listdir(save_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
+    if not remaining_images:
+        os.rmdir(save_dir)
+        logger.info(f"Deleted empty directory: {save_dir}")
+        return True
+    return False
 
 def extract_base_identity(identity):
     # Split the identity by '_' and take the last part without the augmentation part
@@ -79,7 +86,7 @@ def save_image(image: Any, uid: str, base_dir: str, prefix: str, anti_spoofing: 
     augmented_images = sorted([f for f in os.listdir(
         save_dir) if 'aug' in f], key=lambda x: os.path.getmtime(os.path.join(save_dir, x)))
 
-    for old_image in original_images[:-8]:
+    for old_image in original_images[:-4]:
         os.remove(os.path.join(save_dir, old_image))
     for old_image in augmented_images[:-48]:
         os.remove(os.path.join(save_dir, old_image))

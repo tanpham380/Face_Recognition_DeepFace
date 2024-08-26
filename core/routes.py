@@ -69,10 +69,11 @@ def delete_face():
 def recognize():
     if 'image' not in request.files:
         return {"message": "Image is required", "data": None, "success": False}, 400
-
+    uid = request.form.get("uid")
+    
     image = request.files["image"]
     try:
-        response = service.recognize_face(image)
+        response = service.recognize_face(image , uid)
         return response
     except Exception as e:
         logger.error(f"Failed to recognize face: {str(e)}")
