@@ -10461,7 +10461,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4",
+        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(8, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10470,7 +10470,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56",
+        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(8, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10479,7 +10479,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
+        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(8, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10488,7 +10488,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "IMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
+        "peekOfCode": "IMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(8, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10497,7 +10497,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "VECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "VECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(8, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10506,7 +10506,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "MAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "MAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(8, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10515,7 +10515,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "API_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "API_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(8, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10524,7 +10524,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "LOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "LOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(8, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10533,7 +10533,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "NUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "NUMBER_WORKER = min(8, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10632,7 +10632,7 @@
         "kind": 5,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "executor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ntask_queue = queue.Queue(maxsize=100)  # Bounded queue to prevent overflow\nlogger = get_logger()\nthreads = []\nqueue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):",
+        "peekOfCode": "executor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ntask_queue = queue.Queue(maxsize=100)  # Bounded queue to prevent overflow\nlogger = get_logger()\nthreads = []\nqueue_lock = threading.Lock()\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10641,7 +10641,7 @@
         "kind": 5,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "task_queue = queue.Queue(maxsize=100)  # Bounded queue to prevent overflow\nlogger = get_logger()\nthreads = []\nqueue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()",
+        "peekOfCode": "task_queue = queue.Queue(maxsize=100)  # Bounded queue to prevent overflow\nlogger = get_logger()\nthreads = []\nqueue_lock = threading.Lock()\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10650,7 +10650,7 @@
         "kind": 5,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "logger = get_logger()\nthreads = []\nqueue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:",
+        "peekOfCode": "logger = get_logger()\nthreads = []\nqueue_lock = threading.Lock()\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10659,7 +10659,7 @@
         "kind": 5,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "threads = []\nqueue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():",
+        "peekOfCode": "threads = []\nqueue_lock = threading.Lock()\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        # Add task to the database",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10668,16 +10668,7 @@
         "kind": 5,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "queue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")",
-        "detail": "core.utils.threading",
-        "documentation": {}
-    },
-    {
-        "label": "executor",
-        "kind": 5,
-        "importPath": "core.utils.threading",
-        "description": "core.utils.threading",
-        "peekOfCode": "executor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        # Add task to the database\n        app.config[\"ZoDB\"].add_task(task_id, \"queued\", time.time())",
+        "peekOfCode": "queue_lock = threading.Lock()\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        # Add task to the database\n        app.config[\"ZoDB\"].add_task(task_id, \"queued\", time.time())",
         "detail": "core.utils.threading",
         "documentation": {}
     },

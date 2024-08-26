@@ -13,13 +13,8 @@ logger = get_logger()
 threads = []
 queue_lock = threading.Lock()
 
-# Initialize ThreadPoolExecutor once and reuse
-executor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)
-
-
 def generate_unique_task_id() -> str:
     return f"task-{int(time.time())}-{uuid.uuid4().hex}"
-
 
 def add_task_to_queue(func, app, *args, **kwargs):
     task_id = generate_unique_task_id()
@@ -34,8 +29,6 @@ def add_task_to_queue(func, app, *args, **kwargs):
         # Pass `app` as an additional argument to the task
         task_queue.put((task_id, lambda: func(app, *args, **kwargs)))
         logger.info(f"Added task {task_id} to the queue")
-
-
 
 def worker(app):
     logger.info("Worker thread started")
@@ -66,7 +59,6 @@ def worker(app):
             finally:
                 task_queue.task_done()
 
-
 def start_workers(app):
     global threads
     if threads:  # Check if workers are already started
@@ -78,7 +70,6 @@ def start_workers(app):
         t.start()
         threads.append(t)
         logger.info(f"Worker thread {i} started")
-
 
 def stop_workers():
     global threads
