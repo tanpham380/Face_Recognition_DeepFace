@@ -7,11 +7,13 @@ from core.utils.models.face_data import FaceData
 from core.utils.models.task_queue import TaskQueue
 from core.utils.static_variable import IMAGES_DIR, MAX_IMAGES, MAX_ORIGIN_IMAGES
 from core.utils.logging import get_logger
+import threading
 
 logger = get_logger()
 
 class ZoDB_Manager:
     _instance = None  # Singleton instance
+    _thread_local = threading.local()
 
     def __new__(cls, db_path='database/zodb.fs'):
         if cls._instance is None:
@@ -22,33 +24,35 @@ class ZoDB_Manager:
     def _initialize(self, db_path: str):
         storage = FileStorage.FileStorage(db_path)
         self.db = DB(storage)
-        self.connection = None
-        self.root = None
+
+    def _get_thread_local_connection(self):
+        if not hasattr(self._thread_local, "connection"):
+            self._thread_local.connection = self.db.open()
+            self._thread_local.root = self._thread_local.connection.root()
+            self._initialize_root()
+        return self._thread_local.connection
 
     def connect(self):
-        if self.connection is None:
-            self.connection = self.db.open()
-            self.root = self.connection.root()
-            self._initialize_root()
+        return self._get_thread_local_connection()
 
     def close(self):
-        if self.connection:
-            if self.connection.isReadOnly() or transaction.isDoomed():
+        connection = getattr(self._thread_local, "connection", None)
+        if connection:
+            if connection.isReadOnly() or transaction.isDoomed():
                 transaction.abort()
             else:
                 transaction.commit()
-
-            self.connection.close()
-            self.connection = None
-        self.db.close()
+            connection.close()
+            del self._thread_local.connection
 
     def _initialize_root(self):
-        if 'directory_hashes' not in self.root:
-            self.root['directory_hashes'] = PersistentDict()
-        if 'task_queue' not in self.root:
-            self.root['task_queue'] = PersistentDict()
-        if 'face_data' not in self.root:
-            self.root['face_data'] = PersistentDict()
+        root = self._thread_local.root
+        if 'directory_hashes' not in root:
+            root['directory_hashes'] = PersistentDict()
+        if 'task_queue' not in root:
+            root['task_queue'] = PersistentDict()
+        if 'face_data' not in root:
+            root['face_data'] = PersistentDict()
         transaction.commit()
 
     def _get_root_item(self, item_name: str) -> PersistentDict:

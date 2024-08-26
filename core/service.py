@@ -16,6 +16,7 @@ from core.utils.images_handler import (
 from core.utils.static_variable import BASE_PATH, IMAGES_DIR, TEMP_DIR
 from core.utils.logging import get_logger
 
+from ZODB import transaction
 
 # Initialize the logger
 logger = get_logger()
@@ -196,10 +197,14 @@ def import_db(app: Any, img_path: str, uid: str) -> Dict[str, Any]:
             if embedding_objs:
                 embedding = embedding_objs[0].get("embedding")
                 if embedding:
-                    app.config["ZoDB"].add_face_embedding(uid, img_path, embedding)
+                    with transaction.manager:
+                        app.config["ZoDB"].add_face_embedding(uid, img_path, embedding)
+                        transaction.commit()
                     
     except Exception as e:
+        transaction.abort()  # Ensure transaction is aborted in case of an error
         logger.error(f"Error in import_db: {e} - {traceback.format_exc()}")
+
 
 
 def recreate_DB(app: Any, img_path: str, uid: str) -> None:
@@ -221,10 +226,16 @@ def recreate_DB(app: Any, img_path: str, uid: str) -> None:
             logger.info(
                 f"Setting initial hash for directory {save_dir} with current hash {current_hash}."
             )
-            app.config["ZoDB"].set_directory_hash(base_uid, current_hash)
+            
+            with transaction.manager:
+                app.config["ZoDB"].set_directory_hash(base_uid, current_hash)
+                transaction.commit()
+
             logger.info("recreate_DB completed successfully.")
     except Exception as e:
+        transaction.abort()  # Abort transaction if there's an error
         logger.error(f"Error in recreate_DB: {e} - {traceback.format_exc()}")
+
 
 
 # def register_face(image: Any, uid: str, current_app) -> Dict[str, Any]:
@@ -308,7 +319,6 @@ def register_face(image: Any, uid: str, current_app) -> Dict[str, Any]:
         logger.error(f"Exception while registering face with UID {uid}: {e} - {traceback.format_exc()}")
         return {"message": "Failed to register face.", "data": None, "success": False}
     
-    
 def delete_face(uid: str, current_app) -> Dict[str, Any]:
     try:
         base_uid = uid.split("-")[0]
@@ -316,31 +326,37 @@ def delete_face(uid: str, current_app) -> Dict[str, Any]:
 
         # Delete images and check if directory is empty
         delete_images_for_uid(uid, base_uid)
+        
         if delete_directory_if_empty(save_dir):
-            current_app.config["ZoDB"].delete_face_embedding(uid=uid)
+            with transaction.manager:
+                current_app.config["ZoDB"].delete_face_embedding(uid=uid)
+                transaction.commit()
             return {
                 "message": "Face deleted successfully and directory removed.",
                 "data": {"uid": uid},
                 "success": True,
             }
-
-        # Delete all embeddings for a specific UID and its augmentations
-        if current_app.config["ZoDB"].delete_face_embedding(uid=uid):
-            add_task_to_queue(
-                recreate_DB,
-                img_path=IMAGES_DIR,
-                app=current_app._get_current_object(),
-
-                uid=uid,
-            )
-            return {
-                "message": "Face deleted successfully and final task scheduled!",
-                "data": {"uid": uid},
-                "success": True,
-            }
-        else:
-            return {"message": "Failed to delete face data", "data": None, "success": False}
+        
+        with transaction.manager:
+            # Delete all embeddings for a specific UID and its augmentations
+            if current_app.config["ZoDB"].delete_face_embedding(uid=uid):
+                transaction.commit()
+                add_task_to_queue(
+                    recreate_DB,
+                    img_path=IMAGES_DIR,
+                    app=current_app._get_current_object(),
+                    uid=uid,
+                )
+                return {
+                    "message": "Face deleted successfully and final task scheduled!",
+                    "data": {"uid": uid},
+                    "success": True,
+                }
+            else:
+                transaction.abort()
+                return {"message": "Failed to delete face data", "data": None, "success": False}
     except Exception as e:
+        transaction.abort()  # Ensure transaction is aborted on error
         logger.error(
             f"Exception while deleting face with UID {uid}: {e} - {traceback.format_exc()}"
         )

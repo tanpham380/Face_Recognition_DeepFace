@@ -5,6 +5,7 @@ import uuid
 from core.utils.logging import get_logger
 from core.utils.static_variable import NUMBER_WORKER
 from concurrent.futures import ThreadPoolExecutor
+from ZODB import transaction
 
 executor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)
 
@@ -24,7 +25,11 @@ def add_task_to_queue(func, app, *args, **kwargs):
             logger.warning(f"Task queue is full, waiting to add task {task_id}")
 
         # Add task to the database
-        app.config["ZoDB"].add_task(task_id, "queued", time.time())
+        
+        with transaction.manager:
+            app.config["ZoDB"].add_task(task_id, "queued", time.time())
+            
+            transaction.commit()
 
         # Pass `app` as an additional argument to the task
         task_queue.put((task_id, lambda: func(app, *args, **kwargs)))
@@ -40,24 +45,29 @@ def worker(app):
             start_time = time.time()
 
             try:
-                # Update task status to 'running'
-                app.config["ZoDB"].update_task_status(task_id, "running")
-                logger.info(f"Worker picked up task {task_id}")
+                # Each task handles its own transaction
+                with transaction.manager:
+                    # Update task status to 'running'
+                    app.config["ZoDB"].update_task_status(task_id, "running")
+                    logger.info(f"Worker picked up task {task_id}")
 
-                future = executor.submit(task)
-                result = future.result()  # This will block until the task is done
+                    future = executor.submit(task)
+                    result = future.result()  # This will block until the task is done
 
-                # Update task status to 'completed'
-                app.config["ZoDB"].update_task_status(task_id, "completed")
-                logger.info(
-                    f"Worker completed task {task_id} in {time.time() - start_time:.2f} seconds"
-                )
+                    # Update task status to 'completed'
+                    app.config["ZoDB"].update_task_status(task_id, "completed")
+                    logger.info(
+                        f"Worker completed task {task_id} in {time.time() - start_time:.2f} seconds"
+                    )
+                    transaction.commit()  # Commit the transaction for this task
             except Exception as e:
                 # Update task status to 'failed'
                 app.config["ZoDB"].update_task_status(task_id, "failed")
+                transaction.abort()  # Rollback the transaction on error
                 logger.error(f"Error in worker thread: {str(e)}")
             finally:
                 task_queue.task_done()
+
 
 def start_workers(app):
     global threads

@@ -4710,6 +4710,30 @@
     },
     {
         "label": "transaction",
+        "importPath": "ZODB",
+        "description": "ZODB",
+        "isExtraImport": true,
+        "detail": "ZODB",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "importPath": "ZODB",
+        "description": "ZODB",
+        "isExtraImport": true,
+        "detail": "ZODB",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "importPath": "ZODB",
+        "description": "ZODB",
+        "isExtraImport": true,
+        "detail": "ZODB",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "transaction",
@@ -10290,7 +10314,7 @@
         "kind": 6,
         "importPath": "core.utils.database",
         "description": "core.utils.database",
-        "peekOfCode": "class ZoDB_Manager:\n    _instance = None  # Singleton instance\n    def __new__(cls, db_path='database/zodb.fs'):\n        if cls._instance is None:\n            cls._instance = super(ZoDB_Manager, cls).__new__(cls)\n            cls._instance._initialize(db_path)\n        return cls._instance\n    def _initialize(self, db_path: str):\n        storage = FileStorage.FileStorage(db_path)\n        self.db = DB(storage)",
+        "peekOfCode": "class ZoDB_Manager:\n    _instance = None  # Singleton instance\n    _thread_local = threading.local()\n    def __new__(cls, db_path='database/zodb.fs'):\n        if cls._instance is None:\n            cls._instance = super(ZoDB_Manager, cls).__new__(cls)\n            cls._instance._initialize(db_path)\n        return cls._instance\n    def _initialize(self, db_path: str):\n        storage = FileStorage.FileStorage(db_path)",
         "detail": "core.utils.database",
         "documentation": {}
     },
@@ -10299,7 +10323,7 @@
         "kind": 5,
         "importPath": "core.utils.database",
         "description": "core.utils.database",
-        "peekOfCode": "logger = get_logger()\nclass ZoDB_Manager:\n    _instance = None  # Singleton instance\n    def __new__(cls, db_path='database/zodb.fs'):\n        if cls._instance is None:\n            cls._instance = super(ZoDB_Manager, cls).__new__(cls)\n            cls._instance._initialize(db_path)\n        return cls._instance\n    def _initialize(self, db_path: str):\n        storage = FileStorage.FileStorage(db_path)",
+        "peekOfCode": "logger = get_logger()\nclass ZoDB_Manager:\n    _instance = None  # Singleton instance\n    _thread_local = threading.local()\n    def __new__(cls, db_path='database/zodb.fs'):\n        if cls._instance is None:\n            cls._instance = super(ZoDB_Manager, cls).__new__(cls)\n            cls._instance._initialize(db_path)\n        return cls._instance\n    def _initialize(self, db_path: str):",
         "detail": "core.utils.database",
         "documentation": {}
     },
@@ -10587,7 +10611,7 @@
         "kind": 2,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "def generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        # Add task to the database\n        app.config[\"ZoDB\"].add_task(task_id, \"queued\", time.time())\n        # Pass `app` as an additional argument to the task",
+        "peekOfCode": "def generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        # Add task to the database\n        with transaction.manager:\n            app.config[\"ZoDB\"].add_task(task_id, \"queued\", time.time())",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10596,7 +10620,7 @@
         "kind": 2,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "def add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        # Add task to the database\n        app.config[\"ZoDB\"].add_task(task_id, \"queued\", time.time())\n        # Pass `app` as an additional argument to the task\n        task_queue.put((task_id, lambda: func(app, *args, **kwargs)))\n        logger.info(f\"Added task {task_id} to the queue\")",
+        "peekOfCode": "def add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        # Add task to the database\n        with transaction.manager:\n            app.config[\"ZoDB\"].add_task(task_id, \"queued\", time.time())\n            transaction.commit()\n        # Pass `app` as an additional argument to the task",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10605,7 +10629,7 @@
         "kind": 2,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "def worker(app):\n    logger.info(\"Worker thread started\")\n    with app.app_context():\n        while True:\n            task_id, task = task_queue.get()\n            if task is None:\n                break\n            start_time = time.time()\n            try:\n                # Update task status to 'running'",
+        "peekOfCode": "def worker(app):\n    logger.info(\"Worker thread started\")\n    with app.app_context():\n        while True:\n            task_id, task = task_queue.get()\n            if task is None:\n                break\n            start_time = time.time()\n            try:\n                # Each task handles its own transaction",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10668,7 +10692,7 @@
         "kind": 5,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "queue_lock = threading.Lock()\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        # Add task to the database\n        app.config[\"ZoDB\"].add_task(task_id, \"queued\", time.time())",
+        "peekOfCode": "queue_lock = threading.Lock()\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        # Add task to the database\n        with transaction.manager:",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10893,7 +10917,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def delete_face(uid: str, current_app) -> Dict[str, Any]:\n    try:\n        base_uid = uid.split(\"-\")[0]\n        save_dir = os.path.join(IMAGES_DIR, base_uid)\n        # Delete images and check if directory is empty\n        delete_images_for_uid(uid, base_uid)\n        if delete_directory_if_empty(save_dir):\n            current_app.config[\"ZoDB\"].delete_face_embedding(uid=uid)\n            return {\n                \"message\": \"Face deleted successfully and directory removed.\",",
+        "peekOfCode": "def delete_face(uid: str, current_app) -> Dict[str, Any]:\n    try:\n        base_uid = uid.split(\"-\")[0]\n        save_dir = os.path.join(IMAGES_DIR, base_uid)\n        # Delete images and check if directory is empty\n        delete_images_for_uid(uid, base_uid)\n        if delete_directory_if_empty(save_dir):\n            with transaction.manager:\n                current_app.config[\"ZoDB\"].delete_face_embedding(uid=uid)\n                transaction.commit()",
         "detail": "core.service",
         "documentation": {}
     },
