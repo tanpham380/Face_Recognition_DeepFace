@@ -172,74 +172,39 @@ def register_face(image: Any, uid: str, current_app) -> Dict[str, Any]:
             f"Exception while registering face with UID {uid}: {e} - {traceback.format_exc()}"
         )
         return {"message": "Failed to register face", "data": None, "success": False}
-
 def recognize_face(image: Any, uid: Optional[str] = None) -> Dict[str, Any]:
     try:
-        save_dir = IMAGES_DIR if uid is None else os.path.join(IMAGES_DIR, uid.split("-")[0])
+        save_dir = IMAGES_DIR if uid is None else os.path.join(IMAGES_DIR, uid.split('-')[0])
         image_path, _ = save_image(image, "query_results", TEMP_DIR, "")
+        logger.info(f"Recognizing face with UID {uid} in directory {save_dir}")
+        
 
-        # Check if directory contains valid image files
-        if not os.path.exists(save_dir) or not any(
-            f.lower().endswith((".png", ".jpg", ".jpeg")) for f in os.listdir(save_dir)
-        ):
-            return {
-                "message": "No faces detected in the image",
-                "data": [],
-                "success": False,
-            }
-        future_anti_spoofing = get_deepface_controller().extract_faces(
-            img_path=image_path, detector_backend="retinaface", anti_spoofing=True,
-        )
-        future_recognition = get_deepface_controller().find(
-            img_path=image_path,
-            db_path=save_dir,
-            model_name="Facenet512",
-            detector_backend="retinaface",
-            anti_spoofing=False,
-        )
-        # Get the results
-        anti_spoofing_results = future_anti_spoofing.result()[0]
-        recognition_results = future_recognition.result()
+        if not any(f.lower().endswith(('.png', '.jpg', '.jpeg')) for f in os.listdir(save_dir)):
+            return {"message": "No faces detected in the image", "data": [], "success": False}
+        anti_spoofing_results = get_deepface_controller().extract_faces(img_path=image_path, detector_backend="retinaface", anti_spoofing=True)[0]
+
+        recognition_results = get_deepface_controller().find(img_path=image_path, db_path=save_dir, model_name="Facenet512", detector_backend="retinaface", anti_spoofing=False)
 
         if recognition_results and not recognition_results[0].empty:
             best_match = recognition_results[0].iloc[0]
-            best_match_identity = extract_base_identity(
-                os.path.splitext(os.path.basename(best_match["identity"]))[0]
-            )
-            best_match_confidence = round(
-                float((1 - best_match["distance"] / best_match["threshold"]) * 100), 2
-            )
+            best_match_identity = extract_base_identity(os.path.splitext(os.path.basename(best_match['identity']))[0])
+            best_match_confidence = round(float((1 - best_match['distance'] / best_match['threshold']) * 100), 2)
 
             return {
                 "message": "Face recognized successfully!",
                 "data": {
-                    "best_match": {
-                        "identity": best_match_identity,
-                        "confidence": best_match_confidence,
-                    },
-                    "is_real": bool(anti_spoofing_results.get("is_real", False)),
-                    "antispoof_score": round(
-                        float(anti_spoofing_results.get("antispoof_score", 0)), 2
-                    )
-                    * 100,
+                    "best_match": {"identity": best_match_identity, "confidence": best_match_confidence},
+                    "is_real": bool(anti_spoofing_results.get('is_real', False)),
+                    "antispoof_score": round(float(anti_spoofing_results.get('antispoof_score', 0)), 2) * 100
                 },
-                "success": True,
+                "success": True
             }
         else:
-            return {
-                "message": "No faces detected in the image",
-                "data": [],
-                "success": False,
-            }
+            return {"message": "No faces detected in the image", "data": [], "success": False}
     except Exception as e:
-        logger.error(
-            f"Exception while recognizing face: {e} - {traceback.format_exc()}"
-        )
-        return {
-            "message": f"Failed to recognize face: {str(e)}",
-            "data": None,
-            "success": False,
-        }
+        logger.error(f"Exception while recognizing face: {e} - {traceback.format_exc()}")
+        return {"message": "Failed to recognize face", "data": None, "success": False}
+
 def represent(
     img_path: str,
     model_name: str,

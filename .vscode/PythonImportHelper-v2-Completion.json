@@ -10701,7 +10701,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def recognize_face(image: Any, uid: Optional[str] = None) -> Dict[str, Any]:\n    try:\n        save_dir = IMAGES_DIR if uid is None else os.path.join(IMAGES_DIR, uid.split(\"-\")[0])\n        image_path, _ = save_image(image, \"query_results\", TEMP_DIR, \"\")\n        # Check if directory contains valid image files\n        if not os.path.exists(save_dir) or not any(\n            f.lower().endswith((\".png\", \".jpg\", \".jpeg\")) for f in os.listdir(save_dir)\n        ):\n            return {\n                \"message\": \"No faces detected in the image\",",
+        "peekOfCode": "def recognize_face(image: Any, uid: Optional[str] = None) -> Dict[str, Any]:\n    try:\n        save_dir = IMAGES_DIR if uid is None else os.path.join(IMAGES_DIR, uid.split('-')[0])\n        image_path, _ = save_image(image, \"query_results\", TEMP_DIR, \"\")\n        logger.info(f\"Recognizing face with UID {uid} in directory {save_dir}\")\n        if not any(f.lower().endswith(('.png', '.jpg', '.jpeg')) for f in os.listdir(save_dir)):\n            return {\"message\": \"No faces detected in the image\", \"data\": [], \"success\": False}\n        anti_spoofing_results = get_deepface_controller().extract_faces(img_path=image_path, detector_backend=\"retinaface\", anti_spoofing=True)[0]\n        recognition_results = get_deepface_controller().find(img_path=image_path, db_path=save_dir, model_name=\"Facenet512\", detector_backend=\"retinaface\", anti_spoofing=False)\n        if recognition_results and not recognition_results[0].empty:",
         "detail": "core.service",
         "documentation": {}
     },
