@@ -16,9 +16,9 @@ import numpy as np
 import warnings
 import logging
 from typing import Any, Dict, List, Union, Optional
-
+import time
 from core.utils.logging import get_logger
-
+from core.utils.database import ZoDB_Manager
 logger = get_logger()
 
 # Configurations for dependencies
@@ -345,3 +345,109 @@ class DeepFaceController():
             return preprocessing.resize_image(
                 img=extracted_face, target_size=target_size)
         return None
+    
+    
+        
+    def verify_faces_db(
+        self,
+        img_path: Union[str, np.ndarray],
+        db_manager: ZoDB_Manager,
+        model_name: Optional[Union[str, List[str]]] = None,
+        distance_metric: Optional[Union[str, List[str]]] = None,
+        enforce_detection: Optional[bool] = None,
+        detector_backend: Optional[Union[str, List[str]]] = None,
+        align: Optional[bool] = None,
+        expand_percentage: int = 0,
+        threshold: Optional[float] = None,
+        normalization: str = "base",
+        silent: bool = False,
+        anti_spoofing: Optional[bool] = None,
+    ) -> List[Dict[str, Any]]:
+        tic = time.time()
+
+        # Use class attributes if parameters are not provided
+        model_name = model_name or self._model_name[0]
+        distance_metric = distance_metric or self._distance_metric[0]
+        enforce_detection = enforce_detection if enforce_detection is not None else self._face_detector_enforce_detection
+        detector_backend = detector_backend or self._face_detector_backend[0]
+        align = align if align is not None else self._align
+        anti_spoofing = anti_spoofing if anti_spoofing is not None else self._anti_spoofing
+
+        # Detect faces and get embeddings from the provided image
+        source_objs = detection.extract_faces(
+            img_path=img_path,
+            detector_backend=detector_backend,
+            grayscale=False,
+            enforce_detection=enforce_detection,
+            align=align,
+            expand_percentage=expand_percentage,
+            anti_spoofing=anti_spoofing,
+        )
+
+        if not source_objs:
+            return []
+
+        source_obj = source_objs[0]  # Use only the first detected face
+
+        # Get embeddings from the database
+        db_embeddings = []
+        all_face_data = db_manager.list_face_data_embedding()
+        for uid, face_data in all_face_data.items():
+            for embedding in face_data['embedding']:
+                db_embeddings.append({
+                    'uid': uid,
+                    'embedding': embedding
+                })
+
+        if not db_embeddings:
+            return []
+
+        source_img = source_obj["face"]
+        target_representation = representation.represent(
+            img_path=source_img,
+            model_name=model_name,
+            enforce_detection=enforce_detection,
+            detector_backend="skip",
+            align=align,
+            normalization=normalization,
+        )[0]["embedding"]
+
+        # Calculate distances and match identities
+        distances = []
+        identities = []
+
+        for db_entry in db_embeddings:
+            distance = verification.find_distance(
+                db_entry['embedding'], target_representation, distance_metric
+            )
+            distances.append(distance)
+            identities.append(db_entry['uid'])
+
+        target_threshold = threshold or verification.find_threshold(
+            model_name, distance_metric
+        )
+
+        # Filter results based on threshold
+        result_df = pd.DataFrame({
+            "identity": identities,
+            "distance": distances
+        })
+        result_df = result_df[result_df["distance"] <= target_threshold]
+        result_df = result_df.sort_values(by="distance").reset_index(drop=True)
+
+        resp_obj = []
+        if not result_df.empty:
+            resp_obj.append({
+                "source_region": source_obj["facial_area"],
+                "matches": result_df.to_dict(orient='records'),
+                "threshold": target_threshold,
+                "is_real": source_obj.get("is_real", True),
+                "antispoof_score": source_obj.get("antispoof_score", 0.0)
+            })
+
+        toc = time.time()
+        resp_obj.append({
+            "time_excuse": toc - tic,
+        })
+        return resp_obj
+

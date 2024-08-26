@@ -17,17 +17,38 @@ def home():
 @blueprint.route("/users", methods=["GET"])
 @require_api_key
 def get_users():
-    uid_filter = request.args.get("uid")  # Get UID from query parameter, if provided
+    uid_filter = request.form.get("uid")  # Get UID from query parameter, if provided
     try:
         users = service.list_users(uid_filter, current_app)
         return users
     except Exception as e:
         logger.error(f"Failed to retrieve user list: {str(e)}")
-        return {
-            "message": "Failed to retrieve user list",
-            "data": None,
-            "success": False,
-        }, 500
+
+
+@blueprint.route("/get_Face", methods=["GET"])
+@require_api_key
+def fetchFace():
+    uid = request.form.get("uid")
+
+    if uid is None:
+        # If UID is None, return all face data from the database
+        face_data = service.get_all_faces(current_app)
+    else:
+        face_data = service.get_Face_embedding(uid, current_app)
+
+    return face_data
+
+
+@blueprint.route("/tasks", methods=["GET"])
+@require_api_key
+def get_tasks():
+    try:
+        # Retrieve tasks from ZoDB
+        task_id = request.form.get("task_id")  # Optional, to fetch a specific task
+        task_data = service.get_status_task(task_id, current_app)
+        return task_data
+    except Exception as e:
+        logger.error(f"Failed to task list: {str(e)}")
 
 
 @blueprint.route("/hash_dir", methods=["GET"])
@@ -88,6 +109,24 @@ def recognize():
     image = request.files["image"]
     try:
         response = service.recognize_face(image, uid)
+        return response
+    except Exception as e:
+        logger.error(f"Failed to recognize face: {str(e)}")
+        return {
+            "message": "Failed to recognize face",
+            "data": None,
+            "success": False,
+        }, 500
+
+
+@blueprint.route("/recognize_db", methods=["POST"])
+@require_api_key
+def recognize_db():
+    if "image" not in request.files:
+        return {"message": "Image is required", "data": None, "success": False}, 400
+    image = request.files["image"]
+    try:
+        response = service.recognize_face_db(image, current_app)
         return response
     except Exception as e:
         logger.error(f"Failed to recognize face: {str(e)}")
