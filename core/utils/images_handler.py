@@ -8,7 +8,7 @@ import datetime
 from typing import Any
 
 from core.utils.logging import get_logger
-from core.utils.static_variable import IMAGES_DIR
+from core.utils.static_variable import IMAGES_DIR, MAX_IMAGES , MAX_ORIGIN_IMAGES
 import glob
 logger = get_logger()
 
@@ -51,7 +51,7 @@ def delete_images_for_uid(uid: str, base_uid: str):
 def save_image(image: Any, uid: str, base_dir: str, prefix: str, anti_spoofing: bool = False):
     """
     Save the given image to a directory with a specific format. If the directory contains more than
-    56 images (8 original and 48 augmented), the oldest augmented images will be deleted.
+    total images (MAX_ORIGIN_IMAGES original and MAX_IMAGES augmented), the oldest augmented images will be deleted.
 
     Parameters:
     - image: The image object to be saved.
@@ -89,9 +89,9 @@ def save_image(image: Any, uid: str, base_dir: str, prefix: str, anti_spoofing: 
     augmented_images = sorted([f for f in os.listdir(
         save_dir) if 'aug' in f], key=lambda x: os.path.getmtime(os.path.join(save_dir, x)))
 
-    for old_image in original_images[:-4]:
+    for old_image in original_images[:-MAX_ORIGIN_IMAGES]:
         os.remove(os.path.join(save_dir, old_image))
-    for old_image in augmented_images[:-20]:
+    for old_image in augmented_images[:-MAX_IMAGES]:
         os.remove(os.path.join(save_dir, old_image))
 
     return image_path, save_dir

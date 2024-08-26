@@ -37,7 +37,7 @@ def hash_directory(directory_path: str) -> str:
 
 
 
-def check_and_update_directory_hash(dir_name: str, dir_path: str , app):
+def check_and_update_directory_hash(dir_name: str, dir_path: str , app , fetch_once):
     """Kiểm tra hash của thư mục và cập nhật vào ZoDB nếu có thay đổi."""
     directory_hash = app.config["ZoDB"].get_directory_hash(dir_name)
     if directory_hash is None:
@@ -45,13 +45,6 @@ def check_and_update_directory_hash(dir_name: str, dir_path: str , app):
         current_hash = hash_directory(dir_path)
         logger.info(f"Setting initial hash for directory {dir_name}.")
         app.config["ZoDB"].set_directory_hash(dir_name, current_hash)
-        app.config["deepface_controller"].find(
-            img_path=os.path.join(BASE_PATH, "static", "temp.png"),
-            db_path=os.path.join(BASE_PATH, "static", "temp"),
-            model_name="Facenet512",
-            detector_backend="retinaface",
-            anti_spoofing=True,
-        )
         return
     
     previous_hash = directory_hash.hash_value
@@ -59,15 +52,16 @@ def check_and_update_directory_hash(dir_name: str, dir_path: str , app):
     if changed:
         add_task_to_queue(
             recreate_DB,
-            img_path=IMAGES_DIR,
             app = app,
+            img_path=IMAGES_DIR,
             uid=dir_name,
         )
     else:
-        app.config["deepface_controller"].find(
-            img_path=os.path.join(BASE_PATH, "static", "temp.png"),
-            db_path=os.path.join(BASE_PATH, "static", "temp"),
-            model_name="Facenet512",
-            detector_backend="retinaface",
-            anti_spoofing=True,
-        )
+        if not fetch_once: 
+            app.config["deepface_controller"].find(
+                img_path=os.path.join(BASE_PATH, "static", "temp.png"),
+                db_path=os.path.join(BASE_PATH, "static", "temp"),
+                model_name="Facenet512",
+                detector_backend="retinaface",
+                anti_spoofing=True,
+            )

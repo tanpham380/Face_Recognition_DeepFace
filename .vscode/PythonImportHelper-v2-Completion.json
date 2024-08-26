@@ -475,6 +475,14 @@
         "documentation": {}
     },
     {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -500,30 +508,6 @@
     },
     {
         "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Dict",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Any",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -4581,35 +4565,27 @@
         "documentation": {}
     },
     {
-        "label": "package_utils",
-        "importPath": "deepface.commons",
-        "description": "deepface.commons",
+        "label": "get_logger",
+        "importPath": "core.utils.logging",
+        "description": "core.utils.logging",
         "isExtraImport": true,
-        "detail": "deepface.commons",
+        "detail": "core.utils.logging",
         "documentation": {}
     },
     {
-        "label": "folder_utils",
-        "importPath": "deepface.commons",
-        "description": "deepface.commons",
+        "label": "get_logger",
+        "importPath": "core.utils.logging",
+        "description": "core.utils.logging",
         "isExtraImport": true,
-        "detail": "deepface.commons",
+        "detail": "core.utils.logging",
         "documentation": {}
     },
     {
-        "label": "package_utils",
-        "importPath": "deepface.commons",
-        "description": "deepface.commons",
+        "label": "ZoDB_Manager",
+        "importPath": "core.utils.database",
+        "description": "core.utils.database",
         "isExtraImport": true,
-        "detail": "deepface.commons",
-        "documentation": {}
-    },
-    {
-        "label": "folder_utils",
-        "importPath": "deepface.commons",
-        "description": "deepface.commons",
-        "isExtraImport": true,
-        "detail": "deepface.commons",
+        "detail": "core.utils.database",
         "documentation": {}
     },
     {
@@ -4621,11 +4597,43 @@
         "documentation": {}
     },
     {
-        "label": "ZoDB",
+        "label": "ZoDB_Manager",
         "importPath": "core.utils.database",
         "description": "core.utils.database",
         "isExtraImport": true,
         "detail": "core.utils.database",
+        "documentation": {}
+    },
+    {
+        "label": "package_utils",
+        "importPath": "deepface.commons",
+        "description": "deepface.commons",
+        "isExtraImport": true,
+        "detail": "deepface.commons",
+        "documentation": {}
+    },
+    {
+        "label": "folder_utils",
+        "importPath": "deepface.commons",
+        "description": "deepface.commons",
+        "isExtraImport": true,
+        "detail": "deepface.commons",
+        "documentation": {}
+    },
+    {
+        "label": "package_utils",
+        "importPath": "deepface.commons",
+        "description": "deepface.commons",
+        "isExtraImport": true,
+        "detail": "deepface.commons",
+        "documentation": {}
+    },
+    {
+        "label": "folder_utils",
+        "importPath": "deepface.commons",
+        "description": "deepface.commons",
+        "isExtraImport": true,
+        "detail": "deepface.commons",
         "documentation": {}
     },
     {
@@ -4685,12 +4693,36 @@
         "documentation": {}
     },
     {
+        "label": "DB",
+        "importPath": "ZODB",
+        "description": "ZODB",
+        "isExtraImport": true,
+        "detail": "ZODB",
+        "documentation": {}
+    },
+    {
+        "label": "FileStorage",
+        "importPath": "ZODB",
+        "description": "ZODB",
+        "isExtraImport": true,
+        "detail": "ZODB",
+        "documentation": {}
+    },
+    {
         "label": "transaction",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "transaction",
         "description": "transaction",
         "detail": "transaction",
+        "documentation": {}
+    },
+    {
+        "label": "PersistentDict",
+        "importPath": "persistent.dict",
+        "description": "persistent.dict",
+        "isExtraImport": true,
+        "detail": "persistent.dict",
         "documentation": {}
     },
     {
@@ -4710,6 +4742,22 @@
         "documentation": {}
     },
     {
+        "label": "DirectoryHash",
+        "importPath": "core.utils.models.directory_hash",
+        "description": "core.utils.models.directory_hash",
+        "isExtraImport": true,
+        "detail": "core.utils.models.directory_hash",
+        "documentation": {}
+    },
+    {
+        "label": "FaceData",
+        "importPath": "core.utils.models.face_data",
+        "description": "core.utils.models.face_data",
+        "isExtraImport": true,
+        "detail": "core.utils.models.face_data",
+        "documentation": {}
+    },
+    {
         "label": "FaceData",
         "importPath": "core.utils.models.face_data",
         "description": "core.utils.models.face_data",
@@ -4726,121 +4774,79 @@
         "documentation": {}
     },
     {
-        "label": "sqlite3",
-        "kind": 6,
+        "label": "TaskQueue",
+        "importPath": "core.utils.models.task_queue",
+        "description": "core.utils.models.task_queue",
         "isExtraImport": true,
-        "importPath": "sqlite3",
-        "description": "sqlite3",
-        "detail": "sqlite3",
-        "documentation": {}
-    },
-    {
-        "label": "flask",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "flask",
-        "description": "flask",
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "g",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "current_app",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "g",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "request",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "jsonify",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "Blueprint",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "current_app",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "request",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "Flask",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "current_app",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "cosine",
-        "importPath": "scipy.spatial.distance",
-        "description": "scipy.spatial.distance",
-        "isExtraImport": true,
-        "detail": "scipy.spatial.distance",
-        "documentation": {}
-    },
-    {
-        "label": "cosine",
-        "importPath": "scipy.spatial.distance",
-        "description": "scipy.spatial.distance",
-        "isExtraImport": true,
-        "detail": "scipy.spatial.distance",
+        "detail": "core.utils.models.task_queue",
         "documentation": {}
     },
     {
         "label": "IMAGES_DIR",
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "isExtraImport": true,
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_IMAGES",
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "isExtraImport": true,
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_ORIGIN_IMAGES",
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "isExtraImport": true,
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
+        "label": "IMAGES_DIR",
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "isExtraImport": true,
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_IMAGES",
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "isExtraImport": true,
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_ORIGIN_IMAGES",
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "isExtraImport": true,
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
+        "label": "IMAGES_DIR",
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "isExtraImport": true,
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_IMAGES",
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "isExtraImport": true,
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_ORIGIN_IMAGES",
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
         "isExtraImport": true,
@@ -4933,6 +4939,104 @@
         "description": "core.utils.static_variable",
         "isExtraImport": true,
         "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "flask",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "flask",
+        "description": "flask",
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "g",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "current_app",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "current_app",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "current_app",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "cosine",
+        "importPath": "scipy.spatial.distance",
+        "description": "scipy.spatial.distance",
+        "isExtraImport": true,
+        "detail": "scipy.spatial.distance",
         "documentation": {}
     },
     {
@@ -10141,7 +10245,7 @@
         "kind": 6,
         "importPath": "core.utils.models.face_data",
         "description": "core.utils.models.face_data",
-        "peekOfCode": "class FaceData(Persistent):\n    def __init__(self, uid: str, image_paths: list, embedding: Optional[list] = None):\n        self.uid = uid\n        self.image_paths = image_paths\n        self.embedding = embedding if embedding is not None else []\n    def add_image(self, image_path: str, embedding: Optional[list] = None):\n        self.image_paths.append(image_path)\n        if embedding:\n            self.embedding.append(embedding)\n    def remove_image(self, image_path: str):",
+        "peekOfCode": "class FaceData(Persistent):\n    def __init__(self, uid: str, image_paths: list, directory_hash_key: Optional[str] = None):\n        self.uid = uid\n        self.image_paths = image_paths\n        self.embedding = []\n        self.directory_hash_key = directory_hash_key  # Reference to the directory hash key\n    def add_image(self, image_path: str, embedding: Optional[list] = None):\n        self.image_paths.append(image_path)\n        if embedding:\n            self.embedding.append(embedding)",
         "detail": "core.utils.models.face_data",
         "documentation": {}
     },
@@ -10182,11 +10286,20 @@
         "documentation": {}
     },
     {
-        "label": "ZoDB",
+        "label": "ZoDB_Manager",
         "kind": 6,
         "importPath": "core.utils.database",
         "description": "core.utils.database",
-        "peekOfCode": "class ZoDB:\n    def __init__(self, db_path='database/zodb.fs'):\n        storage = FileStorage.FileStorage(db_path)\n        self.db = DB(storage)\n        self.connection = None\n        self.root = None\n    def connect(self):\n        self.connection = self.db.open()\n        self.root = self.connection.root()\n        # Initialize persistent objects if they don't exist",
+        "peekOfCode": "class ZoDB_Manager:\n    _instance = None  # Singleton instance\n    def __new__(cls, db_path='database/zodb.fs'):\n        if cls._instance is None:\n            cls._instance = super(ZoDB_Manager, cls).__new__(cls)\n            cls._instance._initialize(db_path)\n        return cls._instance\n    def _initialize(self, db_path: str):\n        storage = FileStorage.FileStorage(db_path)\n        self.db = DB(storage)",
+        "detail": "core.utils.database",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "core.utils.database",
+        "description": "core.utils.database",
+        "peekOfCode": "logger = get_logger()\nclass ZoDB_Manager:\n    _instance = None  # Singleton instance\n    def __new__(cls, db_path='database/zodb.fs'):\n        if cls._instance is None:\n            cls._instance = super(ZoDB_Manager, cls).__new__(cls)\n            cls._instance._initialize(db_path)\n        return cls._instance\n    def _initialize(self, db_path: str):\n        storage = FileStorage.FileStorage(db_path)",
         "detail": "core.utils.database",
         "documentation": {}
     },
@@ -10200,11 +10313,11 @@
         "documentation": {}
     },
     {
-        "label": "SQLiteManager",
+        "label": "ZoDB_Manager",
         "kind": 6,
         "importPath": "core.utils.databasev2",
         "description": "core.utils.databasev2",
-        "peekOfCode": "class SQLiteManager:\n    def __init__(self, db_path: str):\n        self.db_path = db_path\n        self.logger = logging.getLogger(__name__)\n        # Initialize SQLite settings for optimization\n    def optimize_sqlite(self):\n        \"\"\"Optimize SQLite settings for better performance.\"\"\"\n        with self.get_connection() as conn:\n            conn.execute(\"PRAGMA synchronous = OFF\")\n            conn.execute(\"PRAGMA journal_mode = WAL\")",
+        "peekOfCode": "class ZoDB_Manager:\n    def __init__(self, db_path='database/zodb.fs'):\n        storage = FileStorage.FileStorage(db_path)\n        self.db = DB(storage)\n        self.connection = None\n        self.root = None\n    def connect(self):\n        self.connection = self.db.open()\n        self.root = self.connection.root()\n        # Initialize persistent objects if they don't exist",
         "detail": "core.utils.databasev2",
         "documentation": {}
     },
@@ -10240,7 +10353,7 @@
         "kind": 2,
         "importPath": "core.utils.images_handler",
         "description": "core.utils.images_handler",
-        "peekOfCode": "def save_image(image: Any, uid: str, base_dir: str, prefix: str, anti_spoofing: bool = False):\n    \"\"\"\n    Save the given image to a directory with a specific format. If the directory contains more than\n    56 images (8 original and 48 augmented), the oldest augmented images will be deleted.\n    Parameters:\n    - image: The image object to be saved.\n    - uid: The UID or identifier for the directory.\n    - base_dir: The base directory where the UID directory will be created.\n    - prefix: The prefix to use for the filename (e.g., \"query\" or UID).\n    - anti_spoofing: Boolean flag indicating if the image is flagged for anti-spoofing.",
+        "peekOfCode": "def save_image(image: Any, uid: str, base_dir: str, prefix: str, anti_spoofing: bool = False):\n    \"\"\"\n    Save the given image to a directory with a specific format. If the directory contains more than\n    total images (MAX_ORIGIN_IMAGES original and MAX_IMAGES augmented), the oldest augmented images will be deleted.\n    Parameters:\n    - image: The image object to be saved.\n    - uid: The UID or identifier for the directory.\n    - base_dir: The base directory where the UID directory will be created.\n    - prefix: The prefix to use for the filename (e.g., \"query\" or UID).\n    - anti_spoofing: Boolean flag indicating if the image is flagged for anti-spoofing.",
         "detail": "core.utils.images_handler",
         "documentation": {}
     },
@@ -10321,7 +10434,7 @@
         "kind": 2,
         "importPath": "core.utils.monitor_folder_hash",
         "description": "core.utils.monitor_folder_hash",
-        "peekOfCode": "def check_and_update_directory_hash(dir_name: str, dir_path: str , app):\n    \"\"\"Kiểm tra hash của thư mục và cập nhật vào ZoDB nếu có thay đổi.\"\"\"\n    directory_hash = app.config[\"ZoDB\"].get_directory_hash(dir_name)\n    if directory_hash is None:\n        # First run or hash missing, just set the current hash without triggering DB recreation\n        current_hash = hash_directory(dir_path)\n        logger.info(f\"Setting initial hash for directory {dir_name}.\")\n        app.config[\"ZoDB\"].set_directory_hash(dir_name, current_hash)\n        app.config[\"deepface_controller\"].find(\n            img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),",
+        "peekOfCode": "def check_and_update_directory_hash(dir_name: str, dir_path: str , app , fetch_once):\n    \"\"\"Kiểm tra hash của thư mục và cập nhật vào ZoDB nếu có thay đổi.\"\"\"\n    directory_hash = app.config[\"ZoDB\"].get_directory_hash(dir_name)\n    if directory_hash is None:\n        # First run or hash missing, just set the current hash without triggering DB recreation\n        current_hash = hash_directory(dir_path)\n        logger.info(f\"Setting initial hash for directory {dir_name}.\")\n        app.config[\"ZoDB\"].set_directory_hash(dir_name, current_hash)\n        return\n    previous_hash = directory_hash.hash_value",
         "detail": "core.utils.monitor_folder_hash",
         "documentation": {}
     },
@@ -10348,7 +10461,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
+        "peekOfCode": "TEMP_DIR = tempfile.gettempdir()\nBASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10357,7 +10470,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
+        "peekOfCode": "BASE_PATH = \"core\"\nDB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10366,7 +10479,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "DB_PATH = os.path.join(BASE_PATH, \"database\", \"zodb.fs\")\nIMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10375,7 +10488,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "IMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "IMAGES_DIR = os.path.join(BASE_PATH, \"static\", \"images\")\nVECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10384,7 +10497,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "VECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "VECTOR_SIZE = 512\nMAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10393,7 +10506,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "MAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "MAX_SCORE = -1\nAPI_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10402,7 +10515,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "API_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "API_KEY = os.getenv(\"API_KEY\")\nLOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10411,7 +10524,7 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "LOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "LOG_PATH_FILE = os.path.join(BASE_PATH, \"logs\")\nNUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10420,7 +10533,25 @@
         "kind": 5,
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
-        "peekOfCode": "NUMBER_WORKER = min(32, os.cpu_count() or 1)\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "peekOfCode": "NUMBER_WORKER = min(32, os.cpu_count() or 1)\nMAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_ORIGIN_IMAGES",
+        "kind": 5,
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "peekOfCode": "MAX_ORIGIN_IMAGES = 4\nMAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_IMAGES",
+        "kind": 5,
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "peekOfCode": "MAX_IMAGES = 56\nos.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'\nos.environ[\"TF_CPP_MIN_LOG_LEVEL\"] = \"3\"\nos.environ[\"TF_USE_LEGACY_KERAS\"] = \"1\"",
         "detail": "core.utils.static_variable",
         "documentation": {}
     },
@@ -10456,7 +10587,7 @@
         "kind": 2,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "def generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        task_queue.put((task_id, lambda: func(*args, **kwargs)))\n        logger.info(f\"Added task {task_id} to the queue\")\ndef worker(app):",
+        "peekOfCode": "def generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        # Add task to the database\n        app.config[\"ZoDB\"].add_task(task_id, \"queued\", time.time())\n        # Pass `app` as an additional argument to the task",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10465,7 +10596,7 @@
         "kind": 2,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "def add_task_to_queue(func, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        task_queue.put((task_id, lambda: func(*args, **kwargs)))\n        logger.info(f\"Added task {task_id} to the queue\")\ndef worker(app):\n    logger.info(\"Worker thread started\")\n    with app.app_context():",
+        "peekOfCode": "def add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        # Add task to the database\n        app.config[\"ZoDB\"].add_task(task_id, \"queued\", time.time())\n        # Pass `app` as an additional argument to the task\n        task_queue.put((task_id, lambda: func(app, *args, **kwargs)))\n        logger.info(f\"Added task {task_id} to the queue\")",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10474,7 +10605,7 @@
         "kind": 2,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "def worker(app):\n    logger.info(\"Worker thread started\")\n    with app.app_context():\n        while True:\n            task_id, task = task_queue.get()\n            if task is None:\n                break\n            start_time = time.time()\n            try:\n                logger.info(f\"Worker picked up task {task_id}\")",
+        "peekOfCode": "def worker(app):\n    logger.info(\"Worker thread started\")\n    with app.app_context():\n        while True:\n            task_id, task = task_queue.get()\n            if task is None:\n                break\n            start_time = time.time()\n            try:\n                # Update task status to 'running'",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10501,7 +10632,7 @@
         "kind": 5,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "executor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ntask_queue = queue.Queue(maxsize=100)  # Bounded queue to prevent overflow\nlogger = get_logger()\nthreads = []\nqueue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, *args, **kwargs):",
+        "peekOfCode": "executor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ntask_queue = queue.Queue(maxsize=100)  # Bounded queue to prevent overflow\nlogger = get_logger()\nthreads = []\nqueue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10510,7 +10641,7 @@
         "kind": 5,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "task_queue = queue.Queue(maxsize=100)  # Bounded queue to prevent overflow\nlogger = get_logger()\nthreads = []\nqueue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, *args, **kwargs):\n    task_id = generate_unique_task_id()",
+        "peekOfCode": "task_queue = queue.Queue(maxsize=100)  # Bounded queue to prevent overflow\nlogger = get_logger()\nthreads = []\nqueue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10519,7 +10650,7 @@
         "kind": 5,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "logger = get_logger()\nthreads = []\nqueue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:",
+        "peekOfCode": "logger = get_logger()\nthreads = []\nqueue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10528,7 +10659,7 @@
         "kind": 5,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "threads = []\nqueue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():",
+        "peekOfCode": "threads = []\nqueue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10537,7 +10668,7 @@
         "kind": 5,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "queue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")",
+        "peekOfCode": "queue_lock = threading.Lock()\n# Initialize ThreadPoolExecutor once and reuse\nexecutor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10546,7 +10677,7 @@
         "kind": 5,
         "importPath": "core.utils.threading",
         "description": "core.utils.threading",
-        "peekOfCode": "executor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        task_queue.put((task_id, lambda: func(*args, **kwargs)))\n        logger.info(f\"Added task {task_id} to the queue\")",
+        "peekOfCode": "executor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)\ndef generate_unique_task_id() -> str:\n    return f\"task-{int(time.time())}-{uuid.uuid4().hex}\"\ndef add_task_to_queue(func, app, *args, **kwargs):\n    task_id = generate_unique_task_id()\n    with queue_lock:\n        if task_queue.full():\n            logger.warning(f\"Task queue is full, waiting to add task {task_id}\")\n        # Add task to the database\n        app.config[\"ZoDB\"].add_task(task_id, \"queued\", time.time())",
         "detail": "core.utils.threading",
         "documentation": {}
     },
@@ -10555,7 +10686,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/users\", methods=[\"GET\"])\n@require_api_key\ndef get_users():\n    uid_filter = request.args.get(\"uid\")  # Get UID from query parameter, if provided\n    try:\n        users = service.list_users(uid_filter, current_app)\n        return users",
+        "peekOfCode": "def home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/users\", methods=[\"GET\"])\n@require_api_key\ndef get_users():\n    uid_filter = request.form.get(\"uid\")  # Get UID from query parameter, if provided\n    try:\n        users = service.list_users(uid_filter, current_app)\n        return users",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10564,7 +10695,7 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def get_users():\n    uid_filter = request.args.get(\"uid\")  # Get UID from query parameter, if provided\n    try:\n        users = service.list_users(uid_filter, current_app)\n        return users\n    except Exception as e:\n        logger.error(f\"Failed to retrieve user list: {str(e)}\")\n        return {\n            \"message\": \"Failed to retrieve user list\",\n            \"data\": None,",
+        "peekOfCode": "def get_users():\n    uid_filter = request.form.get(\"uid\")  # Get UID from query parameter, if provided\n    try:\n        users = service.list_users(uid_filter, current_app)\n        return users\n    except Exception as e:\n        logger.error(f\"Failed to retrieve user list: {str(e)}\")\n@blueprint.route(\"/get_Face\", methods=[\"GET\"])\n@require_api_key\ndef fetchFace():",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10573,7 +10704,16 @@
         "kind": 2,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "def fetchFace():\n    face_data = service.get_Face_embedding(current_app)\n    return face_data\n@blueprint.route(\"/hash_dir\", methods=[\"GET\"])\n@require_api_key\ndef hash_dir():\n    hash_data = service.hash_directory_data(current_app)\n    return hash_data\n@blueprint.route(\"/register\", methods=[\"POST\"])\n@require_api_key",
+        "peekOfCode": "def fetchFace():\n    uid = request.form.get(\"uid\")\n    if uid is None:\n        # If UID is None, return all face data from the database\n        face_data = service.get_all_faces(current_app)\n    else:\n        face_data = service.get_Face_embedding(uid, current_app)\n    return face_data\n@blueprint.route(\"/tasks\", methods=[\"GET\"])\n@require_api_key",
+        "detail": "core.routes",
+        "documentation": {}
+    },
+    {
+        "label": "get_tasks",
+        "kind": 2,
+        "importPath": "core.routes",
+        "description": "core.routes",
+        "peekOfCode": "def get_tasks():\n    try:\n        # Retrieve tasks from ZoDB\n        task_id = request.form.get(\"task_id\")  # Optional, to fetch a specific task\n        task_data = service.get_status_task(task_id, current_app)\n        return task_data\n    except Exception as e:\n        logger.error(f\"Failed to task list: {str(e)}\")\n@blueprint.route(\"/hash_dir\", methods=[\"GET\"])\n@require_api_key",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10610,6 +10750,15 @@
         "importPath": "core.routes",
         "description": "core.routes",
         "peekOfCode": "def recognize():\n    if \"image\" not in request.files:\n        return {\"message\": \"Image is required\", \"data\": None, \"success\": False}, 400\n    uid = request.form.get(\"uid\")\n    image = request.files[\"image\"]\n    try:\n        response = service.recognize_face(image, uid)\n        return response\n    except Exception as e:\n        logger.error(f\"Failed to recognize face: {str(e)}\")",
+        "detail": "core.routes",
+        "documentation": {}
+    },
+    {
+        "label": "recognize_db",
+        "kind": 2,
+        "importPath": "core.routes",
+        "description": "core.routes",
+        "peekOfCode": "def recognize_db():\n    if \"image\" not in request.files:\n        return {\"message\": \"Image is required\", \"data\": None, \"success\": False}, 400\n    image = request.files[\"image\"]\n    try:\n        response = service.recognize_face_db(image, current_app)\n        return response\n    except Exception as e:\n        logger.error(f\"Failed to recognize face: {str(e)}\")\n        return {",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10654,7 +10803,7 @@
         "kind": 5,
         "importPath": "core.routes",
         "description": "core.routes",
-        "peekOfCode": "blueprint = Blueprint(\"routes\", __name__)\n# Assuming you have an instance of DeepFaceController\n@blueprint.route(\"/\")\ndef home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/users\", methods=[\"GET\"])\n@require_api_key\ndef get_users():\n    uid_filter = request.args.get(\"uid\")  # Get UID from query parameter, if provided",
+        "peekOfCode": "blueprint = Blueprint(\"routes\", __name__)\n# Assuming you have an instance of DeepFaceController\n@blueprint.route(\"/\")\ndef home():\n    version = service.check_version()\n    return version\n@blueprint.route(\"/users\", methods=[\"GET\"])\n@require_api_key\ndef get_users():\n    uid_filter = request.form.get(\"uid\")  # Get UID from query parameter, if provided",
         "detail": "core.routes",
         "documentation": {}
     },
@@ -10681,7 +10830,25 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def get_Face_embedding(uid: str, current_app) -> Dict[str, Any]:\n    try:\n        face_User = current_app.config[\"ZoDB\"].list_face_data(uid_filter = uid)\n        return {\n            \"message\": \"Face embedding fetched successfully\",\n            \"data\": face_User,\n            \"success\": True,\n        }\n    except Exception as e:\n        logger.error(",
+        "peekOfCode": "def get_Face_embedding(uid: str, current_app) -> Dict[str, Any]:\n    try:\n        face_User = current_app.config[\"ZoDB\"].get_face_data(uid)\n        if face_User:\n            data = face_User.to_dict()\n        else:\n            data = None\n        return {\n            \"message\": \"Face embedding fetched successfully\",\n            \"data\": data,",
+        "detail": "core.service",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_faces",
+        "kind": 2,
+        "importPath": "core.service",
+        "description": "core.service",
+        "peekOfCode": "def get_all_faces(current_app) -> Dict[str, Any]:\n    try:\n        # Fetch all face data\n        all_face_data = current_app.config[\"ZoDB\"].list_face_data()\n        return {\n            \"message\": \"All face data fetched successfully\",\n            \"data\": all_face_data,\n            \"success\": True,\n        }\n    except Exception as e:",
+        "detail": "core.service",
+        "documentation": {}
+    },
+    {
+        "label": "get_status_task",
+        "kind": 2,
+        "importPath": "core.service",
+        "description": "core.service",
+        "peekOfCode": "def get_status_task(task_id: Optional[str] = None, app=None) -> Dict[str, Any]:\n    try:\n        if task_id:\n            # Retrieve specific task by task_id\n            task = app.config[\"ZoDB\"].get_task(task_id)\n            if task:\n                data = {\n                    \"task_id\": task.task_id,\n                    \"status\": task.status,\n                    \"created_at\": task.created_at,",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10704,29 +10871,20 @@
         "documentation": {}
     },
     {
-        "label": "recreate_DB",
-        "kind": 2,
-        "importPath": "core.service",
-        "description": "core.service",
-        "peekOfCode": "def recreate_DB(img_path: str, app: Any, uid: str) -> None:\n    logger.info(f\"Starting recreate_DB with img_path: {img_path}, uid: {uid}\")\n    from core.utils.monitor_folder_hash import (\n        hash_directory,\n    )\n    try:\n        with app.app_context():\n            base_uid = uid.split(\"-\")[0]\n            save_dir = os.path.join(img_path, base_uid)\n            get_deepface_controller().find(",
-        "detail": "core.service",
-        "documentation": {}
-    },
-    {
         "label": "import_db",
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def import_db( img_path: List[str], app: Any, uid: str) -> Dict[str, Any]:\n    for image in img_path:\n        embedding_objs = get_deepface_controller().represent(\n                    img_path=image,\n                    model_name=\"Facenet512\",\n                    detector_backend=\"retinaface\",\n                    anti_spoofing=False,\n                )\n        embedding = embedding_objs[0][\"embedding\"] if embedding_objs else None\n        if embedding:",
+        "peekOfCode": "def import_db(app: Any, img_path: str, uid: str) -> Dict[str, Any]:\n    try:\n        with app.app_context():\n            controller = get_deepface_controller()\n            embedding_objs = controller.represent(\n                img_path=img_path,\n                model_name=\"Facenet512\",\n                detector_backend=\"retinaface\",\n                anti_spoofing=False,\n            )",
         "detail": "core.service",
         "documentation": {}
     },
     {
-        "label": "delete_face",
+        "label": "recreate_DB",
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def delete_face(uid: str, current_app) -> Dict[str, Any]:\n    try:\n        base_uid = uid.split(\"-\")[0]\n        save_dir = os.path.join(IMAGES_DIR, base_uid)\n        # Delete images and check if directory is empty\n        delete_images_for_uid(uid, base_uid)\n        if delete_directory_if_empty(save_dir):\n            current_app.config[\"ZoDB\"].del_directory_hash(uid)\n            return {\n                \"message\": \"Face deleted successfully and directory removed.\",",
+        "peekOfCode": "def recreate_DB(app: Any, img_path: str, uid: str) -> None:\n    logger.info(f\"Starting recreate_DB with img_path: {img_path}, uid: {uid}\")\n    from core.utils.monitor_folder_hash import hash_directory\n    try:\n        with app.app_context():\n            base_uid = uid.split(\"-\")[0]\n            save_dir = os.path.join(img_path, base_uid)\n            get_deepface_controller().find(\n                img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),\n                db_path=save_dir,",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10735,7 +10893,16 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def register_face(image: Any, uid: str, current_app) -> Dict[str, Any]:\n    try:\n        # Save original and augmented images\n        image_path, _ = save_image(image, uid, IMAGES_DIR, uid)\n        augmented_images = augment_image(image)\n        for i, img in enumerate(augmented_images, start=1):\n            save_image(img, uid, IMAGES_DIR, f\"{uid}_aug{i}\")\n        add_task_to_queue(\n            import_db,\n            img_path=augmented_images,",
+        "peekOfCode": "def register_face(image: Any, uid: str, current_app) -> Dict[str, Any]:\n    try:\n        # Save the original image\n        image_path, _ = save_image(image, uid, IMAGES_DIR, uid)\n        # Augment and save images\n        augmented_images = augment_image(image)\n        image_paths = [image_path]\n        for i, img in enumerate(augmented_images, start=1):\n            aug_image_path, _ = save_image(img, uid, IMAGES_DIR, f\"{uid}_aug{i}\")\n            image_paths.append(aug_image_path)",
+        "detail": "core.service",
+        "documentation": {}
+    },
+    {
+        "label": "delete_face",
+        "kind": 2,
+        "importPath": "core.service",
+        "description": "core.service",
+        "peekOfCode": "def delete_face(uid: str, current_app) -> Dict[str, Any]:\n    try:\n        base_uid = uid.split(\"-\")[0]\n        save_dir = os.path.join(IMAGES_DIR, base_uid)\n        # Delete images and check if directory is empty\n        delete_images_for_uid(uid, base_uid)\n        if delete_directory_if_empty(save_dir):\n            current_app.config[\"ZoDB\"].delete_face_embedding(uid=uid)\n            return {\n                \"message\": \"Face deleted successfully and directory removed.\",",
         "detail": "core.service",
         "documentation": {}
     },
@@ -10745,6 +10912,15 @@
         "importPath": "core.service",
         "description": "core.service",
         "peekOfCode": "def recognize_face(image: Any, uid: Optional[str] = None) -> Dict[str, Any]:\n    try:\n        save_dir = IMAGES_DIR if uid is None else os.path.join(IMAGES_DIR, uid.split('-')[0])\n        image_path, _ = save_image(image, \"query_results\", TEMP_DIR, \"\")\n        logger.info(f\"Recognizing face with UID {uid} in directory {save_dir}\")\n        if not any(f.lower().endswith(('.png', '.jpg', '.jpeg')) for f in os.listdir(save_dir)):\n            return {\"message\": \"No faces detected in the image\", \"data\": [], \"success\": False}\n        anti_spoofing_results = get_deepface_controller().extract_faces(img_path=image_path, detector_backend=\"retinaface\", anti_spoofing=True)[0]\n        recognition_results = get_deepface_controller().find(img_path=image_path, db_path=save_dir, model_name=\"Facenet512\", detector_backend=\"retinaface\", anti_spoofing=False)\n        if recognition_results and not recognition_results[0].empty:",
+        "detail": "core.service",
+        "documentation": {}
+    },
+    {
+        "label": "recognize_face_db",
+        "kind": 2,
+        "importPath": "core.service",
+        "description": "core.service",
+        "peekOfCode": "def recognize_face_db(image: Any, app=None) -> Dict[str, Any]:\n    try:\n        # Save the input image to a temporary directory\n        image_path, _ = save_image(image, \"query_results\", TEMP_DIR, \"\")\n        # Perform face recognition using the database manager\n        recognition_results = get_deepface_controller().verify_faces_db(\n            img_path=image_path,\n            db_manager=app.config[\"ZoDB\"],\n            model_name=\"Facenet512\",\n            detector_backend=\"retinaface\",",
         "detail": "core.service",
         "documentation": {}
     },
