@@ -14,6 +14,7 @@ from functools import lru_cache
 def cached_read(filepath):
     with open(filepath, 'rb') as file:
         return file.read()
+logger = get_logger()
 
 def has_directory_changed(directory_path: str, previous_hash: Optional[str] = None) -> (bool, str): # type: ignore
     current_hash = hash_directory(directory_path)
@@ -36,13 +37,18 @@ def hash_directory(directory_path: str) -> str:
 
 
 
-
-
 def check_and_update_directory_hash(dir_name: str, dir_path: str , app):
     """Kiểm tra hash của thư mục và cập nhật vào ZoDB nếu có thay đổi."""
     directory_hash = app.config["ZoDB"].get_directory_hash(dir_name)
+    if directory_hash is None:
+        # First run or hash missing, just set the current hash without triggering DB recreation
+        current_hash = hash_directory(dir_path)
+        logger.info(f"Setting initial hash for directory {dir_name}.")
+        app.config["ZoDB"].set_directory_hash(dir_name, current_hash)
+        return
+    
     previous_hash = directory_hash.hash_value
-    changed, _ = has_directory_changed(dir_path, previous_hash)
+    changed, current_hash = has_directory_changed(dir_path, previous_hash)
     if changed:
         add_task_to_queue(
             recreate_DB,
@@ -50,4 +56,3 @@ def check_and_update_directory_hash(dir_name: str, dir_path: str , app):
             app = app,
             uid=dir_name,
         )
-        # app.config["ZoDB"].set_directory_hash(dir_name, current_hash)

@@ -10295,7 +10295,7 @@
         "kind": 2,
         "importPath": "core.utils.monitor_folder_hash",
         "description": "core.utils.monitor_folder_hash",
-        "peekOfCode": "def cached_read(filepath):\n    with open(filepath, 'rb') as file:\n        return file.read()\ndef has_directory_changed(directory_path: str, previous_hash: Optional[str] = None) -> (bool, str): # type: ignore\n    current_hash = hash_directory(directory_path)\n    return previous_hash is None or current_hash != previous_hash, current_hash\ndef hash_directory(directory_path: str) -> str:\n    hash_obj = hashlib.md5()\n    for root, _, files in os.walk(directory_path):\n        for filename in sorted(files):",
+        "peekOfCode": "def cached_read(filepath):\n    with open(filepath, 'rb') as file:\n        return file.read()\nlogger = get_logger()\ndef has_directory_changed(directory_path: str, previous_hash: Optional[str] = None) -> (bool, str): # type: ignore\n    current_hash = hash_directory(directory_path)\n    return previous_hash is None or current_hash != previous_hash, current_hash\ndef hash_directory(directory_path: str) -> str:\n    hash_obj = hashlib.md5()\n    for root, _, files in os.walk(directory_path):",
         "detail": "core.utils.monitor_folder_hash",
         "documentation": {}
     },
@@ -10322,7 +10322,7 @@
         "kind": 2,
         "importPath": "core.utils.monitor_folder_hash",
         "description": "core.utils.monitor_folder_hash",
-        "peekOfCode": "def check_and_update_directory_hash(dir_name: str, dir_path: str , app):\n    \"\"\"Kiểm tra hash của thư mục và cập nhật vào ZoDB nếu có thay đổi.\"\"\"\n    directory_hash = app.config[\"ZoDB\"].get_directory_hash(dir_name)\n    previous_hash = directory_hash.hash_value\n    changed, _ = has_directory_changed(dir_path, previous_hash)\n    if changed:\n        add_task_to_queue(\n            recreate_DB,\n            img_path=IMAGES_DIR,\n            app = app,",
+        "peekOfCode": "def check_and_update_directory_hash(dir_name: str, dir_path: str , app):\n    \"\"\"Kiểm tra hash của thư mục và cập nhật vào ZoDB nếu có thay đổi.\"\"\"\n    directory_hash = app.config[\"ZoDB\"].get_directory_hash(dir_name)\n    if directory_hash is None:\n        # First run or hash missing, just set the current hash without triggering DB recreation\n        current_hash = hash_directory(dir_path)\n        logger.info(f\"Setting initial hash for directory {dir_name}.\")\n        app.config[\"ZoDB\"].set_directory_hash(dir_name, current_hash)\n        return\n    previous_hash = directory_hash.hash_value",
         "detail": "core.utils.monitor_folder_hash",
         "documentation": {}
     },
@@ -10331,7 +10331,16 @@
         "kind": 5,
         "importPath": "core.utils.monitor_folder_hash",
         "description": "core.utils.monitor_folder_hash",
-        "peekOfCode": "logger = get_logger()\nfrom functools import lru_cache\n@lru_cache(maxsize=100)\ndef cached_read(filepath):\n    with open(filepath, 'rb') as file:\n        return file.read()\ndef has_directory_changed(directory_path: str, previous_hash: Optional[str] = None) -> (bool, str): # type: ignore\n    current_hash = hash_directory(directory_path)\n    return previous_hash is None or current_hash != previous_hash, current_hash\ndef hash_directory(directory_path: str) -> str:",
+        "peekOfCode": "logger = get_logger()\nfrom functools import lru_cache\n@lru_cache(maxsize=100)\ndef cached_read(filepath):\n    with open(filepath, 'rb') as file:\n        return file.read()\nlogger = get_logger()\ndef has_directory_changed(directory_path: str, previous_hash: Optional[str] = None) -> (bool, str): # type: ignore\n    current_hash = hash_directory(directory_path)\n    return previous_hash is None or current_hash != previous_hash, current_hash",
+        "detail": "core.utils.monitor_folder_hash",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "core.utils.monitor_folder_hash",
+        "description": "core.utils.monitor_folder_hash",
+        "peekOfCode": "logger = get_logger()\ndef has_directory_changed(directory_path: str, previous_hash: Optional[str] = None) -> (bool, str): # type: ignore\n    current_hash = hash_directory(directory_path)\n    return previous_hash is None or current_hash != previous_hash, current_hash\ndef hash_directory(directory_path: str) -> str:\n    hash_obj = hashlib.md5()\n    for root, _, files in os.walk(directory_path):\n        for filename in sorted(files):\n            if filename.endswith((\".png\", \".jpg\", \".jpeg\")):\n                filepath = os.path.join(root, filename)",
         "detail": "core.utils.monitor_folder_hash",
         "documentation": {}
     },
