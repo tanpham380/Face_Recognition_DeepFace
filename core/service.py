@@ -38,7 +38,19 @@ def hash_directory_data(app) -> Dict[str, Any]:
             f"Exception while fetching hash data: {e} - {traceback.format_exc()}"
         )
         return {"message": "Failed to fetch hash data", "data": None, "success": False}
-
+def get_Face_embedding(uid: str, current_app) -> Dict[str, Any]:
+    try:
+        face_User = current_app.config["ZoDB"].list_face_data(uid_filter = uid)
+        return {
+            "message": "Face embedding fetched successfully",
+            "data": face_User,
+            "success": True,
+        }
+    except Exception as e:
+        logger.error(
+            f"Exception while fetching face embedding: {e} - {traceback.format_exc()}"
+        )
+        return {"message": "Failed to fetch face embedding", "data": None, "success": False}
 
 def list_users(
     uid_filter: Optional[str] = None, app: Optional[Any] = None
@@ -112,7 +124,18 @@ def recreate_DB(img_path: str, app: Any, uid: str) -> None:
     except Exception as e:
         logger.error(f"Error in recreate_DB: {e} - {traceback.format_exc()}")
 
-
+def import_db( img_path: List[str], app: Any, uid: str) -> Dict[str, Any]:
+    for image in img_path:
+        embedding_objs = get_deepface_controller().represent(
+                    img_path=image,
+                    model_name="Facenet512",
+                    detector_backend="retinaface",
+                    anti_spoofing=False,
+                )
+        embedding = embedding_objs[0]["embedding"] if embedding_objs else None
+        if embedding:
+            app.config["ZoDB"].add_face_embedding(uid, img_path, embedding)
+        
 def delete_face(uid: str, current_app) -> Dict[str, Any]:
     try:
         base_uid = uid.split("-")[0]
@@ -127,6 +150,12 @@ def delete_face(uid: str, current_app) -> Dict[str, Any]:
                 "data": {"uid": uid},
                 "success": True,
             }
+            
+            
+        # current_app.config["ZoDB"].delete_face_embedding(uid="user123", image_path="path/to/image.png")
+
+        # Delete all embeddings for a specific uid
+        current_app.config["ZoDB"].delete_face_embedding(uid=uid)
         add_task_to_queue(
             recreate_DB,
             img_path=IMAGES_DIR,
@@ -154,7 +183,12 @@ def register_face(image: Any, uid: str, current_app) -> Dict[str, Any]:
 
         for i, img in enumerate(augmented_images, start=1):
             save_image(img, uid, IMAGES_DIR, f"{uid}_aug{i}")
-
+        add_task_to_queue(
+            import_db,
+            img_path=augmented_images,
+            app=current_app._get_current_object(),
+            uid=uid,
+        )
         add_task_to_queue(
             recreate_DB,
             img_path=IMAGES_DIR,

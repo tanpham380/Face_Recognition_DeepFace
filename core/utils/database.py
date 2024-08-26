@@ -67,6 +67,22 @@ class ZoDB:
     def add_face_data(self, uid: str, image_paths: list):
         self.root['face_data'][uid] = FaceData(uid, image_paths)
         transaction.commit()
+        
+        
+    def add_face_embedding(self, uid: str, image_path: str, embedding: list):
+        face_data = self.get_face_data(uid)
+        if not face_data:
+            face_data = FaceData(uid, [image_path], [embedding])
+            self.root['face_data'][uid] = face_data
+        else:
+            face_data.add_image(image_path, embedding)
+        transaction.commit()
+
+    def get_face_embedding(self, uid: str) -> Optional[list]:
+        face_data = self.get_face_data(uid)
+        if face_data:
+            return face_data.embedding
+        return None
 
     def list_face_data(self, uid_filter: Optional[str] = None) -> dict:
         """List all face data or filter by UID."""
@@ -82,3 +98,28 @@ class ZoDB:
     def list_all_tasks(self) -> dict:
         """List all tasks in the task queue."""
         return {task_id: task.status for task_id, task in self.root['task_queue'].items()}
+    
+    def delete_face_embedding(self, uid: str, image_path: Optional[str] = None) -> bool:
+        """
+        Delete embedding data for a specific UID. If image_path is provided, 
+        delete the embedding for that specific image, otherwise delete all embeddings for the UID.
+        """
+        face_data = self.get_face_data(uid)
+        if not face_data:
+            return False  # UID not found
+        
+        if image_path:
+            if image_path in face_data.image_paths:
+                index = face_data.image_paths.index(image_path)
+                face_data.image_paths.pop(index)
+                if index < len(face_data.embedding):
+                    face_data.embedding.pop(index)
+                transaction.commit()
+                return True
+            else:
+                return False  # Image path not found
+        else:
+            # Delete all data for the UID
+            del self.root['face_data'][uid]
+            transaction.commit()
+            return True

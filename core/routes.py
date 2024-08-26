@@ -29,6 +29,15 @@ def get_users():
             "success": False,
         }, 500
 
+@blueprint.route("/get_Face", methods=["GET"])
+@require_api_key
+def fetchFace():
+
+    face_data = service.get_Face_embedding(current_app)
+
+    return face_data
+
+
 
 @blueprint.route("/hash_dir", methods=["GET"])
 @require_api_key

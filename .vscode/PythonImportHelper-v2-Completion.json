@@ -467,6 +467,14 @@
         "documentation": {}
     },
     {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -10133,7 +10141,7 @@
         "kind": 6,
         "importPath": "core.utils.models.face_data",
         "description": "core.utils.models.face_data",
-        "peekOfCode": "class FaceData(Persistent):\n    def __init__(self, uid: str, image_paths: list , embedder : None):\n        self.uid = uid\n        self.image_paths = image_paths\n    def add_image(self, image_path: str):\n        self.image_paths.append(image_path)\n    def remove_image(self, image_path: str):\n        if image_path in self.image_paths:\n            self.image_paths.remove(image_path)",
+        "peekOfCode": "class FaceData(Persistent):\n    def __init__(self, uid: str, image_paths: list, embedding: Optional[list] = None):\n        self.uid = uid\n        self.image_paths = image_paths\n        self.embedding = embedding if embedding is not None else []\n    def add_image(self, image_path: str, embedding: Optional[list] = None):\n        self.image_paths.append(image_path)\n        if embedding:\n            self.embedding.append(embedding)\n    def remove_image(self, image_path: str):",
         "detail": "core.utils.models.face_data",
         "documentation": {}
     },
@@ -10561,6 +10569,15 @@
         "documentation": {}
     },
     {
+        "label": "fetchFace",
+        "kind": 2,
+        "importPath": "core.routes",
+        "description": "core.routes",
+        "peekOfCode": "def fetchFace():\n    face_data = service.get_Face_embedding(current_app)\n    return face_data\n@blueprint.route(\"/hash_dir\", methods=[\"GET\"])\n@require_api_key\ndef hash_dir():\n    hash_data = service.hash_directory_data(current_app)\n    return hash_data\n@blueprint.route(\"/register\", methods=[\"POST\"])\n@require_api_key",
+        "detail": "core.routes",
+        "documentation": {}
+    },
+    {
         "label": "hash_dir",
         "kind": 2,
         "importPath": "core.routes",
@@ -10660,6 +10677,15 @@
         "documentation": {}
     },
     {
+        "label": "get_Face_embedding",
+        "kind": 2,
+        "importPath": "core.service",
+        "description": "core.service",
+        "peekOfCode": "def get_Face_embedding(uid: str, current_app) -> Dict[str, Any]:\n    try:\n        face_User = current_app.config[\"ZoDB\"].list_face_data(uid_filter = uid)\n        return {\n            \"message\": \"Face embedding fetched successfully\",\n            \"data\": face_User,\n            \"success\": True,\n        }\n    except Exception as e:\n        logger.error(",
+        "detail": "core.service",
+        "documentation": {}
+    },
+    {
         "label": "list_users",
         "kind": 2,
         "importPath": "core.service",
@@ -10687,6 +10713,15 @@
         "documentation": {}
     },
     {
+        "label": "import_db",
+        "kind": 2,
+        "importPath": "core.service",
+        "description": "core.service",
+        "peekOfCode": "def import_db( img_path: List[str], app: Any, uid: str) -> Dict[str, Any]:\n    for image in img_path:\n        embedding_objs = get_deepface_controller().represent(\n                    img_path=image,\n                    model_name=\"Facenet512\",\n                    detector_backend=\"retinaface\",\n                    anti_spoofing=False,\n                )\n        embedding = embedding_objs[0][\"embedding\"] if embedding_objs else None\n        if embedding:",
+        "detail": "core.service",
+        "documentation": {}
+    },
+    {
         "label": "delete_face",
         "kind": 2,
         "importPath": "core.service",
@@ -10700,7 +10735,7 @@
         "kind": 2,
         "importPath": "core.service",
         "description": "core.service",
-        "peekOfCode": "def register_face(image: Any, uid: str, current_app) -> Dict[str, Any]:\n    try:\n        # Save original and augmented images\n        image_path, _ = save_image(image, uid, IMAGES_DIR, uid)\n        augmented_images = augment_image(image)\n        for i, img in enumerate(augmented_images, start=1):\n            save_image(img, uid, IMAGES_DIR, f\"{uid}_aug{i}\")\n        add_task_to_queue(\n            recreate_DB,\n            img_path=IMAGES_DIR,",
+        "peekOfCode": "def register_face(image: Any, uid: str, current_app) -> Dict[str, Any]:\n    try:\n        # Save original and augmented images\n        image_path, _ = save_image(image, uid, IMAGES_DIR, uid)\n        augmented_images = augment_image(image)\n        for i, img in enumerate(augmented_images, start=1):\n            save_image(img, uid, IMAGES_DIR, f\"{uid}_aug{i}\")\n        add_task_to_queue(\n            import_db,\n            img_path=augmented_images,",
         "detail": "core.service",
         "documentation": {}
     },
