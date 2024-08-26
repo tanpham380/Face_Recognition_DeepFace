@@ -5,6 +5,7 @@ import uuid
 from core.utils.logging import get_logger
 from core.utils.static_variable import NUMBER_WORKER
 from concurrent.futures import ThreadPoolExecutor
+executor = ThreadPoolExecutor(max_workers=NUMBER_WORKER)
 
 task_queue = queue.Queue(maxsize=100)  # Bounded queue to prevent overflow
 logger = get_logger()

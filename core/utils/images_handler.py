@@ -11,6 +11,8 @@ from core.utils.static_variable import IMAGES_DIR
 import glob
 logger = get_logger()
 
+
+
 def delete_directory_if_empty(save_dir: str) -> bool:
     remaining_images = [f for f in os.listdir(save_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
     if not remaining_images:
@@ -88,7 +90,7 @@ def save_image(image: Any, uid: str, base_dir: str, prefix: str, anti_spoofing: 
 
     for old_image in original_images[:-4]:
         os.remove(os.path.join(save_dir, old_image))
-    for old_image in augmented_images[:-48]:
+    for old_image in augmented_images[:-20]:
         os.remove(os.path.join(save_dir, old_image))
 
     return image_path, save_dir
