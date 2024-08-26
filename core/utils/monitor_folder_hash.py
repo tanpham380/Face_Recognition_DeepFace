@@ -56,3 +56,4 @@ def check_and_update_directory_hash(dir_name: str, dir_path: str , app):
             app = app,
             uid=dir_name,
         )
+    
