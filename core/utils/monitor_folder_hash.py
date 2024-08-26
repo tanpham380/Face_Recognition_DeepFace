@@ -4,7 +4,7 @@ from typing import Optional
 
 from core.service import recreate_DB
 from core.utils.logging import get_logger
-from core.utils.static_variable import IMAGES_DIR
+from core.utils.static_variable import BASE_PATH, IMAGES_DIR
 from core.utils.threading import add_task_to_queue
 
 logger = get_logger()
@@ -45,6 +45,13 @@ def check_and_update_directory_hash(dir_name: str, dir_path: str , app):
         current_hash = hash_directory(dir_path)
         logger.info(f"Setting initial hash for directory {dir_name}.")
         app.config["ZoDB"].set_directory_hash(dir_name, current_hash)
+        app.config["deepface_controller"].find(
+            img_path=os.path.join(BASE_PATH, "static", "temp.png"),
+            db_path=os.path.join(BASE_PATH, "static", "temp"),
+            model_name="Facenet512",
+            detector_backend="retinaface",
+            anti_spoofing=True,
+        )
         return
     
     previous_hash = directory_hash.hash_value
@@ -56,4 +63,11 @@ def check_and_update_directory_hash(dir_name: str, dir_path: str , app):
             app = app,
             uid=dir_name,
         )
-    
+    else:
+        app.config["deepface_controller"].find(
+            img_path=os.path.join(BASE_PATH, "static", "temp.png"),
+            db_path=os.path.join(BASE_PATH, "static", "temp"),
+            model_name="Facenet512",
+            detector_backend="retinaface",
+            anti_spoofing=True,
+        )

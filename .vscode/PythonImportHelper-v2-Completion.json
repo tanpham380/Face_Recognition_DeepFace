@@ -4856,6 +4856,14 @@
         "documentation": {}
     },
     {
+        "label": "BASE_PATH",
+        "importPath": "core.utils.static_variable",
+        "description": "core.utils.static_variable",
+        "isExtraImport": true,
+        "detail": "core.utils.static_variable",
+        "documentation": {}
+    },
+    {
         "label": "IMAGES_DIR",
         "importPath": "core.utils.static_variable",
         "description": "core.utils.static_variable",
@@ -10305,7 +10313,7 @@
         "kind": 2,
         "importPath": "core.utils.monitor_folder_hash",
         "description": "core.utils.monitor_folder_hash",
-        "peekOfCode": "def check_and_update_directory_hash(dir_name: str, dir_path: str , app):\n    \"\"\"Kiểm tra hash của thư mục và cập nhật vào ZoDB nếu có thay đổi.\"\"\"\n    directory_hash = app.config[\"ZoDB\"].get_directory_hash(dir_name)\n    if directory_hash is None:\n        # First run or hash missing, just set the current hash without triggering DB recreation\n        current_hash = hash_directory(dir_path)\n        logger.info(f\"Setting initial hash for directory {dir_name}.\")\n        app.config[\"ZoDB\"].set_directory_hash(dir_name, current_hash)\n        return\n    previous_hash = directory_hash.hash_value",
+        "peekOfCode": "def check_and_update_directory_hash(dir_name: str, dir_path: str , app):\n    \"\"\"Kiểm tra hash của thư mục và cập nhật vào ZoDB nếu có thay đổi.\"\"\"\n    directory_hash = app.config[\"ZoDB\"].get_directory_hash(dir_name)\n    if directory_hash is None:\n        # First run or hash missing, just set the current hash without triggering DB recreation\n        current_hash = hash_directory(dir_path)\n        logger.info(f\"Setting initial hash for directory {dir_name}.\")\n        app.config[\"ZoDB\"].set_directory_hash(dir_name, current_hash)\n        app.config[\"deepface_controller\"].find(\n            img_path=os.path.join(BASE_PATH, \"static\", \"temp.png\"),",
         "detail": "core.utils.monitor_folder_hash",
         "documentation": {}
     },
