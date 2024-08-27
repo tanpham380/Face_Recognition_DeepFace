@@ -130,25 +130,43 @@ class ZoDB_Manager:
         self.pending_changes = True
         self._maybe_commit()
 
+    # def add_face_embedding(self, uid: str, image_path: str, embedding: list):
+    #     face_data = self.get_face_data(uid)
+    #     if not face_data:
+    #         face_data = FaceData(uid, [image_path], [embedding])
+    #         self.root['face_data'][uid] = face_data
+    #     else:
+    #         is_augmented = 'aug' in uid
+    #         max_images = MAX_IMAGES if is_augmented else MAX_ORIGIN_IMAGES
+    #         filtered_paths = [path for path in face_data.image_paths if ('aug' in path) == is_augmented]
+
+    #         if len(filtered_paths) >= max_images:
+    #             oldest_index = next(i for i, path in enumerate(face_data.image_paths) if path == filtered_paths[0])
+    #             face_data.image_paths.pop(oldest_index)
+    #             face_data.embedding.pop(oldest_index)
+
+    #         face_data.add_image(image_path, embedding)
+    #     self.change_count += 1
+    #     self.pending_changes = True
+    #     self._maybe_commit()
+    
+    
     def add_face_embedding(self, uid: str, image_path: str, embedding: list):
         face_data = self.get_face_data(uid)
         if not face_data:
+            # If no face data exists for the UID, create a new entry
             face_data = FaceData(uid, [image_path], [embedding])
             self.root['face_data'][uid] = face_data
         else:
-            is_augmented = 'aug' in uid
-            max_images = MAX_IMAGES if is_augmented else MAX_ORIGIN_IMAGES
-            filtered_paths = [path for path in face_data.image_paths if ('aug' in path) == is_augmented]
+            # Overwrite the existing image path and embedding with the new ones
+            face_data.image_paths = [image_path]  # Ensure there's only one image path
+            face_data.embedding = [embedding]     # Ensure there's only one embedding
 
-            if len(filtered_paths) >= max_images:
-                oldest_index = next(i for i, path in enumerate(face_data.image_paths) if path == filtered_paths[0])
-                face_data.image_paths.pop(oldest_index)
-                face_data.embedding.pop(oldest_index)
-
-            face_data.add_image(image_path, embedding)
+        # Track changes for commit
         self.change_count += 1
         self.pending_changes = True
         self._maybe_commit()
+
 
     def get_face_embedding(self, uid: str) -> Optional[list]:
         face_data = self.get_face_data(uid)

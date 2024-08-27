@@ -10,7 +10,7 @@ class TaskQueue(Persistent):
 
     def update_status(self, new_status: str):
         self.status = new_status
-        self.updated_at = time.time()
+        self.updated_at =time.strftime("%d/%m/%Y %H:%M", time.localtime())
         
     def to_dict(self):
         return {
