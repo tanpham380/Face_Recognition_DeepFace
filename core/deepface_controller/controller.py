@@ -143,7 +143,7 @@ class DeepFaceController():
         elif isinstance(actions, list):
             self._actions = actions
     def check_version(self) -> str :
-        return {"message": messange , "version": __version__} 
+        return {"information": messange , "version": __version__} 
 
     def build_model(self, model_name: str) -> Any:
         """
