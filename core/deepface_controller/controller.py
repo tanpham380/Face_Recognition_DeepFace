@@ -36,14 +36,24 @@ if tf_version == 2:
 messange = None
 if len(tf.config.experimental.list_physical_devices('GPU')) > 0:
     physical_devices = tf.config.experimental.list_physical_devices('GPU')
-    tf.config.experimental.set_memory_growth(physical_devices[0], True)
-    tf.config.experimental.set_visible_devices(physical_devices[0], 'GPU')
-    messange = "Using GPU for TensorFlow operations"
-    logger.info(messange)
+    try:
+        # Set memory growth
+        tf.config.experimental.set_memory_growth(physical_devices[0], True)
+        
+        # Set memory limit to 4 GB (4096 MB)
+        tf.config.experimental.set_virtual_device_configuration(
+            physical_devices[0],
+            [tf.config.experimental.VirtualDeviceConfiguration(memory_limit=4096)]
+        )
+        message = "Using GPU with a 4 GB memory limit for TensorFlow operations"
+    except RuntimeError as e:
+        message = f"Error setting GPU memory configuration: {e}"
+    logger.info(message)
 else:
-    messange = "No GPU found. Running on CPU"
-    logger.info(messange)
+    message = "No GPU found. Running on CPU"
+    logger.info(message)
 
+# Initialize folders (if necessary)
 folder_utils.initialize_folder()
 
 
