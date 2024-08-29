@@ -1,6 +1,5 @@
 import sqlite3
 import logging
-import threading
 from flask import g, current_app
 from typing import List, Dict, Any, Optional
 import numpy as np
@@ -10,7 +9,6 @@ class SQLiteManager:
     def __init__(self, db_path: str):
         self.db_path = db_path
         self.logger = logging.getLogger(__name__)
-        self.local = threading.local()  # Thread-local storage for thread-specific connections
 
     def optimize_sqlite(self):
         """Optimize SQLite settings for better performance."""

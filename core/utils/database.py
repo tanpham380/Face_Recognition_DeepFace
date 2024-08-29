@@ -108,7 +108,6 @@ class ZoDB_Manager:
     def update_task_status(self, task_id: str, new_status: str) -> bool:
         """Update the status of a task in the task queue."""
         task = self.get_task(task_id)
-        logger.info(f"Status : {new_status}")
         if task:
             task.update_status(new_status)  # Update status and timestamp
             self.change_count += 1
@@ -154,15 +153,11 @@ class ZoDB_Manager:
     def add_face_embedding(self, uid: str, image_path: str, embedding: list):
         face_data = self.get_face_data(uid)
         if not face_data:
-            # If no face data exists for the UID, create a new entry
             face_data = FaceData(uid, [image_path], [embedding])
             self.root['face_data'][uid] = face_data
         else:
-            # Overwrite the existing image path and embedding with the new ones
             face_data.image_paths = [image_path]  # Ensure there's only one image path
             face_data.embedding = [embedding]     # Ensure there's only one embedding
-
-        # Track changes for commit
         self.change_count += 1
         self.pending_changes = True
         self._maybe_commit()
@@ -177,16 +172,24 @@ class ZoDB_Manager:
     def list_face_data(self, uid_filter: Optional[str] = None) -> dict:
         """List all face data or filter by UID."""
         if uid_filter:
-            face_data = self.root['face_data'].get(uid_filter)
-            return {uid_filter: face_data.to_dict()} if face_data else {}
+            matching_data = {
+            uid: data.to_dict_embedding()
+            for uid, data in self.root['face_data'].items()
+            if uid.startswith(uid_filter)
+        }
+            return matching_data
         else:
             return {uid: data.to_dict() for uid, data in self.root['face_data'].items()}
 
     def list_face_data_embedding(self, uid_filter: Optional[str] = None) -> dict:
         """List all face data or filter by UID."""
         if uid_filter:
-            face_data = self.root['face_data'].get(uid_filter)
-            return {uid_filter: face_data.to_dict_embedding()} if face_data else {}
+            matching_data = {
+            uid: data.to_dict_embedding()
+            for uid, data in self.root['face_data'].items()
+            if uid.startswith(uid_filter)
+        }
+            return matching_data
         else:
             return {uid: data.to_dict_embedding() for uid, data in self.root['face_data'].items()}
 

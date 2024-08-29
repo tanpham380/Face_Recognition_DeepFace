@@ -362,6 +362,7 @@ class DeepFaceController():
         normalization: str = "base",
         silent: bool = False,
         anti_spoofing: Optional[bool] = None,
+        uid: Optional[str] = None, 
     ) -> List[Dict[str, Any]]:
         tic = time.time()
 
@@ -390,13 +391,12 @@ class DeepFaceController():
 
         # Get embeddings from the database
         db_embeddings = []
-        all_face_data = db_manager.list_face_data_embedding()
+        #base_uid = 
+        all_face_data = db_manager.list_face_data_embedding(uid_filter=uid)
         
 
         for uid, face_data in all_face_data.items():
             for embedding in face_data['embedding']:                
-                logger.info(f"debug   all_face_data {uid} " )
-
                 db_embeddings.append({
                     'uid': uid,
                     'embedding': embedding

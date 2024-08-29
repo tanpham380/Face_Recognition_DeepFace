@@ -125,9 +125,11 @@ def recognize():
 def recognize_db():
     if "image" not in request.files:
         return {"message": "Image is required", "data": None, "success": False}, 400
+    
+    uid = request.form.get("uid")
     image = request.files["image"]
     try:
-        response = service.recognize_face_db(image, current_app)
+        response = service.recognize_face_db(image, uid,current_app)
         return response
     except Exception as e:
         logger.error(f"Failed to recognize face: {str(e)}")

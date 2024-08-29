@@ -385,19 +385,18 @@ def recognize_face(image: Any, uid: Optional[str] = None) -> Dict[str, Any]:
     except Exception as e:
         logger.error(f"Exception while recognizing face: {e} - {traceback.format_exc()}")
         return {"message": "Failed to recognize face", "data": None, "success": False}
-def recognize_face_db(image: Any, app=None) -> Dict[str, Any]:
+def recognize_face_db(image: Any, uid = None,app=None) -> Dict[str, Any]:
     try:
         # Save the input image to a temporary directory
         image_path, _ = save_image(image, "query_results", TEMP_DIR, "")
-
         # Perform face recognition using the database manager
-        logger.info("debug")
         recognition_results = get_deepface_controller().verify_faces_db(
             img_path=image_path,
             db_manager=app.config["ZoDB"],
             model_name="Facenet512",
             detector_backend="retinaface",
-            anti_spoofing=True
+            anti_spoofing=True,
+            uid = uid ,
         )
 
         if recognition_results and recognition_results[0].get("matches"):

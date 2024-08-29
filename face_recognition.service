@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicorn instance to serve face recognition app
+After=network.target
+
+[Service]
+User=gitlab
+Group=gitlab
+WorkingDirectory=/home/gitlab/face_recognition
+Environment="PATH=/home/gitlab/miniconda3/envs/face_recognition/bin"
+ExecStart=/home/gitlab/miniconda3/envs/face_recognition/bin/gunicorn -w 1 -b 0.0.0.0:5000 api:deepface_app
+Restart=always
+RestartSec=5
+[Install]
+WantedBy=multi-user.target
