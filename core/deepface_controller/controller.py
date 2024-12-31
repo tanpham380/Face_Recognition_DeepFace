@@ -33,14 +33,13 @@ if tf_version == 2:
     tf.get_logger().setLevel(logging.ERROR)
 
 # Configure TensorFlow to use GPU
+# tf.config.set_visible_devices([], 'GPU')
+logger.info(tf.config.get_visible_devices())
 messange = None
 if len(tf.config.experimental.list_physical_devices('GPU')) > 0:
     physical_devices = tf.config.experimental.list_physical_devices('GPU')
     try:
-        # Set memory growth
         tf.config.experimental.set_memory_growth(physical_devices[0], True)
-        
-        # Set memory limit to 4 GB (4096 MB)
         tf.config.experimental.set_virtual_device_configuration(
             physical_devices[0],
             [tf.config.experimental.VirtualDeviceConfiguration(memory_limit=4096)]
